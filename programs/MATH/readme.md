@@ -20,6 +20,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![GOLDEN](GOLDEN/icon.png) [GOLDEN](#golden)
 * ![GRAYCODE](GRAYCODE/icon.png) [GRAYCODE](#graycode)
 * ![HAPPY](HAPPY/icon.png) [HAPPY](#happy)
+* ![HILBERT](HILBERT/icon.png) [HILBERT](#hilbert)
 * ![KAPREKAR](KAPREKAR/icon.png) [KAPREKAR](#kaprekar)
 * ![LOOKSAY](LOOKSAY/icon.png) [LOOKSAY](#looksay)
 * ![LUCAS](LUCAS/icon.png) [LUCAS](#lucas)
@@ -200,6 +201,16 @@ Stored payload: **103 bytes**.
 [Assembly source](HAPPY/main.asm)
 
 ![HAPPY preview](HAPPY/preview.png)
+
+## HILBERT
+
+DISPLAY A SMALL CHARACTER-MODE HILBERT CURVE.
+
+Stored payload: **89 bytes**.
+
+[Assembly source](HILBERT/main.asm)
+
+![HILBERT preview](HILBERT/preview.png)
 
 ## KAPREKAR
 
@@ -382,7 +393,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**34 programs · 3,981 bytes total · 4723 bytes to spare in this category**
+**35 programs · 4,070 bytes total · 4890 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

@@ -211,6 +211,8 @@ Completed: PALINDRM — added a reverse-and-add palindrome example to MATH.
 
 Completed: TOTIENT — added an Euler-totient reference to MATH.
 
+Completed: HILBERT — added a character-mode Hilbert curve to MATH.
+
 ## GAMES
 
 118 ideas.
