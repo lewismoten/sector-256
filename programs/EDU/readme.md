@@ -34,6 +34,7 @@ SHORT LESSONS AND PRACTICE.
 | ![LOGIC](LOGIC/icon.png) | [LOGIC](#logic) | TOGGLE TWO INPUTS AND VIEW THEIR AND-GATE OUTPUT. |
 | ![MAPGRID](MAPGRID/icon.png) | [MAPGRID](#mapgrid) | Cycles through coordinate prompts on a lettered grid. |
 | ![MAPS](MAPS/icon.png) | [MAPS](#maps) | PRACTICE THE FIRST LETTERS OF COMPASS DIRECTIONS. |
+| ![MATHQUIZ](MATHQUIZ/icon.png) | [MATHQUIZ](#mathquiz) | Cycles through four compact mixed arithmetic facts. |
 | ![MEASURE](MEASURE/icon.png) | [MEASURE](#measure) | ESTIMATE BAR LENGTHS IN CHARACTER CELLS. |
 | ![MEMORY](MEMORY/icon.png) | [MEMORY](#memory) | REPEAT THE THREE-NUMBER SEQUENCE FROM MEMORY. |
 | ![MONTHS](MONTHS/icon.png) | [MONTHS](#months) | PICK THE FIRST LETTER OF THREE MONTH NAMES. |
@@ -348,6 +349,16 @@ Stored payload: **157 bytes**.
 [Assembly source](MAPS/main.asm)
 
 ![MAPS preview](MAPS/preview.png)
+
+## MATHQUIZ
+
+Cycles through four compact mixed arithmetic facts.
+
+Stored payload: **160 bytes**.
+
+[Assembly source](MATHQUIZ/main.asm)
+
+![MATHQUIZ preview](MATHQUIZ/preview.png)
 
 ## MEASURE
 
@@ -670,7 +681,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**60 programs · 10,365 bytes total · 4995 bytes to spare in this category**
+**61 programs · 10,525 bytes total · 5091 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

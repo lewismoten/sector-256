@@ -299,6 +299,8 @@ Completed: DIVQUIZ — added a compact division-facts drill to EDU.
 
 Completed: TONEGEN — added a compact SID pitch-preset tone generator to SOUND.
 
+Completed: MATHQUIZ — added a compact mixed arithmetic-facts quiz to EDU.
+
 ## GAMES
 
 118 ideas.
