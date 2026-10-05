@@ -401,6 +401,35 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.cpu.sp, 0xff)
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'MAZEGEN ')
 
+    def test_life_blinker_randomize_and_return(self):
+        machine = Machine()
+        machine.boot()
+        for _ in range(3):
+            machine.key(0x1d)
+        machine.key(13)
+        self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'LIFE    ')
+        machine.launch(0, wait_address=0x100c)
+
+        machine.memory[0x0400:0x0800] = [32] * 1024
+        for column in (19, 20, 21):
+            machine.memory[0x0400 + 10 * 40 + column] = 0xa0
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        live = {(offset // 40, offset % 40)
+                for offset, value in enumerate(machine.memory[0x0400:0x07e8])
+                if value == 0xa0}
+        self.assertEqual(live, {(9, 20), (10, 20), (11, 20)})
+
+        before = bytes(machine.memory[0x0400:0x07e8])
+        machine.keys.append(32)
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        self.assertNotEqual(bytes(machine.memory[0x0400:0x07e8]), before)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 3)
+        self.assertEqual(machine.var('selected'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
     def test_hangman_win_loss_and_repeated_guess(self):
         machine = Machine()
         machine.boot()
