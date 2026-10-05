@@ -20,6 +20,7 @@ SMALL GAMES. BIG FUN.
 * ![DARTS](DARTS/icon.png) [DARTS](#darts)
 * ![DEFUSE](DEFUSE/icon.png) [DEFUSE](#defuse)
 * ![DICE](DICE/icon.png) [DICE](#dice)
+* ![DOCKING](DOCKING/icon.png) [DOCKING](#docking)
 * ![DODGE](DODGE/icon.png) [DODGE](#dodge)
 * ![DROP4](DROP4/icon.png) [DROP4](#drop4)
 * ![DUEL](DUEL/icon.png) [DUEL](#duel)
@@ -204,6 +205,14 @@ Stored payload: **120 bytes**.
 [Assembly source](DICE/main.asm)
 
 ![DICE preview](DICE/preview.png)
+
+## DOCKING
+
+A/D ADJUST VELOCITY; SPACE DOCKS AT THE TARGET.
+
+Stored payload: **167 bytes**.
+
+[Assembly source](DOCKING/main.asm)
 
 ## DODGE
 
@@ -426,7 +435,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**38 programs · 7,181 bytes total · 2547 bytes to spare in this category**
+**39 programs · 7,348 bytes total · 2636 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
