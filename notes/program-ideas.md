@@ -185,6 +185,8 @@ Completed: CANDLE — added a randomized flickering candle demo to DEMOS.
 
 Completed: MEASURE — added a bar-length estimation drill to EDU.
 
+Completed: ROMAN — added a Roman-numeral reference to MATH.
+
 ## GAMES
 
 118 ideas.

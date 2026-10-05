@@ -22,6 +22,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![POWERS2](POWERS2/icon.png) [POWERS2](#powers2)
 * ![PRIMES](PRIMES/icon.png) [PRIMES](#primes)
 * ![PYTHTRIP](PYTHTRIP/icon.png) [PYTHTRIP](#pythtrip)
+* ![ROMAN](ROMAN/icon.png) [ROMAN](#roman)
 * ![SINTABLE](SINTABLE/icon.png) [SINTABLE](#sintable)
 * ![SQUARES](SQUARES/icon.png) [SQUARES](#squares)
 * ![TRIANGNU](TRIANGNU/icon.png) [TRIANGNU](#triangnu)
@@ -208,6 +209,16 @@ Stored payload: **108 bytes**.
 
 ![PYTHTRIP preview](PYTHTRIP/preview.png)
 
+## ROMAN
+
+DISPLAY ROMAN NUMERALS FROM ONE THROUGH TEN.
+
+Stored payload: **107 bytes**.
+
+[Assembly source](ROMAN/main.asm)
+
+![ROMAN preview](ROMAN/preview.png)
+
 ## SINTABLE
 
 DISPLAY COMMON-ANGLE SINE VALUES.
@@ -239,7 +250,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**21 programs · 2,710 bytes total · 2666 bytes to spare in this category**
+**22 programs · 2,817 bytes total · 2815 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
