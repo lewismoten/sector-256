@@ -301,6 +301,8 @@ Stored payload: **174 bytes**.
 
 [Assembly source](PLANTS/main.asm)
 
+![PLANTS preview](PLANTS/preview.png)
+
 ## QUIZ
 
 ANSWER THREE SHORT ADDITION QUESTIONS.
