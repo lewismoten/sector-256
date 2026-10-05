@@ -287,6 +287,8 @@ Completed: HYPNO — added a compact character-ring hypnotic demo to DEMOS.
 
 Completed: SUNSET — added a compact character-art sunset demo to DEMOS.
 
+Completed: WORMS — added a compact random character-worm demo to DEMOS.
+
 ## GAMES
 
 118 ideas.

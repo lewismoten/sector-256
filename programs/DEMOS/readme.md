@@ -28,6 +28,7 @@ PIXELS, SOUND AND TINY SHOWS.
 | ![SNOW](SNOW/icon-preview.gif) | [SNOW](#snow) | PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT. |
 | ![SUNSET](SUNSET/icon.png) | [SUNSET](#sunset) | Alternates two compact character-art sunset frames. |
 | ![TRUCHET](TRUCHET/icon.png) | [TRUCHET](#truchet) | Generates a fresh random field of diagonal character tiles. |
+| ![WORMS](WORMS/icon.png) | [WORMS](#worms) | Generates a fresh random field of character worm segments. |
 | ![XORPAT](XORPAT/icon.png) | [XORPAT](#xorpat) | A CLASSIC X-XOR-Y CHARACTER TEXTURE. |
 
 ---
@@ -252,6 +253,16 @@ Stored payload: **79 bytes**.
 
 ![TRUCHET preview](TRUCHET/preview.png)
 
+## WORMS
+
+Generates a fresh random field of character worm segments.
+
+Stored payload: **77 bytes**.
+
+[Assembly source](WORMS/main.asm)
+
+![WORMS preview](WORMS/preview.png)
+
 ## XORPAT
 
 A CLASSIC X-XOR-Y CHARACTER TEXTURE.
@@ -263,7 +274,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**23 programs · 3,207 bytes total · 2681 bytes to spare in this category**
+**24 programs · 3,284 bytes total · 2860 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
