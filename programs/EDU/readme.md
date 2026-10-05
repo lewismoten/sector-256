@@ -50,6 +50,7 @@ SHORT LESSONS AND PRACTICE.
 * ![ROUNDING](ROUNDING/icon.png) [ROUNDING](#rounding)
 * ![SCHOOL](SCHOOL/icon.png) [SCHOOL](#school)
 * ![SEQUENCE](SEQUENCE/icon.png) [SEQUENCE](#sequence)
+* ![SHAPEQZ](SHAPEQZ/icon.png) [SHAPEQZ](#shapeqz)
 * ![SHAPES](SHAPES/icon.png) [SHAPES](#shapes)
 * ![SPACE](SPACE/icon.png) [SPACE](#space)
 * ![SPELLING](SPELLING/icon.png) [SPELLING](#spelling)
@@ -521,6 +522,16 @@ Stored payload: **163 bytes**.
 
 ![SEQUENCE preview](SEQUENCE/preview.png)
 
+## SHAPEQZ
+
+IDENTIFY SIMPLE SHAPES BY THEIR NUMBER OF SIDES.
+
+Stored payload: **245 bytes**.
+
+[Assembly source](SHAPEQZ/main.asm)
+
+![SHAPEQZ preview](SHAPEQZ/preview.png)
+
 ## SHAPES
 
 IDENTIFY CIRCLE, SQUARE, AND TRIANGLE BY NUMBER.
@@ -602,7 +613,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**54 programs · 9,154 bytes total · 4670 bytes to spare in this category**
+**55 programs · 9,399 bytes total · 4681 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

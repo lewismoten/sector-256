@@ -169,6 +169,8 @@ Completed: LOOKSAY — added a look-and-say sequence reference to MATH.
 
 Completed: MODCLOCK — added an interactive twelve-hour modular clock to MATH.
 
+Completed: SHAPEQZ — added a visual shape-identification quiz to EDU.
+
 ## GAMES
 
 118 ideas.
