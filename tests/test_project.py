@@ -80,7 +80,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'GAMES   ')
         machine.key(13)
         self.assertEqual(machine.var('category_mode'), 0)
-        self.assertEqual(machine.var('page_count'), 3)
+        self.assertEqual(machine.var('page_count'), 4)
         machine.key(0x1d)
         self.assertEqual(machine.var('selected'), 1)
         machine.key('H')
@@ -146,7 +146,7 @@ class ProjectTests(unittest.TestCase):
         machine.key(13)
         for _ in range(8):
             machine.video_tick()
-        self.assertEqual(machine.memory[machine.labels['current_frames']], 1)
+        self.assertEqual(machine.memory[machine.labels['current_frames']], 0)
         machine.launch(0)
         machine.stop_game()
         self.assertEqual(machine.var('category_mode'), 0)
@@ -154,12 +154,31 @@ class ProjectTests(unittest.TestCase):
         machine.stop_game()
         self.assertEqual(machine.cpu.sp, 0xff)
 
+    def test_balloon_pumps_scores_pops_and_restarts(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        machine.memory[machine.labels['random_state']] = 1
+        machine.launch(0)
+        for expected_air in (1, 2):
+            machine.game_key(' ')
+            self.assertEqual(machine.memory[2], expected_air)
+        machine.game_key(' ')
+        self.assertEqual(machine.memory[2], 2)
+        self.assertIn('POP! SCORE 2', machine.output)
+        machine.game_key(13)
+        self.assertEqual(machine.memory[2], 0)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('selected'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
     def test_monty_hall_reveal_choices_and_score(self):
         machine = Machine()
         machine.boot()
         machine.key(13)
         machine.memory[machine.labels['random_state']] = 1
-        machine.launch(1)
+        machine.launch(2)
         self.assertEqual(machine.memory[2], 2)
         score_address = 0xc000 + bytes(machine.memory[0xc000:0xc100]).find(b'W000 L000')
         self.assertGreaterEqual(score_address, 0xc000)
@@ -195,7 +214,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(bytes(machine.memory[score_address:score_address+4]), b'W100')
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 0)
-        self.assertEqual(machine.var('selected'), 1)
+        self.assertEqual(machine.var('selected'), 2)
 
     def test_four_frame_animation_fast_and_slow(self):
         machine = Machine()
@@ -675,7 +694,7 @@ class ProjectTests(unittest.TestCase):
         machine = Machine()
         machine.boot()
         machine.key(13)
-        machine.launch(0)
+        machine.launch(1)
         offset = machine.memory[2]
         words = b'SECTORPIXELSSPRITEGAMING'
         word = words[offset:offset + 6].decode()
@@ -702,7 +721,7 @@ class ProjectTests(unittest.TestCase):
         machine = Machine()
         machine.boot()
         machine.key(13)
-        machine.launch(2)
+        machine.launch(3)
         machine.game_key('1')
         machine.game_key('1')
         self.assertEqual(machine.memory[3], 1)
@@ -729,8 +748,9 @@ class ProjectTests(unittest.TestCase):
             machine = Machine(root)
             machine.boot()
             machine.key(13)
+            machine.key(0x1d)
             self.assertEqual(machine.var('selected_flags'), 1)
-            self.assertEqual(machine.memory[0x4000 + 6*40 + 9], 0x20)
+            self.assertEqual(machine.memory[0x4000 + 6*40 + 19], 0x20)
             self.assertEqual(machine.memory[0x4000 + 23*40 + 20], 0x20)
 
     def test_icon_color_and_frame_validation(self):
