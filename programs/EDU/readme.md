@@ -4,6 +4,7 @@ SHORT LESSONS AND PRACTICE.
 
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
+* ![ADDITION](ADDITION/icon.png) [ADDITION](#addition)
 * ![ALPHABET](ALPHABET/icon.png) [ALPHABET](#alphabet)
 * ![COLORS](COLORS/icon.png) [COLORS](#colors)
 * ![COUNTING](COUNTING/icon.png) [COUNTING](#counting)
@@ -12,6 +13,16 @@ SHORT LESSONS AND PRACTICE.
 * ![SPELLING](SPELLING/icon.png) [SPELLING](#spelling)
 
 ---
+
+## ADDITION
+
+SOLVE THREE ONE-DIGIT ADDITION QUESTIONS.
+
+Stored payload: **147 bytes**.
+
+[Assembly source](ADDITION/main.asm)
+
+![ADDITION preview](ADDITION/preview.png)
 
 ## ALPHABET
 
@@ -74,7 +85,7 @@ Stored payload: **144 bytes**.
 ![SPELLING preview](SPELLING/preview.png)
 
 ---
-**6 programs · 931 bytes total · 605 bytes to spare in this category**
+**7 programs · 1,078 bytes total · 714 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
