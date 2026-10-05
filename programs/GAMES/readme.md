@@ -66,6 +66,7 @@ SMALL GAMES. BIG FUN.
 * ![NIM](NIM/icon.png) [NIM](#nim)
 * ![NUMRACE](NUMRACE/icon.png) [NUMRACE](#numrace)
 * ![OTHELLO](OTHELLO/icon.png) [OTHELLO](#othello)
+* ![PAIRS](PAIRS/icon.png) [PAIRS](#pairs)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 
 ---
@@ -678,6 +679,16 @@ Stored payload: **127 bytes**.
 
 ![OTHELLO preview](OTHELLO/preview.png)
 
+## PAIRS
+
+PICK TWO OF FOUR CARDS. MATCH THREE PAIRS TO WIN.
+
+Stored payload: **180 bytes**.
+
+[Assembly source](PAIRS/main.asm)
+
+![PAIRS preview](PAIRS/preview.png)
+
 ## TICTACTO
 
 TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE.
@@ -689,7 +700,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**63 programs · 11,754 bytes total · 4374 bytes to spare in this category**
+**64 programs · 11,934 bytes total · 4450 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
