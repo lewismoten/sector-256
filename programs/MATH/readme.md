@@ -17,6 +17,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![POWERS2](POWERS2/icon.png) [POWERS2](#powers2)
 * ![PRIMES](PRIMES/icon.png) [PRIMES](#primes)
 * ![PYTHTRIP](PYTHTRIP/icon.png) [PYTHTRIP](#pythtrip)
+* ![SINTABLE](SINTABLE/icon.png) [SINTABLE](#sintable)
 * ![SQUARES](SQUARES/icon.png) [SQUARES](#squares)
 * ![TRIANGNU](TRIANGNU/icon.png) [TRIANGNU](#triangnu)
 
@@ -152,6 +153,16 @@ Stored payload: **108 bytes**.
 
 ![PYTHTRIP preview](PYTHTRIP/preview.png)
 
+## SINTABLE
+
+DISPLAY COMMON-ANGLE SINE VALUES.
+
+Stored payload: **102 bytes**.
+
+[Assembly source](SINTABLE/main.asm)
+
+![SINTABLE preview](SINTABLE/preview.png)
+
 ## SQUARES
 
 ODD-NUMBER SUMS THAT BUILD PERFECT SQUARES.
@@ -173,7 +184,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**15 programs · 2,075 bytes total · 1765 bytes to spare in this category**
+**16 programs · 2,177 bytes total · 1919 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

@@ -145,6 +145,8 @@ Completed: ROUNDING — added a nearest-ten rounding drill to EDU.
 
 Completed: PYTHTRIP — added a Pythagorean-triple reference to MATH.
 
+Completed: SINTABLE — added a common-angle sine table to MATH.
+
 ## GAMES
 
 118 ideas.
