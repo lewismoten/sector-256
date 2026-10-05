@@ -31,6 +31,7 @@ SMALL GAMES. BIG FUN.
 * ![ECHOSEQ](ECHOSEQ/icon.png) [ECHOSEQ](#echoseq)
 * ![ELEVATOR](ELEVATOR/icon.png) [ELEVATOR](#elevator)
 * ![ESCAPE](ESCAPE/icon.png) [ESCAPE](#escape)
+* ![FALLDOWN](FALLDOWN/icon.png) [FALLDOWN](#falldown)
 * ![FIREMAN](FIREMAN/icon.png) [FIREMAN](#fireman)
 * ![FISHING](FISHING/icon.png) [FISHING](#fishing)
 * ![FLOOD](FLOOD/icon.png) [FLOOD](#flood)
@@ -310,6 +311,16 @@ Stored payload: **183 bytes**.
 
 [Assembly source](ESCAPE/main.asm)
 
+## FALLDOWN
+
+LINE UP WITH EACH RISING FLOOR GAP. A/D MOVE; SPACE FALLS.
+
+Stored payload: **198 bytes**.
+
+[Assembly source](FALLDOWN/main.asm)
+
+![FALLDOWN preview](FALLDOWN/preview.png)
+
 ## FIREMAN
 
 A/D MOVES THE NET. SPACE CATCHES THE RANDOM JUMPER.
@@ -491,7 +502,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**45 programs · 8,466 bytes total · 3054 bytes to spare in this category**
+**46 programs · 8,664 bytes total · 3112 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
