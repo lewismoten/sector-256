@@ -171,6 +171,8 @@ Completed: MODCLOCK — added an interactive twelve-hour modular clock to MATH.
 
 Completed: SHAPEQZ — added a visual shape-identification quiz to EDU.
 
+Completed: COLLATZ — added a Collatz-sequence example to MATH.
+
 ## GAMES
 
 118 ideas.

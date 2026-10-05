@@ -8,6 +8,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![BASECONV](BASECONV/icon.png) [BASECONV](#baseconv)
 * ![BINCOUNT](BINCOUNT/icon.png) [BINCOUNT](#bincount)
 * ![CANTOR](CANTOR/icon.png) [CANTOR](#cantor)
+* ![COLLATZ](COLLATZ/icon.png) [COLLATZ](#collatz)
 * ![FIB](FIB/icon.png) [FIB](#fib)
 * ![GCD](GCD/icon.png) [GCD](#gcd)
 * ![GRAYCODE](GRAYCODE/icon.png) [GRAYCODE](#graycode)
@@ -66,6 +67,16 @@ Stored payload: **170 bytes**.
 [Assembly source](CANTOR/main.asm)
 
 ![CANTOR preview](CANTOR/preview.png)
+
+## COLLATZ
+
+SHOW A COLLATZ SEQUENCE AND ITS TWO RULES.
+
+Stored payload: **89 bytes**.
+
+[Assembly source](COLLATZ/main.asm)
+
+![COLLATZ preview](COLLATZ/preview.png)
 
 ## FIB
 
@@ -228,7 +239,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**20 programs · 2,621 bytes total · 2499 bytes to spare in this category**
+**21 programs · 2,710 bytes total · 2666 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
