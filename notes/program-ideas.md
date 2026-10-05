@@ -165,6 +165,8 @@ Completed: BEATS — added a two-voice SID interference experiment to LAB.
 
 Completed: WINDMILL — added a four-frame spinning windmill toy to TOYS.
 
+Completed: LOOKSAY — added a look-and-say sequence reference to MATH.
+
 ## GAMES
 
 118 ideas.

@@ -13,6 +13,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![GRAYCODE](GRAYCODE/icon.png) [GRAYCODE](#graycode)
 * ![HAPPY](HAPPY/icon.png) [HAPPY](#happy)
 * ![KAPREKAR](KAPREKAR/icon.png) [KAPREKAR](#kaprekar)
+* ![LOOKSAY](LOOKSAY/icon.png) [LOOKSAY](#looksay)
 * ![LUCAS](LUCAS/icon.png) [LUCAS](#lucas)
 * ![MULTAB](MULTAB/icon.png) [MULTAB](#multab)
 * ![PASCAL](PASCAL/icon.png) [PASCAL](#pascal)
@@ -115,6 +116,16 @@ Stored payload: **136 bytes**.
 
 ![KAPREKAR preview](KAPREKAR/preview.png)
 
+## LOOKSAY
+
+SHOW EARLY TERMS OF THE LOOK-AND-SAY SEQUENCE.
+
+Stored payload: **90 bytes**.
+
+[Assembly source](LOOKSAY/main.asm)
+
+![LOOKSAY preview](LOOKSAY/preview.png)
+
 ## LUCAS
 
 LUCAS NUMBERS THROUGH THE 16-BIT LIMIT.
@@ -206,7 +217,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**18 programs · 2,399 bytes total · 2209 bytes to spare in this category**
+**19 programs · 2,489 bytes total · 2375 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
