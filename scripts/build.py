@@ -9,6 +9,7 @@ import subprocess
 from pathlib import Path
 from PIL import Image
 from d64 import make_disk
+from icon_previews import generate_icon_previews
 
 ROOT = Path(__file__).resolve().parents[1]
 PALETTE = ["000000", "ffffff", "813338", "75cec8", "8e3c97", "56ac4d", "2e2c9b", "edf171", "8e5029", "553800", "c46c71", "4a4a4a", "7b7b7b", "a9ff9f", "706deb", "b2b2b2"]
@@ -85,6 +86,7 @@ def assemble(assembler, source, output, labels=None, include=ROOT / "src"):
 
 def build(allow_oversize=False, root=ROOT, assembler="64tass"):
     root = Path(root)
+    generate_icon_previews(root / "programs")
     assembler = shutil.which(assembler) or assembler
     out = root / "build"
     out.mkdir(exist_ok=True)

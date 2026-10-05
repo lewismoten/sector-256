@@ -2,12 +2,14 @@
 """Regenerate programs/readme.md from program metadata and preview artwork."""
 import json
 from pathlib import Path
+from icon_previews import generate_icon_previews
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def generate(root=ROOT):
     root = Path(root)
+    generate_icon_previews(root / "programs")
     manifest = root / "build" / "manifest.json"
     sizes = {p["name"]: p["size"] for p in json.loads(manifest.read_text())["programs"]} if manifest.exists() else {}
     lines = [

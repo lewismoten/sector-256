@@ -15,7 +15,7 @@ Category: DEMOS. Stored payload: **238 bytes**.
 
 ![CUBE3D preview](CUBE3D/preview.gif)
 
-## ![DANCE](DANCE/icon.png) DANCE
+## ![DANCE](DANCE/icon-preview.gif) DANCE
 
 DISCO LADY: FOUR VECTOR DANCE POSES. RUN/STOP TO RETURN.
 
@@ -25,7 +25,7 @@ Category: DEMOS. Stored payload: **249 bytes**.
 
 ![DANCE preview](DANCE/preview.gif)
 
-## ![HANGMAN](HANGMAN/icon.png) HANGMAN
+## ![HANGMAN](HANGMAN/icon-preview.gif) HANGMAN
 
 GUESS A SIX-LETTER WORD.         SIX MISSES AND YOU LOSE.
 
@@ -55,7 +55,7 @@ Category: GAMES. Stored payload: **256 bytes**.
 
 ![MONTY preview](MONTY/preview.png)
 
-## ![SNOW](SNOW/icon.png) SNOW
+## ![SNOW](SNOW/icon-preview.gif) SNOW
 
 PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT.
 
@@ -75,7 +75,7 @@ Category: UTILS. Stored payload: **256 bytes**.
 
 ![SWATCH preview](SWATCH/preview.gif)
 
-## ![TICTACTO](TICTACTO/icon.png) TICTACTO
+## ![TICTACTO](TICTACTO/icon-preview.gif) TICTACTO
 
 TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE.
 

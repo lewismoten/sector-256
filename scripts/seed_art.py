@@ -5,6 +5,7 @@ from math import cos, radians, sin
 from random import Random
 from PIL import Image, ImageDraw
 from build import ROOT, RGB
+from icon_previews import generate_icon_previews
 
 ART = {
 "GAMES": ["................", "................", "......##........", ".....####.......", "......##........", "......##........", "......##........", "..############..", "..#..........#..", "..#..#...##..#..", "..#.###..##..#..", "..#..#.......#..", "..############..", "................", "................", "................"],
@@ -14,12 +15,6 @@ ART = {
 "HANGMAN": ["................", "..##########....", "..#.......#.....", "..#.......#.....", "..#......###....", "..#......#.#....", "..#......###....", "..#.......#.....", "..#......###....", "..#.....#.#.#...", "..#.......#.....", "..#......#.#....", "..#.....#...#...", "..#.............", ".######.........", "................"],
 "TICTACTO": [".....#....#.....", ".#.#.#....#.....", "..#..#.##.#.....", ".#.#.#.##.#.....", ".....#....#.....", "################", ".....#....#.....", ".....#....#.#.#.", ".##..#....#..#..", ".##..#....#.#.#.", "################", ".....#....#.....", ".#.#.#.##.#.....", "..#..#.##.#.....", ".#.#.#....#.....", ".....#....#....."],
 }
-
-
-def save_icon_preview(folder, frames, duration):
-    """Save an animated launcher icon at its native 16x16 size."""
-    frames[0].save(folder / "icon-preview.gif", save_all=True,
-                   append_images=frames[1:], duration=duration, loop=0)
 
 
 def cube_frames():
@@ -63,11 +58,9 @@ def generate():
     frames = list(cube_frames())
     for frame, image in enumerate(frames, 1):
         image.save(folder / ("icon.png" if frame == 1 else f"icon-{frame}.png"))
-    save_icon_preview(folder, frames, 140)
 
     folder = ROOT / "programs/SWATCH"
     folder.mkdir(parents=True, exist_ok=True)
-    frames = []
     for frame in range(4):
         image = Image.new("RGB", (16, 16))
         for y in range(16):
@@ -76,12 +69,9 @@ def generate():
                 first = (frame//2)*8 + quadrant*2
                 color = first + ((x//2 + y//2 + frame) & 1)
                 image.putpixel((x, y), RGB[color])
-        frames.append(image)
         image.save(folder / ("icon.png" if frame == 0 else f"icon-{frame+1}.png"))
-    save_icon_preview(folder, frames, 20)
     folder = ROOT / "programs/MAZEGEN"
     folder.mkdir(parents=True, exist_ok=True)
-    frames = []
     for frame in range(1, 5):
         rng = Random(255 + frame)
         image = Image.new("RGB", (16, 16), RGB[0])
@@ -99,9 +89,8 @@ def generate():
                     image.putpixel((x, y - 1), RGB[0])
         image.putpixel((3, 12), RGB[0])
         image.putpixel((11, 2), RGB[0])
-        frames.append(image)
         image.save(folder / ("icon.png" if frame == 1 else f"icon-{frame}.png"))
-    save_icon_preview(folder, frames, 190)
+    generate_icon_previews(ROOT / "programs")
 
 
 if __name__ == "__main__":

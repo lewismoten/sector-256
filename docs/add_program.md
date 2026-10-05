@@ -74,7 +74,12 @@ color/frame swapping, once per video frame. A four-frame loop at speed 63 is
 **4032 ms**. Timing is synchronized to video refresh: PAL updates every 20 ms,
 NTSC approximately 16.7 ms. Requested deadlines accumulate, so transitions are
 rounded to video frames; rapid blending/flicker depends on the display.
+Icon preview GIFs represent speed 0 with 20 ms frames so the rapid swapping and
+its intended perceptual color mixing remain visible.
 
 `python scripts/seed_art.py` regenerates the supplied hand-coded pixel art.
+`python scripts/icon_previews.py` regenerates every animated program's native
+16×16 `icon-preview.gif` from its icon frames and `animation_speed`. The normal
+build and the program catalog generator run it automatically.
 
 [Home](../readme.md)
