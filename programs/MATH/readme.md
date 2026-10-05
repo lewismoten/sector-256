@@ -10,6 +10,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![GRAYCODE](GRAYCODE/icon.png) [GRAYCODE](#graycode)
 * ![MULTAB](MULTAB/icon.png) [MULTAB](#multab)
 * ![PASCAL](PASCAL/icon.png) [PASCAL](#pascal)
+* ![SQUARES](SQUARES/icon.png) [SQUARES](#squares)
 
 ---
 
@@ -73,8 +74,18 @@ Stored payload: **136 bytes**.
 
 ![PASCAL preview](PASCAL/preview.png)
 
+## SQUARES
+
+ODD-NUMBER SUMS THAT BUILD PERFECT SQUARES.
+
+Stored payload: **161 bytes**.
+
+[Assembly source](SQUARES/main.asm)
+
+![SQUARES preview](SQUARES/preview.png)
+
 ---
-**6 programs · 767 bytes total · 769 bytes to spare in this category**
+**7 programs · 928 bytes total · 864 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

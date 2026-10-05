@@ -95,6 +95,8 @@ Completed: PIG — added a compact roll-or-hold dice game to GAMES.
 
 Completed: WHACK — added a five-hit number-key reaction game to GAMES.
 
+Completed: SQUARES — added an odd-number-sums square proof to MATH.
+
 ## GAMES
 
 118 ideas.
