@@ -28,6 +28,7 @@ SMALL GAMES. BIG FUN.
 * ![HORSES](HORSES/icon.png) [HORSES](#horses)
 * ![HOTPOT](HOTPOT/icon.png) [HOTPOT](#hotpot)
 * ![HUNT](HUNT/icon.png) [HUNT](#hunt)
+* ![JUGGLE](JUGGLE/icon.png) [JUGGLE](#juggle)
 * ![LOCKPICK](LOCKPICK/icon.png) [LOCKPICK](#lockpick)
 * ![LOTTO](LOTTO/icon.png) [LOTTO](#lotto)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
@@ -273,6 +274,14 @@ Stored payload: **157 bytes**.
 
 ![HUNT preview](HUNT/preview.png)
 
+## JUGGLE
+
+SPACE JUGGLES. RANDOM DROPS REDUCE YOUR THREE BALLS.
+
+Stored payload: **134 bytes**.
+
+[Assembly source](JUGGLE/main.asm)
+
 ## LOCKPICK
 
 A/D TURNS THE DIAL. FIND THE CLICK, THEN SPACE TO OPEN.
@@ -314,7 +323,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**28 programs · 5,541 bytes total · 1627 bytes to spare in this category**
+**29 programs · 5,675 bytes total · 1749 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
