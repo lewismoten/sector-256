@@ -10,6 +10,7 @@ SHORT LESSONS AND PRACTICE.
 * ![BODY](BODY/icon.png) [BODY](#body)
 * ![CLOCK](CLOCK/icon.png) [CLOCK](#clock)
 * ![COLORS](COLORS/icon.png) [COLORS](#colors)
+* ![COMPASS](COMPASS/icon.png) [COMPASS](#compass)
 * ![COUNTING](COUNTING/icon.png) [COUNTING](#counting)
 * ![DAYS](DAYS/icon.png) [DAYS](#days)
 * ![DIVIDE](DIVIDE/icon.png) [DIVIDE](#divide)
@@ -105,6 +106,16 @@ Stored payload: **176 bytes**.
 [Assembly source](COLORS/main.asm)
 
 ![COLORS preview](COLORS/preview.png)
+
+## COMPASS
+
+NAME THE CARDINAL DIRECTION OF EACH ARROW.
+
+Stored payload: **198 bytes**.
+
+[Assembly source](COMPASS/main.asm)
+
+![COMPASS preview](COMPASS/preview.png)
 
 ## COUNTING
 
@@ -437,7 +448,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**39 programs · 6,470 bytes total · 3514 bytes to spare in this category**
+**40 programs · 6,668 bytes total · 3572 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

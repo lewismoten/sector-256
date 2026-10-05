@@ -27,6 +27,8 @@ SNOW, SWATCH, TICTACTO.
 
 Completed: PLANTS2 — extended plant-word practice in EDU.
 
+Completed: COMPASS — added a cardinal-direction arrow quiz to EDU.
+
 ## GAMES
 
 118 ideas.
