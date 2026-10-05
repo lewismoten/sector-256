@@ -47,6 +47,7 @@ SHORT LESSONS AND PRACTICE.
 * ![PRIMEQZ](PRIMEQZ/icon.png) [PRIMEQZ](#primeqz)
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
 * ![RHYMES](RHYMES/icon.png) [RHYMES](#rhymes)
+* ![ROUNDING](ROUNDING/icon.png) [ROUNDING](#rounding)
 * ![SCHOOL](SCHOOL/icon.png) [SCHOOL](#school)
 * ![SEQUENCE](SEQUENCE/icon.png) [SEQUENCE](#sequence)
 * ![SHAPES](SHAPES/icon.png) [SHAPES](#shapes)
@@ -428,6 +429,8 @@ Stored payload: **195 bytes**.
 
 [Assembly source](PETSCIIQ/main.asm)
 
+![PETSCIIQ preview](PETSCIIQ/preview.png)
+
 ## PLANETS
 
 PICK THE NEXT INNER PLANET INITIAL IN ORDER.
@@ -487,6 +490,14 @@ Stored payload: **172 bytes**.
 [Assembly source](RHYMES/main.asm)
 
 ![RHYMES preview](RHYMES/preview.png)
+
+## ROUNDING
+
+ROUND TWO-DIGIT NUMBERS TO THE NEAREST TEN.
+
+Stored payload: **182 bytes**.
+
+[Assembly source](ROUNDING/main.asm)
 
 ## SCHOOL
 
@@ -589,7 +600,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**53 programs · 8,972 bytes total · 4596 bytes to spare in this category**
+**54 programs · 9,154 bytes total · 4670 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

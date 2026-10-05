@@ -141,6 +141,8 @@ Completed: GRAPHPT — added a coordinate-plotting drill to EDU.
 
 Completed: PETSCIIQ — added a PETSCII-code quiz to EDU.
 
+Completed: ROUNDING — added a nearest-ten rounding drill to EDU.
+
 ## GAMES
 
 118 ideas.
