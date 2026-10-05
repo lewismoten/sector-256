@@ -257,6 +257,8 @@ Completed: SWEEP — added a compact SID frequency sweep to SOUND.
 
 Completed: MAPGRID — added a compact coordinate-grid reference to EDU.
 
+Completed: RANDPICK — added a compact random one-through-six picker to UTILS.
+
 ## GAMES
 
 118 ideas.

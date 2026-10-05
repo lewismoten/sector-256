@@ -14,6 +14,7 @@ HANDY LITTLE TOOLS.
 | ![MAZEGEN](MAZEGEN/icon-preview.gif) | [MAZEGEN](#mazegen) | 190-ROOM PERFECT MAZE. SPACE:NEW. RUN/STOP:RETURN. |
 | ![PALNTSC](PALNTSC/icon.png) | [PALNTSC](#palntsc) | REPORT THE KERNAL PAL OR NTSC VIDEO-STANDARD FLAG. |
 | ![PETSCII](PETSCII/icon.png) | [PETSCII](#petscii) | DISPLAY COMMON PETSCII CONTROL AND LETTER CODES. |
+| ![RANDPICK](RANDPICK/icon.png) | [RANDPICK](#randpick) | Picks a fresh random number from one through six. |
 | ![REGVIEW](REGVIEW/icon.png) | [REGVIEW](#regview) | SHOW VIC-II BORDER AND BACKGROUND REGISTERS IN HEX. |
 | ![SCORE](SCORE/icon.png) | [SCORE](#score) | A TWO-PLAYER SCOREBOARD. A AND L ADD POINTS. |
 | ![SWATCH](SWATCH/icon-preview.gif) | [SWATCH](#swatch) | ALL 16 COLORS + 120 PAIRS. 1-9:RATE M:MIX SPACE:HOLD STOP:EXIT. |
@@ -101,6 +102,16 @@ Stored payload: **102 bytes**.
 
 ![PETSCII preview](PETSCII/preview.png)
 
+## RANDPICK
+
+Picks a fresh random number from one through six.
+
+Stored payload: **71 bytes**.
+
+[Assembly source](RANDPICK/main.asm)
+
+![RANDPICK preview](RANDPICK/preview.png)
+
 ## REGVIEW
 
 SHOW VIC-II BORDER AND BACKGROUND REGISTERS IN HEX.
@@ -142,7 +153,7 @@ Stored payload: **108 bytes**.
 ![TALLY preview](TALLY/preview.png)
 
 ---
-**12 programs · 1,775 bytes total · 1297 bytes to spare in this category**
+**13 programs · 1,846 bytes total · 1482 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
