@@ -34,6 +34,7 @@ SMALL GAMES. BIG FUN.
 * ![FALLDOWN](FALLDOWN/icon.png) [FALLDOWN](#falldown)
 * ![FIREMAN](FIREMAN/icon.png) [FIREMAN](#fireman)
 * ![FISHING](FISHING/icon.png) [FISHING](#fishing)
+* ![FLIPPER](FLIPPER/icon.png) [FLIPPER](#flipper)
 * ![FLOOD](FLOOD/icon.png) [FLOOD](#flood)
 * ![FLUTTER](FLUTTER/icon.png) [FLUTTER](#flutter)
 * ![GOLF](GOLF/icon.png) [GOLF](#golf)
@@ -341,6 +342,16 @@ Stored payload: **213 bytes**.
 
 ![FISHING preview](FISHING/preview.png)
 
+## FLIPPER
+
+HIT A OR D FOR THE FLIPPER UNDER THE FALLING BALL.
+
+Stored payload: **181 bytes**.
+
+[Assembly source](FLIPPER/main.asm)
+
+![FLIPPER preview](FLIPPER/preview.png)
+
 ## FLOOD
 
 TINY FLOOD-FILL: RECOLOR THE TOP-LEFT REGION B, THEN C.
@@ -502,7 +513,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**46 programs · 8,664 bytes total · 3112 bytes to spare in this category**
+**47 programs · 8,845 bytes total · 3187 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
