@@ -12,6 +12,16 @@ Category: DEMOS. Stored payload: **238 bytes**.
 
 ![CUBE3D preview](CUBE3D/preview.png)
 
+## DANCE
+
+DISCO LADY: FOUR VECTOR DANCE POSES. RUN/STOP TO RETURN.
+
+Category: DEMOS. Stored payload: **249 bytes**.
+
+[Assembly source](DANCE/main.asm)
+
+![DANCE preview](DANCE/preview.png)
+
 ## HANGMAN
 
 GUESS A SIX-LETTER WORD.         SIX MISSES AND YOU LOSE.
@@ -36,7 +46,7 @@ Category: UTILS. Stored payload: **183 bytes**.
 
 ALL 16 COLORS + 120 PAIRS. 1-9:RATE M:MIX SPACE:HOLD STOP:EXIT.
 
-Category: UTILS. Stored payload: **253 bytes**.
+Category: UTILS. Stored payload: **256 bytes**.
 
 [Assembly source](SWATCH/main.asm)
 

@@ -217,6 +217,29 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('category_id'), 2)
         self.assertEqual(machine.var('selected'), 0)
 
+    def test_dance_poses_and_return(self):
+        frames, animation = collect_frames(ROOT / 'programs/DANCE', 7)
+        self.assertEqual(len({frame[:32] for frame in frames}), 4)
+        self.assertEqual(animation, 0xc7)
+        machine = Machine()
+        machine.boot()
+        machine.key(0x1d)
+        machine.key(0x1d)
+        machine.key(13)
+        machine.launch(1, wait_address=0x100c)
+        poses = []
+        for frame in range(20):
+            machine.step()
+            machine.run_until(lambda: machine.cpu.pc == 0x100c)
+            if frame in (0, 5, 10, 15):
+                poses.append(bytes(machine.memory[0xc21e:0xc22a]))
+                bitmap = 0xa000 if frame % 2 == 0 else 0x6000
+                self.assertGreater(sum(b.bit_count() for b in machine.memory[bitmap:bitmap+8000]), 400)
+        self.assertEqual(len(set(poses)), 4)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 2)
+        self.assertEqual(machine.var('selected'), 1)
+
     def test_maze_connected_acyclic_and_regeneration(self):
         machine = Machine()
         machine.boot()
