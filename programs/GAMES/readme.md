@@ -79,6 +79,8 @@ Stored payload: **154 bytes**.
 
 [Assembly source](CHOMP/main.asm)
 
+![CHOMP preview](CHOMP/preview.png)
+
 ## COWBULL
 
 GUESS FOUR 0-7 DIGITS. B=PLACE C=DIGIT. RETURN=NEW.
