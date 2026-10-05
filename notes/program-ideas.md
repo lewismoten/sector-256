@@ -33,6 +33,8 @@ Completed: GREATER — added a comparison-symbol drill to EDU.
 
 Completed: BINQUIZ — added a binary-to-decimal lesson to EDU.
 
+Completed: CANTOR — added a character-mode Cantor set to the MATH category.
+
 ## GAMES
 
 118 ideas.
