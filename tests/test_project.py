@@ -521,6 +521,22 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('category_id'), 0)
         self.assertEqual(machine.cpu.sp, 0xff)
 
+    def test_echoseq_shows_a_sequence_and_rejects_a_wrong_reply(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        self.launch_named(machine, 'ECHOSEQ')
+        self.assertEqual(machine.memory[2], 1)
+        signal = machine.memory[0x30]
+        machine.game_key('X')
+        machine.game_key('B' if signal == ord('A') else 'A')
+        self.assertIn('WRONG!', machine.output)
+        machine.game_key(13)
+        self.assertEqual(machine.memory[2], 1)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
     def test_monty_hall_reveal_choices_and_score(self):
         machine = Machine()
         machine.boot()

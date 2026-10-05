@@ -14,6 +14,7 @@ SMALL GAMES. BIG FUN.
 * ![DICE](DICE/icon.png) [DICE](#dice)
 * ![DODGE](DODGE/icon.png) [DODGE](#dodge)
 * ![DUEL](DUEL/icon.png) [DUEL](#duel)
+* ![ECHOSEQ](ECHOSEQ/icon.png) [ECHOSEQ](#echoseq)
 * ![FISHING](FISHING/icon.png) [FISHING](#fishing)
 * ![GUESSNUM](GUESSNUM/icon.png) [GUESSNUM](#guessnum)
 * ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
@@ -127,6 +128,16 @@ Stored payload: **213 bytes**.
 
 ![DUEL preview](DUEL/preview.png)
 
+## ECHOSEQ
+
+WATCH THE GROWING A-D SIGNAL SEQUENCE, THEN REPEAT IT.
+
+Stored payload: **171 bytes**.
+
+[Assembly source](ECHOSEQ/main.asm)
+
+![ECHOSEQ preview](ECHOSEQ/preview.png)
+
 ## FISHING
 
 SPACE CASTS. STRIKE ONLY AFTER BITE! APPEARS.
@@ -228,7 +239,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**20 programs · 4,075 bytes total · 1045 bytes to spare in this category**
+**21 programs · 4,246 bytes total · 1130 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
