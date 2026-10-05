@@ -70,6 +70,7 @@ SMALL GAMES. BIG FUN.
 * ![PEGS](PEGS/icon.png) [PEGS](#pegs)
 * ![POKER](POKER/icon.png) [POKER](#poker)
 * ![PONG](PONG/icon.png) [PONG](#pong)
+* ![ROCKPAPR](ROCKPAPR/icon.png) [ROCKPAPR](#rockpapr)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 
 ---
@@ -722,6 +723,16 @@ Stored payload: **187 bytes**.
 
 ![PONG preview](PONG/preview.png)
 
+## ROCKPAPR
+
+ROCK, PAPER, SCISSORS AGAINST A RANDOM COMPUTER PICK.
+
+Stored payload: **234 bytes**.
+
+[Assembly source](ROCKPAPR/main.asm)
+
+![ROCKPAPR preview](ROCKPAPR/preview.png)
+
 ## TICTACTO
 
 TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE.
@@ -733,7 +744,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**67 programs · 12,444 bytes total · 4708 bytes to spare in this category**
+**68 programs · 12,678 bytes total · 4730 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
