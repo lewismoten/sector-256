@@ -20,6 +20,7 @@ SHORT LESSONS AND PRACTICE.
 * ![SHAPES](SHAPES/icon.png) [SHAPES](#shapes)
 * ![SPELLING](SPELLING/icon.png) [SPELLING](#spelling)
 * ![SUBTRACT](SUBTRACT/icon.png) [SUBTRACT](#subtract)
+* ![WEATHER](WEATHER/icon.png) [WEATHER](#weather)
 
 ---
 
@@ -183,8 +184,16 @@ Stored payload: **147 bytes**.
 
 ![SUBTRACT preview](SUBTRACT/preview.png)
 
+## WEATHER
+
+PICK THE FIRST LETTER OF THREE WEATHER WORDS.
+
+Stored payload: **172 bytes**.
+
+[Assembly source](WEATHER/main.asm)
+
 ---
-**16 programs · 2,488 bytes total · 1608 bytes to spare in this category**
+**17 programs · 2,660 bytes total · 1692 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
