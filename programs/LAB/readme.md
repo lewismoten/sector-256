@@ -6,6 +6,7 @@ EXPERIMENTS AND PROOF OF CONCEPTS.
 
 | Icon | Program | Description |
 | --- | --- | --- |
+| ![ALIASING](ALIASING/icon.png) | [ALIASING](#aliasing) | SHOW TWO SAMPLED POSITIONS OF FAST MOTION. |
 | ![ANT](ANT/icon.png) | [ANT](#ant) | LANGTON'S ANT ON 256X200 HIRES. SPACE:RESET. STOP:RETURN. |
 | ![BEATS](BEATS/icon.png) | [BEATS](#beats) | HEAR BEATS FROM TWO SLIGHTLY DETUNED SID VOICES. |
 | ![CHAOS](CHAOS/icon.png) | [CHAOS](#chaos) | CHAOS GAME BUILDS A FRACTAL. SPACE:RESET. RUN/STOP:RETURN. |
@@ -14,6 +15,16 @@ EXPERIMENTS AND PROOF OF CONCEPTS.
 | ![SANDPILE](SANDPILE/icon.png) | [SANDPILE](#sandpile) | SANDPILE FRACTAL. SPACE:RESET WITH NEW COLORS. RUN/STOP:RETURN. |
 
 ---
+
+## ALIASING
+
+SHOW TWO SAMPLED POSITIONS OF FAST MOTION.
+
+Stored payload: **112 bytes**.
+
+[Assembly source](ALIASING/main.asm)
+
+![ALIASING preview](ALIASING/preview.png)
 
 ## ANT
 
@@ -76,7 +87,7 @@ Stored payload: **244 bytes**.
 ![SANDPILE preview](SANDPILE/preview.png)
 
 ---
-**6 programs · 1,231 bytes total · 305 bytes to spare in this category**
+**7 programs · 1,343 bytes total · 449 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

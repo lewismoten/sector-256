@@ -223,6 +223,8 @@ Completed: SQRT — added a perfect-square and square-root reference to MATH.
 
 Completed: LINES — added a character-mode radial-line diagram to MATH.
 
+Completed: ALIASING — added a two-frame sampling demo to LAB.
+
 ## GAMES
 
 118 ideas.
