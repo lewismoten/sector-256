@@ -401,14 +401,59 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.cpu.sp, 0xff)
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'MAZEGEN ')
 
+    def test_langtons_ant_rules_reset_and_return(self):
+        machine = Machine()
+        machine.boot()
+        for _ in range(3):
+            machine.key(0x1d)
+        machine.key(13)
+        self.assertEqual(machine.var('page_count'), 2)
+        self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'ANT     ')
+        machine.launch(0, wait_address=0x100c)
+
+        grid = set()
+        x, y, direction = 20, 12, 0
+        vectors = ((0, -1), (1, 0), (0, 1), (-1, 0))
+        for _ in range(8):
+            for _ in range(8):
+                position = (x, y)
+                if position in grid:
+                    grid.remove(position)
+                    direction = (direction - 1) & 3
+                else:
+                    grid.add(position)
+                    direction = (direction + 1) & 3
+                dx, dy = vectors[direction]
+                x, y = (x + dx) % 40, (y + dy) % 25
+            machine.step()
+            machine.run_until(lambda: machine.cpu.pc == 0x100c)
+            actual = {(offset % 40, offset // 40)
+                      for offset, value in enumerate(machine.memory[0xc400:0xc7e8])
+                      if value}
+            self.assertEqual(actual, grid)
+            self.assertEqual(tuple(machine.memory[2:5]), (x, y, direction))
+            self.assertEqual(machine.memory[0x0400 + y * 40 + x], 42)
+
+        machine.keys.append(32)
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        self.assertEqual(bytes(machine.memory[0xc400:0xc7e8]), bytes(1000))
+        self.assertEqual(tuple(machine.memory[2:5]), (20, 12, 0))
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 3)
+        self.assertEqual(machine.var('selected'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
     def test_life_blinker_randomize_and_return(self):
         machine = Machine()
         machine.boot()
         for _ in range(3):
             machine.key(0x1d)
         machine.key(13)
-        self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'LIFE    ')
-        machine.launch(0, wait_address=0x100c)
+        machine.key(0x1d)
+        self.assertEqual(machine.var('selected'), 1)
+        self.assertEqual(bytes(machine.memory[0x4860:0x4868]), b'LIFE    ')
+        machine.launch(1, wait_address=0x100c)
 
         machine.memory[0x0400:0x0800] = [32] * 1024
         for column in (19, 20, 21):
@@ -427,7 +472,7 @@ class ProjectTests(unittest.TestCase):
         self.assertNotEqual(bytes(machine.memory[0x0400:0x07e8]), before)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 3)
-        self.assertEqual(machine.var('selected'), 0)
+        self.assertEqual(machine.var('selected'), 1)
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_hangman_win_loss_and_repeated_guess(self):

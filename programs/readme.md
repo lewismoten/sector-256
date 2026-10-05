@@ -5,6 +5,7 @@ Commodore 64 launcher, and each one's stored payload fits in
 **256 bytes or less**. That's one disk block. Press RUN/STOP 
 in any program to return to the launcher.
 
+* [![ANT](ANT/icon.png) ANT](#ant)
 * [![CUBE3D](CUBE3D/icon-preview.gif) CUBE3D](#cube3d)
 * [![DANCE](DANCE/icon-preview.gif) DANCE](#dance)
 * [![HANGMAN](HANGMAN/icon-preview.gif) HANGMAN](#hangman)
@@ -15,6 +16,16 @@ in any program to return to the launcher.
 * [![SWATCH](SWATCH/icon-preview.gif) SWATCH](#swatch)
 * [![TICTACTO](TICTACTO/icon-preview.gif) TICTACTO](#tictacto)
 ---
+## ANT
+
+LANGTON'S ANT. SPACE:RESET. RUN/STOP:RETURN.
+
+Category: LAB. Stored payload: **237 bytes**.
+
+[Assembly source](ANT/main.asm)
+
+![ANT preview](ANT/preview.png)
+
 ## CUBE3D
 
 A ROTATING 3D WIREFRAME CUBE.   RUN/STOP TO RETURN TO LAUNCHER.
@@ -106,7 +117,7 @@ Category: GAMES. Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**9 programs · 2,186 bytes total · 118 bytes to spare across the whole set**
+**10 programs · 2,423 bytes total · 137 bytes to spare across the whole set**
 
 Want to add one? See [Add a program](../docs/add_program.md) 
 and the [program interface](../docs/program-api.md). 
