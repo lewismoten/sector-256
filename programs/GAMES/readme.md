@@ -80,6 +80,8 @@ Stored payload: **175 bytes**.
 
 [Assembly source](BEAM/main.asm)
 
+![BEAM preview](BEAM/preview.png)
+
 ## BOWLING
 
 A/D AIM, SPACE ROLLS. ACCOUNT FOR THE RANDOM CURVE.
@@ -127,6 +129,8 @@ SPACE CLIMBS; RETURN FLIES THROUGH THE CAVE OPENING.
 Stored payload: **172 bytes**.
 
 [Assembly source](COPTER/main.asm)
+
+![COPTER preview](COPTER/preview.png)
 
 ## COWBULL
 
@@ -256,6 +260,8 @@ Stored payload: **154 bytes**.
 
 [Assembly source](GOLF/main.asm)
 
+![GOLF preview](GOLF/preview.png)
+
 ## GUESSNUM
 
 GUESS 00-99. COMPUTER SAYS HIGH, LOW, OR WIN.
@@ -333,6 +339,8 @@ A/D MOVES THE CANNON; SPACE ZAPS THE INVADER.
 Stored payload: **177 bytes**.
 
 [Assembly source](INVADE/main.asm)
+
+![INVADE preview](INVADE/preview.png)
 
 ## JUGGLE
 
