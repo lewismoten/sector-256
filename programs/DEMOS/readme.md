@@ -13,6 +13,7 @@ PIXELS, SOUND AND TINY SHOWS.
 | ![CUBE3D](CUBE3D/icon-preview.gif) | [CUBE3D](#cube3d) | A ROTATING 3D WIREFRAME CUBE.   RUN/STOP TO RETURN TO LAUNCHER. |
 | ![DANCE](DANCE/icon-preview.gif) | [DANCE](#dance) | DISCO LADY: FOUR VECTOR DANCE POSES. RUN/STOP TO RETURN. |
 | ![EQUALIZR](EQUALIZR/icon.png) | [EQUALIZR](#equalizr) | RANDOM CHARACTER-MODE EQUALIZER BARS. |
+| ![HEARTBT](HEARTBT/icon.png) | [HEARTBT](#heartbt) | Alternates character-heart frames with a SID pulse. |
 | ![MARQUEE](MARQUEE/icon.png) | [MARQUEE](#marquee) | A tiny character-mode chasing-light marquee. |
 | ![MAZE10](MAZE10/icon.png) | [MAZE10](#maze10) | A CLASSIC RANDOM DIAGONAL CHARACTER MAZE. |
 | ![MUNCHING](MUNCHING/icon.png) | [MUNCHING](#munching) | CLASSIC MUNCHING XOR SQUARES WITH A CHANGING PHASE. |
@@ -93,6 +94,16 @@ Stored payload: **97 bytes**.
 
 ![EQUALIZR preview](EQUALIZR/preview.png)
 
+## HEARTBT
+
+Alternates character-heart frames with a SID pulse.
+
+Stored payload: **189 bytes**.
+
+[Assembly source](HEARTBT/main.asm)
+
+![HEARTBT preview](HEARTBT/preview.png)
+
 ## MARQUEE
 
 A tiny character-mode chasing-light marquee.
@@ -164,7 +175,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**14 programs · 1,887 bytes total · 1697 bytes to spare in this category**
+**15 programs · 2,076 bytes total · 1764 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
