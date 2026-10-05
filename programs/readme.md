@@ -14,6 +14,7 @@ in any program to return to the launcher.
 * ![MAZEGEN](MAZEGEN/icon-preview.gif) [MAZEGEN](#mazegen)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
 * ![RULE30](RULE30/icon.png) [RULE30](#rule30)
+* ![SANDPILE](SANDPILE/icon.png) [SANDPILE](#sandpile)
 * ![SNOW](SNOW/icon-preview.gif) [SNOW](#snow)
 * ![SWATCH](SWATCH/icon-preview.gif) [SWATCH](#swatch)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
@@ -108,6 +109,16 @@ Category: LAB. Stored payload: **220 bytes**.
 
 ![RULE30 preview](RULE30/preview.png)
 
+## SANDPILE
+
+SANDPILE FRACTAL. SPACE:RESET. RUN/STOP:RETURN.
+
+Category: LAB. Stored payload: **248 bytes**.
+
+[Assembly source](SANDPILE/main.asm)
+
+![SANDPILE preview](SANDPILE/preview.png)
+
 ## SNOW
 
 PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT.
@@ -139,7 +150,7 @@ Category: GAMES. Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**12 programs · 2,816 bytes total · 256 bytes to spare across the whole set**
+**13 programs · 3,064 bytes total · 264 bytes to spare across the whole set**
 
 Want to add one? See [Add a program](../docs/add_program.md) 
 and the [program interface](../docs/program-api.md). 

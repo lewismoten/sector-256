@@ -305,6 +305,50 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('category_id'), 2)
         self.assertEqual(machine.var('selected'), 1)
 
+    def test_sandpile_matches_abelian_model_reset_and_return(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(0x1d)
+        machine.key(0x1d)
+        machine.key(0x1d)
+        machine.key(13)
+        machine.launch(4, wait_address=0x100c)
+
+        expected = [[0] * 40 for _ in range(25)]
+        for _ in range(64):
+            for _ in range(16):
+                expected[12][20] += 1
+                pending = [(12, 20)] if expected[12][20] == 4 else []
+                while pending:
+                    row, column = pending.pop()
+                    expected[row][column] -= 4
+                    if expected[row][column] >= 4:
+                        pending.append((row, column))
+                    for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+                        neighbor = row + dr, column + dc
+                        if 1 <= neighbor[0] <= 23 and 1 <= neighbor[1] <= 38:
+                            expected[neighbor[0]][neighbor[1]] += 1
+                            if expected[neighbor[0]][neighbor[1]] == 4:
+                                pending.append(neighbor)
+            machine.step()
+            machine.run_until(lambda: machine.cpu.pc == 0x100c)
+
+        actual = [[machine.memory[0xd800 + row*40 + column] & 15
+                   for column in range(40)] for row in range(25)]
+        self.assertEqual(actual, expected)
+        self.assertLess(max(map(max, actual)), 4)
+        self.assertEqual(machine.memory[3], 0)
+
+        machine.keys.append(32)
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        self.assertEqual(bytes(value & 15 for value in machine.memory[0xd800:0xdbe8]),
+                         bytes(1000))
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 3)
+        self.assertEqual(machine.var('selected'), 4)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
     def test_snowfall_speed_density_and_short_stacks(self):
         machine = Machine()
         machine.boot()
@@ -407,7 +451,7 @@ class ProjectTests(unittest.TestCase):
         for _ in range(3):
             machine.key(0x1d)
         machine.key(13)
-        self.assertEqual(machine.var('page_count'), 4)
+        self.assertEqual(machine.var('page_count'), 5)
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'ANT     ')
         machine.launch(0, wait_address=0x100c)
 
