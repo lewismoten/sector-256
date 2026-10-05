@@ -5,7 +5,7 @@ Commodore 64 launcher, and each one's stored payload fits in
 **256 bytes or less**. Choose a category to browse its programs.
 
 * ![GAMES](GAMES/icon.png) [GAMES](GAMES/readme.md) — SMALL GAMES. BIG FUN. (74 programs)
-* ![UTILS](UTILS/icon.png) [UTILS](UTILS/readme.md) — HANDY LITTLE TOOLS. (9 programs)
+* ![UTILS](UTILS/icon.png) [UTILS](UTILS/readme.md) — HANDY LITTLE TOOLS. (10 programs)
 * ![DEMOS](DEMOS/icon.png) [DEMOS](DEMOS/readme.md) — PIXELS, SOUND AND TINY SHOWS. (7 programs)
 * ![LAB](LAB/icon.png) [LAB](LAB/readme.md) — EXPERIMENTS AND PROOF OF CONCEPTS. (5 programs)
 * ![EDU](EDU/icon.png) [EDU](EDU/readme.md) — SHORT LESSONS AND PRACTICE. (54 programs)
@@ -14,7 +14,7 @@ Commodore 64 launcher, and each one's stored payload fits in
 * ![TOYS](TOYS/icon.png) [TOYS](TOYS/readme.md) — SMALL THINGS TO PLAY WITH. (3 programs)
 
 ---
-**177 programs · 30,171 bytes total · 15141 bytes to spare across the whole set**
+**178 programs · 30,279 bytes total · 15289 bytes to spare across the whole set**
 
 Want to add one? See [Add a program](../docs/add_program.md)
 and the [program interface](../docs/program-api.md).

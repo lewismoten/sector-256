@@ -149,6 +149,8 @@ Completed: SINTABLE — added a common-angle sine table to MATH.
 
 Completed: BASECONV — added a binary, decimal, and hexadecimal reference to MATH.
 
+Completed: TALLY — added an up/down tally counter to UTILS.
+
 ## GAMES
 
 118 ideas.

@@ -13,6 +13,7 @@ HANDY LITTLE TOOLS.
 * ![REGVIEW](REGVIEW/icon.png) [REGVIEW](#regview)
 * ![SCORE](SCORE/icon.png) [SCORE](#score)
 * ![SWATCH](SWATCH/icon-preview.gif) [SWATCH](#swatch)
+* ![TALLY](TALLY/icon.png) [TALLY](#tally)
 
 ---
 
@@ -106,8 +107,18 @@ Stored payload: **256 bytes**.
 
 ![SWATCH preview](SWATCH/preview.gif)
 
+## TALLY
+
+COUNT UP OR DOWN WITH A AND Z.
+
+Stored payload: **108 bytes**.
+
+[Assembly source](TALLY/main.asm)
+
+![TALLY preview](TALLY/preview.png)
+
 ---
-**9 programs · 1,359 bytes total · 945 bytes to spare in this category**
+**10 programs · 1,467 bytes total · 1093 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
