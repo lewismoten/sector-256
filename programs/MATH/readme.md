@@ -22,6 +22,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![HAPPY](HAPPY/icon.png) [HAPPY](#happy)
 * ![HILBERT](HILBERT/icon.png) [HILBERT](#hilbert)
 * ![KAPREKAR](KAPREKAR/icon.png) [KAPREKAR](#kaprekar)
+* ![KOCH](KOCH/icon.png) [KOCH](#koch)
 * ![LOOKSAY](LOOKSAY/icon.png) [LOOKSAY](#looksay)
 * ![LUCAS](LUCAS/icon.png) [LUCAS](#lucas)
 * ![MODCLOCK](MODCLOCK/icon.png) [MODCLOCK](#modclock)
@@ -222,6 +223,16 @@ Stored payload: **136 bytes**.
 
 ![KAPREKAR preview](KAPREKAR/preview.png)
 
+## KOCH
+
+DISPLAY A CHARACTER-MODE KOCH-CURVE MOTIF.
+
+Stored payload: **79 bytes**.
+
+[Assembly source](KOCH/main.asm)
+
+![KOCH preview](KOCH/preview.png)
+
 ## LOOKSAY
 
 SHOW EARLY TERMS OF THE LOOK-AND-SAY SEQUENCE.
@@ -393,7 +404,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**35 programs · 4,070 bytes total · 4890 bytes to spare in this category**
+**36 programs · 4,149 bytes total · 5067 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

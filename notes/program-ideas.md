@@ -213,6 +213,8 @@ Completed: TOTIENT — added an Euler-totient reference to MATH.
 
 Completed: HILBERT — added a character-mode Hilbert curve to MATH.
 
+Completed: KOCH — added a character-mode Koch-curve motif to MATH.
+
 ## GAMES
 
 118 ideas.
