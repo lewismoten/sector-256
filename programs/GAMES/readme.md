@@ -12,6 +12,7 @@ SMALL GAMES. BIG FUN.
 * ![FISHING](FISHING/icon.png) [FISHING](#fishing)
 * ![GUESSNUM](GUESSNUM/icon.png) [GUESSNUM](#guessnum)
 * ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
+* ![HILO](HILO/icon.png) [HILO](#hilo)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 
@@ -97,6 +98,16 @@ Stored payload: **253 bytes**.
 
 ![HANGMAN preview](HANGMAN/preview.png)
 
+## HILO
+
+HILO CARD GAME. H=HIGH, L=LOW. GUESS THE NEXT RANK.
+
+Stored payload: **217 bytes**.
+
+[Assembly source](HILO/main.asm)
+
+![HILO preview](HILO/preview.png)
+
 ## MONTY
 
 PICK 1-3. MONTY OPENS A GOAT. S:SWITCH K:KEEP. STOP:EXIT.
@@ -118,7 +129,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**10 programs · 2,094 bytes total · 466 bytes to spare in this category**
+**11 programs · 2,311 bytes total · 505 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

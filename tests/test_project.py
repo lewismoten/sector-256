@@ -93,7 +93,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'GAMES   ')
         machine.key(13)
         self.assertEqual(machine.var('category_mode'), 0)
-        self.assertEqual(machine.var('page_count'), 10)
+        self.assertEqual(machine.var('page_count'), 11)
         machine.key(0x1d)
         self.assertEqual(machine.var('selected'), 1)
         machine.key('H')
@@ -338,6 +338,28 @@ class ProjectTests(unittest.TestCase):
         self.assertIn('WIN!', machine.output)
         machine.game_key(13)
         self.assertLess(machine.memory[2], 100)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
+    def test_hilo_scores_higher_lower_and_restarts(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        self.launch_named(machine, 'HILO')
+        machine.memory[2] = 4
+        machine.memory[machine.labels['random_state']] = 1
+        machine.game_key('L')
+        self.assertEqual(machine.memory[4], 1)
+        self.assertEqual(machine.memory[2], 2)
+        self.assertIn('WIN!', machine.output)
+        machine.game_key('X')
+        machine.memory[2] = 5
+        machine.memory[machine.labels['random_state']] = 1
+        machine.game_key('H')
+        self.assertIn('LOSE!', machine.output)
+        machine.game_key(13)
+        self.assertEqual(machine.memory[4], 0)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 0)
         self.assertEqual(machine.cpu.sp, 0xff)
