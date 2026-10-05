@@ -32,6 +32,7 @@ SHORT LESSONS AND PRACTICE.
 * ![OPPOSITE](OPPOSITE/icon.png) [OPPOSITE](#opposite)
 * ![PLANETS](PLANETS/icon.png) [PLANETS](#planets)
 * ![PLANTS](PLANTS/icon.png) [PLANTS](#plants)
+* ![PLANTS2](PLANTS2/icon.png) [PLANTS2](#plants2)
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
 * ![RHYMES](RHYMES/icon.png) [RHYMES](#rhymes)
 * ![SCHOOL](SCHOOL/icon.png) [SCHOOL](#school)
@@ -325,6 +326,16 @@ Stored payload: **174 bytes**.
 
 ![PLANTS preview](PLANTS/preview.png)
 
+## PLANTS2
+
+PICK THE FIRST LETTER OF THREE MORE PLANT WORDS.
+
+Stored payload: **177 bytes**.
+
+[Assembly source](PLANTS2/main.asm)
+
+![PLANTS2 preview](PLANTS2/preview.png)
+
 ## QUIZ
 
 ANSWER THREE SHORT ADDITION QUESTIONS.
@@ -426,7 +437,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**38 programs · 6,293 bytes total · 3435 bytes to spare in this category**
+**39 programs · 6,470 bytes total · 3514 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

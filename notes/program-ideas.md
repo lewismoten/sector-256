@@ -25,7 +25,7 @@ HUNT, LIFE, LOTTO, FALLDOWN, FLIPPER, FIVEDICE, FOXGEESE, ICEPATH, JUMPER, KNIGH
 MAZEGEN, MONTY, RULE30, SANDPILE,
 SNOW, SWATCH, TICTACTO.
 
-Working: PLANTS2 — extend plant-word practice in EDU.
+Completed: PLANTS2 — extended plant-word practice in EDU.
 
 ## GAMES
 
