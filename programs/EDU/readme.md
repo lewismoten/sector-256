@@ -8,6 +8,7 @@ SHORT LESSONS AND PRACTICE.
 * ![ALPHABET](ALPHABET/icon.png) [ALPHABET](#alphabet)
 * ![COLORS](COLORS/icon.png) [COLORS](#colors)
 * ![COUNTING](COUNTING/icon.png) [COUNTING](#counting)
+* ![DIVIDE](DIVIDE/icon.png) [DIVIDE](#divide)
 * ![MULTIPLY](MULTIPLY/icon.png) [MULTIPLY](#multiply)
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
 * ![SHAPES](SHAPES/icon.png) [SHAPES](#shapes)
@@ -55,6 +56,16 @@ Stored payload: **151 bytes**.
 [Assembly source](COUNTING/main.asm)
 
 ![COUNTING preview](COUNTING/preview.png)
+
+## DIVIDE
+
+SOLVE THREE SMALL DIVISION QUESTIONS.
+
+Stored payload: **145 bytes**.
+
+[Assembly source](DIVIDE/main.asm)
+
+![DIVIDE preview](DIVIDE/preview.png)
 
 ## MULTIPLY
 
@@ -107,7 +118,7 @@ Stored payload: **147 bytes**.
 ![SUBTRACT preview](SUBTRACT/preview.png)
 
 ---
-**9 programs · 1,372 bytes total · 932 bytes to spare in this category**
+**10 programs · 1,517 bytes total · 1043 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
