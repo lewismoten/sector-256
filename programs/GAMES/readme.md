@@ -53,6 +53,7 @@ SMALL GAMES. BIG FUN.
 * ![JUMPER](JUMPER/icon.png) [JUMPER](#jumper)
 * ![KNIGHTS](KNIGHTS/icon.png) [KNIGHTS](#knights)
 * ![LANDER](LANDER/icon.png) [LANDER](#lander)
+* ![LAVA](LAVA/icon.png) [LAVA](#lava)
 * ![LOCKPICK](LOCKPICK/icon.png) [LOCKPICK](#lockpick)
 * ![LOTTO](LOTTO/icon.png) [LOTTO](#lotto)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
@@ -538,6 +539,16 @@ Stored payload: **178 bytes**.
 
 ![LANDER preview](LANDER/preview.png)
 
+## LAVA
+
+MOVE A/D BEFORE THE CURRENT TILE BURNS. KEEP RUNNING.
+
+Stored payload: **179 bytes**.
+
+[Assembly source](LAVA/main.asm)
+
+![LAVA preview](LAVA/preview.png)
+
 ## LOCKPICK
 
 A/D TURNS THE DIAL. FIND THE CLICK, THEN SPACE TO OPEN.
@@ -579,7 +590,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**53 programs · 10,052 bytes total · 3516 bytes to spare in this category**
+**54 programs · 10,231 bytes total · 3593 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
