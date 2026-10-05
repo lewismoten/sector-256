@@ -153,6 +153,8 @@ Completed: TALLY — added an up/down tally counter to UTILS.
 
 Completed: BLACKJCK — added a compact draw-or-stand card game to GAMES.
 
+Completed: CRTTEST — added a CRT convergence grid to UTILS.
+
 ## GAMES
 
 118 ideas.

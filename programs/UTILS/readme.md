@@ -7,6 +7,7 @@ HANDY LITTLE TOOLS.
 * ![BANKVIEW](BANKVIEW/icon.png) [BANKVIEW](#bankview)
 * ![COINTOSS](COINTOSS/icon.png) [COINTOSS](#cointoss)
 * ![COLORSET](COLORSET/icon.png) [COLORSET](#colorset)
+* ![CRTTEST](CRTTEST/icon.png) [CRTTEST](#crttest)
 * ![JOYTEST](JOYTEST/icon.png) [JOYTEST](#joytest)
 * ![MAZEGEN](MAZEGEN/icon-preview.gif) [MAZEGEN](#mazegen)
 * ![PALNTSC](PALNTSC/icon.png) [PALNTSC](#palntsc)
@@ -46,6 +47,16 @@ Stored payload: **169 bytes**.
 [Assembly source](COLORSET/main.asm)
 
 ![COLORSET preview](COLORSET/preview.png)
+
+## CRTTEST
+
+DISPLAY A CRT CONVERGENCE GRID.
+
+Stored payload: **206 bytes**.
+
+[Assembly source](CRTTEST/main.asm)
+
+![CRTTEST preview](CRTTEST/preview.png)
 
 ## JOYTEST
 
@@ -118,7 +129,7 @@ Stored payload: **108 bytes**.
 ![TALLY preview](TALLY/preview.png)
 
 ---
-**10 programs · 1,467 bytes total · 1093 bytes to spare in this category**
+**11 programs · 1,673 bytes total · 1143 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
