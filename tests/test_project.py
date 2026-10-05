@@ -491,6 +491,21 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('category_id'), 0)
         self.assertEqual(machine.cpu.sp, 0xff)
 
+    def test_duel_waits_for_draw_and_awards_first_shot(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        self.launch_named(machine, 'DUEL', wait_address=0x100c)
+        machine.memory[2] = 1
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x1000)
+        self.assertIn('DRAW!', machine.output)
+        machine.game_key('L')
+        self.assertIn('P2 WINS!', machine.output)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
     def test_monty_hall_reveal_choices_and_score(self):
         machine = Machine()
         machine.boot()

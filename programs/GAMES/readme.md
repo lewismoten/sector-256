@@ -12,6 +12,7 @@ SMALL GAMES. BIG FUN.
 * ![DEFUSE](DEFUSE/icon.png) [DEFUSE](#defuse)
 * ![DICE](DICE/icon.png) [DICE](#dice)
 * ![DODGE](DODGE/icon.png) [DODGE](#dodge)
+* ![DUEL](DUEL/icon.png) [DUEL](#duel)
 * ![FISHING](FISHING/icon.png) [FISHING](#fishing)
 * ![GUESSNUM](GUESSNUM/icon.png) [GUESSNUM](#guessnum)
 * ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
@@ -104,6 +105,16 @@ Stored payload: **208 bytes**.
 [Assembly source](DODGE/main.asm)
 
 ![DODGE preview](DODGE/preview.png)
+
+## DUEL
+
+TWO-PLAYER DUEL. WAIT FOR DRAW; A OR L FIRES.
+
+Stored payload: **213 bytes**.
+
+[Assembly source](DUEL/main.asm)
+
+![DUEL preview](DUEL/preview.png)
 
 ## FISHING
 
@@ -206,7 +217,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**18 programs · 3,632 bytes total · 976 bytes to spare in this category**
+**19 programs · 3,845 bytes total · 1019 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
