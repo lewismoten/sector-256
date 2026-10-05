@@ -12,6 +12,7 @@ SHORT LESSONS AND PRACTICE.
 * ![COUNTING](COUNTING/icon.png) [COUNTING](#counting)
 * ![DIVIDE](DIVIDE/icon.png) [DIVIDE](#divide)
 * ![FRACTION](FRACTION/icon.png) [FRACTION](#fraction)
+* ![MAPS](MAPS/icon.png) [MAPS](#maps)
 * ![MEMORY](MEMORY/icon.png) [MEMORY](#memory)
 * ![MULTIPLY](MULTIPLY/icon.png) [MULTIPLY](#multiply)
 * ![OCEANS](OCEANS/icon.png) [OCEANS](#oceans)
@@ -104,6 +105,16 @@ Stored payload: **163 bytes**.
 [Assembly source](FRACTION/main.asm)
 
 ![FRACTION preview](FRACTION/preview.png)
+
+## MAPS
+
+PRACTICE THE FIRST LETTERS OF COMPASS DIRECTIONS.
+
+Stored payload: **157 bytes**.
+
+[Assembly source](MAPS/main.asm)
+
+![MAPS preview](MAPS/preview.png)
 
 ## MEMORY
 
@@ -206,7 +217,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**18 programs · 2,841 bytes total · 1767 bytes to spare in this category**
+**19 programs · 2,998 bytes total · 1866 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
