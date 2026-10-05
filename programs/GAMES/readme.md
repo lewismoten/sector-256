@@ -8,6 +8,7 @@ SMALL GAMES. BIG FUN.
 * ![BALLOON](BALLOON/icon.png) [BALLOON](#balloon)
 * ![BASKETBL](BASKETBL/icon.png) [BASKETBL](#basketbl)
 * ![BEAM](BEAM/icon.png) [BEAM](#beam)
+* ![BOUNCE](BOUNCE/icon.png) [BOUNCE](#bounce)
 * ![BOWLING](BOWLING/icon.png) [BOWLING](#bowling)
 * ![CATCHER](CATCHER/icon.png) [CATCHER](#catcher)
 * ![CHICKEN](CHICKEN/icon.png) [CHICKEN](#chicken)
@@ -81,6 +82,14 @@ Stored payload: **175 bytes**.
 [Assembly source](BEAM/main.asm)
 
 ![BEAM preview](BEAM/preview.png)
+
+## BOUNCE
+
+A/D SHIFTS THE BALL; SPACE LANDS ON THE PLATFORM.
+
+Stored payload: **176 bytes**.
+
+[Assembly source](BOUNCE/main.asm)
 
 ## BOWLING
 
@@ -393,7 +402,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**35 programs · 6,661 bytes total · 2299 bytes to spare in this category**
+**36 programs · 6,837 bytes total · 2379 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
