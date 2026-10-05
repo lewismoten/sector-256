@@ -133,6 +133,8 @@ Completed: GCD — added a step-by-step Euclid algorithm demonstration to MATH.
 
 Completed: PRIMES — added a compact prime-number reference to MATH.
 
+Completed: SQUAREQZ — added a small square-number drill to EDU.
+
 ## GAMES
 
 118 ideas.

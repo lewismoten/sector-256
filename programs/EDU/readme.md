@@ -50,6 +50,7 @@ SHORT LESSONS AND PRACTICE.
 * ![SPACE](SPACE/icon.png) [SPACE](#space)
 * ![SPELLING](SPELLING/icon.png) [SPELLING](#spelling)
 * ![SPORTS](SPORTS/icon.png) [SPORTS](#sports)
+* ![SQUAREQZ](SQUAREQZ/icon.png) [SQUAREQZ](#squareqz)
 * ![SUBTRACT](SUBTRACT/icon.png) [SUBTRACT](#subtract)
 * ![TRANSPRT](TRANSPRT/icon.png) [TRANSPRT](#transprt)
 * ![WEATHER](WEATHER/icon.png) [WEATHER](#weather)
@@ -516,6 +517,16 @@ Stored payload: **174 bytes**.
 
 ![SPORTS preview](SPORTS/preview.png)
 
+## SQUAREQZ
+
+RECALL FOUR SMALL SQUARE-NUMBER PRODUCTS.
+
+Stored payload: **178 bytes**.
+
+[Assembly source](SQUAREQZ/main.asm)
+
+![SQUAREQZ preview](SQUAREQZ/preview.png)
+
 ## SUBTRACT
 
 SOLVE THREE ONE-DIGIT SUBTRACTION QUESTIONS.
@@ -547,7 +558,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**49 programs · 8,214 bytes total · 4330 bytes to spare in this category**
+**50 programs · 8,392 bytes total · 4408 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
