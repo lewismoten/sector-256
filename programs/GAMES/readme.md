@@ -1,0 +1,49 @@
+# GAMES
+
+SMALL GAMES. BIG FUN.
+
+[All categories](../readme.md) · [Sector 256](../../README.md)
+
+* ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
+* ![MONTY](MONTY/icon.png) [MONTY](#monty)
+* ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
+
+---
+
+## HANGMAN
+
+GUESS A SIX-LETTER WORD.         SIX MISSES AND YOU LOSE.
+
+Stored payload: **253 bytes**.
+
+[Assembly source](HANGMAN/main.asm)
+
+![HANGMAN preview](HANGMAN/preview.png)
+
+## MONTY
+
+PICK 1-3. MONTY OPENS A GOAT. S:SWITCH K:KEEP. STOP:EXIT.
+
+Stored payload: **256 bytes**.
+
+[Assembly source](MONTY/main.asm)
+
+![MONTY preview](MONTY/preview.png)
+
+## TICTACTO
+
+TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE.
+
+Stored payload: **253 bytes**.
+
+[Assembly source](TICTACTO/main.asm)
+
+![TICTACTO preview](TICTACTO/preview.png)
+
+---
+**3 programs · 762 bytes total · 6 bytes to spare in this category**
+
+Want to add one? See [Add a program](../../docs/add_program.md)
+and the [program interface](../../docs/program-api.md).
+
+Regenerate this page with `python scripts/programs_md.py`.

@@ -11,9 +11,33 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build import build, encode_icon, collect_frames, record, ROOT
 from d64 import make_disk, read_disk
 from machine import Machine
+from programs_md import generate as generate_programs_md
 
 
 class ProjectTests(unittest.TestCase):
+    def test_program_readmes_are_grouped_by_category(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            shutil.copytree(ROOT / 'programs', root / 'programs')
+            (root / 'build').mkdir()
+            shutil.copy(ROOT / 'build/manifest.json', root / 'build/manifest.json')
+            generate_programs_md(root)
+
+            manifest = json.loads((root / 'build/manifest.json').read_text())
+            index = (root / 'programs/readme.md').read_text()
+            self.assertNotIn('\n## ', index)
+            for category_id, category in enumerate(manifest['categories']):
+                name = category['name']
+                self.assertIn(f'[{name}]({name}/readme.md)', index)
+                page = (root / f'programs/{name}/readme.md').read_text()
+                expected = sorted(program['name'] for program in manifest['programs']
+                                  if program['category'] == category_id)
+                headings = [line[3:] for line in page.splitlines()
+                            if line.startswith('## ')]
+                self.assertEqual(headings, expected)
+                for program in expected:
+                    self.assertIn(f'[{program}](#{program.lower()})', page)
+
     def test_disk_roundtrip_and_bam(self):
         data = make_disk([('A', bytes(range(256)), 'SEQ'), ('B', b'123', 'PRG')])
         self.assertEqual(len(data), 174848)

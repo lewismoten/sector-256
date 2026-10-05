@@ -17,7 +17,7 @@ programs/
       icon-2.png   optional
       icon-3.png   optional
       icon-4.png   optional
-      preview.png  optional, used only in programs/readme.md
+      preview.png  optional, used only in the category readme.md
 ```
 
 Example category metadata:
