@@ -28,6 +28,7 @@ SHORT LESSONS AND PRACTICE.
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
 * ![SHAPES](SHAPES/icon.png) [SHAPES](#shapes)
 * ![SPELLING](SPELLING/icon.png) [SPELLING](#spelling)
+* ![SPORTS](SPORTS/icon.png) [SPORTS](#sports)
 * ![SUBTRACT](SUBTRACT/icon.png) [SUBTRACT](#subtract)
 * ![TRANSPRT](TRANSPRT/icon.png) [TRANSPRT](#transprt)
 * ![WEATHER](WEATHER/icon.png) [WEATHER](#weather)
@@ -274,6 +275,16 @@ Stored payload: **144 bytes**.
 
 ![SPELLING preview](SPELLING/preview.png)
 
+## SPORTS
+
+PICK THE FIRST LETTER OF THREE SPORT WORDS.
+
+Stored payload: **174 bytes**.
+
+[Assembly source](SPORTS/main.asm)
+
+![SPORTS preview](SPORTS/preview.png)
+
 ## SUBTRACT
 
 SOLVE THREE ONE-DIGIT SUBTRACTION QUESTIONS.
@@ -305,7 +316,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**27 programs · 4,389 bytes total · 2523 bytes to spare in this category**
+**28 programs · 4,563 bytes total · 2605 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
