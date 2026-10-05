@@ -113,6 +113,8 @@ Completed: HEXQUIZ — added decimal-to-hex digit practice to EDU.
 
 Completed: BITOPS — added a one-bit logic-operation quiz to EDU.
 
+Completed: KAPREKAR — added a 6174 Kaprekar routine demonstration to MATH.
+
 ## GAMES
 
 118 ideas.

@@ -8,6 +8,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![CANTOR](CANTOR/icon.png) [CANTOR](#cantor)
 * ![FIB](FIB/icon.png) [FIB](#fib)
 * ![GRAYCODE](GRAYCODE/icon.png) [GRAYCODE](#graycode)
+* ![KAPREKAR](KAPREKAR/icon.png) [KAPREKAR](#kaprekar)
 * ![LUCAS](LUCAS/icon.png) [LUCAS](#lucas)
 * ![MULTAB](MULTAB/icon.png) [MULTAB](#multab)
 * ![PASCAL](PASCAL/icon.png) [PASCAL](#pascal)
@@ -56,6 +57,16 @@ Stored payload: **70 bytes**.
 [Assembly source](GRAYCODE/main.asm)
 
 ![GRAYCODE preview](GRAYCODE/preview.png)
+
+## KAPREKAR
+
+THE FOUR-DIGIT KAPREKAR ROUTINE TO 6174.
+
+Stored payload: **136 bytes**.
+
+[Assembly source](KAPREKAR/main.asm)
+
+![KAPREKAR preview](KAPREKAR/preview.png)
 
 ## LUCAS
 
@@ -118,7 +129,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**10 programs · 1,469 bytes total · 1091 bytes to spare in this category**
+**11 programs · 1,605 bytes total · 1211 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
