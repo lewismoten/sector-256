@@ -249,6 +249,8 @@ Completed: SCANNER — added a compact character-mode scanner sweep demo to DEMO
 
 Completed: TIMESDRL — added a compact multiplication drill to EDU.
 
+Completed: DIVISORS — added a compact divisor reference to MATH.
+
 ## GAMES
 
 118 ideas.

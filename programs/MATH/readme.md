@@ -15,6 +15,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 | ![CIRCLE](CIRCLE/icon.png) | [CIRCLE](#circle) | DISPLAY A CHARACTER-MODE CIRCLE WITH AXES. |
 | ![COLLATZ](COLLATZ/icon.png) | [COLLATZ](#collatz) | SHOW A COLLATZ SEQUENCE AND ITS TWO RULES. |
 | ![DIGROOT](DIGROOT/icon.png) | [DIGROOT](#digroot) | SHOW A REPEATED-DIGIT-SUM DIGITAL ROOT EXAMPLE. |
+| ![DIVISORS](DIVISORS/icon.png) | [DIVISORS](#divisors) | Cycles through four compact worked divisor lists. |
 | ![EDIGITS](EDIGITS/icon.png) | [EDIGITS](#edigits) | DISPLAY LEADING DECIMAL DIGITS OF E. |
 | ![FACTORL](FACTORL/icon.png) | [FACTORL](#factorl) | DISPLAY FACTORIAL VALUES THROUGH EIGHT FACTORIAL. |
 | ![FIB](FIB/icon.png) | [FIB](#fib) | FIBONACCI NUMBERS THROUGH THE 16-BIT LIMIT. |
@@ -138,6 +139,16 @@ Stored payload: **77 bytes**.
 [Assembly source](DIGROOT/main.asm)
 
 ![DIGROOT preview](DIGROOT/preview.png)
+
+## DIVISORS
+
+Cycles through four compact worked divisor lists.
+
+Stored payload: **189 bytes**.
+
+[Assembly source](DIVISORS/main.asm)
+
+![DIVISORS preview](DIVISORS/preview.png)
 
 ## EDIGITS
 
@@ -450,7 +461,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**40 programs · 4,572 bytes total · 5668 bytes to spare in this category**
+**41 programs · 4,761 bytes total · 5735 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
