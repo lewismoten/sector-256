@@ -8,6 +8,7 @@ TINY SID SOUNDS AND MUSICAL EXPERIMENTS.
 * ![BEEPER](BEEPER/icon.png) [BEEPER](#beeper)
 * ![CHORDS](CHORDS/icon.png) [CHORDS](#chords)
 * ![DOORBELL](DOORBELL/icon.png) [DOORBELL](#doorbell)
+* ![METRONOM](METRONOM/icon.png) [METRONOM](#metronom)
 * ![MUSICBOX](MUSICBOX/icon.png) [MUSICBOX](#musicbox)
 * ![PIANO](PIANO/icon.png) [PIANO](#piano)
 * ![SCALE](SCALE/icon.png) [SCALE](#scale)
@@ -55,6 +56,16 @@ Stored payload: **109 bytes**.
 
 ![DOORBELL preview](DOORBELL/preview.png)
 
+## METRONOM
+
+PLAY A SHORT SID TICK ON EACH SPACE PRESS.
+
+Stored payload: **105 bytes**.
+
+[Assembly source](METRONOM/main.asm)
+
+![METRONOM preview](METRONOM/preview.png)
+
 ## MUSICBOX
 
 THE OPENING TWINKLE PHRASE ON SID. PRESS A KEY TO REPEAT.
@@ -96,7 +107,7 @@ Stored payload: **113 bytes**.
 ![SIREN preview](SIREN/preview.png)
 
 ---
-**8 programs · 1,007 bytes total · 1041 bytes to spare in this category**
+**9 programs · 1,112 bytes total · 1192 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

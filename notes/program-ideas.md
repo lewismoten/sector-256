@@ -175,6 +175,8 @@ Completed: COLLATZ — added a Collatz-sequence example to MATH.
 
 Completed: RAIN — added a randomized character rain field to DEMOS.
 
+Completed: METRONOM — added a SID metronome tick to SOUND.
+
 ## GAMES
 
 118 ideas.
