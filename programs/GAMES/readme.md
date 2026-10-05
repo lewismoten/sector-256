@@ -23,6 +23,7 @@ SMALL GAMES. BIG FUN.
 * ![FIREMAN](FIREMAN/icon.png) [FIREMAN](#fireman)
 * ![FISHING](FISHING/icon.png) [FISHING](#fishing)
 * ![FLOOD](FLOOD/icon.png) [FLOOD](#flood)
+* ![GOLF](GOLF/icon.png) [GOLF](#golf)
 * ![GUESSNUM](GUESSNUM/icon.png) [GUESSNUM](#guessnum)
 * ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
 * ![HILO](HILO/icon.png) [HILO](#hilo)
@@ -228,6 +229,14 @@ Stored payload: **201 bytes**.
 
 ![FLOOD preview](FLOOD/preview.png)
 
+## GOLF
+
+A BUILDS PUTT POWER; SPACE SHOOTS FOR THE RANDOM HOLE.
+
+Stored payload: **154 bytes**.
+
+[Assembly source](GOLF/main.asm)
+
 ## GUESSNUM
 
 GUESS 00-99. COMPUTER SAYS HIGH, LOW, OR WIN.
@@ -349,7 +358,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**31 programs · 5,983 bytes total · 1953 bytes to spare in this category**
+**32 programs · 6,137 bytes total · 2055 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
