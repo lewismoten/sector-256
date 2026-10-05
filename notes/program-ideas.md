@@ -233,6 +233,8 @@ Completed: CITYLGT — added a compact random city-window demo to DEMOS.
 
 Completed: REACTION — added a compact wait-for-GO reaction game to GAMES.
 
+Completed: MARQUEE — added a compact chasing-light border demo to DEMOS.
+
 ## GAMES
 
 118 ideas.

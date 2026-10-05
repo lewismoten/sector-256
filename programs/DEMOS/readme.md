@@ -12,6 +12,7 @@ PIXELS, SOUND AND TINY SHOWS.
 | ![CUBE3D](CUBE3D/icon-preview.gif) | [CUBE3D](#cube3d) | A ROTATING 3D WIREFRAME CUBE.   RUN/STOP TO RETURN TO LAUNCHER. |
 | ![DANCE](DANCE/icon-preview.gif) | [DANCE](#dance) | DISCO LADY: FOUR VECTOR DANCE POSES. RUN/STOP TO RETURN. |
 | ![EQUALIZR](EQUALIZR/icon.png) | [EQUALIZR](#equalizr) | RANDOM CHARACTER-MODE EQUALIZER BARS. |
+| ![MARQUEE](MARQUEE/icon.png) | [MARQUEE](#marquee) | A tiny character-mode chasing-light marquee. |
 | ![MAZE10](MAZE10/icon.png) | [MAZE10](#maze10) | A CLASSIC RANDOM DIAGONAL CHARACTER MAZE. |
 | ![MUNCHING](MUNCHING/icon.png) | [MUNCHING](#munching) | CLASSIC MUNCHING XOR SQUARES WITH A CHANGING PHASE. |
 | ![RAIN](RAIN/icon.png) | [RAIN](#rain) | REPAINT A SPARSE GREEN CHARACTER-RAIN FIELD. |
@@ -80,6 +81,16 @@ Stored payload: **97 bytes**.
 
 ![EQUALIZR preview](EQUALIZR/preview.png)
 
+## MARQUEE
+
+A tiny character-mode chasing-light marquee.
+
+Stored payload: **137 bytes**.
+
+[Assembly source](MARQUEE/main.asm)
+
+![MARQUEE preview](MARQUEE/preview.png)
+
 ## MAZE10
 
 A CLASSIC RANDOM DIAGONAL CHARACTER MAZE.
@@ -131,7 +142,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**11 programs · 1,481 bytes total · 1335 bytes to spare in this category**
+**12 programs · 1,618 bytes total · 1454 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
