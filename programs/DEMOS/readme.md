@@ -16,6 +16,7 @@ PIXELS, SOUND AND TINY SHOWS.
 | ![MAZE10](MAZE10/icon.png) | [MAZE10](#maze10) | A CLASSIC RANDOM DIAGONAL CHARACTER MAZE. |
 | ![MUNCHING](MUNCHING/icon.png) | [MUNCHING](#munching) | CLASSIC MUNCHING XOR SQUARES WITH A CHANGING PHASE. |
 | ![RAIN](RAIN/icon.png) | [RAIN](#rain) | REPAINT A SPARSE GREEN CHARACTER-RAIN FIELD. |
+| ![SCANNER](SCANNER/icon.png) | [SCANNER](#scanner) | Steps a bright scanner marker across a character line. |
 | ![SNOW](SNOW/icon-preview.gif) | [SNOW](#snow) | PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT. |
 | ![XORPAT](XORPAT/icon.png) | [XORPAT](#xorpat) | A CLASSIC X-XOR-Y CHARACTER TEXTURE. |
 
@@ -121,6 +122,16 @@ Stored payload: **78 bytes**.
 
 ![RAIN preview](RAIN/preview.png)
 
+## SCANNER
+
+Steps a bright scanner marker across a character line.
+
+Stored payload: **81 bytes**.
+
+[Assembly source](SCANNER/main.asm)
+
+![SCANNER preview](SCANNER/preview.png)
+
 ## SNOW
 
 PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT.
@@ -142,7 +153,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**12 programs · 1,618 bytes total · 1454 bytes to spare in this category**
+**13 programs · 1,699 bytes total · 1629 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
