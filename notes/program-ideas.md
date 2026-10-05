@@ -271,6 +271,8 @@ Completed: OCEAN — added a compact character-wave demo to DEMOS.
 
 Completed: COLORRAM — added a compact color-RAM randomizer to LAB.
 
+Completed: ZAP — added a compact random-target zap game to GAMES.
+
 ## GAMES
 
 118 ideas.

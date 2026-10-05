@@ -83,6 +83,7 @@ SMALL GAMES. BIG FUN.
 | ![TICTACTO](TICTACTO/icon-preview.gif) | [TICTACTO](#tictacto) | TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE. |
 | ![TUGOWAR](TUGOWAR/icon.png) | [TUGOWAR](#tugowar) | TWO-PLAYER TUG OF WAR. Q PULLS LEFT, P PULLS RIGHT. |
 | ![WHACK](WHACK/icon.png) | [WHACK](#whack) | HIT THE DISPLAYED NUMBER KEY FIVE TIMES. |
+| ![ZAP](ZAP/icon.png) | [ZAP](#zap) | Places a new random alien target on every key press. |
 
 ---
 
@@ -856,8 +857,18 @@ Stored payload: **166 bytes**.
 
 ![WHACK preview](WHACK/preview.png)
 
+## ZAP
+
+Places a new random alien target on every key press.
+
+Stored payload: **76 bytes**.
+
+[Assembly source](ZAP/main.asm)
+
+![ZAP preview](ZAP/preview.png)
+
 ---
-**77 programs · 14,203 bytes total · 5509 bytes to spare in this category**
+**78 programs · 14,279 bytes total · 5689 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
