@@ -279,6 +279,8 @@ Completed: TRUCHET — added a compact random character-tile demo to DEMOS.
 
 Completed: FIREFLY — added a compact random character-firefly demo to DEMOS.
 
+Completed: GLITCH — added a compact random character-corruption demo to DEMOS.
+
 ## GAMES
 
 118 ideas.
