@@ -159,6 +159,8 @@ Completed: SPINNER — added a random board-game spinner to TOYS.
 
 Completed: ORACLE — added a random yes-or-no responder to TOYS.
 
+Completed: HAPPY — added a happy-number reference to MATH.
+
 ## GAMES
 
 118 ideas.

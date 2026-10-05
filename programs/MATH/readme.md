@@ -11,6 +11,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![FIB](FIB/icon.png) [FIB](#fib)
 * ![GCD](GCD/icon.png) [GCD](#gcd)
 * ![GRAYCODE](GRAYCODE/icon.png) [GRAYCODE](#graycode)
+* ![HAPPY](HAPPY/icon.png) [HAPPY](#happy)
 * ![KAPREKAR](KAPREKAR/icon.png) [KAPREKAR](#kaprekar)
 * ![LUCAS](LUCAS/icon.png) [LUCAS](#lucas)
 * ![MULTAB](MULTAB/icon.png) [MULTAB](#multab)
@@ -93,6 +94,16 @@ Stored payload: **70 bytes**.
 [Assembly source](GRAYCODE/main.asm)
 
 ![GRAYCODE preview](GRAYCODE/preview.png)
+
+## HAPPY
+
+INTRODUCE HAPPY NUMBERS AND THEIR FIRST VALUES.
+
+Stored payload: **103 bytes**.
+
+[Assembly source](HAPPY/main.asm)
+
+![HAPPY preview](HAPPY/preview.png)
 
 ## KAPREKAR
 
@@ -195,7 +206,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**17 programs · 2,296 bytes total · 2056 bytes to spare in this category**
+**18 programs · 2,399 bytes total · 2209 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
