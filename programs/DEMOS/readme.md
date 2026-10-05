@@ -24,6 +24,7 @@ PIXELS, SOUND AND TINY SHOWS.
 | ![NEON](NEON/icon.png) | [NEON](#neon) | Alternates bright and dim character-neon sign frames. |
 | ![OCEAN](OCEAN/icon.png) | [OCEAN](#ocean) | Alternates two compact character-mode ocean wave scenes. |
 | ![RAIN](RAIN/icon.png) | [RAIN](#rain) | REPAINT A SPARSE GREEN CHARACTER-RAIN FIELD. |
+| ![RASTBARS](RASTBARS/icon.png) | [RASTBARS](#rastbars) | Alternates two compact character raster-bar patterns. |
 | ![SCANNER](SCANNER/icon.png) | [SCANNER](#scanner) | Steps a bright scanner marker across a character line. |
 | ![SNOW](SNOW/icon-preview.gif) | [SNOW](#snow) | PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT. |
 | ![SUNSET](SUNSET/icon.png) | [SUNSET](#sunset) | Alternates two compact character-art sunset frames. |
@@ -213,6 +214,16 @@ Stored payload: **78 bytes**.
 
 ![RAIN preview](RAIN/preview.png)
 
+## RASTBARS
+
+Alternates two compact character raster-bar patterns.
+
+Stored payload: **245 bytes**.
+
+[Assembly source](RASTBARS/main.asm)
+
+![RASTBARS preview](RASTBARS/preview.png)
+
 ## SCANNER
 
 Steps a bright scanner marker across a character line.
@@ -274,7 +285,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**24 programs · 3,284 bytes total · 2860 bytes to spare in this category**
+**25 programs · 3,529 bytes total · 2871 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

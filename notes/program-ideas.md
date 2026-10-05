@@ -291,6 +291,8 @@ Completed: WORMS — added a compact random character-worm demo to DEMOS.
 
 Completed: SCROLLX — added a compact VIC horizontal-scroll experiment to LAB.
 
+Completed: RASTBARS — added a compact character raster-bar demo to DEMOS.
+
 ## GAMES
 
 118 ideas.
