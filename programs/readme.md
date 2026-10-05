@@ -22,6 +22,16 @@ Category: GAMES. Stored payload: **253 bytes**.
 
 ![HANGMAN preview](HANGMAN/preview.png)
 
+## MAZEGEN
+
+190-ROOM PERFECT MAZE. SPACE:NEW. RUN/STOP:RETURN.
+
+Category: UTILS. Stored payload: **183 bytes**.
+
+[Assembly source](programs/MAZEGEN/main.asm)
+
+![MAZEGEN preview](MAZEGEN/preview.png)
+
 ## TICTACTO
 
 TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE.

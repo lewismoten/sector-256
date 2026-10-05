@@ -49,7 +49,8 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('category_mode'), 1)
         machine.key(0x1d)
         machine.key(13)
-        self.assertEqual(machine.var('page_count'), 0)
+        self.assertEqual(machine.var('page_count'), 1)
+        self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'MAZEGEN ')
         machine.key(0x87)
         self.assertEqual(machine.var('page_count'), 4)
 
@@ -113,6 +114,25 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.memory[machine.labels['current_frames']], 0)
         self.assertEqual(machine.memory[machine.labels['elapsed_lo']], 24)  # 4040ms - 4032ms, in thirds
 
+    def test_cube_icon_rotation_frames(self):
+        frames, animation = collect_frames(ROOT / 'programs/CUBE3D', 8)
+        self.assertEqual(len(frames), 4)
+        self.assertEqual(len({frame[:32] for frame in frames}), 4)
+        self.assertEqual(animation, 0xc8)
+        machine = Machine()
+        machine.boot()
+        machine.key(0x1d)
+        machine.key(0x1d)
+        machine.key(13)
+        self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'CUBE3D  ')
+        self.assertEqual(machine.memory[machine.labels['frame_counts']], 4)
+        seen = []
+        for tick in range(1, 27):
+            machine.video_tick()
+            if tick in (7, 13, 20, 26):
+                seen.append(machine.memory[machine.labels['current_frames']])
+        self.assertEqual(seen, [1, 2, 3, 0])
+
     def test_nonblocking_input_and_explicit_exit(self):
         machine = Machine()
         machine.boot()
@@ -126,6 +146,126 @@ class ProjectTests(unittest.TestCase):
         machine.cpu.pc = 0x100f
         machine.run_until(lambda: machine.cpu.pc == machine.labels['main_loop'])
         self.assertEqual(machine.cpu.sp, 0xff)
+
+    def test_bitmap_lines_all_octants(self):
+        machine = Machine()
+        machine.boot()
+        machine.call('bitmap_begin')
+        def reference(x0, y0, x1, y1):
+            result = set()
+            dx, dy = abs(x1-x0), abs(y1-y0)
+            sx, sy = (1 if x0<x1 else -1), (1 if y0<y1 else -1)
+            error = dx-dy
+            while True:
+                result.add((x0,y0))
+                if (x0,y0)==(x1,y1):
+                    return result
+                twice = 2*error
+                if twice > -dy:
+                    error -= dy
+                    x0 += sx
+                if twice < dx:
+                    error += dx
+                    y0 += sy
+        for endpoints in [(0,0,255,199),(255,199,0,0),(0,199,255,0),(255,0,0,199),
+                          (0,100,255,100),(100,0,100,199),(180,150,110,170),
+                          (110,170,180,150),(100,100,100,100)]:
+            machine.call('bitmap_new_frame')
+            machine.memory[6:10] = list(endpoints)
+            machine.call('bitmap_line')
+            points = set()
+            for y in range(200):
+                for x in range(256):
+                    address = 0xa000+(y//8)*320+(x//8)*8+y%8
+                    if machine.memory[address] & (128>>(x%8)):
+                        points.add((x,y))
+            self.assertEqual(points, reference(*endpoints))
+
+    def test_cube_rotation_buffers_and_return(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(0x1d)
+        machine.key(0x1d)
+        machine.key(13)
+        self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'CUBE3D  ')
+        machine.launch(0, wait_address=0x100c)
+        previous = None
+        for frame in range(16):
+            machine.step()
+            machine.run_until(lambda: machine.cpu.pc == 0x100c)
+            self.assertEqual(machine.var('bitmap_frame_count'), frame+1)
+            self.assertEqual(machine.memory[0xdd00] & 3, 1 if frame%2==0 else 2)
+            xs, ys = machine.memory[0xc200:0xc208], machine.memory[0xc208:0xc210]
+            self.assertEqual(xs[:4], xs[4:])
+            self.assertEqual([y+64 for y in ys[:4]], ys[4:])
+            self.assertEqual(xs[0]+xs[2], 320)
+            self.assertEqual(xs[1]+xs[3], 320)
+            self.assertTrue(all(100 <= x <= 220 for x in xs))
+            self.assertTrue(all(40 <= y <= 160 for y in ys))
+            if frame==0:
+                previous = (xs[:],ys[:])
+            elif frame==8:
+                self.assertNotEqual((xs,ys), previous)
+            bitmap = 0xa000 if frame%2==0 else 0x6000
+            self.assertGreater(sum(b.bit_count() for b in machine.memory[bitmap:bitmap+8000]), 300)
+            for x,y in zip(xs,ys):
+                address = bitmap+(y//8)*320+(x//8)*8+y%8
+                self.assertTrue(machine.memory[address] & (128>>(x%8)))
+        machine.stop_game()
+        self.assertEqual(machine.memory[0xdd00] & 3, 2)
+        self.assertEqual(machine.cpu.sp, 0xff)
+        self.assertEqual(machine.var('category_id'), 2)
+        self.assertEqual(machine.var('selected'), 0)
+
+    def test_maze_connected_acyclic_and_regeneration(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(0x1d)
+        machine.key(13)
+        machine.launch(0)
+
+        def check_maze():
+            grid = [machine.memory[0x0450+y*40:0x0450+y*40+39] for y in range(21)]
+            rooms = {(y, x) for y in range(1, 20, 2) for x in range(1, 38, 2)}
+            graph = {room: set() for room in rooms}
+            for y, x in rooms:
+                self.assertEqual(grid[y][x], 32)
+                for dy, dx in ((0, 2), (2, 0)):
+                    neighbor = (y+dy, x+dx)
+                    if neighbor in rooms and grid[y+dy//2][x+dx//2] == 32:
+                        graph[y, x].add(neighbor)
+                        graph[neighbor].add((y, x))
+            self.assertEqual(sum(map(len, graph.values()))//2, 189)
+            seen, pending = set(), [(19, 1)]
+            while pending:
+                room = pending.pop()
+                if room not in seen:
+                    seen.add(room)
+                    pending.extend(graph[room] - seen)
+            self.assertEqual(seen, rooms)  # connectivity + V-1 edges proves no cycles
+            boundary = {(y, x) for y in range(21) for x in range(39)
+                        if y in (0, 20) or x in (0, 38)}
+            self.assertEqual({p for p in boundary if grid[p[0]][p[1]] == 32},
+                             {(20, 1), (0, 37)})
+            self.assertTrue(all(value in (32, 160) for row in grid for value in row))
+            return bytes(value for row in grid for value in row)
+
+        snapshots = {check_maze()}
+        before = bytes(machine.memory[0x0400:0x07e8])
+        machine.game_key('X')
+        self.assertEqual(bytes(machine.memory[0x0400:0x07e8]), before)
+        for _ in range(3):
+            machine.game_key(' ')
+            snapshots.add(check_maze())
+        self.assertEqual(len(snapshots), 4)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 1)
+        self.assertEqual(machine.var('selected'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+        machine.launch(0, wait_address=0x100c)
+        machine.stop_game()  # exit also works while carving the maze
+        self.assertEqual(machine.cpu.sp, 0xff)
+        self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'MAZEGEN ')
 
     def test_hangman_win_loss_and_repeated_guess(self):
         machine = Machine()
@@ -181,7 +321,7 @@ class ProjectTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'exceeds 256'):
                 build(root=root, assembler=ASSEMBLER)
             result = build(True, root=root, assembler=ASSEMBLER)
-            self.assertEqual(result['programs'][0]['flags'], 1)
+            self.assertEqual(next(p for p in result['programs'] if p['name'] == 'HANGMAN')['flags'], 1)
             machine = Machine(root)
             machine.boot()
             machine.key(13)

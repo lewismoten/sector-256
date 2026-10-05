@@ -2,6 +2,7 @@
 """Draw the supplied exact-palette pixel icons; no resizing or quantization."""
 from itertools import product
 from math import cos, radians, sin
+from random import Random
 from PIL import Image, ImageDraw
 from build import ROOT, RGB
 
@@ -54,6 +55,26 @@ def generate():
     folder = ROOT / "programs/CUBE3D"
     folder.mkdir(parents=True, exist_ok=True)
     for frame, image in enumerate(cube_frames(), 1):
+        image.save(folder / ("icon.png" if frame == 1 else f"icon-{frame}.png"))
+    folder = ROOT / "programs/MAZEGEN"
+    folder.mkdir(parents=True, exist_ok=True)
+    for frame in range(1, 5):
+        rng = Random(255 + frame)
+        image = Image.new("RGB", (16, 16), RGB[0])
+        draw = ImageDraw.Draw(image)
+        draw.rectangle((2, 2, 12, 12), fill=RGB[13])
+        for row in range(5):
+            for column in range(5):
+                x, y = 3 + column*2, 3 + row*2
+                image.putpixel((x, y), RGB[0])
+                if row == 0 and column == 4:
+                    continue
+                if row == 0 or (column != 4 and rng.randrange(2)):
+                    image.putpixel((x + 1, y), RGB[0])
+                else:
+                    image.putpixel((x, y - 1), RGB[0])
+        image.putpixel((3, 12), RGB[0])
+        image.putpixel((11, 2), RGB[0])
         image.save(folder / ("icon.png" if frame == 1 else f"icon-{frame}.png"))
 
 

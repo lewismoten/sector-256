@@ -68,6 +68,10 @@ class Machine:
         self.steps += 1
         c = self.cpu
         address = c.pc
+        if address == self.labels.get("flip_wait_low"):
+            self.memory[0xd011] &= 0x7f
+        elif address == self.labels.get("flip_wait_high"):
+            self.memory[0xd011] |= 0x80
         if address == 0xffbd:
             p = c.x | c.y << 8
             self.name = bytes(self.memory[p:p + c.a]).decode('ascii')
@@ -154,12 +158,12 @@ class Machine:
         self.step()
         self.run_until(lambda: not self.keys and self.cpu.pc == self.labels['main_loop'])
 
-    def launch(self, selection):
+    def launch(self, selection, wait_address=0x1000):
         self.set_var('selected', selection)
         self.keys.append(13)
         self.step()
         self.run_until(lambda: self.cpu.pc == 0xc000)
-        self.run_until(lambda: self.cpu.pc == 0x1000)
+        self.run_until(lambda: self.cpu.pc == wait_address)
 
     def game_key(self, key):
         self.keys.append(ord(key) if isinstance(key, str) else key)
@@ -186,6 +190,8 @@ class Machine:
         self.memory[0xd011] &= 0x7f
 
     def screenshot(self, path, text=False):
+        bitmap_base = 0xa000 if self.memory[0xdd00] & 3 == 1 else 0x6000
+        screen_base = 0x8000 if bitmap_base == 0xa000 else 0x4000
         image = Image.new('RGB', (320, 200))
         for cy in range(25):
             for cx in range(40):
@@ -195,8 +201,8 @@ class Machine:
                     glyph = self.memory[0x5800 + code * 8:0x5800 + code * 8 + 8]
                     foreground, background = 1, 0
                 else:
-                    glyph = self.memory[0x6000 + cell * 8:0x6000 + cell * 8 + 8]
-                    colors = self.memory[0x4000 + cell]
+                    glyph = self.memory[bitmap_base + cell * 8:bitmap_base + cell * 8 + 8]
+                    colors = self.memory[screen_base + cell]
                     foreground, background = colors >> 4, colors & 15
                 for y, bits in enumerate(glyph):
                     for x in range(8):
