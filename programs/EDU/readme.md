@@ -25,6 +25,7 @@ SHORT LESSONS AND PRACTICE.
 * ![NATURE](NATURE/icon.png) [NATURE](#nature)
 * ![OCEANS](OCEANS/icon.png) [OCEANS](#oceans)
 * ![ODDEVEN](ODDEVEN/icon.png) [ODDEVEN](#oddeven)
+* ![OPPOSITE](OPPOSITE/icon.png) [OPPOSITE](#opposite)
 * ![PLANETS](PLANETS/icon.png) [PLANETS](#planets)
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
 * ![SHAPES](SHAPES/icon.png) [SHAPES](#shapes)
@@ -247,6 +248,16 @@ Stored payload: **156 bytes**.
 
 ![ODDEVEN preview](ODDEVEN/preview.png)
 
+## OPPOSITE
+
+PICK THE FIRST LETTER OF THREE OPPOSITE WORDS.
+
+Stored payload: **162 bytes**.
+
+[Assembly source](OPPOSITE/main.asm)
+
+![OPPOSITE preview](OPPOSITE/preview.png)
+
 ## PLANETS
 
 PICK THE NEXT INNER PLANET INITIAL IN ORDER.
@@ -338,7 +349,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**30 programs · 4,912 bytes total · 2768 bytes to spare in this category**
+**31 programs · 5,074 bytes total · 2862 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
