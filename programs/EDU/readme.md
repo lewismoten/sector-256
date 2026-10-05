@@ -40,6 +40,7 @@ SHORT LESSONS AND PRACTICE.
 * ![OCEANS](OCEANS/icon.png) [OCEANS](#oceans)
 * ![ODDEVEN](ODDEVEN/icon.png) [ODDEVEN](#oddeven)
 * ![OPPOSITE](OPPOSITE/icon.png) [OPPOSITE](#opposite)
+* ![PETSCIIQ](PETSCIIQ/icon.png) [PETSCIIQ](#petsciiq)
 * ![PLANETS](PLANETS/icon.png) [PLANETS](#planets)
 * ![PLANTS](PLANTS/icon.png) [PLANTS](#plants)
 * ![PLANTS2](PLANTS2/icon.png) [PLANTS2](#plants2)
@@ -237,6 +238,8 @@ Stored payload: **246 bytes**.
 
 [Assembly source](GRAPHPT/main.asm)
 
+![GRAPHPT preview](GRAPHPT/preview.png)
+
 ## GREATER
 
 CHOOSE LESS-THAN OR GREATER-THAN FOR EACH PAIR.
@@ -417,6 +420,14 @@ Stored payload: **162 bytes**.
 
 ![OPPOSITE preview](OPPOSITE/preview.png)
 
+## PETSCIIQ
+
+TYPE THE DECIMAL PETSCII CODES OF DISPLAYED LETTERS.
+
+Stored payload: **195 bytes**.
+
+[Assembly source](PETSCIIQ/main.asm)
+
 ## PLANETS
 
 PICK THE NEXT INNER PLANET INITIAL IN ORDER.
@@ -578,7 +589,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**52 programs · 8,777 bytes total · 4535 bytes to spare in this category**
+**53 programs · 8,972 bytes total · 4596 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

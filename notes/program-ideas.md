@@ -139,6 +139,8 @@ Completed: LOGIC — added an interactive AND-gate explorer to EDU.
 
 Completed: GRAPHPT — added a coordinate-plotting drill to EDU.
 
+Completed: PETSCIIQ — added a PETSCII-code quiz to EDU.
+
 ## GAMES
 
 118 ideas.
