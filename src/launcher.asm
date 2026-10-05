@@ -540,7 +540,7 @@ text_mode:
     sta $0288
     lda #1
     sta $0286
-    lda #0
+    lda #6                     ; C64 blue keeps text-mode programs readable in previews
     sta $d020
     sta $d021
     rts
