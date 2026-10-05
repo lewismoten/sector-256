@@ -10,7 +10,7 @@ Category: DEMOS. Stored payload: **238 bytes**.
 
 [Assembly source](programs/CUBE3D/main.asm)
 
-![CUBE3D preview](programs/CUBE3D/preview.png)
+![CUBE3D preview](CUBE3D/preview.png)
 
 ## HANGMAN
 
@@ -20,7 +20,7 @@ Category: GAMES. Stored payload: **253 bytes**.
 
 [Assembly source](programs/HANGMAN/main.asm)
 
-![HANGMAN preview](programs/HANGMAN/preview.png)
+![HANGMAN preview](HANGMAN/preview.png)
 
 ## TICTACTO
 
@@ -30,4 +30,4 @@ Category: GAMES. Stored payload: **253 bytes**.
 
 [Assembly source](programs/TICTACTO/main.asm)
 
-![TICTACTO preview](programs/TICTACTO/preview.png)
+![TICTACTO preview](TICTACTO/preview.png)

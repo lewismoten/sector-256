@@ -20,7 +20,7 @@ def generate(root=ROOT):
                   f"Category: {data['category']}. " + (f"Stored payload: **{sizes[name]} bytes**." if name in sizes else "Build to calculate size."), "",
                   f"[Assembly source](programs/{folder.name}/main.asm)", ""]
         if (folder / "preview.png").exists():
-            lines += [f"![{name} preview](programs/{folder.name}/preview.png)", ""]
+            lines += [f"![{name} preview]({folder.name}/preview.png)", ""]
     (root / "programs/readme.md").write_text("\n".join(lines))
     readme = root / "readme.md"
     if readme.exists() and "(programs/readme.md)" not in readme.read_text():
