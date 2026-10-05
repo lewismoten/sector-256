@@ -17,6 +17,7 @@ PIXELS, SOUND AND TINY SHOWS.
 | ![MARQUEE](MARQUEE/icon.png) | [MARQUEE](#marquee) | A tiny character-mode chasing-light marquee. |
 | ![MAZE10](MAZE10/icon.png) | [MAZE10](#maze10) | A CLASSIC RANDOM DIAGONAL CHARACTER MAZE. |
 | ![MUNCHING](MUNCHING/icon.png) | [MUNCHING](#munching) | CLASSIC MUNCHING XOR SQUARES WITH A CHANGING PHASE. |
+| ![NEON](NEON/icon.png) | [NEON](#neon) | Alternates bright and dim character-neon sign frames. |
 | ![RAIN](RAIN/icon.png) | [RAIN](#rain) | REPAINT A SPARSE GREEN CHARACTER-RAIN FIELD. |
 | ![SCANNER](SCANNER/icon.png) | [SCANNER](#scanner) | Steps a bright scanner marker across a character line. |
 | ![SNOW](SNOW/icon-preview.gif) | [SNOW](#snow) | PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT. |
@@ -134,6 +135,16 @@ Stored payload: **49 bytes**.
 
 ![MUNCHING preview](MUNCHING/preview.png)
 
+## NEON
+
+Alternates bright and dim character-neon sign frames.
+
+Stored payload: **197 bytes**.
+
+[Assembly source](NEON/main.asm)
+
+![NEON preview](NEON/preview.png)
+
 ## RAIN
 
 REPAINT A SPARSE GREEN CHARACTER-RAIN FIELD.
@@ -175,7 +186,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**15 programs · 2,076 bytes total · 1764 bytes to spare in this category**
+**16 programs · 2,273 bytes total · 1823 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

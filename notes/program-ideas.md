@@ -265,6 +265,8 @@ Completed: CREDITS — added a compact paged credits-roll demo to DEMOS.
 
 Completed: HEARTBT — added a compact character heart-beat demo to DEMOS.
 
+Completed: NEON — added a compact flickering character-neon demo to DEMOS.
+
 ## GAMES
 
 118 ideas.
