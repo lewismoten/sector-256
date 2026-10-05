@@ -12,6 +12,7 @@ SMALL GAMES. BIG FUN.
 * ![CHOMP](CHOMP/icon.png) [CHOMP](#chomp)
 * ![COWBULL](COWBULL/icon.png) [COWBULL](#cowbull)
 * ![CRAPS](CRAPS/icon.png) [CRAPS](#craps)
+* ![DARTS](DARTS/icon.png) [DARTS](#darts)
 * ![DEFUSE](DEFUSE/icon.png) [DEFUSE](#defuse)
 * ![DICE](DICE/icon.png) [DICE](#dice)
 * ![DODGE](DODGE/icon.png) [DODGE](#dodge)
@@ -113,6 +114,14 @@ Stored payload: **230 bytes**.
 [Assembly source](CRAPS/main.asm)
 
 ![CRAPS preview](CRAPS/preview.png)
+
+## DARTS
+
+A/D MOVES THE CROSSHAIR. SPACE THROWS AT THE BULL.
+
+Stored payload: **191 bytes**.
+
+[Assembly source](DARTS/main.asm)
 
 ## DEFUSE
 
@@ -303,7 +312,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**27 programs · 5,350 bytes total · 1562 bytes to spare in this category**
+**28 programs · 5,541 bytes total · 1627 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
