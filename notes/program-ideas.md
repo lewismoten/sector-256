@@ -18,10 +18,10 @@
 
 ## Progress
 
-Completed: ANT, BALLOON, CHAOS, CUBE3D, DANCE, HANGMAN, LIFE, MAZEGEN, MONTY,
-RULE30, SANDPILE, SNOW, SWATCH, TICTACTO.
+Completed: ANT, BALLOON, CATCHER, CHAOS, CUBE3D, DANCE, HANGMAN, LIFE,
+MAZEGEN, MONTY, RULE30, SANDPILE, SNOW, SWATCH, TICTACTO.
 
-Working: CATCHER — catch falling stars in GAMES.
+Working: COWBULL — bulls-and-cows number deduction game in GAMES.
 
 ## GAMES
 

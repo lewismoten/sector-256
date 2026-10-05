@@ -5,6 +5,7 @@ SMALL GAMES. BIG FUN.
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
 * ![BALLOON](BALLOON/icon.png) [BALLOON](#balloon)
+* ![CATCHER](CATCHER/icon.png) [CATCHER](#catcher)
 * ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
@@ -20,6 +21,16 @@ Stored payload: **181 bytes**.
 [Assembly source](BALLOON/main.asm)
 
 ![BALLOON preview](BALLOON/preview.png)
+
+## CATCHER
+
+A/D MOVE BASKET. CATCH STARS. THREE MISSES ENDS GAME.
+
+Stored payload: **241 bytes**.
+
+[Assembly source](CATCHER/main.asm)
+
+![CATCHER preview](CATCHER/preview.png)
 
 ## HANGMAN
 
@@ -52,7 +63,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**4 programs · 943 bytes total · 81 bytes to spare in this category**
+**5 programs · 1,184 bytes total · 96 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

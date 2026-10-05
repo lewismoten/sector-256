@@ -15,6 +15,19 @@ from programs_md import generate as generate_programs_md
 
 
 class ProjectTests(unittest.TestCase):
+    def program_index(self, machine, name):
+        target = name.encode().ljust(8)
+        for index in range(machine.var('page_count')):
+            address = 0x4800 + index * 96
+            if bytes(machine.memory[address:address + 8]) == target:
+                return index
+        self.fail(f'{name} is not visible on the current launcher page')
+
+    def launch_named(self, machine, name, wait_address=0x1000):
+        index = self.program_index(machine, name)
+        machine.launch(index, wait_address=wait_address)
+        return index
+
     def test_program_readmes_are_grouped_by_category(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -80,7 +93,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'GAMES   ')
         machine.key(13)
         self.assertEqual(machine.var('category_mode'), 0)
-        self.assertEqual(machine.var('page_count'), 4)
+        self.assertEqual(machine.var('page_count'), 5)
         machine.key(0x1d)
         self.assertEqual(machine.var('selected'), 1)
         machine.key('H')
@@ -147,10 +160,10 @@ class ProjectTests(unittest.TestCase):
         for _ in range(8):
             machine.video_tick()
         self.assertEqual(machine.memory[machine.labels['current_frames']], 0)
-        machine.launch(0)
+        self.launch_named(machine, 'BALLOON')
         machine.stop_game()
         self.assertEqual(machine.var('category_mode'), 0)
-        machine.launch(1)
+        self.launch_named(machine, 'HANGMAN')
         machine.stop_game()
         self.assertEqual(machine.cpu.sp, 0xff)
 
@@ -159,7 +172,7 @@ class ProjectTests(unittest.TestCase):
         machine.boot()
         machine.key(13)
         machine.memory[machine.labels['random_state']] = 1
-        machine.launch(0)
+        self.launch_named(machine, 'BALLOON')
         for expected_air in (1, 2):
             machine.game_key(' ')
             self.assertEqual(machine.memory[2], expected_air)
@@ -173,12 +186,49 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('selected'), 0)
         self.assertEqual(machine.cpu.sp, 0xff)
 
+    def test_catcher_moves_catches_and_ends_after_three_misses(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        self.launch_named(machine, 'CATCHER', wait_address=0x100c)
+        self.assertEqual(machine.memory[4], 15)
+
+        machine.keys.append(ord('D'))
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        self.assertEqual(machine.memory[4], 16)
+
+        machine.memory[2:4] = [16, 22]
+        machine.memory[0x20:0x22] = [0, 4]
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        self.assertEqual(machine.memory[0x0429], ord('1'))
+
+        for miss in range(2):
+            machine.memory[2:4] = [0, 22]
+            machine.memory[0x20:0x22] = [0, 4]
+            machine.step()
+            machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        self.assertEqual(machine.memory[0x042c], ord('2'))
+        machine.memory[2:4] = [0, 22]
+        machine.memory[0x20:0x22] = [0, 4]
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x1000)
+        self.assertIn('THREE MISSES!', machine.output)
+        machine.keys.append(13)
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        self.assertEqual(machine.memory[4], 15)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
     def test_monty_hall_reveal_choices_and_score(self):
         machine = Machine()
         machine.boot()
         machine.key(13)
         machine.memory[machine.labels['random_state']] = 1
-        machine.launch(2)
+        monty_index = self.launch_named(machine, 'MONTY')
         self.assertEqual(machine.memory[2], 2)
         score_address = 0xc000 + bytes(machine.memory[0xc000:0xc100]).find(b'W000 L000')
         self.assertGreaterEqual(score_address, 0xc000)
@@ -214,7 +264,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(bytes(machine.memory[score_address:score_address+4]), b'W100')
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 0)
-        self.assertEqual(machine.var('selected'), 2)
+        self.assertEqual(machine.var('selected'), monty_index)
 
     def test_four_frame_animation_fast_and_slow(self):
         machine = Machine()
@@ -268,7 +318,7 @@ class ProjectTests(unittest.TestCase):
         machine.call('poll_key')
         self.assertEqual(machine.cpu.a, 65)
         machine.key(13)
-        machine.launch(0)
+        self.launch_named(machine, 'BALLOON')
         machine.cpu.pc = 0x100f
         machine.run_until(lambda: machine.cpu.pc == machine.labels['main_loop'])
         self.assertEqual(machine.cpu.sp, 0xff)
@@ -694,7 +744,7 @@ class ProjectTests(unittest.TestCase):
         machine = Machine()
         machine.boot()
         machine.key(13)
-        machine.launch(1)
+        self.launch_named(machine, 'HANGMAN')
         offset = machine.memory[2]
         words = b'SECTORPIXELSSPRITEGAMING'
         word = words[offset:offset + 6].decode()
@@ -721,7 +771,7 @@ class ProjectTests(unittest.TestCase):
         machine = Machine()
         machine.boot()
         machine.key(13)
-        machine.launch(3)
+        self.launch_named(machine, 'TICTACTO')
         machine.game_key('1')
         machine.game_key('1')
         self.assertEqual(machine.memory[3], 1)
@@ -748,10 +798,11 @@ class ProjectTests(unittest.TestCase):
             machine = Machine(root)
             machine.boot()
             machine.key(13)
-            machine.key(0x1d)
+            hangman_index = self.program_index(machine, 'HANGMAN')
+            for _ in range(hangman_index):
+                machine.key(0x1d)
             self.assertEqual(machine.var('selected_flags'), 1)
-            self.assertEqual(machine.memory[0x4000 + 6*40 + 19], 0x20)
-            self.assertEqual(machine.memory[0x4000 + 23*40 + 20], 0x20)
+            self.assertEqual(machine.memory[0x4000 + 6*40 + 9 + 10*hangman_index], 0x20)
 
     def test_icon_color_and_frame_validation(self):
         from PIL import Image
