@@ -407,7 +407,7 @@ class ProjectTests(unittest.TestCase):
         for _ in range(3):
             machine.key(0x1d)
         machine.key(13)
-        self.assertEqual(machine.var('page_count'), 2)
+        self.assertEqual(machine.var('page_count'), 3)
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'ANT     ')
         machine.launch(0, wait_address=0x100c)
 
@@ -492,6 +492,44 @@ class ProjectTests(unittest.TestCase):
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 3)
         self.assertEqual(machine.var('selected'), 1)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
+    def test_rule30_generations_completion_reset_and_return(self):
+        machine = Machine()
+        machine.boot()
+        for _ in range(3):
+            machine.key(0x1d)
+        machine.key(13)
+        machine.launch(2, wait_address=0x100c)
+
+        row = [0] * 256
+        row[128] = 1
+        for y in range(200):
+            if y:
+                machine.step()
+                machine.run_until(lambda: machine.cpu.pc == 0x100c)
+                row = [row[(x - 1) % 256] ^ (row[x] | row[(x + 1) % 256])
+                       for x in range(256)]
+            self.assertEqual(machine.memory[2], y)
+            for x, expected in enumerate(row):
+                address = (0x6000 + (y // 8) * 320
+                           + ((x + 32) // 8) * 8 + y % 8)
+                actual = bool(machine.memory[address] & (128 >> (x & 7)))
+                self.assertEqual(actual, bool(expected))
+
+        completed = bytes(machine.memory[0x6000:0x8000])
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        self.assertEqual(bytes(machine.memory[0x6000:0x8000]), completed)
+        machine.keys.append(32)
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        self.assertEqual(machine.memory[2], 0)
+        self.assertEqual(sum(value.bit_count()
+                             for value in machine.memory[0x6000:0x8000]), 1)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 3)
+        self.assertEqual(machine.var('selected'), 2)
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_hangman_win_loss_and_repeated_guess(self):

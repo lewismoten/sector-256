@@ -12,6 +12,7 @@ in any program to return to the launcher.
 * ![LIFE](LIFE/icon.png) [LIFE](#life)
 * ![MAZEGEN](MAZEGEN/icon-preview.gif) [MAZEGEN](#mazegen)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
+* ![RULE30](RULE30/icon.png) [RULE30](#rule30)
 * ![SNOW](SNOW/icon-preview.gif) [SNOW](#snow)
 * ![SWATCH](SWATCH/icon-preview.gif) [SWATCH](#swatch)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
@@ -86,6 +87,16 @@ Category: GAMES. Stored payload: **256 bytes**.
 
 ![MONTY preview](MONTY/preview.png)
 
+## RULE30
+
+RULE 30 FROM ONE CELL. SPACE:RESET. RUN/STOP:RETURN.
+
+Category: LAB. Stored payload: **220 bytes**.
+
+[Assembly source](RULE30/main.asm)
+
+![RULE30 preview](RULE30/preview.png)
+
 ## SNOW
 
 PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT.
@@ -117,7 +128,7 @@ Category: GAMES. Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**10 programs · 2,409 bytes total · 151 bytes to spare across the whole set**
+**11 programs · 2,629 bytes total · 187 bytes to spare across the whole set**
 
 Want to add one? See [Add a program](../docs/add_program.md) 
 and the [program interface](../docs/program-api.md). 
