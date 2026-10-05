@@ -9,6 +9,7 @@ SMALL GAMES. BIG FUN.
 * ![COWBULL](COWBULL/icon.png) [COWBULL](#cowbull)
 * ![DICE](DICE/icon.png) [DICE](#dice)
 * ![DODGE](DODGE/icon.png) [DODGE](#dodge)
+* ![FISHING](FISHING/icon.png) [FISHING](#fishing)
 * ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
@@ -65,6 +66,16 @@ Stored payload: **208 bytes**.
 
 ![DODGE preview](DODGE/preview.png)
 
+## FISHING
+
+SPACE CASTS. STRIKE ONLY AFTER BITE! APPEARS.
+
+Stored payload: **213 bytes**.
+
+[Assembly source](FISHING/main.asm)
+
+![FISHING preview](FISHING/preview.png)
+
 ## HANGMAN
 
 GUESS A SIX-LETTER WORD.         SIX MISSES AND YOU LOSE.
@@ -96,7 +107,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**8 programs · 1,687 bytes total · 361 bytes to spare in this category**
+**9 programs · 1,900 bytes total · 404 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
