@@ -5,16 +5,16 @@ Commodore 64 launcher, and each one's stored payload fits in
 **256 bytes or less**. That's one disk block. Press RUN/STOP 
 in any program to return to the launcher.
 
-* [![ANT](ANT/icon.png) ANT](#ant)
-* [![CUBE3D](CUBE3D/icon-preview.gif) CUBE3D](#cube3d)
-* [![DANCE](DANCE/icon-preview.gif) DANCE](#dance)
-* [![HANGMAN](HANGMAN/icon-preview.gif) HANGMAN](#hangman)
-* [![LIFE](LIFE/icon.png) LIFE](#life)
-* [![MAZEGEN](MAZEGEN/icon-preview.gif) MAZEGEN](#mazegen)
-* [![MONTY](MONTY/icon.png) MONTY](#monty)
-* [![SNOW](SNOW/icon-preview.gif) SNOW](#snow)
-* [![SWATCH](SWATCH/icon-preview.gif) SWATCH](#swatch)
-* [![TICTACTO](TICTACTO/icon-preview.gif) TICTACTO](#tictacto)
+* ![ANT](ANT/icon.png) [ANT](#ant)
+* ![CUBE3D](CUBE3D/icon-preview.gif) [CUBE3D](#cube3d)
+* ![DANCE](DANCE/icon-preview.gif) [DANCE](#dance)
+* ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
+* ![LIFE](LIFE/icon.png) [LIFE](#life)
+* ![MAZEGEN](MAZEGEN/icon-preview.gif) [MAZEGEN](#mazegen)
+* ![MONTY](MONTY/icon.png) [MONTY](#monty)
+* ![SNOW](SNOW/icon-preview.gif) [SNOW](#snow)
+* ![SWATCH](SWATCH/icon-preview.gif) [SWATCH](#swatch)
+* ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 ---
 ## ANT
 
