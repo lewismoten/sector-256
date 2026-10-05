@@ -55,6 +55,8 @@ Completed: DOODLE — added a WASD sketchpad to the TOYS category.
 
 Completed: FACES — added random character-art faces to TOYS.
 
+Completed: FORTUNE — added random fortune-cookie messages to TOYS.
+
 ## GAMES
 
 118 ideas.

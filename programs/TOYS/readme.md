@@ -6,6 +6,7 @@ SMALL THINGS TO PLAY WITH.
 
 * ![DOODLE](DOODLE/icon.png) [DOODLE](#doodle)
 * ![FACES](FACES/icon.png) [FACES](#faces)
+* ![FORTUNE](FORTUNE/icon.png) [FORTUNE](#fortune)
 
 ---
 
@@ -29,8 +30,18 @@ Stored payload: **229 bytes**.
 
 ![FACES preview](FACES/preview.png)
 
+## FORTUNE
+
+A RANDOM FORTUNE COOKIE MESSAGE ON EACH KEYPRESS.
+
+Stored payload: **157 bytes**.
+
+[Assembly source](FORTUNE/main.asm)
+
+![FORTUNE preview](FORTUNE/preview.png)
+
 ---
-**2 programs · 373 bytes total · 139 bytes to spare in this category**
+**3 programs · 530 bytes total · 238 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
