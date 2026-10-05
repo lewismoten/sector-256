@@ -11,6 +11,7 @@ SHORT LESSONS AND PRACTICE.
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
 * ![SHAPES](SHAPES/icon.png) [SHAPES](#shapes)
 * ![SPELLING](SPELLING/icon.png) [SPELLING](#spelling)
+* ![SUBTRACT](SUBTRACT/icon.png) [SUBTRACT](#subtract)
 
 ---
 
@@ -84,8 +85,18 @@ Stored payload: **144 bytes**.
 
 ![SPELLING preview](SPELLING/preview.png)
 
+## SUBTRACT
+
+SOLVE THREE ONE-DIGIT SUBTRACTION QUESTIONS.
+
+Stored payload: **147 bytes**.
+
+[Assembly source](SUBTRACT/main.asm)
+
+![SUBTRACT preview](SUBTRACT/preview.png)
+
 ---
-**7 programs · 1,078 bytes total · 714 bytes to spare in this category**
+**8 programs · 1,225 bytes total · 823 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
