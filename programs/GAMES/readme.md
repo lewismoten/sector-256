@@ -52,6 +52,7 @@ SMALL GAMES. BIG FUN.
 * ![JUGGLE](JUGGLE/icon.png) [JUGGLE](#juggle)
 * ![JUMPER](JUMPER/icon.png) [JUMPER](#jumper)
 * ![KNIGHTS](KNIGHTS/icon.png) [KNIGHTS](#knights)
+* ![LANDER](LANDER/icon.png) [LANDER](#lander)
 * ![LOCKPICK](LOCKPICK/icon.png) [LOCKPICK](#lockpick)
 * ![LOTTO](LOTTO/icon.png) [LOTTO](#lotto)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
@@ -527,6 +528,16 @@ Stored payload: **215 bytes**.
 
 ![KNIGHTS preview](KNIGHTS/preview.png)
 
+## LANDER
+
+FIRE A TO THRUST. KEEP DESCENT SPEED BELOW THREE.
+
+Stored payload: **178 bytes**.
+
+[Assembly source](LANDER/main.asm)
+
+![LANDER preview](LANDER/preview.png)
+
 ## LOCKPICK
 
 A/D TURNS THE DIAL. FIND THE CLICK, THEN SPACE TO OPEN.
@@ -568,7 +579,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**52 programs · 9,874 bytes total · 3438 bytes to spare in this category**
+**53 programs · 10,052 bytes total · 3516 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
