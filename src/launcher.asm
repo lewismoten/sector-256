@@ -135,6 +135,8 @@ select_item:
     jsr draw_details
     jmp main_loop
 go_home:
+    lda category_mode
+    bne redraw_home
     lda #1
     sta category_mode
     lda #0
@@ -145,6 +147,14 @@ release_stop:
     jsr STOP
     beq release_stop
     jmp reload_page
+redraw_home:
+    lda #0
+    sta selected
+    sta page_skip
+    sta page_skip+1
+    sta jump_letter
+    jsr draw_page
+    jmp main_loop
 next_page:
     lda category_mode
     bne main_loop
