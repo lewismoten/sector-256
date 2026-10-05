@@ -7,6 +7,7 @@ TINY SID SOUNDS AND MUSICAL EXPERIMENTS.
 * ![ARPEGGIO](ARPEGGIO/icon.png) [ARPEGGIO](#arpeggio)
 * ![DOORBELL](DOORBELL/icon.png) [DOORBELL](#doorbell)
 * ![SCALE](SCALE/icon.png) [SCALE](#scale)
+* ![SIREN](SIREN/icon.png) [SIREN](#siren)
 
 ---
 
@@ -40,8 +41,18 @@ Stored payload: **121 bytes**.
 
 ![SCALE preview](SCALE/preview.png)
 
+## SIREN
+
+A FOUR-TONE SID SIREN WAIL. PRESS A KEY TO REPEAT.
+
+Stored payload: **113 bytes**.
+
+[Assembly source](SIREN/main.asm)
+
+![SIREN preview](SIREN/preview.png)
+
 ---
-**3 programs · 350 bytes total · 418 bytes to spare in this category**
+**4 programs · 463 bytes total · 561 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

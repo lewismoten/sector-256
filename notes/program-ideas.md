@@ -49,6 +49,8 @@ Completed: ARPEGGIO — added a fast SID C-major arpeggio to SOUND.
 
 Completed: DOORBELL — added a two-note SID doorbell chime to SOUND.
 
+Completed: SIREN — added a four-tone SID siren wail to SOUND.
+
 ## GAMES
 
 118 ideas.
