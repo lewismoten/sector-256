@@ -289,6 +289,8 @@ Completed: SUNSET — added a compact character-art sunset demo to DEMOS.
 
 Completed: WORMS — added a compact random character-worm demo to DEMOS.
 
+Completed: SCROLLX — added a compact VIC horizontal-scroll experiment to LAB.
+
 ## GAMES
 
 118 ideas.

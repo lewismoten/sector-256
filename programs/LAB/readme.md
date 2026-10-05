@@ -15,6 +15,7 @@ EXPERIMENTS AND PROOF OF CONCEPTS.
 | ![LIFE](LIFE/icon.png) | [LIFE](#life) | CONWAY LIFE. SPACE:RANDOMIZE. RUN/STOP:RETURN. |
 | ![RULE30](RULE30/icon.png) | [RULE30](#rule30) | RULE 30 FROM ONE CELL. SPACE:RESET. RUN/STOP:RETURN. |
 | ![SANDPILE](SANDPILE/icon.png) | [SANDPILE](#sandpile) | SANDPILE FRACTAL. SPACE:RESET WITH NEW COLORS. RUN/STOP:RETURN. |
+| ![SCROLLX](SCROLLX/icon.png) | [SCROLLX](#scrollx) | Steps the VIC-II horizontal fine-scroll offset from 0 to 7. |
 
 ---
 
@@ -108,8 +109,18 @@ Stored payload: **244 bytes**.
 
 ![SANDPILE preview](SANDPILE/preview.png)
 
+## SCROLLX
+
+Steps the VIC-II horizontal fine-scroll offset from 0 to 7.
+
+Stored payload: **91 bytes**.
+
+[Assembly source](SCROLLX/main.asm)
+
+![SCROLLX preview](SCROLLX/preview.png)
+
 ---
-**9 programs · 1,518 bytes total · 786 bytes to spare in this category**
+**10 programs · 1,609 bytes total · 951 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
