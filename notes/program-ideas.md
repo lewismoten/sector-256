@@ -157,6 +157,8 @@ Completed: CRTTEST — added a CRT convergence grid to UTILS.
 
 Completed: SPINNER — added a random board-game spinner to TOYS.
 
+Completed: ORACLE — added a random yes-or-no responder to TOYS.
+
 ## GAMES
 
 118 ideas.

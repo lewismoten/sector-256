@@ -7,6 +7,7 @@ SMALL THINGS TO PLAY WITH.
 * ![DOODLE](DOODLE/icon.png) [DOODLE](#doodle)
 * ![FACES](FACES/icon.png) [FACES](#faces)
 * ![FORTUNE](FORTUNE/icon.png) [FORTUNE](#fortune)
+* ![ORACLE](ORACLE/icon.png) [ORACLE](#oracle)
 * ![SPINNER](SPINNER/icon.png) [SPINNER](#spinner)
 
 ---
@@ -41,6 +42,16 @@ Stored payload: **157 bytes**.
 
 ![FORTUNE preview](FORTUNE/preview.png)
 
+## ORACLE
+
+GET A RANDOM YES-OR-NO STYLE ANSWER.
+
+Stored payload: **125 bytes**.
+
+[Assembly source](ORACLE/main.asm)
+
+![ORACLE preview](ORACLE/preview.png)
+
 ## SPINNER
 
 SPIN A RANDOM DIRECTION FOR BOARD GAMES.
@@ -52,7 +63,7 @@ Stored payload: **136 bytes**.
 ![SPINNER preview](SPINNER/preview.png)
 
 ---
-**4 programs · 666 bytes total · 358 bytes to spare in this category**
+**5 programs · 791 bytes total · 489 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
