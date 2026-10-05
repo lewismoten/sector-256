@@ -129,6 +129,8 @@ Completed: ARMSTRNG — added three-digit Armstrong-number identities to MATH.
 
 Completed: MUNCHING — added phased munching XOR squares to DEMOS.
 
+Completed: GCD — added a step-by-step Euclid algorithm demonstration to MATH.
+
 ## GAMES
 
 118 ideas.
