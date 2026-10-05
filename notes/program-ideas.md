@@ -209,6 +209,8 @@ Completed: FACTORL — added a factorial reference to MATH.
 
 Completed: PALINDRM — added a reverse-and-add palindrome example to MATH.
 
+Completed: TOTIENT — added an Euler-totient reference to MATH.
+
 ## GAMES
 
 118 ideas.

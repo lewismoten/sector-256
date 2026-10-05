@@ -36,6 +36,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![ROMAN](ROMAN/icon.png) [ROMAN](#roman)
 * ![SINTABLE](SINTABLE/icon.png) [SINTABLE](#sintable)
 * ![SQUARES](SQUARES/icon.png) [SQUARES](#squares)
+* ![TOTIENT](TOTIENT/icon.png) [TOTIENT](#totient)
 * ![TRIANGNU](TRIANGNU/icon.png) [TRIANGNU](#triangnu)
 
 ---
@@ -360,6 +361,16 @@ Stored payload: **161 bytes**.
 
 ![SQUARES preview](SQUARES/preview.png)
 
+## TOTIENT
+
+DISPLAY EULER TOTIENT VALUES THROUGH TEN.
+
+Stored payload: **96 bytes**.
+
+[Assembly source](TOTIENT/main.asm)
+
+![TOTIENT preview](TOTIENT/preview.png)
+
 ## TRIANGNU
 
 THE FIRST TEN TRIANGULAR NUMBERS AS RUNNING SUMS.
@@ -371,7 +382,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**33 programs · 3,885 bytes total · 4563 bytes to spare in this category**
+**34 programs · 3,981 bytes total · 4723 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
