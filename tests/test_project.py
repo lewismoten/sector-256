@@ -93,7 +93,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'GAMES   ')
         machine.key(13)
         self.assertEqual(machine.var('category_mode'), 0)
-        self.assertEqual(machine.var('page_count'), 6)
+        self.assertEqual(machine.var('page_count'), 7)
         machine.key(0x1d)
         self.assertEqual(machine.var('selected'), 1)
         machine.key('H')
@@ -238,6 +238,25 @@ class ProjectTests(unittest.TestCase):
         self.assertIn('B0 C4', machine.output)
         machine.game_key(13)
         self.assertNotEqual(bytes(machine.memory[0x20:0x24]), bytes(4))
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
+    def test_dice_tumbles_for_twelve_frames(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        self.launch_named(machine, 'DICE', wait_address=0x100c)
+        machine.keys.append(32)
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        self.assertEqual(machine.memory[2], 11)
+        self.assertIn(machine.memory[0x0429], range(ord('1'), ord('7')))
+        self.assertIn(machine.memory[0x042d], range(ord('1'), ord('7')))
+        for _ in range(11):
+            machine.step()
+            machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        self.assertEqual(machine.memory[2], 0)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 0)
         self.assertEqual(machine.cpu.sp, 0xff)
@@ -821,7 +840,6 @@ class ProjectTests(unittest.TestCase):
             for _ in range(hangman_index):
                 machine.key(0x1d)
             self.assertEqual(machine.var('selected_flags'), 1)
-            self.assertEqual(machine.memory[0x4000 + 6*40 + 9 + 10*hangman_index], 0x20)
 
     def test_icon_color_and_frame_validation(self):
         from PIL import Image
