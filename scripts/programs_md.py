@@ -21,23 +21,28 @@ def generate(root=ROOT):
         "in any program to return to the launcher.",
         ""
         ]
-    folders = sorted((p for p in (root / "programs").iterdir() if p.is_dir()),
-                     key=lambda p: p.name.upper())
+    categories = json.loads((root / "categories.json").read_text())
+    category_names = {category["name"].upper() for category in categories}
+    folders = sorted((path.parent for path in (root / "programs").glob("*/*/program.json")
+                      if path.parent.parent.name.upper() in category_names),
+                     key=lambda path: path.name.upper())
     for folder in folders:
-        data = json.loads((folder / "program.json").read_text())
         name = folder.name.upper()
+        relative = folder.relative_to(root / "programs").as_posix()
         icon = "icon-preview.gif" if (folder / "icon-preview.gif").exists() else "icon.png"
-        lines += [f"* ![{name}]({folder.name}/{icon}) [{name}](#{name.lower()})"]
+        lines += [f"* ![{name}]({relative}/{icon}) [{name}](#{name.lower()})"]
     lines += ["---"]
     for folder in folders:
         data = json.loads((folder / "program.json").read_text())
         name = folder.name.upper()
+        category = folder.parent.name.upper()
+        relative = folder.relative_to(root / "programs").as_posix()
         preview = "preview.gif" if (folder / "preview.gif").exists() else "preview.png"
         lines += [f"## {name}", "", data["description"], "",
-                  f"Category: {data['category']}. " + (f"Stored payload: **{sizes[name]} bytes**." if name in sizes else "Build to calculate size."), "",
-                  f"[Assembly source]({folder.name}/main.asm)", ""]
+                  f"Category: {category}. " + (f"Stored payload: **{sizes[name]} bytes**." if name in sizes else "Build to calculate size."), "",
+                  f"[Assembly source]({relative}/main.asm)", ""]
         if (folder / preview).exists():
-            lines += [f"![{name} preview]({folder.name}/{preview})", ""]
+            lines += [f"![{name} preview]({relative}/{preview})", ""]
     total = sum(sizes.get(folder.name.upper(), 0) for folder in folders)
     summary = (f"**{len(folders)} programs · {total:,} bytes total · "
                f"{len(folders) * 256 - total} bytes to spare across the whole set**"

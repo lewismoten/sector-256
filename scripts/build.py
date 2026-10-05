@@ -96,6 +96,23 @@ def build(allow_oversize=False, root=ROOT, assembler="64tass"):
     ids = {c["name"].upper(): i for i, c in enumerate(categories)}
     if len(ids) != len(categories):
         raise ValueError("category names must be unique")
+    program_root = root / "programs"
+    category_folders = {folder.name.upper(): folder for folder in program_root.iterdir()
+                        if folder.is_dir()}
+    unknown = sorted(set(category_folders) - set(ids))
+    if unknown:
+        raise ValueError(f"unknown program category folder: {unknown[0]}")
+    program_folders = []
+    for category_name in ids:
+        category_folder = category_folders.get(category_name)
+        if category_folder is None:
+            raise ValueError(f"missing program category folder: {category_name}")
+        for folder in category_folder.iterdir():
+            if folder.is_dir():
+                if not (folder / "program.json").is_file():
+                    raise ValueError(f"{folder}: missing program.json")
+                program_folders.append((folder, ids[category_name]))
+    program_folders.sort(key=lambda item: item[0].name.upper())
     icon_data = bytearray()
     category_frames = []
     for i, cat in enumerate(categories):
@@ -105,17 +122,14 @@ def build(allow_oversize=False, root=ROOT, assembler="64tass"):
     programs = []
     packs = [bytearray()]
     names = set()
-    for folder in sorted((root / "programs").iterdir(), key=lambda p: p.name.upper()):
-        if not folder.is_dir():
-            continue
+    for folder, category in program_folders:
         name = folder.name.upper()
         if not re.fullmatch(r"[A-Z][A-Z0-9_-]{0,7}", name) or name in names:
             raise ValueError(f"{folder.name}: unique 1..8 character name required")
         names.add(name)
         metadata = json.loads((folder / "program.json").read_text())
-        category = ids.get(metadata["category"].upper())
-        if category is None:
-            raise ValueError(f"{name}: unknown category")
+        if "category" in metadata:
+            raise ValueError(f"{name}: remove category from program.json; its parent folder defines it")
         source = folder / "main.asm"
         address, binary = assemble(assembler, source, out / f"{name}.prg",
                                    labels=out / f"{name}.labels", include=root / "src")

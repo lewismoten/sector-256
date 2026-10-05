@@ -5,19 +5,19 @@ Commodore 64 launcher, and each one's stored payload fits in
 **256 bytes or less**. That's one disk block. Press RUN/STOP 
 in any program to return to the launcher.
 
-* ![ANT](ANT/icon.png) [ANT](#ant)
-* ![CHAOS](CHAOS/icon.png) [CHAOS](#chaos)
-* ![CUBE3D](CUBE3D/icon-preview.gif) [CUBE3D](#cube3d)
-* ![DANCE](DANCE/icon-preview.gif) [DANCE](#dance)
-* ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
-* ![LIFE](LIFE/icon.png) [LIFE](#life)
-* ![MAZEGEN](MAZEGEN/icon-preview.gif) [MAZEGEN](#mazegen)
-* ![MONTY](MONTY/icon.png) [MONTY](#monty)
-* ![RULE30](RULE30/icon.png) [RULE30](#rule30)
-* ![SANDPILE](SANDPILE/icon.png) [SANDPILE](#sandpile)
-* ![SNOW](SNOW/icon-preview.gif) [SNOW](#snow)
-* ![SWATCH](SWATCH/icon-preview.gif) [SWATCH](#swatch)
-* ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
+* ![ANT](LAB/ANT/icon.png) [ANT](#ant)
+* ![CHAOS](LAB/CHAOS/icon.png) [CHAOS](#chaos)
+* ![CUBE3D](DEMOS/CUBE3D/icon-preview.gif) [CUBE3D](#cube3d)
+* ![DANCE](DEMOS/DANCE/icon-preview.gif) [DANCE](#dance)
+* ![HANGMAN](GAMES/HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
+* ![LIFE](LAB/LIFE/icon.png) [LIFE](#life)
+* ![MAZEGEN](UTILS/MAZEGEN/icon-preview.gif) [MAZEGEN](#mazegen)
+* ![MONTY](GAMES/MONTY/icon.png) [MONTY](#monty)
+* ![RULE30](LAB/RULE30/icon.png) [RULE30](#rule30)
+* ![SANDPILE](LAB/SANDPILE/icon.png) [SANDPILE](#sandpile)
+* ![SNOW](DEMOS/SNOW/icon-preview.gif) [SNOW](#snow)
+* ![SWATCH](UTILS/SWATCH/icon-preview.gif) [SWATCH](#swatch)
+* ![TICTACTO](GAMES/TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 ---
 ## ANT
 
@@ -25,9 +25,9 @@ LANGTON'S ANT ON 256X200 HIRES. SPACE:RESET. STOP:RETURN.
 
 Category: LAB. Stored payload: **223 bytes**.
 
-[Assembly source](ANT/main.asm)
+[Assembly source](LAB/ANT/main.asm)
 
-![ANT preview](ANT/preview.png)
+![ANT preview](LAB/ANT/preview.png)
 
 ## CHAOS
 
@@ -35,9 +35,9 @@ CHAOS GAME BUILDS A FRACTAL. SPACE:RESET. RUN/STOP:RETURN.
 
 Category: LAB. Stored payload: **187 bytes**.
 
-[Assembly source](CHAOS/main.asm)
+[Assembly source](LAB/CHAOS/main.asm)
 
-![CHAOS preview](CHAOS/preview.png)
+![CHAOS preview](LAB/CHAOS/preview.png)
 
 ## CUBE3D
 
@@ -45,9 +45,9 @@ A ROTATING 3D WIREFRAME CUBE.   RUN/STOP TO RETURN TO LAUNCHER.
 
 Category: DEMOS. Stored payload: **238 bytes**.
 
-[Assembly source](CUBE3D/main.asm)
+[Assembly source](DEMOS/CUBE3D/main.asm)
 
-![CUBE3D preview](CUBE3D/preview.gif)
+![CUBE3D preview](DEMOS/CUBE3D/preview.gif)
 
 ## DANCE
 
@@ -55,9 +55,9 @@ DISCO LADY: FOUR VECTOR DANCE POSES. RUN/STOP TO RETURN.
 
 Category: DEMOS. Stored payload: **249 bytes**.
 
-[Assembly source](DANCE/main.asm)
+[Assembly source](DEMOS/DANCE/main.asm)
 
-![DANCE preview](DANCE/preview.gif)
+![DANCE preview](DEMOS/DANCE/preview.gif)
 
 ## HANGMAN
 
@@ -65,9 +65,9 @@ GUESS A SIX-LETTER WORD.         SIX MISSES AND YOU LOSE.
 
 Category: GAMES. Stored payload: **253 bytes**.
 
-[Assembly source](HANGMAN/main.asm)
+[Assembly source](GAMES/HANGMAN/main.asm)
 
-![HANGMAN preview](HANGMAN/preview.png)
+![HANGMAN preview](GAMES/HANGMAN/preview.png)
 
 ## LIFE
 
@@ -75,9 +75,9 @@ CONWAY LIFE. SPACE:RANDOMIZE. RUN/STOP:RETURN.
 
 Category: LAB. Stored payload: **243 bytes**.
 
-[Assembly source](LIFE/main.asm)
+[Assembly source](LAB/LIFE/main.asm)
 
-![LIFE preview](LIFE/preview.png)
+![LIFE preview](LAB/LIFE/preview.png)
 
 ## MAZEGEN
 
@@ -85,9 +85,9 @@ Category: LAB. Stored payload: **243 bytes**.
 
 Category: UTILS. Stored payload: **183 bytes**.
 
-[Assembly source](MAZEGEN/main.asm)
+[Assembly source](UTILS/MAZEGEN/main.asm)
 
-![MAZEGEN preview](MAZEGEN/preview.png)
+![MAZEGEN preview](UTILS/MAZEGEN/preview.png)
 
 ## MONTY
 
@@ -95,9 +95,9 @@ PICK 1-3. MONTY OPENS A GOAT. S:SWITCH K:KEEP. STOP:EXIT.
 
 Category: GAMES. Stored payload: **256 bytes**.
 
-[Assembly source](MONTY/main.asm)
+[Assembly source](GAMES/MONTY/main.asm)
 
-![MONTY preview](MONTY/preview.png)
+![MONTY preview](GAMES/MONTY/preview.png)
 
 ## RULE30
 
@@ -105,9 +105,9 @@ RULE 30 FROM ONE CELL. SPACE:RESET. RUN/STOP:RETURN.
 
 Category: LAB. Stored payload: **220 bytes**.
 
-[Assembly source](RULE30/main.asm)
+[Assembly source](LAB/RULE30/main.asm)
 
-![RULE30 preview](RULE30/preview.png)
+![RULE30 preview](LAB/RULE30/preview.png)
 
 ## SANDPILE
 
@@ -115,9 +115,9 @@ SANDPILE FRACTAL. SPACE:RESET WITH NEW COLORS. RUN/STOP:RETURN.
 
 Category: LAB. Stored payload: **244 bytes**.
 
-[Assembly source](SANDPILE/main.asm)
+[Assembly source](LAB/SANDPILE/main.asm)
 
-![SANDPILE preview](SANDPILE/preview.png)
+![SANDPILE preview](LAB/SANDPILE/preview.png)
 
 ## SNOW
 
@@ -125,9 +125,9 @@ PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT.
 
 Category: DEMOS. Stored payload: **255 bytes**.
 
-[Assembly source](SNOW/main.asm)
+[Assembly source](DEMOS/SNOW/main.asm)
 
-![SNOW preview](SNOW/preview.gif)
+![SNOW preview](DEMOS/SNOW/preview.gif)
 
 ## SWATCH
 
@@ -135,9 +135,9 @@ ALL 16 COLORS + 120 PAIRS. 1-9:RATE M:MIX SPACE:HOLD STOP:EXIT.
 
 Category: UTILS. Stored payload: **256 bytes**.
 
-[Assembly source](SWATCH/main.asm)
+[Assembly source](UTILS/SWATCH/main.asm)
 
-![SWATCH preview](SWATCH/preview.gif)
+![SWATCH preview](UTILS/SWATCH/preview.gif)
 
 ## TICTACTO
 
@@ -145,9 +145,9 @@ TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE.
 
 Category: GAMES. Stored payload: **253 bytes**.
 
-[Assembly source](TICTACTO/main.asm)
+[Assembly source](GAMES/TICTACTO/main.asm)
 
-![TICTACTO preview](TICTACTO/preview.png)
+![TICTACTO preview](GAMES/TICTACTO/preview.png)
 
 ---
 **13 programs · 3,060 bytes total · 268 bytes to spare across the whole set**

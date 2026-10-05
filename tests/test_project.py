@@ -23,9 +23,19 @@ class ProjectTests(unittest.TestCase):
     def test_games_fit_and_catalog_matches_disk(self):
         manifest = json.loads((ROOT / 'build/manifest.json').read_text())
         disk = read_disk((ROOT / 'release/sector-256.d64').read_bytes())
+        category_ids = {category['name']: index
+                        for index, category in enumerate(manifest['categories'])}
+        program_metadata = list((ROOT / 'programs').glob('*/*/program.json'))
+        self.assertEqual({path.parent.parent.name for path in program_metadata},
+                         set(category_ids))
+        self.assertTrue(all('category' not in json.loads(path.read_text())
+                            for path in program_metadata))
+        expected_categories = {path.parent.name: category_ids[path.parent.parent.name]
+                               for path in program_metadata}
         self.assertEqual(disk['INDEX.DAT'][:6], b'S256\x01\x60')
         for i, game in enumerate(manifest['programs']):
             self.assertLessEqual(game['size'], 256)
+            self.assertEqual(game['category'], expected_categories[game['name']])
             prg = (ROOT / 'build' / (game['name'] + '.prg')).read_bytes()
             container = disk[f"P{game['pack']:03}.DAT"][2:]
             self.assertEqual(container[game['offset']:game['offset'] + game['size']], prg[2:])
@@ -180,7 +190,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.memory[machine.labels['elapsed_lo']], 24)  # 4040ms - 4032ms, in thirds
 
     def test_cube_icon_rotation_frames(self):
-        frames, animation = collect_frames(ROOT / 'programs/CUBE3D', 8)
+        frames, animation = collect_frames(ROOT / 'programs/DEMOS/CUBE3D', 8)
         self.assertEqual(len(frames), 4)
         self.assertEqual(len({frame[:32] for frame in frames}), 4)
         self.assertEqual(animation, 0xc8)
@@ -283,7 +293,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('selected'), 0)
 
     def test_dance_poses_and_return(self):
-        frames, animation = collect_frames(ROOT / 'programs/DANCE', 7)
+        frames, animation = collect_frames(ROOT / 'programs/DEMOS/DANCE', 7)
         self.assertEqual(len({frame[:32] for frame in frames}), 4)
         self.assertEqual(animation, 0xc7)
         machine = Machine()
@@ -678,7 +688,7 @@ class ProjectTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / 'project'
             shutil.copytree(ROOT, root, ignore=shutil.ignore_patterns('build', '__pycache__'))
-            source = root / 'programs/HANGMAN/main.asm'
+            source = root / 'programs/GAMES/HANGMAN/main.asm'
             source.write_text(source.read_text() + '\n.fill 10,0\n')
             with self.assertRaisesRegex(ValueError, 'exceeds 256'):
                 build(root=root, assembler=ASSEMBLER)

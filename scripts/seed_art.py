@@ -21,6 +21,16 @@ ART = {
 "TICTACTO": [".....#....#.....", ".#.#.#....#.....", "..#..#.##.#.....", ".#.#.#.##.#.....", ".....#....#.....", "################", ".....#....#.....", ".....#....#.#.#.", ".##..#....#..#..", ".##..#....#.#.#.", "################", ".....#....#.....", ".#.#.#.##.#.....", "..#..#.##.#.....", ".#.#.#....#.....", ".....#....#....."],
 }
 
+PROGRAM_CATEGORIES = {
+    "ANT": "LAB", "CHAOS": "LAB", "CUBE3D": "DEMOS", "HANGMAN": "GAMES",
+    "LIFE": "LAB", "MAZEGEN": "UTILS", "RULE30": "LAB", "SANDPILE": "LAB",
+    "SWATCH": "UTILS", "TICTACTO": "GAMES",
+}
+
+
+def program_folder(name):
+    return ROOT / "programs" / PROGRAM_CATEGORIES[name] / name
+
 
 def cube_frames():
     """Four Y-axis orientations; cube symmetry makes the 90-degree loop seamless."""
@@ -48,7 +58,8 @@ def cube_frames():
 
 def generate():
     for name, rows in ART.items():
-        folder = ROOT / ("programs" if name in ("ANT", "CHAOS", "HANGMAN", "LIFE", "RULE30", "SANDPILE", "TICTACTO") else "categories") / name
+        folder = (program_folder(name) if name in PROGRAM_CATEGORIES
+                  else ROOT / "categories" / name)
         folder.mkdir(parents=True, exist_ok=True)
         color = {"GAMES": 3, "UTILS": 7, "DEMOS": 14, "LAB": 13,
                  "ANT": 7, "CHAOS": 14, "HANGMAN": 7, "LIFE": 13, "RULE30": 14,
@@ -60,13 +71,13 @@ def generate():
                     if pixel == "#":
                         image.putpixel((x, y), RGB[color if frame == 1 else 1])
             image.save(folder / ("icon.png" if frame == 1 else f"icon-{frame}.png"))
-    folder = ROOT / "programs/CUBE3D"
+    folder = program_folder("CUBE3D")
     folder.mkdir(parents=True, exist_ok=True)
     frames = list(cube_frames())
     for frame, image in enumerate(frames, 1):
         image.save(folder / ("icon.png" if frame == 1 else f"icon-{frame}.png"))
 
-    folder = ROOT / "programs/SWATCH"
+    folder = program_folder("SWATCH")
     folder.mkdir(parents=True, exist_ok=True)
     for frame in range(4):
         image = Image.new("RGB", (16, 16))
@@ -77,7 +88,7 @@ def generate():
                 color = first + ((x//2 + y//2 + frame) & 1)
                 image.putpixel((x, y), RGB[color])
         image.save(folder / ("icon.png" if frame == 0 else f"icon-{frame+1}.png"))
-    folder = ROOT / "programs/MAZEGEN"
+    folder = program_folder("MAZEGEN")
     folder.mkdir(parents=True, exist_ok=True)
     for frame in range(1, 5):
         rng = Random(255 + frame)

@@ -70,7 +70,7 @@ redistributed in this project.
 | --- | --- |
 | `src/launcher.asm` | Graphical disk/catalog launcher |
 | `src/api.inc` | Stable game entry and shared routine addresses |
-| `programs/*/main.asm` | Individual program source |
+| `programs/<category>/*/main.asm` | Individual program source, grouped by category |
 | `scripts/build.py` | Compile, validate, pack, and build D64 |
 | `scripts/d64.py` | Disk-image writer and verification reader |
 | `scripts/programs_md.py` | Generate preview/source catalog |

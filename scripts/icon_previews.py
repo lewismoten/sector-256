@@ -55,21 +55,22 @@ def generate_icon_preview(folder):
 
 
 def generate_icon_previews(programs=ROOT / "programs"):
-    """Generate previews for every animated icon under the programs folder."""
+    """Generate previews for every animated icon in the category tree."""
     programs = Path(programs)
     generated = []
-    for folder in sorted(programs.iterdir(), key=lambda path: path.name.upper()):
-        if folder.is_dir() and (folder / "program.json").exists():
-            output = generate_icon_preview(folder)
-            if output is not None:
-                generated.append(output)
+    metadata_files = sorted(programs.glob("*/*/program.json"),
+                            key=lambda path: (path.parent.name.upper(), str(path)))
+    for metadata in metadata_files:
+        output = generate_icon_preview(metadata.parent)
+        if output is not None:
+            generated.append(output)
     return generated
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("programs", nargs="?", type=Path, default=ROOT / "programs",
-                        help="programs directory (default: repository programs folder)")
+                        help="categorized programs directory (default: repository programs folder)")
     args = parser.parse_args()
     try:
         generated = generate_icon_previews(args.programs)

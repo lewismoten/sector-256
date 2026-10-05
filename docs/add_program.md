@@ -1,25 +1,27 @@
 ## Add a program
 
-Create a uniquely named folder under `programs/`, using 1–8 characters from
-`A-Z`, `0-9`, `_`, and `-`, starting with a letter. Names are normalized to
-uppercase, sorted alphabetically, and space-padded to eight bytes in the index.
+Create a uniquely named folder under its category in `programs/`, using 1–8
+characters from `A-Z`, `0-9`, `_`, and `-`, starting with a letter. The parent
+folder assigns the category. Program names are normalized to uppercase, sorted
+globally, and space-padded to eight bytes in the index.
 
 ```text
-programs/MYTOOL/
-  main.asm
-  program.json
-  icon.png
-  icon-2.png       optional
-  icon-3.png       optional
-  icon-4.png       optional
-  preview.png     optional, used only in programs/readme.md
+programs/
+  UTILS/
+    MYTOOL/
+      main.asm
+      program.json
+      icon.png
+      icon-2.png   optional
+      icon-3.png   optional
+      icon-4.png   optional
+      preview.png  optional, used only in programs/readme.md
 ```
 
 Example metadata:
 
 ```json
 {
-  "category": "UTILS",
   "description": "A HANDY TOOL. RUN/STOP RETURNS TO THE LAUNCHER.",
   "animation_speed": 8
 }
@@ -28,10 +30,11 @@ Example metadata:
 Descriptions are printable ASCII, at most 64 bytes, converted to uppercase and
 space-padded. The launcher displays them in two 32-character lines; embedded
 spaces can be used to arrange the line break. Each category in `categories.json`
-has a matching icon folder in `categories/`. Configure up to twelve categories.
+has a matching program folder in `programs/` and icon folder in `categories/`.
+Configure up to twelve categories.
 
 `main.asm` must assemble for the 6502 with entry address `$c000` and use the
-[program interface](docs/program-api.md). Only its actual machine-code/data
+[program interface](program-api.md). Only its actual machine-code/data
 payload counts toward 256 bytes. Index records, names, descriptions, icons,
 shared launcher routines, and container/PRG metadata are separate disk costs.
 These starter games depend on the launcher's shared input/exit interface.
