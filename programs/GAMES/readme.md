@@ -123,6 +123,8 @@ Stored payload: **174 bytes**.
 
 [Assembly source](CAVE/main.asm)
 
+![CAVE preview](CAVE/preview.png)
+
 ## CHICKEN
 
 TWO-PLAYER CHICKEN. WAIT FOR GO; A OR L SWERVES.
@@ -280,6 +282,8 @@ SPACE FLAPS; RETURN FLIES THROUGH THE CAVE OPENING.
 Stored payload: **170 bytes**.
 
 [Assembly source](FLUTTER/main.asm)
+
+![FLUTTER preview](FLUTTER/preview.png)
 
 ## GOLF
 
