@@ -5,6 +5,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
 * ![ARMSTRNG](ARMSTRNG/icon.png) [ARMSTRNG](#armstrng)
+* ![BASECONV](BASECONV/icon.png) [BASECONV](#baseconv)
 * ![BINCOUNT](BINCOUNT/icon.png) [BINCOUNT](#bincount)
 * ![CANTOR](CANTOR/icon.png) [CANTOR](#cantor)
 * ![FIB](FIB/icon.png) [FIB](#fib)
@@ -32,6 +33,16 @@ Stored payload: **137 bytes**.
 [Assembly source](ARMSTRNG/main.asm)
 
 ![ARMSTRNG preview](ARMSTRNG/preview.png)
+
+## BASECONV
+
+SHOW SMALL VALUES IN BINARY, DECIMAL, AND HEX.
+
+Stored payload: **119 bytes**.
+
+[Assembly source](BASECONV/main.asm)
+
+![BASECONV preview](BASECONV/preview.png)
 
 ## BINCOUNT
 
@@ -184,7 +195,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**16 programs · 2,177 bytes total · 1919 bytes to spare in this category**
+**17 programs · 2,296 bytes total · 2056 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

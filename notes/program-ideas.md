@@ -147,6 +147,8 @@ Completed: PYTHTRIP — added a Pythagorean-triple reference to MATH.
 
 Completed: SINTABLE — added a common-angle sine table to MATH.
 
+Completed: BASECONV — added a binary, decimal, and hexadecimal reference to MATH.
+
 ## GAMES
 
 118 ideas.
