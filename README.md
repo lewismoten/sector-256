@@ -3,10 +3,14 @@
 ![Sector 256: One block. Many worlds.](docs/social-preview.jpg)
 
 **One block. Many worlds.** A graphical Commodore 64 launcher for games,
-utilities, demos, and experiments whose individual stored payloads are at most
-256 bytes.
+utilities, demos, and experiments whose catalog payloads are at most 256 bytes.
+That is a disk-storage constraint, not a runtime-capability limit: launched
+programs run at `$c000` and use the shared launcher API.
 
-![Sector 256 launcher](docs/launcher.png)
+<!-- program-count: 288 -->
+The catalog contains **288 programs**.
+
+![Sector 256 categories](docs/categories.png)
 
 [Browse the programs](programs/readme.md) · [Disk formats](docs/formats.md) ·
 [Program interface](docs/program-api.md)
@@ -22,10 +26,17 @@ python3 -m venv .venv
 python -m pip install -r requirements.txt
 python scripts/build.py
 python scripts/programs_md.py
+python scripts/render_launcher_screenshots.py
 ```
 
-The playable image is `release/sector-256.d64`. Attach it to drive 8 in VICE or
-write it to a real 1541 disk. Load the first program:
+The playable image is `release/sector-256.d64`. The same build also writes a
+self-contained PRG for every catalog item under
+`release/programs/<CATEGORY>/<PROGRAM>/<PROGRAM>.PRG`, plus
+`release/sector-256-programs.zip` for release upload. Each standalone PRG has a
+BASIC `SYS 2061` loader and embeds the 795-byte API implementation (including
+its 30-byte vector table at `$1000`–`$101d`), so its program payload may use the
+full `$c000`–`$cfff` execution region (up to 4096 bytes). Attach the D64 to
+drive 8 in VICE or write it to a real 1541 disk. Load the first program:
 
 ```basic
 LOAD"LOADER",8
@@ -35,7 +46,8 @@ RUN
 ## Releases
 
 Pushing a semantic version tag in `vX.X.X` form builds and tests the project,
-then creates a GitHub Release with `sector-256.d64` attached:
+then creates a GitHub Release with both `sector-256.d64` and
+`sector-256-programs.zip` attached:
 
 ```sh
 git tag v1.0.0
@@ -73,9 +85,10 @@ redistributed in this project.
 | `programs/<category>/category.json` | Category description and launcher order |
 | `programs/<category>/icon.png` | Category icon |
 | `programs/<category>/*/main.asm` | Individual program source, grouped by category |
-| `scripts/build.py` | Compile, validate, pack, and build D64 |
-| `scripts/d64.py` | Disk-image writer and verification reader |
+| `scripts/build.py` | Compile, validate, pack, and build D64/standalone release artifacts |
+| `scripts/standalone.py` | Build standalone BASIC-loadable PRGs with the embedded API |
 | `scripts/programs_md.py` | Generate preview/source catalog |
+| `scripts/render_launcher_screenshots.py` | Render native 320×200 launcher screenshots from the machine harness |
 | `tests/` | Machine-code and packaging verification |
 | `build/manifest.json` | Generated sizes, offsets, flags, and pack assignments |
 | `release/sector-256.d64` | Playable disk image |

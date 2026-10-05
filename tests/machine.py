@@ -6,7 +6,7 @@ from RAM for assertions; it is not a cycle-accurate C64 emulator.
 import re
 from pathlib import Path
 from py65.devices.mpu6502 import MPU
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from build import RGB
@@ -17,6 +17,25 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def labels(path):
     return {m[1]: int(m[2], 16) for m in re.finditer(r'^(\w+)\s*=\s*\$([0-9a-f]+)', path.read_text(), re.M)}
+
+
+def preview_charset():
+    """Return a deterministic preview charset when no C64 ROM is supplied."""
+    font = ImageFont.load_default()
+    charset = bytearray(2048)
+    for code in range(128):
+        if 1 <= code <= 26:
+            character = chr(code + 64)
+        elif 48 <= code <= 57 or code in (32, 33, 44, 45, 46, 47, 58):
+            character = chr(code)
+        else:
+            continue
+        tile = Image.new("1", (8, 8))
+        ImageDraw.Draw(tile).text((0, -2), character, font=font, fill=1)
+        for y in range(8):
+            charset[code * 8 + y] = sum(
+                1 << (7 - x) for x in range(8) if tile.getpixel((x, y)))
+    return charset
 
 
 class Machine:

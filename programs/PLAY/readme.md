@@ -268,7 +268,7 @@ Stored payload: **208 bytes**.
 [Assembly source](TWENTY1/main.asm)
 
 ---
-**24 programs · 4,705 bytes total · 1439 bytes to spare in this category**
+**24 programs · 4,705 bytes total in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

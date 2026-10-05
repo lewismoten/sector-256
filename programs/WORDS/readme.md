@@ -274,7 +274,7 @@ Stored payload: **144 bytes**.
 ![SPELLING preview](SPELLING/preview.png)
 
 ---
-**24 programs · 4,121 bytes total · 2023 bytes to spare in this category**
+**24 programs · 4,121 bytes total in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

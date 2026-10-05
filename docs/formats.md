@@ -34,9 +34,11 @@ Each subsequent record is exactly 96 bytes:
 | 82 | 14 | Reserved, zero |
 
 INDEX.DAT is globally alphabetical. Filtering by category preserves that order.
-CATS.DAT follows the `order` values in `programs/*/category.json`. Only twelve
-index records are resident at once. Pages and letter jumps stream from the
-start of the file; late pages take longer to reach on a physical drive.
+CATS.DAT follows the `order` values in `programs/*/category.json`; it supports
+up to 256 categories because the record category ID is an unsigned byte. The
+launcher holds twelve records per screen page and streams additional category
+or program pages from the start of the file; late pages take longer to reach on
+a physical drive.
 
 ## ICONS.DAT
 
@@ -72,7 +74,11 @@ assembled to run at `$c000` regardless of their pack offset.
 An entry of length 256 is compliant. An entry of length 257–4096 requires
 `--allow-oversize`, sets flag bit 0, and is visibly marked in the launcher.
 The 256-byte rule covers all game-specific compiled code/data; it excludes
-shared launcher services and the separately stored catalog/artwork.
+shared launcher services and the separately stored catalog/artwork. It limits
+stored payload rather than runtime capability: after launch, programs run in
+the C64 execution area and can use the shared API and its documented memory.
+The API's fixed vector table occupies 30 bytes from `$1000` through `$101d`;
+this does not state a total implementation size for the shared routines.
 
 ## C64 RAM
 

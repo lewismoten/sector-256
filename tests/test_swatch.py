@@ -34,7 +34,8 @@ class SwatchTests(unittest.TestCase):
                     if bytes(machine.memory[address:address + 8]) == target:
                         return index
                 self.assertTrue(machine.var('has_next'), name)
-                machine.key(0x86)
+                machine.set_var('selected', machine.var('page_count') - 1)
+                machine.key(0x1d)
 
         machine.set_var('selected', find_named('TOOLS'))
         machine.key(13)

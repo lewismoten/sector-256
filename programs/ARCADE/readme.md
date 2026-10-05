@@ -272,7 +272,7 @@ Stored payload: **76 bytes**.
 ![ZAP preview](ZAP/preview.png)
 
 ---
-**24 programs · 4,346 bytes total · 1798 bytes to spare in this category**
+**24 programs · 4,346 bytes total in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

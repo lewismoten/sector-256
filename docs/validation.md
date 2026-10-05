@@ -11,7 +11,7 @@ py65 1.2.0 and VICE 3.7.1.
 - Launcher PRG payload: **5769 bytes**, including reusable bitmap/line services.
 - D64 image: **174848 bytes**, standard 35-track layout.
 - `c1541` recognizes every file and reports **319 blocks free** in the current 288-program image.
-- Sixty-three unittest checks pass. They execute the assembled launcher and programs,
+- Seventy-five unittest checks pass. They execute the assembled launcher and programs,
   verify win/loss/draw and rejected inputs, exercise a 700-entry index including
   an entry beyond 255, check category/page/letter navigation, check four-frame
   fast/slow timing, check nonblocking input/exit, and verify oversize rejection
@@ -43,9 +43,22 @@ py65 1.2.0 and VICE 3.7.1.
   requested speed. Tests check both immediate swapping and the 4032 ms
   four-frame-loop deadline (4040 ms at PAL frame granularity).
 
-The screenshot files in this source archive reconstruct executed C64 screen
-or bitmap RAM with C64 glyphs. They are not AI-generated artwork. Real-device
-colors and timing can vary. Physical hardware was not tested.
+The screenshot files in this source archive reconstruct executed C64 bitmap RAM
+with a deterministic preview charset when a C64 ROM is not supplied. They are
+not AI-generated artwork. Real-device colors, glyph shapes, and timing can vary;
+physical hardware was not tested.
+
+`python scripts/render_launcher_screenshots.py` regenerates the launcher
+captures directly from the machine harness at native 320×200 resolution, with
+no resizing.
+
+The 256-byte rule measures stored catalog payload only. It does not limit what
+a running program can do with the C64 execution area or documented shared API.
+The API's fixed vector table is 30 bytes from `$1000` through `$101d`; this is
+not a measurement of the shared API implementation as a whole. The current
+release build also verifies 288 standalone PRGs under `release/programs/` and
+packs the same 288 artifacts into `release/sector-256-programs.zip`; each
+embeds a 795-byte standalone API implementation.
 
 SWATCH's `preview.png` is a labeled arithmetic RGB-average reference rather
 than a hardware color measurement. Its native-frame PNGs and `preview.gif`

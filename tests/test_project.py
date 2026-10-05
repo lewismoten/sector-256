@@ -52,7 +52,8 @@ class ProjectTests(unittest.TestCase):
                     return index
             if not machine.var('has_next'):
                 break
-            machine.key(0x86)
+            machine.set_var('selected', machine.var('page_count') - 1)
+            machine.key(0x1d)
         self.fail(f'{name} is not visible on the current launcher page')
 
     def launch_named(self, machine, name, wait_address=0x1000):
@@ -209,9 +210,10 @@ class ProjectTests(unittest.TestCase):
         machine.key(13)
         self.assertEqual(machine.var('page_count'), 12)
         self.assertEqual(machine.var('has_next'), 1)
-        machine.key(0x86)
+        machine.set_var('selected', 11)
+        machine.key(0x1d)
         self.assertEqual(machine.word('page_skip'), 12)
-        machine.key(0x85)
+        machine.key(0x9d)
         self.assertEqual(machine.word('page_skip'), 0)
         machine.set_var('page_skip', 0xb4)
         machine.memory[machine.labels['page_skip'] + 1] = 2  # 692

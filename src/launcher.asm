@@ -87,10 +87,6 @@ main_loop:
     beq previous_item
     cmp #$91                    ; cursor up
     beq up_item
-    cmp #$85                    ; F1
-    beq previous_page
-    cmp #$86                    ; F3
-    beq next_page
     cmp #$87                    ; F5
     beq go_home
     cmp #$14                    ; DEL also returns to categories
@@ -108,11 +104,22 @@ next_item:
     clc
     adc #1
     cmp page_count
-    bcs main_loop
-    jmp select_item
+    bcc select_item
+    lda has_next
+    beq main_loop
+    lda #0
+    sta nav_target
+    jmp next_page
 previous_item:
     lda selected
+    bne previous_item_same_page
+    lda page_skip
+    ora page_skip+1
     beq main_loop
+    lda #$ff
+    sta nav_target
+    jmp previous_page
+previous_item_same_page:
     sec
     sbc #1
     jmp select_item
@@ -121,12 +128,26 @@ down_item:
     clc
     adc #4
     cmp page_count
-    bcs main_loop
-    jmp select_item
+    bcc select_item
+    lda has_next
+    beq main_loop
+    lda selected
+    and #3
+    sta nav_target
+    jmp next_page
 up_item:
     lda selected
     cmp #4
-    bcc main_loop
+    bcs up_item_same_page
+    lda page_skip
+    ora page_skip+1
+    beq main_loop
+    lda selected
+    clc
+    adc #8
+    sta nav_target
+    jmp previous_page
+up_item_same_page:
     sec
     sbc #4
 select_item:
@@ -135,8 +156,6 @@ select_item:
     jsr draw_details
     jmp main_loop
 go_home:
-    lda category_mode
-    bne redraw_home
     lda #1
     sta category_mode
     lda #0
@@ -147,29 +166,19 @@ release_stop:
     jsr STOP
     beq release_stop
     jmp reload_page
-redraw_home:
-    lda #0
-    sta selected
-    sta page_skip
-    sta page_skip+1
-    sta jump_letter
-    jsr draw_page
-    jmp main_loop
 next_page:
-    lda category_mode
-    bne main_loop
     lda has_next
     beq main_loop
     clc
     lda page_skip
     adc #12
     sta page_skip
-    bcc reload_page
+    bcc next_page_loaded
     inc page_skip+1
-    jmp reload_page
+next_page_loaded:
+    jsr load_page
+    jmp select_page_target
 previous_page:
-    lda category_mode
-    bne main_loop
     lda page_skip
     ora page_skip+1
     beq main_loop
@@ -180,10 +189,19 @@ previous_page:
     lda page_skip+1
     sbc #0
     sta page_skip+1
-    bcs reload_page
-    lda #0
-    sta page_skip
-    sta page_skip+1
+    bcc main_loop
+    jsr load_page
+select_page_target:
+    lda nav_target
+    cmp page_count
+    bcc page_target_ready
+    lda page_count
+    sec
+    sbc #1
+page_target_ready:
+    sta selected
+    jsr draw_page
+    jmp main_loop
 reload_page:
     lda #0
     sta selected
@@ -298,7 +316,7 @@ scan_record:
     beq page_loaded
     jsr read_record
     lda category_mode
-    bne include_record
+    bne compare_skip
     lda REC+72
     cmp category_id
     bne scan_record
@@ -1494,7 +1512,7 @@ categories_text: .text "CHOOSE A CATEGORY"
 .byte 0
 browse_text: .text "CHOOSE A PROGRAM"
 .byte 0
-paging_text: .text "F1 PREV F3 NEXT F5 HOME  A-Z JUMP"
+paging_text: .text "ARROWS CHANGE PAGES"
 .byte 0
 controls_text: .text "CURSORS MOVE  RETURN OPEN  STOP BACK"
 .byte 0
@@ -1526,6 +1544,7 @@ has_next: .byte 0
 page_skip: .word 0
 matched: .word 0
 jump_letter: .byte 0
+nav_target: .byte 0
 slot: .byte 0
 frames_left: .byte 0
 stream_frame: .word 0

@@ -3,6 +3,8 @@
 Every program here runs from the [Sector 256](../README.md)
 Commodore 64 launcher, and each one's stored payload fits in
 **256 bytes or less**. Choose a category to browse its programs.
+The limit applies to stored payload, not runtime capability: programs
+run in the C64 execution area and can use the shared launcher API.
 
 * ![ARCADE](ARCADE/icon.png) [ARCADE](ARCADE/readme.md) — FAST ACTION. QUICK REFLEXES. HIGH SCORES. (24 programs)
 * ![PLAY](PLAY/icon.png) [PLAY](PLAY/readme.md) — GAMES OF CHANCE, SKILL, AND SPORT. (24 programs)
@@ -18,7 +20,7 @@ Commodore 64 launcher, and each one's stored payload fits in
 * ![PATTERNS](PATTERNS/icon.png) [PATTERNS](PATTERNS/readme.md) — GEOMETRY, PATTERNS, AND MATHEMATICAL FORMS. (24 programs)
 
 ---
-**288 programs · 44,880 bytes total · 28848 bytes to spare across the whole set**
+**288 programs · 44,880 bytes total in total**
 
 Want to add one? See [Add a program](../docs/add_program.md)
 and the [program interface](../docs/program-api.md).

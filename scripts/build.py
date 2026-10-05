@@ -9,7 +9,7 @@ import subprocess
 from pathlib import Path
 from PIL import Image
 from d64 import make_disk
-from icon_previews import generate_icon_previews
+from standalone import build_standalones
 
 ROOT = Path(__file__).resolve().parents[1]
 PALETTE = ["000000", "ffffff", "813338", "75cec8", "8e3c97", "56ac4d", "2e2c9b", "edf171", "8e5029", "553800", "c46c71", "4a4a4a", "7b7b7b", "a9ff9f", "706deb", "b2b2b2"]
@@ -84,16 +84,19 @@ def assemble(assembler, source, output, labels=None, include=ROOT / "src"):
     return int.from_bytes(binary[:2], "little"), binary[2:]
 
 
+def validate_category_count(categories):
+    if not 1 <= len(categories) <= 256:
+        raise ValueError("use 1..256 categories")
+
+
 def build(allow_oversize=False, root=ROOT, assembler="64tass"):
     root = Path(root)
-    generate_icon_previews(root / "programs")
     assembler = shutil.which(assembler) or assembler
     out = root / "build"
     out.mkdir(exist_ok=True)
     program_root = root / "programs"
     category_folders = [folder for folder in program_root.iterdir() if folder.is_dir()]
-    if not 1 <= len(category_folders) <= 12:
-        raise ValueError("use 1..12 categories")
+    validate_category_count(category_folders)
     category_entries = []
     for folder in category_folders:
         metadata_path = folder / "category.json"
@@ -191,9 +194,20 @@ def build(allow_oversize=False, root=ROOT, assembler="64tass"):
     release = root / "release"
     release.mkdir(exist_ok=True)
     (release / "sector-256.d64").write_bytes(disk)
+    standalone_release = release / "programs"
+    shutil.rmtree(standalone_release, ignore_errors=True)
+    standalone_report = build_standalones(standalone_release, root=root, group_by_category=True)
+    standalone_release.mkdir(parents=True, exist_ok=True)
+    (standalone_release / "README.TXT").write_text(
+        "SECTOR 256 STANDALONE PROGRAMS\n\n"
+        "Each PROGRAM.PRG contains its program plus the Sector 256 API.\n"
+        "Load one file and type RUN. RUN/STOP returns to BASIC.\n"
+    )
+    shutil.make_archive(str(release / "sector-256-programs"), "zip", release, "programs")
     (out / "sector-256.d64").unlink(missing_ok=True)
     report = dict(programs=programs, categories=categories, pack_bytes=[len(p) for p in packs],
-                  launcher_bytes=len(launcher), disk_bytes=len(disk), disk_files=[f[0] for f in files])
+                  launcher_bytes=len(launcher), disk_bytes=len(disk), disk_files=[f[0] for f in files],
+                  standalone_count=len(standalone_report))
     (out / "manifest.json").write_text(json.dumps(report, indent=2) + "\n")
     return report
 

@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Regenerate the category index and per-category program catalogs."""
 import json
+import re
 from pathlib import Path
-
-from icon_previews import generate_icon_previews
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -11,9 +10,17 @@ ROOT = Path(__file__).resolve().parents[1]
 def category_summary(folders, sizes, scope):
     total = sum(sizes.get(folder.name.upper(), 0) for folder in folders)
     if all(folder.name.upper() in sizes for folder in folders):
-        return (f"**{len(folders)} programs · {total:,} bytes total · "
-                f"{len(folders) * 256 - total} bytes to spare {scope}**")
-    return f"**Build to calculate total size and spare bytes {scope}**"
+        return f"**{len(folders)} programs · {total:,} bytes total {scope}**"
+    return f"**Build to calculate total stored payload {scope}**"
+
+
+def update_root_readme(readme, program_count):
+    text = readme.read_text()
+    text = re.sub(r"<!-- program-count: \d+ -->",
+                  f"<!-- program-count: {program_count} -->", text)
+    text = re.sub(r"The catalog contains \*\*\d+ programs\*\*\.",
+                  f"The catalog contains **{program_count} programs**.", text)
+    readme.write_text(text)
 
 
 def generate_category_readme(category_folder, metadata, folders, sizes):
@@ -72,7 +79,6 @@ def generate_category_readme(category_folder, metadata, folders, sizes):
 def generate(root=ROOT):
     root = Path(root)
     program_root = root / "programs"
-    generate_icon_previews(program_root)
     manifest = root / "build" / "manifest.json"
     sizes = ({p["name"]: p["size"]
               for p in json.loads(manifest.read_text())["programs"]}
@@ -90,6 +96,8 @@ def generate(root=ROOT):
         "Every program here runs from the [Sector 256](../README.md)",
         "Commodore 64 launcher, and each one's stored payload fits in",
         "**256 bytes or less**. Choose a category to browse its programs.",
+        "The limit applies to stored payload, not runtime capability: programs",
+        "run in the C64 execution area and can use the shared launcher API.",
         "",
     ]
     for _, category_folder, metadata in categories:
@@ -107,7 +115,7 @@ def generate(root=ROOT):
     lines += [
         "",
         "---",
-        category_summary(all_folders, sizes, "across the whole set"),
+        category_summary(all_folders, sizes, "in total"),
         "",
         "Want to add one? See [Add a program](../docs/add_program.md)",
         "and the [program interface](../docs/program-api.md).",
@@ -117,8 +125,10 @@ def generate(root=ROOT):
     ]
     (program_root / "readme.md").write_text("\n".join(lines))
     readme = root / "README.md"
-    if readme.exists() and "(programs/readme.md)" not in readme.read_text():
-        readme.write_text(readme.read_text() + "\n[Browse the programs](programs/readme.md).\n")
+    if readme.exists():
+        update_root_readme(readme, len(all_folders))
+        if "(programs/readme.md)" not in readme.read_text():
+            readme.write_text(readme.read_text() + "\n[Browse the programs](programs/readme.md).\n")
 
 
 if __name__ == "__main__":

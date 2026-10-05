@@ -274,7 +274,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**24 programs · 3,074 bytes total · 3070 bytes to spare in this category**
+**24 programs · 3,074 bytes total in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

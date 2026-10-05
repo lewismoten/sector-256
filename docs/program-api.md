@@ -59,8 +59,14 @@ turns off sprites/SID volume, drains pending keys, and redraws the same page.
 - Preserve the standard IRQ vectors, CIA keyboard/timer setup, interrupt
   state, KERNAL, and I/O mapping while using WAITKEY. Programs that customize
   those must restore them before exiting.
-- D64 drive number is 8 in this first version. Programs are not standalone
-  SYS-able PRGs without the launcher ABI.
+- D64 launches use the launcher ABI: load `LOADER`, select a catalog item, and
+  the launcher copies its payload to `$c000` before calling it.
+- The standard build also produces standalone BASIC-loadable PRGs under
+  `release/programs/`. They provide the same vector addresses and an embedded
+  795-byte API implementation (including the 30-byte vector table), copy a
+  1–4096-byte payload to `$c000`, and return to BASIC on EXIT or RUN/STOP.
+- Both forms use the same input/exit conventions. Standalone PRGs can be loaded
+  directly and started with `RUN`; they do not require the D64 launcher.
 
 ## Minimal source
 

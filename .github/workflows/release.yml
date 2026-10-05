@@ -47,9 +47,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
-            gh release upload "$GITHUB_REF_NAME" release/sector-256.d64 --clobber
+            gh release upload "$GITHUB_REF_NAME" release/sector-256.d64 release/sector-256-programs.zip --clobber
           else
-            gh release create "$GITHUB_REF_NAME" release/sector-256.d64 \
+            gh release create "$GITHUB_REF_NAME" release/sector-256.d64 release/sector-256-programs.zip \
               --verify-tag \
               --generate-notes \
               --title "Sector 256 $GITHUB_REF_NAME"

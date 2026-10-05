@@ -7,15 +7,23 @@ does not upload a custom fastloader to the drive.
 
 ![Launcher](./launcher.png)
 
+Regenerate both native 320×200 screenshots after a build with:
+
+```sh
+python scripts/render_launcher_screenshots.py
+```
+
+The renderer boots the built disk through the deterministic machine harness and
+writes the captured C64 pixels without resizing.
+
 ## Controls
 
 | Key | Launcher action |
 | --- | --- |
-| Cursor keys / shifted cursor keys | Move the selection |
+| Cursor keys / shifted cursor keys | Move the selection; cross a grid edge to change page when another page exists |
 | RETURN | Open a category or launch a program |
-| F1 / F3 | Previous / next page of 12 programs |
-| A–Z | Jump to the first program starting with that letter or a later letter |
-| F5, DEL, or RUN/STOP | Return to the category page |
+| A–Z | In a program list, jump to the first program starting with that letter or a later letter |
+| F5, DEL, or RUN/STOP | Return to the first category page |
 | RUN/STOP during a program | Return to the same launcher page |
 
 The selected icon's name has a cyan background. Its 64-byte description and

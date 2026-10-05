@@ -274,7 +274,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**24 programs · 2,245 bytes total · 3899 bytes to spare in this category**
+**24 programs · 2,245 bytes total in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

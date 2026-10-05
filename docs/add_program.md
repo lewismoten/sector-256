@@ -42,17 +42,22 @@ Descriptions are printable ASCII, at most 64 bytes, converted to uppercase and
 space-padded. The launcher displays them in two 32-character lines; embedded
 spaces can be used to arrange the line break. Each category folder has a
 `category.json` containing its description and zero-based display order, plus
-an `icon.png` for the category icon. Configure up to twelve categories. Order
-values must be unique and contiguous from zero.
+an `icon.png` for the category icon. Catalogs are displayed in pages, so
+program documentation should not assume a fixed category count. Order values
+must be unique and contiguous from zero.
 
 `main.asm` must assemble for the 6502 with entry address `$c000` and use the
 [program interface](program-api.md). Only its actual machine-code/data
 payload counts toward 256 bytes. Index records, names, descriptions, icons,
 shared launcher routines, and container/PRG metadata are separate disk costs.
+The limit controls stored payload only: after launch, a program runs in the C64
+execution area and can use the shared API and its documented memory. The API's
+fixed vector table is 30 bytes from `$1000` through `$101d`; that vector-table
+size is not a claim about the total implementation size of the shared routines.
 These starter games depend on the launcher's shared input/exit interface.
 
-The build fails if a payload exceeds 256 bytes. To deliberately include larger
-programs and flag them in the UI:
+The build fails if a catalog payload exceeds 256 bytes. To deliberately include
+larger programs and flag them in the UI:
 
 ```sh
 python scripts/build.py --allow-oversize
@@ -60,6 +65,11 @@ python scripts/build.py --allow-oversize
 
 The bypass supports payloads up to 4096 bytes, the reserved execution area.
 It does not bypass palette, metadata, memory, or total disk-capacity checks.
+The normal build also emits standalone PRGs in
+`release/programs/<CATEGORY>/<PROGRAM>/PROGRAM.PRG`. These use the same API
+addresses, embed its 795-byte implementation (including the 30-byte vector
+table at `$1000`–`$101d`), and accept a payload of 1–4096 bytes. Their BASIC
+loader occupies the conventional `$0801`–`$0fff` range before the API.
 
 ## Pixel icons and animation
 
@@ -93,8 +103,9 @@ Icon preview GIFs represent speed 0 with 20 ms frames so the rapid swapping and
 its intended perceptual color mixing remain visible.
 
 `python scripts/seed_art.py` regenerates the supplied hand-coded pixel art.
-`python scripts/icon_previews.py` regenerates every animated program's native
-16×16 `icon-preview.gif` from its icon frames and `animation_speed`. The normal
-build and the program catalog generator run it automatically.
+`python scripts/icon_previews.py` can regenerate animated programs' native
+16×16 `icon-preview.gif` files from icon frames and `animation_speed`. The
+catalog generator and launcher screenshot renderer do not run it, so they
+preserve user-owned animated GIFs.
 
 [Home](../readme.md)

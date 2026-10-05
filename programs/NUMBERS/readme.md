@@ -274,7 +274,7 @@ Stored payload: **185 bytes**.
 ![PRIMSPIR preview](PRIMSPIR/preview.png)
 
 ---
-**24 programs · 2,999 bytes total · 3145 bytes to spare in this category**
+**24 programs · 2,999 bytes total in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
