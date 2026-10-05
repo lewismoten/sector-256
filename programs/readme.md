@@ -32,6 +32,16 @@ Category: UTILS. Stored payload: **183 bytes**.
 
 ![MAZEGEN preview](MAZEGEN/preview.png)
 
+## SWATCH
+
+ALL 16 COLORS + 120 PAIRS. 1-9:RATE M:MIX SPACE:HOLD STOP:EXIT.
+
+Category: UTILS. Stored payload: **253 bytes**.
+
+[Assembly source](programs/SWATCH/main.asm)
+
+![SWATCH preview](SWATCH/preview.png)
+
 ## TICTACTO
 
 TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE.

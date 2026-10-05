@@ -56,6 +56,18 @@ def generate():
     folder.mkdir(parents=True, exist_ok=True)
     for frame, image in enumerate(cube_frames(), 1):
         image.save(folder / ("icon.png" if frame == 1 else f"icon-{frame}.png"))
+
+    folder = ROOT / "programs/SWATCH"
+    folder.mkdir(parents=True, exist_ok=True)
+    for frame in range(4):
+        image = Image.new("RGB", (16, 16))
+        for y in range(16):
+            for x in range(16):
+                quadrant = (y//8)*2 + x//8
+                first = (frame//2)*8 + quadrant*2
+                color = first + ((x//2 + y//2 + frame) & 1)
+                image.putpixel((x, y), RGB[color])
+        image.save(folder / ("icon.png" if frame == 0 else f"icon-{frame+1}.png"))
     folder = ROOT / "programs/MAZEGEN"
     folder.mkdir(parents=True, exist_ok=True)
     for frame in range(1, 5):

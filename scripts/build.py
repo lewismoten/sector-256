@@ -115,7 +115,8 @@ def build(allow_oversize=False, root=ROOT, assembler="64tass"):
         if category is None:
             raise ValueError(f"{name}: unknown category")
         source = folder / "main.asm"
-        address, binary = assemble(assembler, source, out / f"{name}.prg", include=root / "src")
+        address, binary = assemble(assembler, source, out / f"{name}.prg",
+                                   labels=out / f"{name}.labels", include=root / "src")
         if address != 0xc000:
             raise ValueError(f"{name}: entry/load address must be $c000")
         if not binary or len(binary) > 4096:
