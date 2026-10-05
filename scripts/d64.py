@@ -15,7 +15,15 @@ def make_disk(files, name="SECTOR 256", disk_id="S2"):
     used = {(18, 0)}
     directory_blocks = max(1, (len(files) + 7) // 8)
     used.update((18, i + 1) for i in range(directory_blocks))
-    free = [(t, s) for t in range(1, 36) if t != 18 for s in range(SECTORS[t])]
+    # A C64 begins by reading the directory/BAM on track 18.  Keep the
+    # boot path immediately adjacent to it: callers put LOADER, indexes, and
+    # packs in priority order, so allocate tracks 17, 19, 16, 20, ... first.
+    # This is still a standard D64; only physical placement changes.
+    track_order = [track for distance in range(1, 18)
+                   for track in (18 - distance, 18 + distance)
+                   if 1 <= track <= 35]
+    free = [(track, sector) for track in track_order
+            for sector in range(SECTORS[track])]
     cursor = 0
     for i, (filename, payload, kind) in enumerate(files):
         blocks = max(1, (len(payload) + 253) // 254)

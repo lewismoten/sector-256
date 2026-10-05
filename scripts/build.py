@@ -176,8 +176,12 @@ def build(allow_oversize=False, root=ROOT, assembler="64tass"):
         cat_index += record(cat["name"], cat["description"], i, 0, count, 0, 0, icon, animation)
     icons = b"SICO" + bytes((1, 36)) + struct.pack("<H", len(icon_data) // 36) + icon_data
     address, launcher = assemble(assembler, root / "src" / "launcher.asm", out / "LOADER.prg", out / "launcher.labels", include=root / "src")
+    # The loader opens the category index and category icons before it needs
+    # the much larger program index. Keep that startup/return-home path first
+    # so the D64 allocator can place it beside track 18.
     files = [("LOADER", address.to_bytes(2, "little") + launcher, "PRG"),
-             ("INDEX.DAT", index, "SEQ"), ("CATS.DAT", cat_index, "SEQ"), ("ICONS.DAT", icons, "SEQ")]
+             ("CATS.DAT", cat_index, "SEQ"), ("ICONS.DAT", icons, "SEQ"),
+             ("INDEX.DAT", index, "SEQ")]
     for i, pack in enumerate(packs):
         filename = f"P{i:03}.DAT"
         files.append((filename, b"\x00\xa0" + pack, "PRG"))
