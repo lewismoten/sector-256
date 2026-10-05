@@ -208,4 +208,4 @@ class Machine:
                 for y, bits in enumerate(glyph):
                     for x in range(8):
                         image.putpixel((cx * 8 + x, cy * 8 + y), RGB[foreground if bits & (128 >> x) else background])
-        image.resize((960, 600), Image.Resampling.NEAREST).save(path)
+        image.save(path)
