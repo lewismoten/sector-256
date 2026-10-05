@@ -75,6 +75,8 @@ Completed: EQUALIZR — added random character-mode equalizer bars to DEMOS.
 
 Completed: SEQUENCE — added a number-pattern quiz to EDU.
 
+Completed: PRIMEQZ — added a prime-number yes-or-no quiz to EDU.
+
 ## GAMES
 
 118 ideas.
