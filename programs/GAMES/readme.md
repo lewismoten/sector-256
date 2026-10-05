@@ -50,6 +50,7 @@ SMALL GAMES. BIG FUN.
 * ![ICEPATH](ICEPATH/icon.png) [ICEPATH](#icepath)
 * ![INVADE](INVADE/icon.png) [INVADE](#invade)
 * ![JUGGLE](JUGGLE/icon.png) [JUGGLE](#juggle)
+* ![JUMPER](JUMPER/icon.png) [JUMPER](#jumper)
 * ![LOCKPICK](LOCKPICK/icon.png) [LOCKPICK](#lockpick)
 * ![LOTTO](LOTTO/icon.png) [LOTTO](#lotto)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
@@ -505,6 +506,16 @@ Stored payload: **134 bytes**.
 
 ![JUGGLE preview](JUGGLE/preview.png)
 
+## JUMPER
+
+CHARGE A JUMP WITH A, THEN SPACE OVER EACH WALL.
+
+Stored payload: **185 bytes**.
+
+[Assembly source](JUMPER/main.asm)
+
+![JUMPER preview](JUMPER/preview.png)
+
 ## LOCKPICK
 
 A/D TURNS THE DIAL. FIND THE CLICK, THEN SPACE TO OPEN.
@@ -546,7 +557,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**50 programs · 9,474 bytes total · 3326 bytes to spare in this category**
+**51 programs · 9,659 bytes total · 3397 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
