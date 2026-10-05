@@ -38,6 +38,7 @@ SMALL GAMES. BIG FUN.
 * ![FLIPPER](FLIPPER/icon.png) [FLIPPER](#flipper)
 * ![FLOOD](FLOOD/icon.png) [FLOOD](#flood)
 * ![FLUTTER](FLUTTER/icon.png) [FLUTTER](#flutter)
+* ![FOXGEESE](FOXGEESE/icon.png) [FOXGEESE](#foxgeese)
 * ![GOLF](GOLF/icon.png) [GOLF](#golf)
 * ![GUESSNUM](GUESSNUM/icon.png) [GUESSNUM](#guessnum)
 * ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
@@ -383,6 +384,16 @@ Stored payload: **170 bytes**.
 
 ![FLUTTER preview](FLUTTER/preview.png)
 
+## FOXGEESE
+
+TWO-PLAYER FOX AND GOOSE CHASE ON A SEVEN-SPACE BOARD.
+
+Stored payload: **246 bytes**.
+
+[Assembly source](FOXGEESE/main.asm)
+
+![FOXGEESE preview](FOXGEESE/preview.png)
+
 ## GOLF
 
 A BUILDS PUTT POWER; SPACE SHOOTS FOR THE RANDOM HOLE.
@@ -524,7 +535,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**48 programs · 9,041 bytes total · 3247 bytes to spare in this category**
+**49 programs · 9,287 bytes total · 3257 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
