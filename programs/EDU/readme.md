@@ -30,6 +30,7 @@ SHORT LESSONS AND PRACTICE.
 * ![LANDMARK](LANDMARK/icon.png) [LANDMARK](#landmark)
 * ![LOGIC](LOGIC/icon.png) [LOGIC](#logic)
 * ![MAPS](MAPS/icon.png) [MAPS](#maps)
+* ![MEASURE](MEASURE/icon.png) [MEASURE](#measure)
 * ![MEMORY](MEMORY/icon.png) [MEMORY](#memory)
 * ![MONTHS](MONTHS/icon.png) [MONTHS](#months)
 * ![MULTIPLY](MULTIPLY/icon.png) [MULTIPLY](#multiply)
@@ -322,6 +323,16 @@ Stored payload: **157 bytes**.
 [Assembly source](MAPS/main.asm)
 
 ![MAPS preview](MAPS/preview.png)
+
+## MEASURE
+
+ESTIMATE BAR LENGTHS IN CHARACTER CELLS.
+
+Stored payload: **196 bytes**.
+
+[Assembly source](MEASURE/main.asm)
+
+![MEASURE preview](MEASURE/preview.png)
 
 ## MEMORY
 
@@ -624,7 +635,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**56 programs · 9,650 bytes total · 4686 bytes to spare in this category**
+**57 programs · 9,846 bytes total · 4746 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

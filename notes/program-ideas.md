@@ -183,6 +183,8 @@ Completed: PETSCII — added a common PETSCII-code reference to UTILS.
 
 Completed: CANDLE — added a randomized flickering candle demo to DEMOS.
 
+Completed: MEASURE — added a bar-length estimation drill to EDU.
+
 ## GAMES
 
 118 ideas.
