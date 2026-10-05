@@ -4,6 +4,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
+* ![ARMSTRNG](ARMSTRNG/icon.png) [ARMSTRNG](#armstrng)
 * ![BINCOUNT](BINCOUNT/icon.png) [BINCOUNT](#bincount)
 * ![CANTOR](CANTOR/icon.png) [CANTOR](#cantor)
 * ![FIB](FIB/icon.png) [FIB](#fib)
@@ -17,6 +18,16 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![TRIANGNU](TRIANGNU/icon.png) [TRIANGNU](#triangnu)
 
 ---
+
+## ARMSTRNG
+
+THREE-DIGIT ARMSTRONG NUMBERS AS SUMS OF CUBES.
+
+Stored payload: **137 bytes**.
+
+[Assembly source](ARMSTRNG/main.asm)
+
+![ARMSTRNG preview](ARMSTRNG/preview.png)
 
 ## BINCOUNT
 
@@ -129,7 +140,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**11 programs · 1,605 bytes total · 1211 bytes to spare in this category**
+**12 programs · 1,742 bytes total · 1330 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

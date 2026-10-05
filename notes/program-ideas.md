@@ -125,6 +125,8 @@ Completed: DAYSWK — added a next-weekday drill to EDU.
 
 Completed: ESTIMATE — added a briefly flashed dot-counting drill to EDU.
 
+Completed: ARMSTRNG — added three-digit Armstrong-number identities to MATH.
+
 ## GAMES
 
 118 ideas.
