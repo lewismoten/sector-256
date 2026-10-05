@@ -31,6 +31,8 @@ Completed: COMPASS — added a cardinal-direction arrow quiz to EDU.
 
 Completed: GREATER — added a comparison-symbol drill to EDU.
 
+Completed: BINQUIZ — added a binary-to-decimal lesson to EDU.
+
 ## GAMES
 
 118 ideas.

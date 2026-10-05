@@ -7,6 +7,7 @@ SHORT LESSONS AND PRACTICE.
 * ![ADDITION](ADDITION/icon.png) [ADDITION](#addition)
 * ![ALPHABET](ALPHABET/icon.png) [ALPHABET](#alphabet)
 * ![ANIMALS](ANIMALS/icon.png) [ANIMALS](#animals)
+* ![BINQUIZ](BINQUIZ/icon.png) [BINQUIZ](#binquiz)
 * ![BODY](BODY/icon.png) [BODY](#body)
 * ![CLOCK](CLOCK/icon.png) [CLOCK](#clock)
 * ![COLORS](COLORS/icon.png) [COLORS](#colors)
@@ -77,6 +78,16 @@ Stored payload: **171 bytes**.
 [Assembly source](ANIMALS/main.asm)
 
 ![ANIMALS preview](ANIMALS/preview.png)
+
+## BINQUIZ
+
+CONVERT FOUR SIMPLE BINARY VALUES TO DECIMAL.
+
+Stored payload: **174 bytes**.
+
+[Assembly source](BINQUIZ/main.asm)
+
+![BINQUIZ preview](BINQUIZ/preview.png)
 
 ## BODY
 
@@ -459,7 +470,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**41 programs · 6,826 bytes total · 3670 bytes to spare in this category**
+**42 programs · 7,000 bytes total · 3752 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
