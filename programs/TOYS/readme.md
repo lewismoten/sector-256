@@ -15,6 +15,7 @@ SMALL THINGS TO PLAY WITH.
 | ![FLOWERS](FLOWERS/icon.png) | [FLOWERS](#flowers) | Generates a fresh random field of character flowers. |
 | ![FORTUNE](FORTUNE/icon.png) | [FORTUNE](#fortune) | A RANDOM FORTUNE COOKIE MESSAGE ON EACH KEYPRESS. |
 | ![ORACLE](ORACLE/icon.png) | [ORACLE](#oracle) | GET A RANDOM YES-OR-NO STYLE ANSWER. |
+| ![POPCORN](POPCORN/icon.png) | [POPCORN](#popcorn) | Generates a fresh random field of popping kernels. |
 | ![SPARKLER](SPARKLER/icon.png) | [SPARKLER](#sparkler) | Generates a fresh random field of character sparks. |
 | ![SPINNER](SPINNER/icon.png) | [SPINNER](#spinner) | SPIN A RANDOM DIRECTION FOR BOARD GAMES. |
 | ![SPINTOP](SPINTOP/icon.png) | [SPINTOP](#spintop) | Steps through four character frames of a spinning top. |
@@ -112,6 +113,16 @@ Stored payload: **125 bytes**.
 
 ![ORACLE preview](ORACLE/preview.png)
 
+## POPCORN
+
+Generates a fresh random field of popping kernels.
+
+Stored payload: **79 bytes**.
+
+[Assembly source](POPCORN/main.asm)
+
+![POPCORN preview](POPCORN/preview.png)
+
 ## SPARKLER
 
 Generates a fresh random field of character sparks.
@@ -153,7 +164,7 @@ Stored payload: **191 bytes**.
 ![WINDMILL preview](WINDMILL/preview.png)
 
 ---
-**13 programs · 1,739 bytes total · 1589 bytes to spare in this category**
+**14 programs · 1,818 bytes total · 1766 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

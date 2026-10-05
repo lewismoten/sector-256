@@ -309,6 +309,8 @@ Completed: COINSND — added a compact SID arcade-coin sound program to SOUND.
 
 Completed: FLOWERS — added a compact random character-flower toy to TOYS.
 
+Completed: POPCORN — added a compact randomized popping-kernel toy to TOYS.
+
 ## GAMES
 
 118 ideas.
