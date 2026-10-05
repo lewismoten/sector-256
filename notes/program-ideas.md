@@ -77,6 +77,8 @@ Completed: SEQUENCE — added a number-pattern quiz to EDU.
 
 Completed: PRIMEQZ — added a prime-number yes-or-no quiz to EDU.
 
+Completed: KEYFIND — added a keyboard-location drill to EDU.
+
 ## GAMES
 
 118 ideas.

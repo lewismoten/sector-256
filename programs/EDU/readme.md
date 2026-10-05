@@ -21,6 +21,7 @@ SHORT LESSONS AND PRACTICE.
 * ![GREATER](GREATER/icon.png) [GREATER](#greater)
 * ![HOME](HOME/icon.png) [HOME](#home)
 * ![JOBS](JOBS/icon.png) [JOBS](#jobs)
+* ![KEYFIND](KEYFIND/icon.png) [KEYFIND](#keyfind)
 * ![LANDMARK](LANDMARK/icon.png) [LANDMARK](#landmark)
 * ![MAPS](MAPS/icon.png) [MAPS](#maps)
 * ![MEMORY](MEMORY/icon.png) [MEMORY](#memory)
@@ -220,6 +221,16 @@ Stored payload: **176 bytes**.
 [Assembly source](JOBS/main.asm)
 
 ![JOBS preview](JOBS/preview.png)
+
+## KEYFIND
+
+FIND AND PRESS EACH HIGHLIGHTED KEY.
+
+Stored payload: **167 bytes**.
+
+[Assembly source](KEYFIND/main.asm)
+
+![KEYFIND preview](KEYFIND/preview.png)
 
 ## LANDMARK
 
@@ -492,7 +503,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**44 programs · 7,341 bytes total · 3923 bytes to spare in this category**
+**45 programs · 7,508 bytes total · 4012 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
