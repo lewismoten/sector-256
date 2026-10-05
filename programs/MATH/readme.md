@@ -26,6 +26,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![MULTAB](MULTAB/icon.png) [MULTAB](#multab)
 * ![PASCAL](PASCAL/icon.png) [PASCAL](#pascal)
 * ![PERFECT](PERFECT/icon.png) [PERFECT](#perfect)
+* ![PERMUTE](PERMUTE/icon.png) [PERMUTE](#permute)
 * ![PI](PI/icon.png) [PI](#pi)
 * ![POWERS2](POWERS2/icon.png) [POWERS2](#powers2)
 * ![PRIMES](PRIMES/icon.png) [PRIMES](#primes)
@@ -257,6 +258,16 @@ Stored payload: **104 bytes**.
 
 ![PERFECT preview](PERFECT/preview.png)
 
+## PERMUTE
+
+LIST ALL 24 PERMUTATIONS OF ABCD.
+
+Stored payload: **169 bytes**.
+
+[Assembly source](PERMUTE/main.asm)
+
+![PERMUTE preview](PERMUTE/preview.png)
+
 ## PI
 
 DISPLAY LEADING DECIMAL DIGITS OF PI.
@@ -338,7 +349,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**30 programs · 3,534 bytes total · 4146 bytes to spare in this category**
+**31 programs · 3,703 bytes total · 4233 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
