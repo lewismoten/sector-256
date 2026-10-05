@@ -25,6 +25,7 @@ SMALL GAMES. BIG FUN.
 * ![DROP4](DROP4/icon.png) [DROP4](#drop4)
 * ![DUEL](DUEL/icon.png) [DUEL](#duel)
 * ![ECHOSEQ](ECHOSEQ/icon.png) [ECHOSEQ](#echoseq)
+* ![ESCAPE](ESCAPE/icon.png) [ESCAPE](#escape)
 * ![FIREMAN](FIREMAN/icon.png) [FIREMAN](#fireman)
 * ![FISHING](FISHING/icon.png) [FISHING](#fishing)
 * ![FLOOD](FLOOD/icon.png) [FLOOD](#flood)
@@ -254,6 +255,14 @@ Stored payload: **171 bytes**.
 
 ![ECHOSEQ preview](ECHOSEQ/preview.png)
 
+## ESCAPE
+
+A/D MOVES THE RUNNER. SPACE ESCAPES THE ROBOT LANE.
+
+Stored payload: **183 bytes**.
+
+[Assembly source](ESCAPE/main.asm)
+
 ## FIREMAN
 
 A/D MOVES THE NET. SPACE CATCHES THE RANDOM JUMPER.
@@ -435,7 +444,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**39 programs · 7,348 bytes total · 2636 bytes to spare in this category**
+**40 programs · 7,531 bytes total · 2709 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
