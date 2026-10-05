@@ -66,6 +66,8 @@ Stored payload: **152 bytes**.
 
 [Assembly source](BASKETBL/main.asm)
 
+![BASKETBL preview](BASKETBL/preview.png)
+
 ## BOWLING
 
 A/D AIM, SPACE ROLLS. ACCOUNT FOR THE RANDOM CURVE.
@@ -173,6 +175,8 @@ TWO-PLAYER DROP4. PICK A COLUMN; COMPLETE A FOUR-HIGH STACK.
 Stored payload: **137 bytes**.
 
 [Assembly source](DROP4/main.asm)
+
+![DROP4 preview](DROP4/preview.png)
 
 ## DUEL
 
@@ -292,6 +296,8 @@ Stored payload: **156 bytes**.
 
 [Assembly source](HURDLES/main.asm)
 
+![HURDLES preview](HURDLES/preview.png)
+
 ## JUGGLE
 
 SPACE JUGGLES. RANDOM DROPS REDUCE YOUR THREE BALLS.
@@ -299,6 +305,8 @@ SPACE JUGGLES. RANDOM DROPS REDUCE YOUR THREE BALLS.
 Stored payload: **134 bytes**.
 
 [Assembly source](JUGGLE/main.asm)
+
+![JUGGLE preview](JUGGLE/preview.png)
 
 ## LOCKPICK
 
