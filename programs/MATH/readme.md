@@ -8,6 +8,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![BASECONV](BASECONV/icon.png) [BASECONV](#baseconv)
 * ![BINCOUNT](BINCOUNT/icon.png) [BINCOUNT](#bincount)
 * ![CANTOR](CANTOR/icon.png) [CANTOR](#cantor)
+* ![CIRCLE](CIRCLE/icon.png) [CIRCLE](#circle)
 * ![COLLATZ](COLLATZ/icon.png) [COLLATZ](#collatz)
 * ![DIGROOT](DIGROOT/icon.png) [DIGROOT](#digroot)
 * ![FIB](FIB/icon.png) [FIB](#fib)
@@ -69,6 +70,16 @@ Stored payload: **170 bytes**.
 [Assembly source](CANTOR/main.asm)
 
 ![CANTOR preview](CANTOR/preview.png)
+
+## CIRCLE
+
+DISPLAY A CHARACTER-MODE CIRCLE WITH AXES.
+
+Stored payload: **85 bytes**.
+
+[Assembly source](CIRCLE/main.asm)
+
+![CIRCLE preview](CIRCLE/preview.png)
 
 ## COLLATZ
 
@@ -261,7 +272,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**23 programs · 2,894 bytes total · 2994 bytes to spare in this category**
+**24 programs · 2,979 bytes total · 3165 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

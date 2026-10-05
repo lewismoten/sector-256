@@ -189,6 +189,8 @@ Completed: ROMAN — added a Roman-numeral reference to MATH.
 
 Completed: DIGROOT — added a digital-root worked example to MATH.
 
+Completed: CIRCLE — added a character-mode circle reference to MATH.
+
 ## GAMES
 
 118 ideas.
