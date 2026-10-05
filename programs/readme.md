@@ -5,7 +5,7 @@ Commodore 64 launcher, and each one's stored payload fits in
 **256 bytes or less**. That's one disk block. Press RUN/STOP 
 in any program to return to the launcher.
 
-## CUBE3D
+## ![CUBE3D](CUBE3D/icon.png) CUBE3D
 
 A ROTATING 3D WIREFRAME CUBE.   RUN/STOP TO RETURN TO LAUNCHER.
 
@@ -15,7 +15,7 @@ Category: DEMOS. Stored payload: **238 bytes**.
 
 ![CUBE3D preview](CUBE3D/preview.png)
 
-## DANCE
+## ![DANCE](DANCE/icon.png) DANCE
 
 DISCO LADY: FOUR VECTOR DANCE POSES. RUN/STOP TO RETURN.
 
@@ -25,7 +25,7 @@ Category: DEMOS. Stored payload: **249 bytes**.
 
 ![DANCE preview](DANCE/preview.png)
 
-## HANGMAN
+## ![HANGMAN](HANGMAN/icon.png) HANGMAN
 
 GUESS A SIX-LETTER WORD.         SIX MISSES AND YOU LOSE.
 
@@ -35,7 +35,7 @@ Category: GAMES. Stored payload: **253 bytes**.
 
 ![HANGMAN preview](HANGMAN/preview.png)
 
-## MAZEGEN
+## ![MAZEGEN](MAZEGEN/icon.png) MAZEGEN
 
 190-ROOM PERFECT MAZE. SPACE:NEW. RUN/STOP:RETURN.
 
@@ -45,7 +45,7 @@ Category: UTILS. Stored payload: **183 bytes**.
 
 ![MAZEGEN preview](MAZEGEN/preview.png)
 
-## MONTY
+## ![MONTY](MONTY/icon.png) MONTY
 
 PICK 1-3. MONTY OPENS A GOAT. S:SWITCH K:KEEP. STOP:EXIT.
 
@@ -55,7 +55,7 @@ Category: GAMES. Stored payload: **256 bytes**.
 
 ![MONTY preview](MONTY/preview.png)
 
-## SNOW
+## ![SNOW](SNOW/icon.png) SNOW
 
 PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT.
 
@@ -65,7 +65,7 @@ Category: DEMOS. Stored payload: **255 bytes**.
 
 ![SNOW preview](SNOW/preview.png)
 
-## SWATCH
+## ![SWATCH](SWATCH/icon.png) SWATCH
 
 ALL 16 COLORS + 120 PAIRS. 1-9:RATE M:MIX SPACE:HOLD STOP:EXIT.
 
@@ -75,7 +75,7 @@ Category: UTILS. Stored payload: **256 bytes**.
 
 ![SWATCH preview](SWATCH/preview.png)
 
-## TICTACTO
+## ![TICTACTO](TICTACTO/icon.png) TICTACTO
 
 TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE.
 

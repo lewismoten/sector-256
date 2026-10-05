@@ -24,7 +24,7 @@ def generate(root=ROOT):
     for folder in folders:
         data = json.loads((folder / "program.json").read_text())
         name = folder.name.upper()
-        lines += [f"## {name}", "", data["description"], "",
+        lines += [f"## ![{name}]({folder.name}/icon.png) {name}", "", data["description"], "",
                   f"Category: {data['category']}. " + (f"Stored payload: **{sizes[name]} bytes**." if name in sizes else "Build to calculate size."), "",
                   f"[Assembly source]({folder.name}/main.asm)", ""]
         if (folder / "preview.png").exists():
