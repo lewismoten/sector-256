@@ -32,6 +32,16 @@ LOAD"LOADER",8
 RUN
 ```
 
+## Releases
+
+Pushing a semantic version tag in `vX.X.X` form builds and tests the project,
+then creates a GitHub Release with `sector-256.d64` attached:
+
+```sh
+git tag v1.0.0
+git push origin v1.0.0
+```
+
 * [Launcher](docs/launcher.md)
 * [Program List](programs/readme.md)
 * [Add a program](docs/add_program.md)

@@ -1,0 +1,56 @@
+name: Release D64
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+permissions:
+  contents: write
+
+jobs:
+  build-release:
+    name: Build, test, and release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out tagged source
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Verify release tag
+        run: |
+          if [[ ! "$GITHUB_REF_NAME" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Expected a vX.X.X tag, received: $GITHUB_REF_NAME" >&2
+            exit 1
+          fi
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes 64tass
+          python -m pip install --requirement requirements.txt
+
+      - name: Build disk image
+        run: python scripts/build.py
+
+      - name: Run tests
+        run: python -m unittest discover -s tests -q
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" release/sector-256.d64 --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" release/sector-256.d64 \
+              --verify-tag \
+              --generate-notes \
+              --title "Sector 256 $GITHUB_REF_NAME"
+          fi
