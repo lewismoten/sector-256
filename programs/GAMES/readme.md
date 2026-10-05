@@ -58,6 +58,7 @@ SMALL GAMES. BIG FUN.
 * ![LOTTO](LOTTO/icon.png) [LOTTO](#lotto)
 * ![MANCALA](MANCALA/icon.png) [MANCALA](#mancala)
 * ![MATCH](MATCH/icon.png) [MATCH](#match)
+* ![MAZE3D](MAZE3D/icon.png) [MAZE3D](#maze3d)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 
@@ -591,6 +592,16 @@ Stored payload: **180 bytes**.
 
 ![MATCH preview](MATCH/preview.png)
 
+## MAZE3D
+
+CHOOSE THE OPEN CORRIDOR WITH A OR D THROUGH FIVE TURNS.
+
+Stored payload: **193 bytes**.
+
+[Assembly source](MAZE3D/main.asm)
+
+![MAZE3D preview](MAZE3D/preview.png)
+
 ## MONTY
 
 PICK 1-3. MONTY OPENS A GOAT. S:SWITCH K:KEEP. STOP:EXIT.
@@ -612,7 +623,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**56 programs · 10,577 bytes total · 3759 bytes to spare in this category**
+**57 programs · 10,770 bytes total · 3822 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
