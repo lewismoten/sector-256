@@ -25,7 +25,7 @@ HUNT, LIFE, LOTTO, FALLDOWN, FLIPPER, FIVEDICE, FOXGEESE, ICEPATH, JUMPER, KNIGH
 MAZEGEN, MONTY, RULE30, SANDPILE,
 SNOW, SWATCH, TICTACTO.
 
-Working: OCEANLIF — learn sea-life initials in EDU.
+Working: LANDMARK — learn landmark-word initials in EDU.
 
 ## GAMES
 
