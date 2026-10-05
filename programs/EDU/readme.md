@@ -13,6 +13,7 @@ SHORT LESSONS AND PRACTICE.
 * ![COUNTING](COUNTING/icon.png) [COUNTING](#counting)
 * ![DAYS](DAYS/icon.png) [DAYS](#days)
 * ![DIVIDE](DIVIDE/icon.png) [DIVIDE](#divide)
+* ![FOOD](FOOD/icon.png) [FOOD](#food)
 * ![FRACTION](FRACTION/icon.png) [FRACTION](#fraction)
 * ![MAPS](MAPS/icon.png) [MAPS](#maps)
 * ![MEMORY](MEMORY/icon.png) [MEMORY](#memory)
@@ -118,6 +119,16 @@ Stored payload: **145 bytes**.
 [Assembly source](DIVIDE/main.asm)
 
 ![DIVIDE preview](DIVIDE/preview.png)
+
+## FOOD
+
+PICK THE FIRST LETTER OF THREE FOOD WORDS.
+
+Stored payload: **172 bytes**.
+
+[Assembly source](FOOD/main.asm)
+
+![FOOD preview](FOOD/preview.png)
 
 ## FRACTION
 
@@ -250,7 +261,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**22 programs · 3,526 bytes total · 2106 bytes to spare in this category**
+**23 programs · 3,698 bytes total · 2190 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
