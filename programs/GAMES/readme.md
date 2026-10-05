@@ -11,6 +11,7 @@ SMALL GAMES. BIG FUN.
 * ![BOUNCE](BOUNCE/icon.png) [BOUNCE](#bounce)
 * ![BOWLING](BOWLING/icon.png) [BOWLING](#bowling)
 * ![CATCHER](CATCHER/icon.png) [CATCHER](#catcher)
+* ![CAVE](CAVE/icon.png) [CAVE](#cave)
 * ![CHICKEN](CHICKEN/icon.png) [CHICKEN](#chicken)
 * ![CHOMP](CHOMP/icon.png) [CHOMP](#chomp)
 * ![COPTER](COPTER/icon.png) [COPTER](#copter)
@@ -112,6 +113,14 @@ Stored payload: **241 bytes**.
 [Assembly source](CATCHER/main.asm)
 
 ![CATCHER preview](CATCHER/preview.png)
+
+## CAVE
+
+SPACE CLIMBS; RETURN FLIES THROUGH THE CAVE OPENING.
+
+Stored payload: **174 bytes**.
+
+[Assembly source](CAVE/main.asm)
 
 ## CHICKEN
 
@@ -404,7 +413,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**36 programs · 6,837 bytes total · 2379 bytes to spare in this category**
+**37 programs · 7,011 bytes total · 2461 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
