@@ -65,6 +65,7 @@ SMALL GAMES. BIG FUN.
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
 * ![NIM](NIM/icon.png) [NIM](#nim)
 * ![NUMRACE](NUMRACE/icon.png) [NUMRACE](#numrace)
+* ![OTHELLO](OTHELLO/icon.png) [OTHELLO](#othello)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 
 ---
@@ -667,6 +668,16 @@ Stored payload: **166 bytes**.
 
 ![NUMRACE preview](NUMRACE/preview.png)
 
+## OTHELLO
+
+PLACE BLACK AT 4 TO BRACKET AND FLIP THE WHITE ROW.
+
+Stored payload: **127 bytes**.
+
+[Assembly source](OTHELLO/main.asm)
+
+![OTHELLO preview](OTHELLO/preview.png)
+
 ## TICTACTO
 
 TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE.
@@ -678,7 +689,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**62 programs · 11,627 bytes total · 4245 bytes to spare in this category**
+**63 programs · 11,754 bytes total · 4374 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
