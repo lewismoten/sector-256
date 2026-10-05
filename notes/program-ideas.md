@@ -67,6 +67,8 @@ Completed: BANKVIEW — added a processor-port memory-bank display to UTILS.
 
 Completed: COINTOSS — added a random coin toss with tallies to UTILS.
 
+Completed: COLORSET — added a border and background color picker to UTILS.
+
 ## GAMES
 
 118 ideas.

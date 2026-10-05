@@ -6,6 +6,7 @@ HANDY LITTLE TOOLS.
 
 * ![BANKVIEW](BANKVIEW/icon.png) [BANKVIEW](#bankview)
 * ![COINTOSS](COINTOSS/icon.png) [COINTOSS](#cointoss)
+* ![COLORSET](COLORSET/icon.png) [COLORSET](#colorset)
 * ![MAZEGEN](MAZEGEN/icon-preview.gif) [MAZEGEN](#mazegen)
 * ![SWATCH](SWATCH/icon-preview.gif) [SWATCH](#swatch)
 
@@ -31,6 +32,16 @@ Stored payload: **159 bytes**.
 
 ![COINTOSS preview](COINTOSS/preview.png)
 
+## COLORSET
+
+SET BORDER OR BACKGROUND COLORS WITH B G AND 0-7.
+
+Stored payload: **169 bytes**.
+
+[Assembly source](COLORSET/main.asm)
+
+![COLORSET preview](COLORSET/preview.png)
+
 ## MAZEGEN
 
 190-ROOM PERFECT MAZE. SPACE:NEW. RUN/STOP:RETURN.
@@ -52,7 +63,7 @@ Stored payload: **256 bytes**.
 ![SWATCH preview](SWATCH/preview.gif)
 
 ---
-**4 programs · 684 bytes total · 340 bytes to spare in this category**
+**5 programs · 853 bytes total · 427 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
