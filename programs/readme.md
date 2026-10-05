@@ -4,7 +4,11 @@ Every program here runs from the [Sector 256](../README.md)
 Commodore 64 launcher, and each one's stored payload fits in
 **256 bytes or less**. Choose a category to browse its programs.
 
-* ![GAMES](GAMES/icon.png) [GAMES](GAMES/readme.md) — SMALL GAMES. BIG FUN. (78 programs)
+* ![ARCADE](ARCADE/icon.png) [ARCADE](ARCADE/readme.md) — FAST ACTION. QUICK REFLEXES. HIGH SCORES. (23 programs)
+* ![PUZZLES](PUZZLES/icon.png) [PUZZLES](PUZZLES/readme.md) — THINK IT THROUGH. ONE MOVE AT A TIME. (19 programs)
+* ![TABLETOP](TABLETOP/icon.png) [TABLETOP](TABLETOP/readme.md) — CLASSIC TABLE GAMES FOR ONE OR TWO PLAYERS. (15 programs)
+* ![CHANCE](CHANCE/icon.png) [CHANCE](CHANCE/readme.md) — ROLL, DEAL, PICK, AND PRESS YOUR LUCK. (11 programs)
+* ![SPORTS](SPORTS/icon.png) [SPORTS](SPORTS/readme.md) — AIM, THROW, RACE, AND SCORE. (10 programs)
 * ![UTILS](UTILS/icon.png) [UTILS](UTILS/readme.md) — HANDY LITTLE TOOLS. (13 programs)
 * ![DEMOS](DEMOS/icon.png) [DEMOS](DEMOS/readme.md) — PIXELS, SOUND AND TINY SHOWS. (26 programs)
 * ![LAB](LAB/icon.png) [LAB](LAB/readme.md) — EXPERIMENTS AND PROOF OF CONCEPTS. (10 programs)

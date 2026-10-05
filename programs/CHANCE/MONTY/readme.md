@@ -1,6 +1,6 @@
 # MONTY
 
-A **256-byte** Monty Hall game for the Commodore 64. Open GAMES, select
+A **256-byte** Monty Hall game for the Commodore 64. Open CHANCE, select
 MONTY, and press RETURN.
 
 Pick door **1**, **2**, or **3**. The car is placed behind a door before you

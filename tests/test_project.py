@@ -15,6 +15,34 @@ from programs_md import generate as generate_programs_md
 
 
 class ProjectTests(unittest.TestCase):
+    CATEGORY_ORDERS = {
+        'ARCADE': 0, 'PUZZLES': 1, 'TABLETOP': 2, 'CHANCE': 3, 'SPORTS': 4,
+        'UTILS': 5, 'DEMOS': 6, 'LAB': 7, 'EDU': 8, 'MATH': 9, 'SOUND': 10,
+        'TOYS': 11,
+    }
+    CATEGORY_PROGRAMS = {
+        'ARCADE': 'BALLOON BEAM BOUNCE BRICKS BUMPCAR CATCHER CAVE COPTER DOCKING DODGE ELEVATOR ESCAPE FALLDOWN FIREMAN FLIPPER FLUTTER INVADE JUGGLE JUMPER LANDER LAVA PONG ZAP'.split(),
+        'PUZZLES': 'BOXPUSH DEFUSE ECHOSEQ FLOOD GUESSNUM HANGMAN HUNT ICEPATH KNIGHTS LOCKPICK MAZE3D MAZEDARK MAZERUN MINES NUMMEM ODDONE PEGS REACTION WHACK'.split(),
+        'TABLETOP': 'CHICKEN CHOMP COWBULL DROP4 DUEL FOXGEESE MANCALA MATCH NIM NUMRACE OTHELLO PAIRS ROCKPAPR TICTACTO TUGOWAR'.split(),
+        'CHANCE': 'BLACKJCK CRAPS DICE FIVEDICE HILO HOTPOT LOTTO MONTY PIG POKER SLOTS'.split(),
+        'SPORTS': 'ARCHERY ARTILLRY BASKETBL BOWLING DARTS FISHING GOLF HORSES HURDLES PENALTY'.split(),
+        'UTILS': 'BANKVIEW COINTOSS COLORSET CRTTEST JOYTEST MAZEGEN PALNTSC PETSCII RANDPICK REGVIEW SCORE SWATCH TALLY'.split(),
+        'DEMOS': 'ATOM CANDLE CITYLGT COLORCYC CREDITS CUBE3D DANCE EQUALIZR FIREFLY GLITCH HEARTBT HEXFLOW HYPNO MARQUEE MAZE10 MUNCHING NEON OCEAN RAIN RASTBARS SCANNER SNOW SUNSET TRUCHET WORMS XORPAT'.split(),
+        'LAB': 'ALIASING ANT BEATS CHAOS COLORRAM LFSR LIFE RULE30 SANDPILE SCROLLX'.split(),
+        'EDU': 'ADDITION ALPHABET ANIMALS BINQUIZ BITOPS BODY CLOCK COLORS COMPASS COUNTING DAYS DAYSWK DIVIDE DIVQUIZ ESTIMATE FAMILY FOOD FRACTION GRAPHPT GREATER HEXQUIZ HOME JOBS KEYFIND LANDMARK LOGIC MAPGRID MAPS MATHQUIZ MEASURE MEMORY MONTHS MULTIPLY MUSIC NATURE NUMBERS NUMLINE OCEANLIF OCEANS ODDEVEN OPPOSITE PETSCIIQ PLANETS PLANTS PLANTS2 PRIMEQZ QUIZ RHYMES ROUNDING SCHOOL SEQUENCE SHAPEQZ SHAPES SPACE SPELLING SPORTS SQUAREQZ SUBTRACT TIMESDRL TRANSPRT WEATHER'.split(),
+        'MATH': 'ARMSTRNG BASECONV BINCOUNT BINOMIAL CANTOR CATALAN CIRCLE COLLATZ DIGROOT DIVISORS EDIGITS FACTORL FIB GCD GOLDEN GRAYCODE HAPPY HILBERT KAPREKAR KOCH LINES LOOKSAY LUCAS MAGICSQ MODCLOCK MULTAB PALINDRM PASCAL PERFECT PERMUTE PI POWERS2 PRIMES PYTHTRIP ROMAN SIERPCAR SINTABLE SQRT SQUARES TOTIENT TRIANGNU'.split(),
+        'SOUND': 'ARPEGGIO BEEPER BELLS CHORDS COINSND DOORBELL KLAXON METRONOM MUSICBOX PHONERNG PIANO SCALE SIREN SWEEP TONEGEN'.split(),
+        'TOYS': 'BINCLOCK BUBBLES CATEYES CONFETTI DOODLE FACES FLOWERS FORTUNE ORACLE POPCORN SPARKLER SPINNER SPINTOP WINDMILL'.split(),
+    }
+
+    def category_id(self, name):
+        return self.CATEGORY_ORDERS[name]
+
+    def program_category_id(self, name):
+        folders = list((ROOT / 'programs').glob(f'*/{name}'))
+        self.assertEqual(len(folders), 1, name)
+        return self.category_id(folders[0].parent.name)
+
     def program_index(self, machine, name):
         target = name.encode().ljust(8)
         while True:
@@ -28,6 +56,15 @@ class ProjectTests(unittest.TestCase):
         self.fail(f'{name} is not visible on the current launcher page')
 
     def launch_named(self, machine, name, wait_address=0x1000):
+        folders = list((ROOT / 'programs').glob(f'*/{name}'))
+        self.assertEqual(len(folders), 1, name)
+        category = folders[0].parent
+        category_id = json.loads((category / 'category.json').read_text())['order']
+        if (machine.var('category_mode') != 0 or
+                machine.var('category_id') != category_id):
+            if machine.var('category_mode') == 0:
+                machine.key(0x87)
+            self.enter_category(machine, category.name)
         index = self.program_index(machine, name)
         machine.launch(index, wait_address=wait_address)
         return index
@@ -65,6 +102,17 @@ class ProjectTests(unittest.TestCase):
                 self.assertEqual(headings, expected)
                 for program in expected:
                     self.assertIn(f'[{program}](#{program.lower()})', page)
+
+    def test_category_taxonomy_and_icons(self):
+        categories = sorted((path.parent for path in (ROOT / 'programs').glob('*/category.json')),
+                            key=lambda path: json.loads((path / 'category.json').read_text())['order'])
+        self.assertEqual([category.name for category in categories], list(self.CATEGORY_ORDERS))
+        encoded_icons = [encode_icon(category / 'icon.png') for category in categories]
+        self.assertEqual(len(encoded_icons), len(set(encoded_icons)))
+        for category, programs in self.CATEGORY_PROGRAMS.items():
+            actual = sorted(path.name for path in (ROOT / 'programs' / category).iterdir()
+                            if path.is_dir() and (path / 'program.json').is_file())
+            self.assertEqual(actual, programs)
 
     def test_disk_roundtrip_and_bam(self):
         data = make_disk([('A', bytes(range(256)), 'SEQ'), ('B', b'123', 'PRG')])
@@ -110,8 +158,8 @@ class ProjectTests(unittest.TestCase):
     def test_launcher_category_and_selection(self):
         machine = Machine()
         machine.boot()
-        self.assertEqual(machine.var('page_count'), 8)
-        self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'GAMES   ')
+        self.assertEqual(machine.var('page_count'), 12)
+        self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'ARCADE  ')
         machine.key(13)
         self.assertEqual(machine.var('category_mode'), 0)
         self.assertEqual(machine.var('page_count'), 12)
@@ -120,14 +168,14 @@ class ProjectTests(unittest.TestCase):
         machine.key('H')
         self.assertEqual(machine.var('selected'), 0)
         machine.key('T')
-        self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'TICTACTO')
+        self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'ZAP     ')
         machine.key(0x87)
         self.assertEqual(machine.var('category_mode'), 1)
         self.enter_category(machine, 'DEMOS')
         self.assertGreaterEqual(machine.var('page_count'), 2)
         self.assertIn(b'ATOM    ', bytes(machine.memory[0x4800:0x4800 + 12 * 96]))
         machine.key(0x87)
-        self.assertEqual(machine.var('page_count'), 8)
+        self.assertEqual(machine.var('page_count'), 12)
 
     def test_short_names_center_under_icons(self):
         machine = Machine()
@@ -142,8 +190,8 @@ class ProjectTests(unittest.TestCase):
                                        0x6000 + 6*320 + (start+i+1)*8])
                     for i in range(8)]
 
-        self.assertEqual(occupied(1), [False] + [True]*5 + [False]*2)  # GAMES
-        self.assertEqual(occupied(31), [False]*2 + [True]*3 + [False]*3)  # LAB
+        self.assertEqual(occupied(1), [False] + [True]*6 + [False])  # ARCADE
+        self.assertEqual(occupied(31), [False] + [True]*6 + [False])  # PUZZLES
         self.enter_category(machine, 'DEMOS')
         self.assertEqual(occupied(1), [False]*2 + [True]*4 + [False]*2)  # ATOM
         self.assertEqual(occupied(11), [False] + [True]*6 + [False])  # CANDLE
@@ -199,7 +247,7 @@ class ProjectTests(unittest.TestCase):
         machine.game_key(13)
         self.assertEqual(machine.memory[2], 0)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('BALLOON'))
         self.assertEqual(machine.var('selected'), balloon_index)
         self.assertEqual(machine.cpu.sp, 0xff)
 
@@ -237,7 +285,7 @@ class ProjectTests(unittest.TestCase):
         machine.run_until(lambda: machine.cpu.pc == 0x100c)
         self.assertEqual(machine.memory[4], 15)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('CATCHER'))
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_cowbull_reports_bulls_cows_and_new_secret(self):
@@ -256,7 +304,7 @@ class ProjectTests(unittest.TestCase):
         machine.game_key(13)
         self.assertNotEqual(bytes(machine.memory[0x20:0x24]), bytes(4))
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('COWBULL'))
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_dice_tumbles_for_twelve_frames(self):
@@ -275,7 +323,7 @@ class ProjectTests(unittest.TestCase):
             machine.run_until(lambda: machine.cpu.pc == 0x100c)
         self.assertEqual(machine.memory[2], 0)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('DICE'))
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_dodge_scores_survival_and_detects_collision(self):
@@ -304,7 +352,7 @@ class ProjectTests(unittest.TestCase):
         machine.run_until(lambda: machine.cpu.pc == 0x100c)
         self.assertEqual(machine.memory[4], 15)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('DODGE'))
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_fishing_requires_a_bite_before_a_successful_strike(self):
@@ -335,7 +383,7 @@ class ProjectTests(unittest.TestCase):
         machine.run_until(lambda: machine.cpu.pc == 0x100c)
         self.assertIn('TOO SOON!', machine.output)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('FISHING'))
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_guessnum_reports_low_high_and_win(self):
@@ -356,7 +404,7 @@ class ProjectTests(unittest.TestCase):
         machine.game_key(13)
         self.assertLess(machine.memory[2], 100)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('GUESSNUM'))
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_hilo_scores_higher_lower_and_restarts(self):
@@ -378,7 +426,7 @@ class ProjectTests(unittest.TestCase):
         machine.game_key(13)
         self.assertEqual(machine.memory[4], 0)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('HILO'))
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_horses_runs_a_random_race_and_restarts(self):
@@ -402,7 +450,7 @@ class ProjectTests(unittest.TestCase):
         machine.run_until(lambda: machine.output.count('HORSE 1-5?') == 2)
         self.assertIn('HORSE 1-5?', machine.output)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('HORSES'))
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_hotpot_explodes_on_its_hidden_fuse_and_restarts(self):
@@ -417,7 +465,7 @@ class ProjectTests(unittest.TestCase):
         self.assertGreaterEqual(machine.memory[2], 5)
         self.assertLessEqual(machine.memory[2], 20)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('HOTPOT'))
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_lotto_records_six_picks_draws_and_restarts(self):
@@ -434,7 +482,7 @@ class ProjectTests(unittest.TestCase):
         machine.game_key(13)
         self.assertEqual(machine.memory[2], 6)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('LOTTO'))
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_chicken_waits_for_go_and_awards_the_other_driver(self):
@@ -449,7 +497,7 @@ class ProjectTests(unittest.TestCase):
         machine.game_key('L')
         self.assertIn('P2 SWERVES! P1 WINS', machine.output)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('CHICKEN'))
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_hunt_reports_cold_warm_and_found(self):
@@ -468,7 +516,7 @@ class ProjectTests(unittest.TestCase):
         self.assertGreaterEqual(machine.memory[2], 1)
         self.assertLessEqual(machine.memory[2], 8)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('HUNT'))
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_archery_aims_with_wind_and_restarts(self):
@@ -485,7 +533,7 @@ class ProjectTests(unittest.TestCase):
         self.assertLessEqual(machine.memory[3], 8)
         self.assertLessEqual(machine.memory[4], 1)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('ARCHERY'))
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_defuse_requires_three_safe_wire_cuts(self):
@@ -501,7 +549,7 @@ class ProjectTests(unittest.TestCase):
         machine.game_key(13)
         self.assertEqual(machine.memory[3], 0)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('DEFUSE'))
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_duel_waits_for_draw_and_awards_first_shot(self):
@@ -516,7 +564,7 @@ class ProjectTests(unittest.TestCase):
         machine.game_key('L')
         self.assertIn('P2 WINS!', machine.output)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('DUEL'))
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_craps_rolls_two_dice_and_tracks_a_legal_total(self):
@@ -531,7 +579,7 @@ class ProjectTests(unittest.TestCase):
         self.assertLessEqual(machine.memory[3], 12)
         self.assertIn('DICE ', machine.output)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('CRAPS'))
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_echoseq_shows_a_sequence_and_rejects_a_wrong_reply(self):
@@ -547,7 +595,7 @@ class ProjectTests(unittest.TestCase):
         machine.game_key(13)
         self.assertEqual(machine.memory[2], 1)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('ECHOSEQ'))
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_lockpick_opens_when_dial_matches_notch(self):
@@ -634,7 +682,7 @@ class ProjectTests(unittest.TestCase):
         machine.game_key('K')
         self.assertEqual(bytes(machine.memory[score_address:score_address+4]), b'W100')
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('MONTY'))
         self.assertEqual(machine.var('selected'), monty_index)
 
     def test_four_frame_animation_fast_and_slow(self):
@@ -759,7 +807,7 @@ class ProjectTests(unittest.TestCase):
         machine.stop_game()
         self.assertEqual(machine.memory[0xdd00] & 3, 2)
         self.assertEqual(machine.cpu.sp, 0xff)
-        self.assertEqual(machine.var('category_id'), 2)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('CUBE3D'))
         self.assertEqual(machine.var('selected'), cube_index)
 
     def test_dance_poses_and_return(self):
@@ -780,7 +828,7 @@ class ProjectTests(unittest.TestCase):
                 self.assertGreater(sum(b.bit_count() for b in machine.memory[bitmap:bitmap+8000]), 400)
         self.assertEqual(len(set(poses)), 4)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 2)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('DANCE'))
         self.assertEqual(machine.var('selected'), dance_index)
 
     def test_sandpile_matches_abelian_model_reset_and_return(self):
@@ -824,7 +872,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual([value & 15 for value in machine.memory[0xd800:0xdbe8]],
                          [new_palette] * 1000)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 3)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('SANDPILE'))
         self.assertEqual(machine.var('selected'), sandpile_index)
         self.assertEqual(machine.cpu.sp, 0xff)
 
@@ -869,7 +917,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.memory[0xc300 + column], 8)
         self.assertEqual(machine.memory[0xc240], 0)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 2)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('SNOW'))
         self.assertEqual(machine.var('selected'), snow_index)
 
     def test_maze_connected_acyclic_and_regeneration(self):
@@ -913,7 +961,7 @@ class ProjectTests(unittest.TestCase):
             snapshots.add(check_maze())
         self.assertEqual(len(snapshots), 4)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 1)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('MAZEGEN'))
         self.assertEqual(machine.var('selected'), maze_index)
         self.assertEqual(machine.cpu.sp, 0xff)
         self.launch_named(machine, 'MAZEGEN', wait_address=0x100c)
@@ -977,7 +1025,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(bytes(machine.memory[0x6000:0x8000]), bytes(8192))
         self.assertEqual(tuple(machine.memory[2:5]), (128, 100, 0))
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 3)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('ANT'))
         self.assertEqual(machine.var('selected'), ant_index)
         self.assertEqual(machine.cpu.sp, 0xff)
 
@@ -1023,7 +1071,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(bytes(machine.memory[0x6000:0x8000]), bytes(8192))
         self.assertEqual(tuple(machine.memory[2:4]), (128, 100))
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 3)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('CHAOS'))
         self.assertEqual(machine.var('selected'), chaos_index)
         self.assertEqual(machine.cpu.sp, 0xff)
 
@@ -1049,7 +1097,7 @@ class ProjectTests(unittest.TestCase):
         machine.run_until(lambda: machine.cpu.pc == 0x100c)
         self.assertNotEqual(bytes(machine.memory[0x0400:0x07e8]), before)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 3)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('LIFE'))
         self.assertEqual(machine.var('selected'), life_index)
         self.assertEqual(machine.cpu.sp, 0xff)
 
@@ -1085,7 +1133,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(sum(value.bit_count()
                              for value in machine.memory[0x6000:0x8000]), 1)
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 3)
+        self.assertEqual(machine.var('category_id'), self.program_category_id('RULE30'))
         self.assertEqual(machine.var('selected'), rule_index)
         self.assertEqual(machine.cpu.sp, 0xff)
 
@@ -1138,7 +1186,7 @@ class ProjectTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / 'project'
             shutil.copytree(ROOT, root, ignore=shutil.ignore_patterns('build', '__pycache__'))
-            source = root / 'programs/GAMES/HANGMAN/main.asm'
+            source = root / 'programs/PUZZLES/HANGMAN/main.asm'
             source.write_text(source.read_text() + '\n.fill 10,0\n')
             with self.assertRaisesRegex(ValueError, 'exceeds 256'):
                 build(root=root, assembler=ASSEMBLER)
@@ -1146,7 +1194,7 @@ class ProjectTests(unittest.TestCase):
             self.assertEqual(next(p for p in result['programs'] if p['name'] == 'HANGMAN')['flags'], 1)
             machine = Machine(root)
             machine.boot()
-            machine.key(13)
+            self.enter_category(machine, 'PUZZLES')
             hangman_index = self.program_index(machine, 'HANGMAN')
             for _ in range(hangman_index):
                 machine.key(0x1d)

@@ -25,9 +25,21 @@ class SwatchTests(unittest.TestCase):
         machine.cpu.memory = machine.memory
         symbols = labels(ROOT / 'build/SWATCH.labels')
         machine.boot()
-        machine.key(0x1d)
+
+        def find_named(name):
+            target = name.encode().ljust(8)
+            while True:
+                for index in range(machine.var('page_count')):
+                    address = 0x4800 + index * 96
+                    if bytes(machine.memory[address:address + 8]) == target:
+                        return index
+                self.assertTrue(machine.var('has_next'), name)
+                machine.key(0x86)
+
+        machine.set_var('selected', find_named('UTILS'))
         machine.key(13)
-        machine.launch(1, wait_address=symbols['poll'])
+        swatch_index = find_named('SWATCH')
+        machine.launch(swatch_index, wait_address=symbols['poll'])
         screen = 0x0400 + 3*40 + 8
         color = 0xd800 + 3*40 + 8
         mixed = {color+row*40+column for row in range(16) for column in range(row)}
@@ -114,8 +126,8 @@ class SwatchTests(unittest.TestCase):
         self.assertEqual(machine.memory[0x0404], ord('1'))
         self.assertEqual(machine.memory[0x0408], ord('3'))
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 1)
-        self.assertEqual(machine.var('selected'), 1)
+        self.assertEqual(machine.var('category_id'), 5)
+        self.assertEqual(machine.var('selected'), swatch_index)
         self.assertEqual(machine.cpu.sp, 0xff)
 
 

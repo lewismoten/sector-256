@@ -2,4 +2,3 @@ build/
 .venv/
 __pycache__/
 release/
-notes/
