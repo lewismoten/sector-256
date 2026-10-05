@@ -19,9 +19,9 @@ def generate(root=ROOT):
         "in any program to return to the launcher.",
         ""
         ]
-    for folder in sorted((root / "programs").iterdir(), key=lambda p: p.name.upper()):
-        if not folder.is_dir():
-            continue
+    folders = sorted((p for p in (root / "programs").iterdir() if p.is_dir()),
+                     key=lambda p: p.name.upper())
+    for folder in folders:
         data = json.loads((folder / "program.json").read_text())
         name = folder.name.upper()
         lines += [f"## {name}", "", data["description"], "",
@@ -29,10 +29,14 @@ def generate(root=ROOT):
                   f"[Assembly source]({folder.name}/main.asm)", ""]
         if (folder / "preview.png").exists():
             lines += [f"![{name} preview]({folder.name}/preview.png)", ""]
+    total = sum(sizes.get(folder.name.upper(), 0) for folder in folders)
+    summary = (f"**{len(folders)} programs · {total:,} bytes total · "
+               f"{len(folders) * 256 - total} bytes to spare across the whole set**"
+               if all(folder.name.upper() in sizes for folder in folders)
+               else "**Build to calculate total size and spare bytes across the whole set**")
     lines += [
         "---",
-        "**7 programs · 1,685 bytes total · 107 bytes to spare across ",
-        "the whole set**",
+        summary,
         "",
         "Want to add one? See [Add a program](../docs/add_program.md) ",
         "and the [program interface](../docs/program-api.md). ",

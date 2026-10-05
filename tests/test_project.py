@@ -38,7 +38,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'GAMES   ')
         machine.key(13)
         self.assertEqual(machine.var('category_mode'), 0)
-        self.assertEqual(machine.var('page_count'), 2)
+        self.assertEqual(machine.var('page_count'), 3)
         machine.key(0x1d)
         self.assertEqual(machine.var('selected'), 1)
         machine.key('H')
@@ -111,6 +111,49 @@ class ProjectTests(unittest.TestCase):
         machine.launch(1)
         machine.stop_game()
         self.assertEqual(machine.cpu.sp, 0xff)
+
+    def test_monty_hall_reveal_choices_and_score(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        machine.memory[machine.labels['random_state']] = 1
+        machine.launch(1)
+        self.assertEqual(machine.memory[2], 2)
+        score_address = 0xc000 + bytes(machine.memory[0xc000:0xc100]).find(b'W000 L000')
+        self.assertGreaterEqual(score_address, 0xc000)
+        machine.game_key('0')
+        self.assertNotIn('OPEN ', machine.output)
+        wins = losses = 0
+        cases = [(prize, pick, switch)
+                 for prize in range(3) for pick in range(3)
+                 for switch in (False, True)]
+        for index, (prize, pick, switch) in enumerate(cases):
+            machine.memory[2] = prize
+            machine.game_key(str(pick + 1))
+            opened = machine.memory[4]
+            self.assertNotIn(opened, (prize, pick))
+            machine.game_key('X')
+            machine.game_key('S' if switch else 'K')
+            final = 3 - pick - opened if switch else pick
+            wins += final == prize
+            losses += final != prize
+            self.assertEqual(bytes(machine.memory[score_address:score_address+9]),
+                             f'W{wins:03} L{losses:03}'.encode())
+            if index + 1 < len(cases):
+                seed = index % 3 + 1
+                machine.memory[machine.labels['random_state']] = seed
+                machine.game_key(13)
+                self.assertEqual(machine.memory[2], (2 * seed) % 3)
+        self.assertEqual((wins, losses), (9, 9))
+        machine.game_key(13)
+        machine.memory[score_address+1:score_address+4] = b'099'
+        machine.memory[2] = 0
+        machine.game_key('1')
+        machine.game_key('K')
+        self.assertEqual(bytes(machine.memory[score_address:score_address+4]), b'W100')
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.var('selected'), 1)
 
     def test_four_frame_animation_fast_and_slow(self):
         machine = Machine()
@@ -389,7 +432,7 @@ class ProjectTests(unittest.TestCase):
         machine = Machine()
         machine.boot()
         machine.key(13)
-        machine.launch(1)
+        machine.launch(2)
         machine.game_key('1')
         machine.game_key('1')
         self.assertEqual(machine.memory[3], 1)

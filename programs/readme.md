@@ -45,6 +45,16 @@ Category: UTILS. Stored payload: **183 bytes**.
 
 ![MAZEGEN preview](MAZEGEN/preview.png)
 
+## MONTY
+
+PICK 1-3. MONTY OPENS A GOAT. S:SWITCH K:KEEP. STOP:EXIT.
+
+Category: GAMES. Stored payload: **256 bytes**.
+
+[Assembly source](MONTY/main.asm)
+
+![MONTY preview](MONTY/preview.png)
+
 ## SNOW
 
 PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT.
@@ -76,8 +86,7 @@ Category: GAMES. Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**7 programs · 1,685 bytes total · 107 bytes to spare across 
-the whole set**
+**8 programs · 1,943 bytes total · 105 bytes to spare across the whole set**
 
 Want to add one? See [Add a program](../docs/add_program.md) 
 and the [program interface](../docs/program-api.md). 
