@@ -8,6 +8,7 @@ HANDY LITTLE TOOLS.
 * ![COINTOSS](COINTOSS/icon.png) [COINTOSS](#cointoss)
 * ![COLORSET](COLORSET/icon.png) [COLORSET](#colorset)
 * ![MAZEGEN](MAZEGEN/icon-preview.gif) [MAZEGEN](#mazegen)
+* ![REGVIEW](REGVIEW/icon.png) [REGVIEW](#regview)
 * ![SWATCH](SWATCH/icon-preview.gif) [SWATCH](#swatch)
 
 ---
@@ -52,6 +53,16 @@ Stored payload: **183 bytes**.
 
 ![MAZEGEN preview](MAZEGEN/preview.png)
 
+## REGVIEW
+
+SHOW VIC-II BORDER AND BACKGROUND REGISTERS IN HEX.
+
+Stored payload: **120 bytes**.
+
+[Assembly source](REGVIEW/main.asm)
+
+![REGVIEW preview](REGVIEW/preview.png)
+
 ## SWATCH
 
 ALL 16 COLORS + 120 PAIRS. 1-9:RATE M:MIX SPACE:HOLD STOP:EXIT.
@@ -63,7 +74,7 @@ Stored payload: **256 bytes**.
 ![SWATCH preview](SWATCH/preview.gif)
 
 ---
-**5 programs · 853 bytes total · 427 bytes to spare in this category**
+**6 programs · 973 bytes total · 563 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

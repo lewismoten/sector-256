@@ -79,6 +79,8 @@ Completed: PRIMEQZ — added a prime-number yes-or-no quiz to EDU.
 
 Completed: KEYFIND — added a keyboard-location drill to EDU.
 
+Completed: REGVIEW — added a live VIC-II color-register display to UTILS.
+
 ## GAMES
 
 118 ideas.
