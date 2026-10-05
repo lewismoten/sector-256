@@ -7,6 +7,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![BINCOUNT](BINCOUNT/icon.png) [BINCOUNT](#bincount)
 * ![CANTOR](CANTOR/icon.png) [CANTOR](#cantor)
 * ![FIB](FIB/icon.png) [FIB](#fib)
+* ![GRAYCODE](GRAYCODE/icon.png) [GRAYCODE](#graycode)
 * ![PASCAL](PASCAL/icon.png) [PASCAL](#pascal)
 
 ---
@@ -41,6 +42,16 @@ Stored payload: **164 bytes**.
 
 ![FIB preview](FIB/preview.png)
 
+## GRAYCODE
+
+AN EIGHT-BIT GRAY CODE, ONE BIT CHANGE PER STEP.
+
+Stored payload: **70 bytes**.
+
+[Assembly source](GRAYCODE/main.asm)
+
+![GRAYCODE preview](GRAYCODE/preview.png)
+
 ## PASCAL
 
 THE FIRST SIX ROWS OF PASCAL'S TRIANGLE.
@@ -52,7 +63,7 @@ Stored payload: **136 bytes**.
 ![PASCAL preview](PASCAL/preview.png)
 
 ---
-**4 programs · 542 bytes total · 482 bytes to spare in this category**
+**5 programs · 612 bytes total · 668 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
