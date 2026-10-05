@@ -68,6 +68,7 @@ SMALL GAMES. BIG FUN.
 * ![OTHELLO](OTHELLO/icon.png) [OTHELLO](#othello)
 * ![PAIRS](PAIRS/icon.png) [PAIRS](#pairs)
 * ![PEGS](PEGS/icon.png) [PEGS](#pegs)
+* ![POKER](POKER/icon.png) [POKER](#poker)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 
 ---
@@ -700,6 +701,16 @@ Stored payload: **140 bytes**.
 
 ![PEGS preview](PEGS/preview.png)
 
+## POKER
+
+SPACE DEALS A TINY FIVE-CARD POKER HAND.
+
+Stored payload: **183 bytes**.
+
+[Assembly source](POKER/main.asm)
+
+![POKER preview](POKER/preview.png)
+
 ## TICTACTO
 
 TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE.
@@ -711,7 +722,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**65 programs · 12,074 bytes total · 4566 bytes to spare in this category**
+**66 programs · 12,257 bytes total · 4639 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
