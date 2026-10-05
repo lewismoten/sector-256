@@ -5,6 +5,7 @@ EXPERIMENTS AND PROOF OF CONCEPTS.
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
 * ![ANT](ANT/icon.png) [ANT](#ant)
+* ![BEATS](BEATS/icon.png) [BEATS](#beats)
 * ![CHAOS](CHAOS/icon.png) [CHAOS](#chaos)
 * ![LIFE](LIFE/icon.png) [LIFE](#life)
 * ![RULE30](RULE30/icon.png) [RULE30](#rule30)
@@ -21,6 +22,16 @@ Stored payload: **223 bytes**.
 [Assembly source](ANT/main.asm)
 
 ![ANT preview](ANT/preview.png)
+
+## BEATS
+
+HEAR BEATS FROM TWO SLIGHTLY DETUNED SID VOICES.
+
+Stored payload: **114 bytes**.
+
+[Assembly source](BEATS/main.asm)
+
+![BEATS preview](BEATS/preview.png)
 
 ## CHAOS
 
@@ -63,7 +74,7 @@ Stored payload: **244 bytes**.
 ![SANDPILE preview](SANDPILE/preview.png)
 
 ---
-**5 programs · 1,117 bytes total · 163 bytes to spare in this category**
+**6 programs · 1,231 bytes total · 305 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

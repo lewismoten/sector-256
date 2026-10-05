@@ -161,6 +161,8 @@ Completed: ORACLE — added a random yes-or-no responder to TOYS.
 
 Completed: HAPPY — added a happy-number reference to MATH.
 
+Completed: BEATS — added a two-voice SID interference experiment to LAB.
+
 ## GAMES
 
 118 ideas.
