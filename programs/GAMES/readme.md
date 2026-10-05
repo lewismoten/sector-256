@@ -102,6 +102,8 @@ Stored payload: **152 bytes**.
 
 [Assembly source](ARTILLRY/main.asm)
 
+![ARTILLRY preview](ARTILLRY/preview.png)
+
 ## BALLOON
 
 PUMP WITH SPACE FOR POINTS. POP AND THE ROUND ENDS.
@@ -180,6 +182,8 @@ Stored payload: **216 bytes**.
 
 [Assembly source](BRICKS/main.asm)
 
+![BRICKS preview](BRICKS/preview.png)
+
 ## BUMPCAR
 
 A/D STEERS THE CAR. SPACE RAMS THE OTHER CAR.
@@ -187,6 +191,8 @@ A/D STEERS THE CAR. SPACE RAMS THE OTHER CAR.
 Stored payload: **177 bytes**.
 
 [Assembly source](BUMPCAR/main.asm)
+
+![BUMPCAR preview](BUMPCAR/preview.png)
 
 ## CATCHER
 
@@ -296,6 +302,8 @@ Stored payload: **167 bytes**.
 
 [Assembly source](DOCKING/main.asm)
 
+![DOCKING preview](DOCKING/preview.png)
+
 ## DODGE
 
 A/D DODGE FALLING BLOCKS. SURVIVE FOR SCORE.
@@ -344,6 +352,8 @@ Stored payload: **175 bytes**.
 
 [Assembly source](ELEVATOR/main.asm)
 
+![ELEVATOR preview](ELEVATOR/preview.png)
+
 ## ESCAPE
 
 A/D MOVES THE RUNNER. SPACE ESCAPES THE ROBOT LANE.
@@ -351,6 +361,8 @@ A/D MOVES THE RUNNER. SPACE ESCAPES THE ROBOT LANE.
 Stored payload: **183 bytes**.
 
 [Assembly source](ESCAPE/main.asm)
+
+![ESCAPE preview](ESCAPE/preview.png)
 
 ## FALLDOWN
 
