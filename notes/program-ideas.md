@@ -285,6 +285,8 @@ Completed: HEXFLOW — added a compact random hexadecimal-flow demo to DEMOS.
 
 Completed: HYPNO — added a compact character-ring hypnotic demo to DEMOS.
 
+Completed: SUNSET — added a compact character-art sunset demo to DEMOS.
+
 ## GAMES
 
 118 ideas.

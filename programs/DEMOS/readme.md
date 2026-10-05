@@ -26,6 +26,7 @@ PIXELS, SOUND AND TINY SHOWS.
 | ![RAIN](RAIN/icon.png) | [RAIN](#rain) | REPAINT A SPARSE GREEN CHARACTER-RAIN FIELD. |
 | ![SCANNER](SCANNER/icon.png) | [SCANNER](#scanner) | Steps a bright scanner marker across a character line. |
 | ![SNOW](SNOW/icon-preview.gif) | [SNOW](#snow) | PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT. |
+| ![SUNSET](SUNSET/icon.png) | [SUNSET](#sunset) | Alternates two compact character-art sunset frames. |
 | ![TRUCHET](TRUCHET/icon.png) | [TRUCHET](#truchet) | Generates a fresh random field of diagonal character tiles. |
 | ![XORPAT](XORPAT/icon.png) | [XORPAT](#xorpat) | A CLASSIC X-XOR-Y CHARACTER TEXTURE. |
 
@@ -231,6 +232,16 @@ Stored payload: **255 bytes**.
 
 ![SNOW preview](SNOW/preview.gif)
 
+## SUNSET
+
+Alternates two compact character-art sunset frames.
+
+Stored payload: **214 bytes**.
+
+[Assembly source](SUNSET/main.asm)
+
+![SUNSET preview](SUNSET/preview.png)
+
 ## TRUCHET
 
 Generates a fresh random field of diagonal character tiles.
@@ -252,7 +263,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**22 programs · 2,993 bytes total · 2639 bytes to spare in this category**
+**23 programs · 3,207 bytes total · 2681 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
