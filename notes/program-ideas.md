@@ -115,6 +115,8 @@ Completed: BITOPS — added a one-bit logic-operation quiz to EDU.
 
 Completed: KAPREKAR — added a 6174 Kaprekar routine demonstration to MATH.
 
+Completed: NUMMEM — added a three-digit memory game to GAMES.
+
 ## GAMES
 
 118 ideas.

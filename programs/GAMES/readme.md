@@ -64,6 +64,7 @@ SMALL GAMES. BIG FUN.
 * ![MINES](MINES/icon.png) [MINES](#mines)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
 * ![NIM](NIM/icon.png) [NIM](#nim)
+* ![NUMMEM](NUMMEM/icon.png) [NUMMEM](#nummem)
 * ![NUMRACE](NUMRACE/icon.png) [NUMRACE](#numrace)
 * ![OTHELLO](OTHELLO/icon.png) [OTHELLO](#othello)
 * ![PAIRS](PAIRS/icon.png) [PAIRS](#pairs)
@@ -668,6 +669,16 @@ Stored payload: **157 bytes**.
 
 ![NIM preview](NIM/preview.png)
 
+## NUMMEM
+
+MEMORIZE AND REPEAT A THREE-DIGIT SEQUENCE.
+
+Stored payload: **171 bytes**.
+
+[Assembly source](NUMMEM/main.asm)
+
+![NUMMEM preview](NUMMEM/preview.png)
+
 ## NUMRACE
 
 TWO PLAYERS ADD 1 OR 2. HIT TEN EXACTLY TO WIN.
@@ -799,7 +810,7 @@ Stored payload: **166 bytes**.
 ![WHACK preview](WHACK/preview.png)
 
 ---
-**73 programs · 13,569 bytes total · 5119 bytes to spare in this category**
+**74 programs · 13,740 bytes total · 5204 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
