@@ -281,6 +281,8 @@ Completed: FIREFLY — added a compact random character-firefly demo to DEMOS.
 
 Completed: GLITCH — added a compact random character-corruption demo to DEMOS.
 
+Completed: HEXFLOW — added a compact random hexadecimal-flow demo to DEMOS.
+
 ## GAMES
 
 118 ideas.
