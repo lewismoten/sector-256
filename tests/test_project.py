@@ -240,6 +240,30 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('category_id'), 2)
         self.assertEqual(machine.var('selected'), 1)
 
+    def test_snowfall_accumulates_across_screen(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(0x1d)
+        machine.key(0x1d)
+        machine.key(13)
+        machine.launch(2, wait_address=0x100c)
+        depths = []
+        for frame in range(50):
+            machine.step()
+            machine.run_until(lambda: machine.cpu.pc == 0x100c)
+            depth = machine.memory[2]
+            depths.append(depth)
+            if frame in (0, 1, 49):
+                bitmap = 0xa000 if machine.memory[0xdd00] & 3 == 1 else 0x6000
+                for y in range(199-depth, 200):
+                    for x in (0, 127, 255, 256, 319):
+                        address = bitmap + (y // 8) * 320 + (x // 8) * 8 + y % 8
+                        self.assertTrue(machine.memory[address] & (128 >> (x % 8)))
+        self.assertGreater(depths[-1], depths[0])
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 2)
+        self.assertEqual(machine.var('selected'), 2)
+
     def test_maze_connected_acyclic_and_regeneration(self):
         machine = Machine()
         machine.boot()

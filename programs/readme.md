@@ -42,6 +42,16 @@ Category: UTILS. Stored payload: **183 bytes**.
 
 ![MAZEGEN preview](MAZEGEN/preview.png)
 
+## SNOW
+
+FALLING SNOW BUILDS A SNOWBANK. RUN/STOP TO RETURN.
+
+Category: DEMOS. Stored payload: **241 bytes**.
+
+[Assembly source](SNOW/main.asm)
+
+![SNOW preview](SNOW/preview.png)
+
 ## SWATCH
 
 ALL 16 COLORS + 120 PAIRS. 1-9:RATE M:MIX SPACE:HOLD STOP:EXIT.
