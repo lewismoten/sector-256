@@ -32,6 +32,7 @@ SMALL GAMES. BIG FUN.
 * ![HOTPOT](HOTPOT/icon.png) [HOTPOT](#hotpot)
 * ![HUNT](HUNT/icon.png) [HUNT](#hunt)
 * ![HURDLES](HURDLES/icon.png) [HURDLES](#hurdles)
+* ![INVADE](INVADE/icon.png) [INVADE](#invade)
 * ![JUGGLE](JUGGLE/icon.png) [JUGGLE](#juggle)
 * ![LOCKPICK](LOCKPICK/icon.png) [LOCKPICK](#lockpick)
 * ![LOTTO](LOTTO/icon.png) [LOTTO](#lotto)
@@ -316,6 +317,14 @@ Stored payload: **156 bytes**.
 
 ![HURDLES preview](HURDLES/preview.png)
 
+## INVADE
+
+A/D MOVES THE CANNON; SPACE ZAPS THE INVADER.
+
+Stored payload: **177 bytes**.
+
+[Assembly source](INVADE/main.asm)
+
 ## JUGGLE
 
 SPACE JUGGLES. RANDOM DROPS REDUCE YOUR THREE BALLS.
@@ -367,7 +376,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**33 programs · 6,312 bytes total · 2136 bytes to spare in this category**
+**34 programs · 6,489 bytes total · 2215 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
