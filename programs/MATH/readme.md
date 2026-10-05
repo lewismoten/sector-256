@@ -25,6 +25,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![KOCH](KOCH/icon.png) [KOCH](#koch)
 * ![LOOKSAY](LOOKSAY/icon.png) [LOOKSAY](#looksay)
 * ![LUCAS](LUCAS/icon.png) [LUCAS](#lucas)
+* ![MAGICSQ](MAGICSQ/icon.png) [MAGICSQ](#magicsq)
 * ![MODCLOCK](MODCLOCK/icon.png) [MODCLOCK](#modclock)
 * ![MULTAB](MULTAB/icon.png) [MULTAB](#multab)
 * ![PALINDRM](PALINDRM/icon.png) [PALINDRM](#palindrm)
@@ -254,6 +255,16 @@ Stored payload: **157 bytes**.
 
 ![LUCAS preview](LUCAS/preview.png)
 
+## MAGICSQ
+
+DISPLAY THE CLASSIC 3X3 MAGIC SQUARE.
+
+Stored payload: **88 bytes**.
+
+[Assembly source](MAGICSQ/main.asm)
+
+![MAGICSQ preview](MAGICSQ/preview.png)
+
 ## MODCLOCK
 
 ADVANCE A TWELVE-HOUR CLOCK WITH MODULAR ARITHMETIC.
@@ -415,7 +426,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**37 programs · 4,277 bytes total · 5195 bytes to spare in this category**
+**38 programs · 4,365 bytes total · 5363 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

@@ -217,6 +217,8 @@ Completed: KOCH — added a character-mode Koch-curve motif to MATH.
 
 Completed: SIERPCAR — added a character-mode Sierpinski carpet to MATH.
 
+Completed: MAGICSQ — added a 3x3 magic-square reference to MATH.
+
 ## GAMES
 
 118 ideas.
