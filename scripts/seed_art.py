@@ -59,7 +59,7 @@ def cube_frames():
 def generate():
     for name, rows in ART.items():
         folder = (program_folder(name) if name in PROGRAM_CATEGORIES
-                  else ROOT / "categories" / name)
+                  else ROOT / "programs" / name)
         folder.mkdir(parents=True, exist_ok=True)
         color = {"GAMES": 3, "UTILS": 7, "DEMOS": 14, "LAB": 13,
                  "ANT": 7, "CHAOS": 14, "HANGMAN": 7, "LIFE": 13, "RULE30": 14,

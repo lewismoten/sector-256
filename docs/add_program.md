@@ -30,7 +30,7 @@ Example metadata:
 Descriptions are printable ASCII, at most 64 bytes, converted to uppercase and
 space-padded. The launcher displays them in two 32-character lines; embedded
 spaces can be used to arrange the line break. Each category in `categories.json`
-has a matching program folder in `programs/` and icon folder in `categories/`.
+has a matching folder in `programs/`; its `icon.png` is the category icon.
 Configure up to twelve categories.
 
 `main.asm` must assemble for the 6502 with entry address `$c000` and use the

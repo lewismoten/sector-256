@@ -116,7 +116,7 @@ def build(allow_oversize=False, root=ROOT, assembler="64tass"):
     icon_data = bytearray()
     category_frames = []
     for i, cat in enumerate(categories):
-        frames, animation = collect_frames(root / "categories" / cat["name"], cat.get("animation_speed", 8))
+        frames, animation = collect_frames(root / "programs" / cat["name"], cat.get("animation_speed", 8))
         category_frames.append((len(icon_data) // 36, animation))
         icon_data.extend(b"".join(frames))
     programs = []
