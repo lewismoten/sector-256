@@ -6,6 +6,7 @@ SMALL GAMES. BIG FUN.
 
 * ![BALLOON](BALLOON/icon.png) [BALLOON](#balloon)
 * ![CATCHER](CATCHER/icon.png) [CATCHER](#catcher)
+* ![CHICKEN](CHICKEN/icon.png) [CHICKEN](#chicken)
 * ![COWBULL](COWBULL/icon.png) [COWBULL](#cowbull)
 * ![DICE](DICE/icon.png) [DICE](#dice)
 * ![DODGE](DODGE/icon.png) [DODGE](#dodge)
@@ -40,6 +41,16 @@ Stored payload: **241 bytes**.
 [Assembly source](CATCHER/main.asm)
 
 ![CATCHER preview](CATCHER/preview.png)
+
+## CHICKEN
+
+TWO-PLAYER CHICKEN. WAIT FOR GO; A OR L SWERVES.
+
+Stored payload: **191 bytes**.
+
+[Assembly source](CHICKEN/main.asm)
+
+![CHICKEN preview](CHICKEN/preview.png)
 
 ## COWBULL
 
@@ -162,7 +173,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**14 programs · 2,906 bytes total · 678 bytes to spare in this category**
+**15 programs · 3,097 bytes total · 743 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
