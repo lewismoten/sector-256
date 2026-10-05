@@ -11,6 +11,7 @@ SMALL GAMES. BIG FUN.
 * ![BEAM](BEAM/icon.png) [BEAM](#beam)
 * ![BOUNCE](BOUNCE/icon.png) [BOUNCE](#bounce)
 * ![BOWLING](BOWLING/icon.png) [BOWLING](#bowling)
+* ![BOXPUSH](BOXPUSH/icon.png) [BOXPUSH](#boxpush)
 * ![BRICKS](BRICKS/icon.png) [BRICKS](#bricks)
 * ![BUMPCAR](BUMPCAR/icon.png) [BUMPCAR](#bumpcar)
 * ![CATCHER](CATCHER/icon.png) [CATCHER](#catcher)
@@ -118,6 +119,16 @@ Stored payload: **217 bytes**.
 [Assembly source](BOWLING/main.asm)
 
 ![BOWLING preview](BOWLING/preview.png)
+
+## BOXPUSH
+
+PUSH THE CRATE ONTO THE TARGET WITH A AND D.
+
+Stored payload: **215 bytes**.
+
+[Assembly source](BOXPUSH/main.asm)
+
+![BOXPUSH preview](BOXPUSH/preview.png)
 
 ## BRICKS
 
@@ -480,7 +491,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**44 programs · 8,251 bytes total · 3013 bytes to spare in this category**
+**45 programs · 8,466 bytes total · 3054 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

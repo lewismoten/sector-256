@@ -176,7 +176,7 @@ class ProjectTests(unittest.TestCase):
         machine.boot()
         machine.key(13)
         machine.memory[machine.labels['random_state']] = 1
-        self.launch_named(machine, 'BALLOON')
+        balloon_index = self.launch_named(machine, 'BALLOON')
         for expected_air in (1, 2):
             machine.game_key(' ')
             self.assertEqual(machine.memory[2], expected_air)
@@ -187,7 +187,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.memory[2], 0)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 0)
-        self.assertEqual(machine.var('selected'), 1)
+        self.assertEqual(machine.var('selected'), balloon_index)
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_catcher_moves_catches_and_ends_after_three_misses(self):
