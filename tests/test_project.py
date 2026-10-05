@@ -93,7 +93,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'GAMES   ')
         machine.key(13)
         self.assertEqual(machine.var('category_mode'), 0)
-        self.assertEqual(machine.var('page_count'), 5)
+        self.assertEqual(machine.var('page_count'), 6)
         machine.key(0x1d)
         self.assertEqual(machine.var('selected'), 1)
         machine.key('H')
@@ -219,6 +219,25 @@ class ProjectTests(unittest.TestCase):
         machine.step()
         machine.run_until(lambda: machine.cpu.pc == 0x100c)
         self.assertEqual(machine.memory[4], 15)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
+    def test_cowbull_reports_bulls_cows_and_new_secret(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        self.launch_named(machine, 'COWBULL')
+        machine.memory[0x20:0x24] = b'1234'
+        for digit in '1234':
+            machine.game_key(digit)
+        self.assertIn('B4 C0', machine.output)
+        machine.game_key('X')
+        for digit in '2143':
+            machine.game_key(digit)
+        self.assertIn('B0 C4', machine.output)
+        machine.game_key(13)
+        self.assertNotEqual(bytes(machine.memory[0x20:0x24]), bytes(4))
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 0)
         self.assertEqual(machine.cpu.sp, 0xff)
