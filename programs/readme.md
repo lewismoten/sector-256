@@ -5,15 +5,15 @@ Commodore 64 launcher, and each one's stored payload fits in
 **256 bytes or less**. That's one disk block. Press RUN/STOP 
 in any program to return to the launcher.
 
-* [![CUBE3D](CUBE3D/icon-preview.gif)](#cube3d)
-* [![DANCE](DANCE/icon-preview.gif)](#dance)
-* [![HANGMAN](HANGMAN/icon-preview.gif)](#hangman)
-* [![LIFE](LIFE/icon.png)](#life)
-* [![MAZEGEN](MAZEGEN/icon-preview.gif)](#mazegen)
-* [![MONTY](MONTY/icon.png)](#monty)
-* [![SNOW](SNOW/icon-preview.gif)](#snow)
-* [![SWATCH](SWATCH/icon-preview.gif)](#swatch)
-* [![TICTACTO](TICTACTO/icon-preview.gif)](#tictacto)
+* [![CUBE3D](CUBE3D/icon-preview.gif) CUBE3D](#cube3d)
+* [![DANCE](DANCE/icon-preview.gif) DANCE](#dance)
+* [![HANGMAN](HANGMAN/icon-preview.gif) HANGMAN](#hangman)
+* [![LIFE](LIFE/icon.png) LIFE](#life)
+* [![MAZEGEN](MAZEGEN/icon-preview.gif) MAZEGEN](#mazegen)
+* [![MONTY](MONTY/icon.png) MONTY](#monty)
+* [![SNOW](SNOW/icon-preview.gif) SNOW](#snow)
+* [![SWATCH](SWATCH/icon-preview.gif) SWATCH](#swatch)
+* [![TICTACTO](TICTACTO/icon-preview.gif) TICTACTO](#tictacto)
 ---
 ## CUBE3D
 

@@ -27,7 +27,7 @@ def generate(root=ROOT):
         data = json.loads((folder / "program.json").read_text())
         name = folder.name.upper()
         icon = "icon-preview.gif" if (folder / "icon-preview.gif").exists() else "icon.png"
-        lines += [f"* [![{name}]({folder.name}/{icon})](#{name.lower()})"]
+        lines += [f"* [![{name}]({folder.name}/{icon}) {name}](#{name.lower()})"]
     lines += ["---"]
     for folder in folders:
         data = json.loads((folder / "program.json").read_text())
