@@ -9,6 +9,7 @@ SHORT LESSONS AND PRACTICE.
 * ![COLORS](COLORS/icon.png) [COLORS](#colors)
 * ![COUNTING](COUNTING/icon.png) [COUNTING](#counting)
 * ![DIVIDE](DIVIDE/icon.png) [DIVIDE](#divide)
+* ![FRACTION](FRACTION/icon.png) [FRACTION](#fraction)
 * ![MULTIPLY](MULTIPLY/icon.png) [MULTIPLY](#multiply)
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
 * ![SHAPES](SHAPES/icon.png) [SHAPES](#shapes)
@@ -67,6 +68,16 @@ Stored payload: **145 bytes**.
 
 ![DIVIDE preview](DIVIDE/preview.png)
 
+## FRACTION
+
+IDENTIFY THE TOP NUMBER IN THREE SIMPLE FRACTIONS.
+
+Stored payload: **163 bytes**.
+
+[Assembly source](FRACTION/main.asm)
+
+![FRACTION preview](FRACTION/preview.png)
+
 ## MULTIPLY
 
 SOLVE THREE SMALL MULTIPLICATION QUESTIONS.
@@ -118,7 +129,7 @@ Stored payload: **147 bytes**.
 ![SUBTRACT preview](SUBTRACT/preview.png)
 
 ---
-**10 programs · 1,517 bytes total · 1043 bytes to spare in this category**
+**11 programs · 1,680 bytes total · 1136 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
