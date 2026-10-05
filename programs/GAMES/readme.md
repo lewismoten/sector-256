@@ -123,6 +123,8 @@ Stored payload: **191 bytes**.
 
 [Assembly source](DARTS/main.asm)
 
+![DARTS preview](DARTS/preview.png)
+
 ## DEFUSE
 
 CUT WIRES 1-3. THREE SAFE CUTS DEFUSE THE BOMB.
