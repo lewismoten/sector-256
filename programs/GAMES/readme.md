@@ -60,6 +60,7 @@ SMALL GAMES. BIG FUN.
 * ![MATCH](MATCH/icon.png) [MATCH](#match)
 * ![MAZE3D](MAZE3D/icon.png) [MAZE3D](#maze3d)
 * ![MAZEDARK](MAZEDARK/icon.png) [MAZEDARK](#mazedark)
+* ![MAZERUN](MAZERUN/icon.png) [MAZERUN](#mazerun)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 
@@ -613,6 +614,16 @@ Stored payload: **185 bytes**.
 
 ![MAZEDARK preview](MAZEDARK/preview.png)
 
+## MAZERUN
+
+FOLLOW OPEN CORRIDORS. ESCAPE IN FIVE TURNS WITHIN SEVEN MOVES.
+
+Stored payload: **194 bytes**.
+
+[Assembly source](MAZERUN/main.asm)
+
+![MAZERUN preview](MAZERUN/preview.png)
+
 ## MONTY
 
 PICK 1-3. MONTY OPENS A GOAT. S:SWITCH K:KEEP. STOP:EXIT.
@@ -634,7 +645,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**58 programs · 10,955 bytes total · 3893 bytes to spare in this category**
+**59 programs · 11,149 bytes total · 3955 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
