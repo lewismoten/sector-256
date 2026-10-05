@@ -8,6 +8,7 @@ SMALL GAMES. BIG FUN.
 * ![BALLOON](BALLOON/icon.png) [BALLOON](#balloon)
 * ![CATCHER](CATCHER/icon.png) [CATCHER](#catcher)
 * ![CHICKEN](CHICKEN/icon.png) [CHICKEN](#chicken)
+* ![CHOMP](CHOMP/icon.png) [CHOMP](#chomp)
 * ![COWBULL](COWBULL/icon.png) [COWBULL](#cowbull)
 * ![CRAPS](CRAPS/icon.png) [CRAPS](#craps)
 * ![DEFUSE](DEFUSE/icon.png) [DEFUSE](#defuse)
@@ -69,6 +70,14 @@ Stored payload: **191 bytes**.
 [Assembly source](CHICKEN/main.asm)
 
 ![CHICKEN preview](CHICKEN/preview.png)
+
+## CHOMP
+
+TWO-PLAYER CHOMP. PICK 2-5; SQUARE 1 IS POISON.
+
+Stored payload: **154 bytes**.
+
+[Assembly source](CHOMP/main.asm)
 
 ## COWBULL
 
@@ -261,7 +270,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**23 programs · 4,650 bytes total · 1238 bytes to spare in this category**
+**24 programs · 4,804 bytes total · 1340 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
