@@ -5,6 +5,7 @@ SMALL GAMES. BIG FUN.
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
 * ![ARCHERY](ARCHERY/icon.png) [ARCHERY](#archery)
+* ![ARTILLRY](ARTILLRY/icon.png) [ARTILLRY](#artillry)
 * ![BALLOON](BALLOON/icon.png) [BALLOON](#balloon)
 * ![BASKETBL](BASKETBL/icon.png) [BASKETBL](#basketbl)
 * ![BEAM](BEAM/icon.png) [BEAM](#beam)
@@ -57,6 +58,14 @@ Stored payload: **223 bytes**.
 [Assembly source](ARCHERY/main.asm)
 
 ![ARCHERY preview](ARCHERY/preview.png)
+
+## ARTILLRY
+
+A BUILDS SHELL POWER; SPACE FIRES THE CANNON.
+
+Stored payload: **152 bytes**.
+
+[Assembly source](ARTILLRY/main.asm)
 
 ## BALLOON
 
@@ -453,7 +462,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**41 programs · 7,706 bytes total · 2790 bytes to spare in this category**
+**42 programs · 7,858 bytes total · 2894 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
