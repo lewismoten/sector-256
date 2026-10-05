@@ -140,6 +140,8 @@ Stored payload: **175 bytes**.
 
 [Assembly source](FAMILY/main.asm)
 
+![FAMILY preview](FAMILY/preview.png)
+
 ## FOOD
 
 PICK THE FIRST LETTER OF THREE FOOD WORDS.
