@@ -27,6 +27,7 @@ SHORT LESSONS AND PRACTICE.
 * ![JOBS](JOBS/icon.png) [JOBS](#jobs)
 * ![KEYFIND](KEYFIND/icon.png) [KEYFIND](#keyfind)
 * ![LANDMARK](LANDMARK/icon.png) [LANDMARK](#landmark)
+* ![LOGIC](LOGIC/icon.png) [LOGIC](#logic)
 * ![MAPS](MAPS/icon.png) [MAPS](#maps)
 * ![MEMORY](MEMORY/icon.png) [MEMORY](#memory)
 * ![MONTHS](MONTHS/icon.png) [MONTHS](#months)
@@ -286,6 +287,14 @@ Stored payload: **180 bytes**.
 [Assembly source](LANDMARK/main.asm)
 
 ![LANDMARK preview](LANDMARK/preview.png)
+
+## LOGIC
+
+TOGGLE TWO INPUTS AND VIEW THEIR AND-GATE OUTPUT.
+
+Stored payload: **139 bytes**.
+
+[Assembly source](LOGIC/main.asm)
 
 ## MAPS
 
@@ -558,7 +567,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**50 programs · 8,392 bytes total · 4408 bytes to spare in this category**
+**51 programs · 8,531 bytes total · 4525 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

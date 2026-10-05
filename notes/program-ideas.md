@@ -135,6 +135,8 @@ Completed: PRIMES — added a compact prime-number reference to MATH.
 
 Completed: SQUAREQZ — added a small square-number drill to EDU.
 
+Completed: LOGIC — added an interactive AND-gate explorer to EDU.
+
 ## GAMES
 
 118 ideas.
