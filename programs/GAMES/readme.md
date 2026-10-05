@@ -9,6 +9,7 @@ SMALL GAMES. BIG FUN.
 * ![CATCHER](CATCHER/icon.png) [CATCHER](#catcher)
 * ![CHICKEN](CHICKEN/icon.png) [CHICKEN](#chicken)
 * ![COWBULL](COWBULL/icon.png) [COWBULL](#cowbull)
+* ![CRAPS](CRAPS/icon.png) [CRAPS](#craps)
 * ![DEFUSE](DEFUSE/icon.png) [DEFUSE](#defuse)
 * ![DICE](DICE/icon.png) [DICE](#dice)
 * ![DODGE](DODGE/icon.png) [DODGE](#dodge)
@@ -75,6 +76,16 @@ Stored payload: **175 bytes**.
 [Assembly source](COWBULL/main.asm)
 
 ![COWBULL preview](COWBULL/preview.png)
+
+## CRAPS
+
+CRAPS: SPACE ROLLS. MAKE THE POINT BEFORE ROLLING SEVEN.
+
+Stored payload: **230 bytes**.
+
+[Assembly source](CRAPS/main.asm)
+
+![CRAPS preview](CRAPS/preview.png)
 
 ## DEFUSE
 
@@ -217,7 +228,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**19 programs · 3,845 bytes total · 1019 bytes to spare in this category**
+**20 programs · 4,075 bytes total · 1045 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

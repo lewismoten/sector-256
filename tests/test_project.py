@@ -506,6 +506,21 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('category_id'), 0)
         self.assertEqual(machine.cpu.sp, 0xff)
 
+    def test_craps_rolls_two_dice_and_tracks_a_legal_total(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        self.launch_named(machine, 'CRAPS')
+        machine.game_key(' ')
+        self.assertGreaterEqual(machine.memory[4], 1)
+        self.assertLessEqual(machine.memory[4], 6)
+        self.assertGreaterEqual(machine.memory[3], 2)
+        self.assertLessEqual(machine.memory[3], 12)
+        self.assertIn('DICE ', machine.output)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
     def test_monty_hall_reveal_choices_and_score(self):
         machine = Machine()
         machine.boot()
