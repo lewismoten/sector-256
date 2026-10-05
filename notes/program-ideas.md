@@ -19,11 +19,11 @@
 ## Progress
 
 Completed: ANT, BALLOON, CATCHER, CHAOS, CHICKEN, COWBULL, CUBE3D, DANCE,
-DICE, DODGE, FISHING, GUESSNUM, HANGMAN, HILO, HORSES, HOTPOT, LIFE, LOTTO,
+DICE, DODGE, FISHING, GUESSNUM, HANGMAN, HILO, HORSES, HOTPOT, HUNT, LIFE, LOTTO,
 MAZEGEN, MONTY, RULE30, SANDPILE,
 SNOW, SWATCH, TICTACTO.
 
-Working: HUNT — find hidden treasure from hot/cold distance hints in GAMES.
+Working: ARCHERY — account for a random wind while aiming for a target in GAMES.
 
 ## GAMES
 

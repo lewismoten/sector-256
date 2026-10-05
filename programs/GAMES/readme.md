@@ -16,6 +16,7 @@ SMALL GAMES. BIG FUN.
 * ![HILO](HILO/icon.png) [HILO](#hilo)
 * ![HORSES](HORSES/icon.png) [HORSES](#horses)
 * ![HOTPOT](HOTPOT/icon.png) [HOTPOT](#hotpot)
+* ![HUNT](HUNT/icon.png) [HUNT](#hunt)
 * ![LOTTO](LOTTO/icon.png) [LOTTO](#lotto)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
@@ -142,6 +143,16 @@ Stored payload: **162 bytes**.
 
 ![HOTPOT preview](HOTPOT/preview.png)
 
+## HUNT
+
+HUNT THE TREASURE 1-8. WARM/COLD HINTS GUIDE YOU.
+
+Stored payload: **157 bytes**.
+
+[Assembly source](HUNT/main.asm)
+
+![HUNT preview](HUNT/preview.png)
+
 ## LOTTO
 
 PICK SIX 1-9 DIGITS, THEN MATCH THE RANDOM LOTTO DRAW.
@@ -173,7 +184,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**15 programs · 3,097 bytes total · 743 bytes to spare in this category**
+**16 programs · 3,254 bytes total · 842 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

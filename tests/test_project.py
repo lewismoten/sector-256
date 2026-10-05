@@ -439,6 +439,25 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('category_id'), 0)
         self.assertEqual(machine.cpu.sp, 0xff)
 
+    def test_hunt_reports_cold_warm_and_found(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        self.launch_named(machine, 'HUNT')
+        machine.memory[2] = 4
+        machine.game_key('1')
+        self.assertIn('COLD', machine.output)
+        machine.game_key('3')
+        self.assertIn('WARM', machine.output)
+        machine.game_key('4')
+        self.assertIn('FOUND!', machine.output)
+        machine.game_key(13)
+        self.assertGreaterEqual(machine.memory[2], 1)
+        self.assertLessEqual(machine.memory[2], 8)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
     def test_monty_hall_reveal_choices_and_score(self):
         machine = Machine()
         machine.boot()
