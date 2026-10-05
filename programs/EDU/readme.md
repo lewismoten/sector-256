@@ -11,6 +11,7 @@ SHORT LESSONS AND PRACTICE.
 * ![COUNTING](COUNTING/icon.png) [COUNTING](#counting)
 * ![DIVIDE](DIVIDE/icon.png) [DIVIDE](#divide)
 * ![FRACTION](FRACTION/icon.png) [FRACTION](#fraction)
+* ![MEMORY](MEMORY/icon.png) [MEMORY](#memory)
 * ![MULTIPLY](MULTIPLY/icon.png) [MULTIPLY](#multiply)
 * ![ODDEVEN](ODDEVEN/icon.png) [ODDEVEN](#oddeven)
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
@@ -90,6 +91,16 @@ Stored payload: **163 bytes**.
 
 ![FRACTION preview](FRACTION/preview.png)
 
+## MEMORY
+
+REPEAT THE THREE-NUMBER SEQUENCE FROM MEMORY.
+
+Stored payload: **140 bytes**.
+
+[Assembly source](MEMORY/main.asm)
+
+![MEMORY preview](MEMORY/preview.png)
+
 ## MULTIPLY
 
 SOLVE THREE SMALL MULTIPLICATION QUESTIONS.
@@ -151,7 +162,7 @@ Stored payload: **147 bytes**.
 ![SUBTRACT preview](SUBTRACT/preview.png)
 
 ---
-**13 programs · 2,007 bytes total · 1321 bytes to spare in this category**
+**14 programs · 2,147 bytes total · 1437 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
