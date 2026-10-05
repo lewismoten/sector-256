@@ -229,6 +229,8 @@ Completed: ALIASING — added a two-frame sampling demo to LAB.
 
 Completed: BINCLOCK — added a binary clock reference to TOYS.
 
+Completed: CITYLGT — added a compact random city-window demo to DEMOS.
+
 ## GAMES
 
 118 ideas.
