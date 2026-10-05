@@ -111,6 +111,8 @@ Completed: POWERS2 — added powers of two through the 16-bit limit to MATH.
 
 Completed: HEXQUIZ — added decimal-to-hex digit practice to EDU.
 
+Completed: BITOPS — added a one-bit logic-operation quiz to EDU.
+
 ## GAMES
 
 118 ideas.

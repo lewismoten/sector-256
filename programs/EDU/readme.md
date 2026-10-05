@@ -8,6 +8,7 @@ SHORT LESSONS AND PRACTICE.
 * ![ALPHABET](ALPHABET/icon.png) [ALPHABET](#alphabet)
 * ![ANIMALS](ANIMALS/icon.png) [ANIMALS](#animals)
 * ![BINQUIZ](BINQUIZ/icon.png) [BINQUIZ](#binquiz)
+* ![BITOPS](BITOPS/icon.png) [BITOPS](#bitops)
 * ![BODY](BODY/icon.png) [BODY](#body)
 * ![CLOCK](CLOCK/icon.png) [CLOCK](#clock)
 * ![COLORS](COLORS/icon.png) [COLORS](#colors)
@@ -92,6 +93,16 @@ Stored payload: **174 bytes**.
 [Assembly source](BINQUIZ/main.asm)
 
 ![BINQUIZ preview](BINQUIZ/preview.png)
+
+## BITOPS
+
+SOLVE FOUR ONE-BIT AND OR XOR OPERATIONS.
+
+Stored payload: **181 bytes**.
+
+[Assembly source](BITOPS/main.asm)
+
+![BITOPS preview](BITOPS/preview.png)
 
 ## BODY
 
@@ -514,7 +525,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**46 programs · 7,687 bytes total · 4089 bytes to spare in this category**
+**47 programs · 7,868 bytes total · 4164 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
