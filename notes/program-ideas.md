@@ -177,6 +177,8 @@ Completed: RAIN — added a randomized character rain field to DEMOS.
 
 Completed: METRONOM — added a SID metronome tick to SOUND.
 
+Completed: NUMLINE — added a number-line reading drill to EDU.
+
 ## GAMES
 
 118 ideas.

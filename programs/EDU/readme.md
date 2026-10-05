@@ -36,6 +36,7 @@ SHORT LESSONS AND PRACTICE.
 * ![MUSIC](MUSIC/icon.png) [MUSIC](#music)
 * ![NATURE](NATURE/icon.png) [NATURE](#nature)
 * ![NUMBERS](NUMBERS/icon.png) [NUMBERS](#numbers)
+* ![NUMLINE](NUMLINE/icon.png) [NUMLINE](#numline)
 * ![OCEANLIF](OCEANLIF/icon.png) [OCEANLIF](#oceanlif)
 * ![OCEANS](OCEANS/icon.png) [OCEANS](#oceans)
 * ![ODDEVEN](ODDEVEN/icon.png) [ODDEVEN](#oddeven)
@@ -382,6 +383,16 @@ Stored payload: **172 bytes**.
 
 ![NUMBERS preview](NUMBERS/preview.png)
 
+## NUMLINE
+
+READ MARKED VALUES ON SIMPLE NUMBER LINES.
+
+Stored payload: **251 bytes**.
+
+[Assembly source](NUMLINE/main.asm)
+
+![NUMLINE preview](NUMLINE/preview.png)
+
 ## OCEANLIF
 
 PICK THE FIRST LETTER OF THREE SEA-LIFE WORDS.
@@ -613,7 +624,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**55 programs · 9,399 bytes total · 4681 bytes to spare in this category**
+**56 programs · 9,650 bytes total · 4686 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
