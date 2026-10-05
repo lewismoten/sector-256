@@ -131,6 +131,8 @@ Completed: MUNCHING — added phased munching XOR squares to DEMOS.
 
 Completed: GCD — added a step-by-step Euclid algorithm demonstration to MATH.
 
+Completed: PRIMES — added a compact prime-number reference to MATH.
+
 ## GAMES
 
 118 ideas.

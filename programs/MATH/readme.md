@@ -15,6 +15,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![MULTAB](MULTAB/icon.png) [MULTAB](#multab)
 * ![PASCAL](PASCAL/icon.png) [PASCAL](#pascal)
 * ![POWERS2](POWERS2/icon.png) [POWERS2](#powers2)
+* ![PRIMES](PRIMES/icon.png) [PRIMES](#primes)
 * ![SQUARES](SQUARES/icon.png) [SQUARES](#squares)
 * ![TRIANGNU](TRIANGNU/icon.png) [TRIANGNU](#triangnu)
 
@@ -130,6 +131,16 @@ Stored payload: **224 bytes**.
 
 ![POWERS2 preview](POWERS2/preview.png)
 
+## PRIMES
+
+A COMPACT LIST OF PRIME NUMBERS THROUGH 97.
+
+Stored payload: **115 bytes**.
+
+[Assembly source](PRIMES/main.asm)
+
+![PRIMES preview](PRIMES/preview.png)
+
 ## SQUARES
 
 ODD-NUMBER SUMS THAT BUILD PERFECT SQUARES.
@@ -151,7 +162,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**13 programs · 1,852 bytes total · 1476 bytes to spare in this category**
+**14 programs · 1,967 bytes total · 1617 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
