@@ -21,6 +21,7 @@ SHORT LESSONS AND PRACTICE.
 * ![FAMILY](FAMILY/icon.png) [FAMILY](#family)
 * ![FOOD](FOOD/icon.png) [FOOD](#food)
 * ![FRACTION](FRACTION/icon.png) [FRACTION](#fraction)
+* ![GRAPHPT](GRAPHPT/icon.png) [GRAPHPT](#graphpt)
 * ![GREATER](GREATER/icon.png) [GREATER](#greater)
 * ![HEXQUIZ](HEXQUIZ/icon.png) [HEXQUIZ](#hexquiz)
 * ![HOME](HOME/icon.png) [HOME](#home)
@@ -228,6 +229,14 @@ Stored payload: **163 bytes**.
 
 ![FRACTION preview](FRACTION/preview.png)
 
+## GRAPHPT
+
+READ A MARKED POINT ON A SMALL COORDINATE GRID.
+
+Stored payload: **246 bytes**.
+
+[Assembly source](GRAPHPT/main.asm)
+
 ## GREATER
 
 CHOOSE LESS-THAN OR GREATER-THAN FOR EACH PAIR.
@@ -295,6 +304,8 @@ TOGGLE TWO INPUTS AND VIEW THEIR AND-GATE OUTPUT.
 Stored payload: **139 bytes**.
 
 [Assembly source](LOGIC/main.asm)
+
+![LOGIC preview](LOGIC/preview.png)
 
 ## MAPS
 
@@ -567,7 +578,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**51 programs · 8,531 bytes total · 4525 bytes to spare in this category**
+**52 programs · 8,777 bytes total · 4535 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
