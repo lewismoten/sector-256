@@ -16,6 +16,8 @@ Stored payload: **147 bytes**.
 
 [Assembly source](QUIZ/main.asm)
 
+![QUIZ preview](QUIZ/preview.png)
+
 ---
 **1 programs · 147 bytes total · 109 bytes to spare in this category**
 
