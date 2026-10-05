@@ -10,6 +10,7 @@ TINY SID SOUNDS AND MUSICAL EXPERIMENTS.
 | ![BEEPER](BEEPER/icon.png) | [BEEPER](#beeper) | TYPE KEYS TO ECHO THEM WITH SHORT SID BEEPS. |
 | ![BELLS](BELLS/icon.png) | [BELLS](#bells) | Alternates two bright SID bell-like pitches. |
 | ![CHORDS](CHORDS/icon.png) | [CHORDS](#chords) | C F G PLAY THREE-VOICE SID MAJOR CHORDS. |
+| ![COINSND](COINSND/icon.png) | [COINSND](#coinsnd) | Alternates two bright SID arcade-coin chimes. |
 | ![DOORBELL](DOORBELL/icon.png) | [DOORBELL](#doorbell) | A TWO-NOTE SID DOORBELL CHIME. PRESS A KEY TO REPEAT. |
 | ![KLAXON](KLAXON/icon.png) | [KLAXON](#klaxon) | Alternates high and low sawtooth SID klaxon tones. |
 | ![METRONOM](METRONOM/icon.png) | [METRONOM](#metronom) | PLAY A SHORT SID TICK ON EACH SPACE PRESS. |
@@ -62,6 +63,16 @@ Stored payload: **186 bytes**.
 [Assembly source](CHORDS/main.asm)
 
 ![CHORDS preview](CHORDS/preview.png)
+
+## COINSND
+
+Alternates two bright SID arcade-coin chimes.
+
+Stored payload: **112 bytes**.
+
+[Assembly source](COINSND/main.asm)
+
+![COINSND preview](COINSND/preview.png)
 
 ## DOORBELL
 
@@ -164,7 +175,7 @@ Stored payload: **118 bytes**.
 ![TONEGEN preview](TONEGEN/preview.png)
 
 ---
-**14 programs · 1,667 bytes total · 1917 bytes to spare in this category**
+**15 programs · 1,779 bytes total · 2061 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

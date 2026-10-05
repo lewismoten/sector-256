@@ -305,6 +305,8 @@ Completed: BELLS — added a compact two-pitch SID bell program to SOUND.
 
 Completed: SPARKLER — added a compact random character-spark toy to TOYS.
 
+Completed: COINSND — added a compact SID arcade-coin sound program to SOUND.
+
 ## GAMES
 
 118 ideas.
