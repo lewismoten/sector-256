@@ -241,6 +241,8 @@ Completed: KLAXON — added a compact two-tone SID klaxon to SOUND.
 
 Completed: LFSR — added an eight-bit feedback-register visualizer to LAB.
 
+Completed: ODDONE — added a compact odd-character spotting game to GAMES.
+
 ## GAMES
 
 118 ideas.

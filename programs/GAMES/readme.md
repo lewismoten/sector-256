@@ -69,6 +69,7 @@ SMALL GAMES. BIG FUN.
 | ![NIM](NIM/icon.png) | [NIM](#nim) | TWO PLAYERS TAKE 1-3 COUNTERS. TAKE THE LAST TO WIN. |
 | ![NUMMEM](NUMMEM/icon.png) | [NUMMEM](#nummem) | MEMORIZE AND REPEAT A THREE-DIGIT SEQUENCE. |
 | ![NUMRACE](NUMRACE/icon.png) | [NUMRACE](#numrace) | TWO PLAYERS ADD 1 OR 2. HIT TEN EXACTLY TO WIN. |
+| ![ODDONE](ODDONE/icon.png) | [ODDONE](#oddone) | Find the single B hidden in a field of A characters. |
 | ![OTHELLO](OTHELLO/icon.png) | [OTHELLO](#othello) | PLACE BLACK AT 4 TO BRACKET AND FLIP THE WHITE ROW. |
 | ![PAIRS](PAIRS/icon.png) | [PAIRS](#pairs) | PICK TWO OF FOUR CARDS. MATCH THREE PAIRS TO WIN. |
 | ![PEGS](PEGS/icon.png) | [PEGS](#pegs) | MAKE JUMPS 0, 1, AND 2 TO LEAVE ONE PEG. |
@@ -715,6 +716,16 @@ Stored payload: **166 bytes**.
 
 ![NUMRACE preview](NUMRACE/preview.png)
 
+## ODDONE
+
+Find the single B hidden in a field of A characters.
+
+Stored payload: **80 bytes**.
+
+[Assembly source](ODDONE/main.asm)
+
+![ODDONE preview](ODDONE/preview.png)
+
 ## OTHELLO
 
 PLACE BLACK AT 4 TO BRACKET AND FLIP THE WHITE ROW.
@@ -846,7 +857,7 @@ Stored payload: **166 bytes**.
 ![WHACK preview](WHACK/preview.png)
 
 ---
-**76 programs · 14,123 bytes total · 5333 bytes to spare in this category**
+**77 programs · 14,203 bytes total · 5509 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
