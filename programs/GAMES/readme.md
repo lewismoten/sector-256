@@ -68,6 +68,7 @@ SMALL GAMES. BIG FUN.
 * ![OTHELLO](OTHELLO/icon.png) [OTHELLO](#othello)
 * ![PAIRS](PAIRS/icon.png) [PAIRS](#pairs)
 * ![PEGS](PEGS/icon.png) [PEGS](#pegs)
+* ![PIG](PIG/icon.png) [PIG](#pig)
 * ![POKER](POKER/icon.png) [POKER](#poker)
 * ![PONG](PONG/icon.png) [PONG](#pong)
 * ![ROCKPAPR](ROCKPAPR/icon.png) [ROCKPAPR](#rockpapr)
@@ -705,6 +706,16 @@ Stored payload: **140 bytes**.
 
 ![PEGS preview](PEGS/preview.png)
 
+## PIG
+
+ROLL TOWARD NINE, OR HOLD BEFORE A ONE BUSTS.
+
+Stored payload: **204 bytes**.
+
+[Assembly source](PIG/main.asm)
+
+![PIG preview](PIG/preview.png)
+
 ## POKER
 
 SPACE DEALS A TINY FIVE-CARD POKER HAND.
@@ -766,7 +777,7 @@ Stored payload: **163 bytes**.
 ![TUGOWAR preview](TUGOWAR/preview.png)
 
 ---
-**70 programs · 13,046 bytes total · 4874 bytes to spare in this category**
+**71 programs · 13,250 bytes total · 4926 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

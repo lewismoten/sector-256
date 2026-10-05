@@ -91,6 +91,8 @@ Completed: CHORDS — added three-voice SID major chords to SOUND.
 
 Completed: MULTAB — added a one-through-five multiplication table to MATH.
 
+Completed: PIG — added a compact roll-or-hold dice game to GAMES.
+
 ## GAMES
 
 118 ideas.
