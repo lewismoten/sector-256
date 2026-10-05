@@ -10,6 +10,7 @@ TINY SID SOUNDS AND MUSICAL EXPERIMENTS.
 | ![BEEPER](BEEPER/icon.png) | [BEEPER](#beeper) | TYPE KEYS TO ECHO THEM WITH SHORT SID BEEPS. |
 | ![CHORDS](CHORDS/icon.png) | [CHORDS](#chords) | C F G PLAY THREE-VOICE SID MAJOR CHORDS. |
 | ![DOORBELL](DOORBELL/icon.png) | [DOORBELL](#doorbell) | A TWO-NOTE SID DOORBELL CHIME. PRESS A KEY TO REPEAT. |
+| ![KLAXON](KLAXON/icon.png) | [KLAXON](#klaxon) | Alternates high and low sawtooth SID klaxon tones. |
 | ![METRONOM](METRONOM/icon.png) | [METRONOM](#metronom) | PLAY A SHORT SID TICK ON EACH SPACE PRESS. |
 | ![MUSICBOX](MUSICBOX/icon.png) | [MUSICBOX](#musicbox) | THE OPENING TWINKLE PHRASE ON SID. PRESS A KEY TO REPEAT. |
 | ![PIANO](PIANO/icon.png) | [PIANO](#piano) | A S D F PLAY FOUR SID PIANO NOTES. |
@@ -57,6 +58,16 @@ Stored payload: **109 bytes**.
 [Assembly source](DOORBELL/main.asm)
 
 ![DOORBELL preview](DOORBELL/preview.png)
+
+## KLAXON
+
+Alternates high and low sawtooth SID klaxon tones.
+
+Stored payload: **119 bytes**.
+
+[Assembly source](KLAXON/main.asm)
+
+![KLAXON preview](KLAXON/preview.png)
 
 ## METRONOM
 
@@ -109,7 +120,7 @@ Stored payload: **113 bytes**.
 ![SIREN preview](SIREN/preview.png)
 
 ---
-**9 programs · 1,112 bytes total · 1192 bytes to spare in this category**
+**10 programs · 1,231 bytes total · 1329 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

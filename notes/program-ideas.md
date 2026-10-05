@@ -237,6 +237,8 @@ Completed: MARQUEE — added a compact chasing-light border demo to DEMOS.
 
 Completed: CONFETTI — added a compact randomized confetti toy to TOYS.
 
+Completed: KLAXON — added a compact two-tone SID klaxon to SOUND.
+
 ## GAMES
 
 118 ideas.
