@@ -13,6 +13,7 @@ SMALL GAMES. BIG FUN.
 * ![GUESSNUM](GUESSNUM/icon.png) [GUESSNUM](#guessnum)
 * ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
 * ![HILO](HILO/icon.png) [HILO](#hilo)
+* ![HORSES](HORSES/icon.png) [HORSES](#horses)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 
@@ -108,6 +109,16 @@ Stored payload: **217 bytes**.
 
 ![HILO preview](HILO/preview.png)
 
+## HORSES
+
+HORSE RACE. PICK 1-5; FIRST HORSE TO THE FINISH WINS.
+
+Stored payload: **256 bytes**.
+
+[Assembly source](HORSES/main.asm)
+
+![HORSES preview](HORSES/preview.png)
+
 ## MONTY
 
 PICK 1-3. MONTY OPENS A GOAT. S:SWITCH K:KEEP. STOP:EXIT.
@@ -129,7 +140,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**11 programs · 2,311 bytes total · 505 bytes to spare in this category**
+**12 programs · 2,567 bytes total · 505 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

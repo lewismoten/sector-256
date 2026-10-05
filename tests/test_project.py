@@ -93,7 +93,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'GAMES   ')
         machine.key(13)
         self.assertEqual(machine.var('category_mode'), 0)
-        self.assertEqual(machine.var('page_count'), 11)
+        self.assertEqual(machine.var('page_count'), 12)
         machine.key(0x1d)
         self.assertEqual(machine.var('selected'), 1)
         machine.key('H')
@@ -360,6 +360,30 @@ class ProjectTests(unittest.TestCase):
         self.assertIn('LOSE!', machine.output)
         machine.game_key(13)
         self.assertEqual(machine.memory[4], 0)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
+    def test_horses_runs_a_random_race_and_restarts(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        self.launch_named(machine, 'HORSES')
+        machine.keys.append(ord('1'))
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        for _ in range(30):
+            machine.step()
+            machine.run_until(lambda: (machine.cpu.pc == 0x100c or
+                                       'RETURN=RACE' in machine.output))
+            if 'RETURN=RACE' in machine.output:
+                break
+        self.assertIn('HORSE ', machine.output)
+        self.assertIn('RETURN=RACE', machine.output)
+        machine.keys.append(13)
+        machine.step()
+        machine.run_until(lambda: machine.output.count('HORSE 1-5?') == 2)
+        self.assertIn('HORSE 1-5?', machine.output)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 0)
         self.assertEqual(machine.cpu.sp, 0xff)

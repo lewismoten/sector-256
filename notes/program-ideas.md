@@ -19,10 +19,10 @@
 ## Progress
 
 Completed: ANT, BALLOON, CATCHER, CHAOS, COWBULL, CUBE3D, DANCE, DICE,
-DODGE, FISHING, GUESSNUM, HANGMAN, HILO, LIFE, MAZEGEN, MONTY, RULE30, SANDPILE,
+DODGE, FISHING, GUESSNUM, HANGMAN, HILO, HORSES, LIFE, MAZEGEN, MONTY, RULE30, SANDPILE,
 SNOW, SWATCH, TICTACTO.
 
-Working: HORSES — pick a horse and watch a random race in GAMES.
+Working: HOTPOT — pass the keyboard until the hidden timer expires in GAMES.
 
 ## GAMES
 
