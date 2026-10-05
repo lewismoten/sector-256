@@ -103,6 +103,8 @@ Completed: XORPAT — added a classic x-XOR-y character texture to DEMOS.
 
 Completed: JOYTEST — added a dual-port joystick bit display to UTILS.
 
+Completed: TRIANGNU — added the first ten triangular numbers to MATH.
+
 ## GAMES
 
 118 ideas.

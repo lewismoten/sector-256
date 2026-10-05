@@ -11,6 +11,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![MULTAB](MULTAB/icon.png) [MULTAB](#multab)
 * ![PASCAL](PASCAL/icon.png) [PASCAL](#pascal)
 * ![SQUARES](SQUARES/icon.png) [SQUARES](#squares)
+* ![TRIANGNU](TRIANGNU/icon.png) [TRIANGNU](#triangnu)
 
 ---
 
@@ -84,8 +85,18 @@ Stored payload: **161 bytes**.
 
 ![SQUARES preview](SQUARES/preview.png)
 
+## TRIANGNU
+
+THE FIRST TEN TRIANGULAR NUMBERS AS RUNNING SUMS.
+
+Stored payload: **160 bytes**.
+
+[Assembly source](TRIANGNU/main.asm)
+
+![TRIANGNU preview](TRIANGNU/preview.png)
+
 ---
-**7 programs · 928 bytes total · 864 bytes to spare in this category**
+**8 programs · 1,088 bytes total · 960 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
