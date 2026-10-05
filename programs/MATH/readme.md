@@ -8,6 +8,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![BASECONV](BASECONV/icon.png) [BASECONV](#baseconv)
 * ![BINCOUNT](BINCOUNT/icon.png) [BINCOUNT](#bincount)
 * ![CANTOR](CANTOR/icon.png) [CANTOR](#cantor)
+* ![CATALAN](CATALAN/icon.png) [CATALAN](#catalan)
 * ![CIRCLE](CIRCLE/icon.png) [CIRCLE](#circle)
 * ![COLLATZ](COLLATZ/icon.png) [COLLATZ](#collatz)
 * ![DIGROOT](DIGROOT/icon.png) [DIGROOT](#digroot)
@@ -71,6 +72,16 @@ Stored payload: **170 bytes**.
 [Assembly source](CANTOR/main.asm)
 
 ![CANTOR preview](CANTOR/preview.png)
+
+## CATALAN
+
+SHOW EARLY CATALAN NUMBERS AND THEIR USE.
+
+Stored payload: **94 bytes**.
+
+[Assembly source](CATALAN/main.asm)
+
+![CATALAN preview](CATALAN/preview.png)
 
 ## CIRCLE
 
@@ -283,7 +294,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**25 programs · 3,083 bytes total · 3317 bytes to spare in this category**
+**26 programs · 3,177 bytes total · 3479 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

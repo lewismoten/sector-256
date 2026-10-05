@@ -193,6 +193,8 @@ Completed: CIRCLE — added a character-mode circle reference to MATH.
 
 Completed: PERFECT — added a perfect-number divisor-sum reference to MATH.
 
+Completed: CATALAN — added a Catalan-number reference to MATH.
+
 ## GAMES
 
 118 ideas.
