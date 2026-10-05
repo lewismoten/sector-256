@@ -12,6 +12,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![CIRCLE](CIRCLE/icon.png) [CIRCLE](#circle)
 * ![COLLATZ](COLLATZ/icon.png) [COLLATZ](#collatz)
 * ![DIGROOT](DIGROOT/icon.png) [DIGROOT](#digroot)
+* ![EDIGITS](EDIGITS/icon.png) [EDIGITS](#edigits)
 * ![FIB](FIB/icon.png) [FIB](#fib)
 * ![GCD](GCD/icon.png) [GCD](#gcd)
 * ![GRAYCODE](GRAYCODE/icon.png) [GRAYCODE](#graycode)
@@ -112,6 +113,16 @@ Stored payload: **77 bytes**.
 [Assembly source](DIGROOT/main.asm)
 
 ![DIGROOT preview](DIGROOT/preview.png)
+
+## EDIGITS
+
+DISPLAY LEADING DECIMAL DIGITS OF E.
+
+Stored payload: **84 bytes**.
+
+[Assembly source](EDIGITS/main.asm)
+
+![EDIGITS preview](EDIGITS/preview.png)
 
 ## FIB
 
@@ -294,7 +305,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**26 programs · 3,177 bytes total · 3479 bytes to spare in this category**
+**27 programs · 3,261 bytes total · 3651 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
