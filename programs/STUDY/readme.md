@@ -6,8 +6,18 @@ EXTRA PRACTICE, SHAPES, AND TOPIC STUDY.
 
 | Icon | Program | Description |
 | --- | --- | --- |
+| ![ANGLES](ANGLES/icon.png) | [ANGLES](#angles) | ESTIMATE THE ANGLE OF A DRAWN LINE. |
+| ![CALENDAR](CALENDAR/icon.png) | [CALENDAR](#calendar) | MONTH CALENDAR REFERENCE FOR MARCH 2026. |
+| ![CLOCKQZ](CLOCKQZ/icon.png) | [CLOCKQZ](#clockqz) | READ THE ANALOG CLOCK AND TYPE THE HOUR. |
+| ![INTERVAL](INTERVAL/icon.png) | [INTERVAL](#interval) | IDENTIFY MUSICAL INTERVALS BY EAR. |
 | ![MEMORY](MEMORY/icon.png) | [MEMORY](#memory) | REPEAT THE THREE-NUMBER SEQUENCE FROM MEMORY. |
+| ![MONEY](MONEY/icon.png) | [MONEY](#money) | COUNT COINS TO MAKE THE TARGET TOTAL. |
+| ![MORSEQZ](MORSEQZ/icon.png) | [MORSEQZ](#morseqz) | HEAR A MORSE LETTER AND TYPE ITS NAME. |
+| ![NOTEREAD](NOTEREAD/icon.png) | [NOTEREAD](#noteread) | NAME THE NOTE SHOWN ON A SIMPLE STAFF. |
+| ![OPCODES](OPCODES/icon.png) | [OPCODES](#opcodes) | QUIZ ON A COMMON 6502 OPCODE BYTE. |
 | ![PETSCIIQ](PETSCIIQ/icon.png) | [PETSCIIQ](#petsciiq) | TYPE THE DECIMAL PETSCII CODES OF DISPLAYED LETTERS. |
+| ![PIANOQZ](PIANOQZ/icon.png) | [PIANOQZ](#pianoqz) | NAME THE NOTE YOU HEAR FROM THE SID. |
+| ![RHYTHM](RHYTHM/icon.png) | [RHYTHM](#rhythm) | TAP BACK A SHORT THREE-BEAT RHYTHM. |
 | ![ROUNDING](ROUNDING/icon.png) | [ROUNDING](#rounding) | ROUND TWO-DIGIT NUMBERS TO THE NEAREST TEN. |
 | ![SEQUENCE](SEQUENCE/icon.png) | [SEQUENCE](#sequence) | COMPLETE THREE SIMPLE NUMBER SEQUENCES. |
 | ![SHAPEQZ](SHAPEQZ/icon.png) | [SHAPEQZ](#shapeqz) | IDENTIFY SIMPLE SHAPES BY THEIR NUMBER OF SIDES. |
@@ -18,9 +28,50 @@ EXTRA PRACTICE, SHAPES, AND TOPIC STUDY.
 | ![SUBTRACT](SUBTRACT/icon.png) | [SUBTRACT](#subtract) | SOLVE THREE ONE-DIGIT SUBTRACTION QUESTIONS. |
 | ![TIMESDRL](TIMESDRL/icon.png) | [TIMESDRL](#timesdrl) | Cycles through four compact multiplication facts. |
 | ![TRANSPRT](TRANSPRT/icon.png) | [TRANSPRT](#transprt) | PICK THE FIRST LETTER OF THREE TRANSPORT WORDS. |
+| ![TYPETUT](TYPETUT/icon.png) | [TYPETUT](#typetut) | PRACTICE THE HOME-ROW ASDF KEYS. |
 | ![WEATHER](WEATHER/icon.png) | [WEATHER](#weather) | PICK THE FIRST LETTER OF THREE WEATHER WORDS. |
 
 ---
+
+## ANGLES
+
+ESTIMATE THE ANGLE OF A DRAWN LINE.
+
+Stored payload: **139 bytes**.
+
+[Assembly source](ANGLES/main.asm)
+
+![ANGLES preview](ANGLES/preview.png)
+
+## CALENDAR
+
+MONTH CALENDAR REFERENCE FOR MARCH 2026.
+
+Stored payload: **171 bytes**.
+
+[Assembly source](CALENDAR/main.asm)
+
+![CALENDAR preview](CALENDAR/preview.png)
+
+## CLOCKQZ
+
+READ THE ANALOG CLOCK AND TYPE THE HOUR.
+
+Stored payload: **149 bytes**.
+
+[Assembly source](CLOCKQZ/main.asm)
+
+![CLOCKQZ preview](CLOCKQZ/preview.png)
+
+## INTERVAL
+
+IDENTIFY MUSICAL INTERVALS BY EAR.
+
+Stored payload: **190 bytes**.
+
+[Assembly source](INTERVAL/main.asm)
+
+![INTERVAL preview](INTERVAL/preview.png)
 
 ## MEMORY
 
@@ -32,6 +83,46 @@ Stored payload: **140 bytes**.
 
 ![MEMORY preview](MEMORY/preview.png)
 
+## MONEY
+
+COUNT COINS TO MAKE THE TARGET TOTAL.
+
+Stored payload: **135 bytes**.
+
+[Assembly source](MONEY/main.asm)
+
+![MONEY preview](MONEY/preview.png)
+
+## MORSEQZ
+
+HEAR A MORSE LETTER AND TYPE ITS NAME.
+
+Stored payload: **164 bytes**.
+
+[Assembly source](MORSEQZ/main.asm)
+
+![MORSEQZ preview](MORSEQZ/preview.png)
+
+## NOTEREAD
+
+NAME THE NOTE SHOWN ON A SIMPLE STAFF.
+
+Stored payload: **133 bytes**.
+
+[Assembly source](NOTEREAD/main.asm)
+
+![NOTEREAD preview](NOTEREAD/preview.png)
+
+## OPCODES
+
+QUIZ ON A COMMON 6502 OPCODE BYTE.
+
+Stored payload: **110 bytes**.
+
+[Assembly source](OPCODES/main.asm)
+
+![OPCODES preview](OPCODES/preview.png)
+
 ## PETSCIIQ
 
 TYPE THE DECIMAL PETSCII CODES OF DISPLAYED LETTERS.
@@ -41,6 +132,26 @@ Stored payload: **195 bytes**.
 [Assembly source](PETSCIIQ/main.asm)
 
 ![PETSCIIQ preview](PETSCIIQ/preview.png)
+
+## PIANOQZ
+
+NAME THE NOTE YOU HEAR FROM THE SID.
+
+Stored payload: **158 bytes**.
+
+[Assembly source](PIANOQZ/main.asm)
+
+![PIANOQZ preview](PIANOQZ/preview.png)
+
+## RHYTHM
+
+TAP BACK A SHORT THREE-BEAT RHYTHM.
+
+Stored payload: **186 bytes**.
+
+[Assembly source](RHYTHM/main.asm)
+
+![RHYTHM preview](RHYTHM/preview.png)
 
 ## ROUNDING
 
@@ -142,6 +253,16 @@ Stored payload: **174 bytes**.
 
 ![TRANSPRT preview](TRANSPRT/preview.png)
 
+## TYPETUT
+
+PRACTICE THE HOME-ROW ASDF KEYS.
+
+Stored payload: **135 bytes**.
+
+[Assembly source](TYPETUT/main.asm)
+
+![TYPETUT preview](TYPETUT/preview.png)
+
 ## WEATHER
 
 PICK THE FIRST LETTER OF THREE WEATHER WORDS.
@@ -153,7 +274,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**13 programs · 2,268 bytes total · 1060 bytes to spare in this category**
+**24 programs · 3,938 bytes total · 2206 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

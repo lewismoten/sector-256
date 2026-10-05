@@ -15,6 +15,7 @@ USEFUL UTILITIES AND EXPERIMENTS.
 | ![COLORRAM](COLORRAM/icon.png) | [COLORRAM](#colorram) | Randomizes the text screen through color RAM's four bits. |
 | ![COLORSET](COLORSET/icon.png) | [COLORSET](#colorset) | SET BORDER OR BACKGROUND COLORS WITH B G AND 0-7. |
 | ![CRTTEST](CRTTEST/icon.png) | [CRTTEST](#crttest) | DISPLAY A CRT CONVERGENCE GRID. |
+| ![DISKFREE](DISKFREE/icon.png) | [DISKFREE](#diskfree) | DISPLAY FREE BLOCKS ON DEVICE 8. ANY KEY:REFRESH. STOP:RETURN. |
 | ![JOYTEST](JOYTEST/icon.png) | [JOYTEST](#joytest) | SHOW BOTH JOYSTICK PORTS AS ACTIVE-LOW UDLRF BITS. |
 | ![LFSR](LFSR/icon.png) | [LFSR](#lfsr) | Steps an eight-bit feedback shift register one key at a time. |
 | ![LIFE](LIFE/icon.png) | [LIFE](#life) | CONWAY LIFE. SPACE:RANDOMIZE. RUN/STOP:RETURN. |
@@ -122,6 +123,16 @@ Stored payload: **206 bytes**.
 
 ![CRTTEST preview](CRTTEST/preview.png)
 
+## DISKFREE
+
+DISPLAY FREE BLOCKS ON DEVICE 8. ANY KEY:REFRESH. STOP:RETURN.
+
+Stored payload: **207 bytes**.
+
+[Assembly source](DISKFREE/main.asm)
+
+![DISKFREE preview](DISKFREE/preview.png)
+
 ## JOYTEST
 
 SHOW BOTH JOYSTICK PORTS AS ACTIVE-LOW UDLRF BITS.
@@ -136,7 +147,7 @@ Stored payload: **149 bytes**.
 
 Steps an eight-bit feedback shift register one key at a time.
 
-Stored payload: **85 bytes**.
+Stored payload: **93 bytes**.
 
 [Assembly source](LFSR/main.asm)
 
@@ -263,7 +274,7 @@ Stored payload: **108 bytes**.
 ![TALLY preview](TALLY/preview.png)
 
 ---
-**23 programs · 3,455 bytes total · 2433 bytes to spare in this category**
+**24 programs · 3,670 bytes total · 2474 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

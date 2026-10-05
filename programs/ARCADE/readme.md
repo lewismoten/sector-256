@@ -28,6 +28,7 @@ FAST ACTION. QUICK REFLEXES. HIGH SCORES.
 | ![LANDER](LANDER/icon.png) | [LANDER](#lander) | FIRE A TO THRUST. KEEP DESCENT SPEED BELOW THREE. |
 | ![LAVA](LAVA/icon.png) | [LAVA](#lava) | MOVE A/D BEFORE THE CURRENT TILE BURNS. KEEP RUNNING. |
 | ![PONG](PONG/icon.png) | [PONG](#pong) | RETURN THE BALL WITH A ON LEFT OR D ON RIGHT. |
+| ![STACKER](STACKER/icon.png) | [STACKER](#stacker) | TIME SPACE TO DROP A SLIDING BLOCK ON AN EVER-SMALLER STACK. |
 | ![ZAP](ZAP/icon.png) | [ZAP](#zap) | Places a new random alien target on every key press. |
 
 ---
@@ -252,6 +253,14 @@ Stored payload: **187 bytes**.
 
 ![PONG preview](PONG/preview.png)
 
+## STACKER
+
+TIME SPACE TO DROP A SLIDING BLOCK ON AN EVER-SMALLER STACK.
+
+Stored payload: **244 bytes**.
+
+[Assembly source](STACKER/main.asm)
+
 ## ZAP
 
 Places a new random alien target on every key press.
@@ -263,7 +272,7 @@ Stored payload: **76 bytes**.
 ![ZAP preview](ZAP/preview.png)
 
 ---
-**23 programs · 4,102 bytes total · 1786 bytes to spare in this category**
+**24 programs · 4,346 bytes total · 1798 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

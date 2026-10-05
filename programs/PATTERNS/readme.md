@@ -9,7 +9,9 @@ GEOMETRY, PATTERNS, AND MATHEMATICAL FORMS.
 | ![BINOMIAL](BINOMIAL/icon.png) | [BINOMIAL](#binomial) | DISPLAY EARLY BINOMIAL COEFFICIENTS. |
 | ![CANTOR](CANTOR/icon.png) | [CANTOR](#cantor) | FOUR LEVELS OF THE CANTOR SET IN CHARACTERS. |
 | ![CIRCLE](CIRCLE/icon.png) | [CIRCLE](#circle) | DISPLAY A CHARACTER-MODE CIRCLE WITH AXES. |
+| ![DRAGON](DRAGON/icon.png) | [DRAGON](#dragon) | CHARACTER-MODE DRAGON CURVE FOLDING PATTERN. |
 | ![HILBERT](HILBERT/icon.png) | [HILBERT](#hilbert) | DISPLAY A SMALL CHARACTER-MODE HILBERT CURVE. |
+| ![JULIA](JULIA/icon.png) | [JULIA](#julia) | FIXED-PARAMETER CHARACTER-MODE JULIA SET. |
 | ![KOCH](KOCH/icon.png) | [KOCH](#koch) | DISPLAY A CHARACTER-MODE KOCH-CURVE MOTIF. |
 | ![LINES](LINES/icon.png) | [LINES](#lines) | DISPLAY A CHARACTER-MODE RADIAL-LINE DIAGRAM. |
 | ![LOOKSAY](LOOKSAY/icon.png) | [LOOKSAY](#looksay) | SHOW EARLY TERMS OF THE LOOK-AND-SAY SEQUENCE. |
@@ -18,12 +20,14 @@ GEOMETRY, PATTERNS, AND MATHEMATICAL FORMS.
 | ![MULTAB](MULTAB/icon.png) | [MULTAB](#multab) | A COMPACT ONE-THROUGH-FIVE MULTIPLICATION TABLE. |
 | ![PASCAL](PASCAL/icon.png) | [PASCAL](#pascal) | THE FIRST SIX ROWS OF PASCAL'S TRIANGLE. |
 | ![PERMUTE](PERMUTE/icon.png) | [PERMUTE](#permute) | LIST ALL 24 PERMUTATIONS OF ABCD. |
+| ![PLOTFN](PLOTFN/icon.png) | [PLOTFN](#plotfn) | ADJUSTABLE CHARACTER-MODE SINE CURVE PLOT. |
 | ![PYTHTRIP](PYTHTRIP/icon.png) | [PYTHTRIP](#pythtrip) | SHOW THREE CLASSIC PYTHAGOREAN TRIPLES. |
 | ![ROMAN](ROMAN/icon.png) | [ROMAN](#roman) | DISPLAY ROMAN NUMERALS FROM ONE THROUGH TEN. |
 | ![SIERPCAR](SIERPCAR/icon.png) | [SIERPCAR](#sierpcar) | DISPLAY A CHARACTER-MODE SIERPINSKI CARPET. |
 | ![SINTABLE](SINTABLE/icon.png) | [SINTABLE](#sintable) | DISPLAY COMMON-ANGLE SINE VALUES. |
 | ![SQRT](SQRT/icon.png) | [SQRT](#sqrt) | DISPLAY SMALL PERFECT SQUARES AND THEIR ROOTS. |
 | ![SQUARES](SQUARES/icon.png) | [SQUARES](#squares) | ODD-NUMBER SUMS THAT BUILD PERFECT SQUARES. |
+| ![TIMESTBL](TIMESTBL/icon.png) | [TIMESTBL](#timestbl) | MODULAR MULTIPLICATION CIRCLE AND TIMES TABLE. |
 | ![TOTIENT](TOTIENT/icon.png) | [TOTIENT](#totient) | DISPLAY EULER TOTIENT VALUES THROUGH TEN. |
 | ![TRIANGNU](TRIANGNU/icon.png) | [TRIANGNU](#triangnu) | THE FIRST TEN TRIANGULAR NUMBERS AS RUNNING SUMS. |
 
@@ -59,6 +63,16 @@ Stored payload: **85 bytes**.
 
 ![CIRCLE preview](CIRCLE/preview.png)
 
+## DRAGON
+
+CHARACTER-MODE DRAGON CURVE FOLDING PATTERN.
+
+Stored payload: **139 bytes**.
+
+[Assembly source](DRAGON/main.asm)
+
+![DRAGON preview](DRAGON/preview.png)
+
 ## HILBERT
 
 DISPLAY A SMALL CHARACTER-MODE HILBERT CURVE.
@@ -68,6 +82,16 @@ Stored payload: **89 bytes**.
 [Assembly source](HILBERT/main.asm)
 
 ![HILBERT preview](HILBERT/preview.png)
+
+## JULIA
+
+FIXED-PARAMETER CHARACTER-MODE JULIA SET.
+
+Stored payload: **162 bytes**.
+
+[Assembly source](JULIA/main.asm)
+
+![JULIA preview](JULIA/preview.png)
 
 ## KOCH
 
@@ -149,6 +173,16 @@ Stored payload: **169 bytes**.
 
 ![PERMUTE preview](PERMUTE/preview.png)
 
+## PLOTFN
+
+ADJUSTABLE CHARACTER-MODE SINE CURVE PLOT.
+
+Stored payload: **213 bytes**.
+
+[Assembly source](PLOTFN/main.asm)
+
+![PLOTFN preview](PLOTFN/preview.png)
+
 ## PYTHTRIP
 
 SHOW THREE CLASSIC PYTHAGOREAN TRIPLES.
@@ -209,6 +243,16 @@ Stored payload: **161 bytes**.
 
 ![SQUARES preview](SQUARES/preview.png)
 
+## TIMESTBL
+
+MODULAR MULTIPLICATION CIRCLE AND TIMES TABLE.
+
+Stored payload: **181 bytes**.
+
+[Assembly source](TIMESTBL/main.asm)
+
+![TIMESTBL preview](TIMESTBL/preview.png)
+
 ## TOTIENT
 
 DISPLAY EULER TOTIENT VALUES THROUGH TEN.
@@ -230,7 +274,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**20 programs · 2,379 bytes total · 2741 bytes to spare in this category**
+**24 programs · 3,074 bytes total · 3070 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

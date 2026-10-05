@@ -8,12 +8,14 @@ NUMBER THEORY, SEQUENCES, AND CONSTANTS.
 | --- | --- | --- |
 | ![ARMSTRNG](ARMSTRNG/icon.png) | [ARMSTRNG](#armstrng) | THREE-DIGIT ARMSTRONG NUMBERS AS SUMS OF CUBES. |
 | ![BASECONV](BASECONV/icon.png) | [BASECONV](#baseconv) | SHOW SMALL VALUES IN BINARY, DECIMAL, AND HEX. |
+| ![BIGADD](BIGADD/icon.png) | [BIGADD](#bigadd) | ADDS TWO FIXED 40-DIGIT DECIMAL NUMBERS. |
 | ![BINCOUNT](BINCOUNT/icon.png) | [BINCOUNT](#bincount) | AN EIGHT-BIT COUNTER ADVANCED ONE KEY AT A TIME. |
 | ![CATALAN](CATALAN/icon.png) | [CATALAN](#catalan) | SHOW EARLY CATALAN NUMBERS AND THEIR USE. |
 | ![COLLATZ](COLLATZ/icon.png) | [COLLATZ](#collatz) | SHOW A COLLATZ SEQUENCE AND ITS TWO RULES. |
 | ![DIGROOT](DIGROOT/icon.png) | [DIGROOT](#digroot) | SHOW A REPEATED-DIGIT-SUM DIGITAL ROOT EXAMPLE. |
 | ![DIVISORS](DIVISORS/icon.png) | [DIVISORS](#divisors) | Cycles through four compact worked divisor lists. |
 | ![EDIGITS](EDIGITS/icon.png) | [EDIGITS](#edigits) | DISPLAY LEADING DECIMAL DIGITS OF E. |
+| ![FACTOR](FACTOR/icon.png) | [FACTOR](#factor) | COMPACT 16-BIT PRIME FACTORIZATION DEMONSTRATOR. |
 | ![FACTORL](FACTORL/icon.png) | [FACTORL](#factorl) | DISPLAY FACTORIAL VALUES THROUGH EIGHT FACTORIAL. |
 | ![FIB](FIB/icon.png) | [FIB](#fib) | FIBONACCI NUMBERS THROUGH THE 16-BIT LIMIT. |
 | ![GCD](GCD/icon.png) | [GCD](#gcd) | EUCLID'S GCD ALGORITHM STEPPED THROUGH AN EXAMPLE. |
@@ -27,6 +29,7 @@ NUMBER THEORY, SEQUENCES, AND CONSTANTS.
 | ![PI](PI/icon.png) | [PI](#pi) | DISPLAY LEADING DECIMAL DIGITS OF PI. |
 | ![POWERS2](POWERS2/icon.png) | [POWERS2](#powers2) | POWERS OF TWO THROUGH THE 16-BIT LIMIT. |
 | ![PRIMES](PRIMES/icon.png) | [PRIMES](#primes) | A COMPACT LIST OF PRIME NUMBERS THROUGH 97. |
+| ![PRIMSPIR](PRIMSPIR/icon.png) | [PRIMSPIR](#primspir) | SHOWS PRIME MARKS IN A COMPACT ULAM SPIRAL. |
 
 ---
 
@@ -49,6 +52,16 @@ Stored payload: **119 bytes**.
 [Assembly source](BASECONV/main.asm)
 
 ![BASECONV preview](BASECONV/preview.png)
+
+## BIGADD
+
+ADDS TWO FIXED 40-DIGIT DECIMAL NUMBERS.
+
+Stored payload: **240 bytes**.
+
+[Assembly source](BIGADD/main.asm)
+
+![BIGADD preview](BIGADD/preview.png)
 
 ## BINCOUNT
 
@@ -109,6 +122,16 @@ Stored payload: **84 bytes**.
 [Assembly source](EDIGITS/main.asm)
 
 ![EDIGITS preview](EDIGITS/preview.png)
+
+## FACTOR
+
+COMPACT 16-BIT PRIME FACTORIZATION DEMONSTRATOR.
+
+Stored payload: **192 bytes**.
+
+[Assembly source](FACTOR/main.asm)
+
+![FACTOR preview](FACTOR/preview.png)
 
 ## FACTORL
 
@@ -240,8 +263,18 @@ Stored payload: **115 bytes**.
 
 ![PRIMES preview](PRIMES/preview.png)
 
+## PRIMSPIR
+
+SHOWS PRIME MARKS IN A COMPACT ULAM SPIRAL.
+
+Stored payload: **185 bytes**.
+
+[Assembly source](PRIMSPIR/main.asm)
+
+![PRIMSPIR preview](PRIMSPIR/preview.png)
+
 ---
-**21 programs · 2,382 bytes total · 2994 bytes to spare in this category**
+**24 programs · 2,999 bytes total · 3145 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

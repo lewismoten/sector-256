@@ -26,7 +26,10 @@ GAMES OF CHANCE, SKILL, AND SPORT.
 | ![PENALTY](PENALTY/icon.png) | [PENALTY](#penalty) | PICK A CORNER BEFORE THE RANDOM KEEPER SAVES IT. |
 | ![PIG](PIG/icon.png) | [PIG](#pig) | ROLL TOWARD NINE, OR HOLD BEFORE A ONE BUSTS. |
 | ![POKER](POKER/icon.png) | [POKER](#poker) | SPACE DEALS A TINY FIVE-CARD POKER HAND. |
+| ![ROULETTE](ROULETTE/icon.png) | [ROULETTE](#roulette) | BET RED OR BLACK AGAINST A COMPACT ROULETTE WHEEL. |
 | ![SLOTS](SLOTS/icon.png) | [SLOTS](#slots) | THREE-REEL SLOTS. MATCH ALL THREE TO WIN. |
+| ![SQUASH](SQUASH/icon.png) | [SQUASH](#squash) | ONE-PADDLE SQUASH AGAINST THREE WALLS. A/D TO MOVE. |
+| ![TWENTY1](TWENTY1/icon.png) | [TWENTY1](#twenty1) | TAKE 1-3. MAKE THE CPU SAY 21. |
 
 ---
 
@@ -230,6 +233,14 @@ Stored payload: **183 bytes**.
 
 ![POKER preview](POKER/preview.png)
 
+## ROULETTE
+
+BET RED OR BLACK AGAINST A COMPACT ROULETTE WHEEL.
+
+Stored payload: **226 bytes**.
+
+[Assembly source](ROULETTE/main.asm)
+
 ## SLOTS
 
 THREE-REEL SLOTS. MATCH ALL THREE TO WIN.
@@ -240,8 +251,24 @@ Stored payload: **205 bytes**.
 
 ![SLOTS preview](SLOTS/preview.png)
 
+## SQUASH
+
+ONE-PADDLE SQUASH AGAINST THREE WALLS. A/D TO MOVE.
+
+Stored payload: **206 bytes**.
+
+[Assembly source](SQUASH/main.asm)
+
+## TWENTY1
+
+TAKE 1-3. MAKE THE CPU SAY 21.
+
+Stored payload: **208 bytes**.
+
+[Assembly source](TWENTY1/main.asm)
+
 ---
-**21 programs · 4,065 bytes total · 1311 bytes to spare in this category**
+**24 programs · 4,705 bytes total · 1439 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

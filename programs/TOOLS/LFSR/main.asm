@@ -3,6 +3,7 @@
 .cpu "6502"
 *=$c000
 s=$02
+t=$03
  lda #$a5
  sta s
 again:
@@ -11,9 +12,11 @@ again:
  sta $21
  ldx #<title
  jsr text
+ lda s
+ sta t
  ldx #8
 bits:
- asl s
+ asl t
  bcc zero
  lda #'1'
  bne put
@@ -21,9 +24,12 @@ zero:lda #'0'
 put:jsr PUTCHAR
  dex
  bne bits
+ asl s
+ bcc wait
  lda s
- eor #$b8
+ eor #$1d
  sta s
+wait:
  jsr WAITKEY
  jmp again
 text:

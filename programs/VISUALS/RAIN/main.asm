@@ -12,12 +12,10 @@ b:lda #46
 c:sta $0400,x
  sta $0500,x
  sta $0600,x
- sta $0700,x
  lda #5
  sta $d800,x
  sta $d900,x
  sta $da00,x
- sta $db00,x
  inx
  bne a
  ldx #0
@@ -27,9 +25,9 @@ d:jsr RANDOM
  lda #32
  bne f
 e:lda #46
-f:sta $07e8,x
+f:sta $0700,x
  lda #5
- sta $dbe8,x
+ sta $db00,x
  inx
  cpx #232
  bne d

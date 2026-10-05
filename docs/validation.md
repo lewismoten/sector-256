@@ -10,8 +10,8 @@ py65 1.2.0 and VICE 3.7.1.
 - SWATCH stored machine-code/data payload: **256 bytes**, within the inclusive payload limit.
 - Launcher PRG payload: **5769 bytes**, including reusable bitmap/line services.
 - D64 image: **174848 bytes**, standard 35-track layout.
-- `c1541` recognizes every file and reports **629 blocks free**.
-- Sixteen unittest checks pass. They execute the assembled launcher and programs,
+- `c1541` recognizes every file and reports **319 blocks free** in the current 288-program image.
+- Sixty-three unittest checks pass. They execute the assembled launcher and programs,
   verify win/loss/draw and rejected inputs, exercise a 700-entry index including
   an entry beyond 255, check category/page/letter navigation, check four-frame
   fast/slow timing, check nonblocking input/exit, and verify oversize rejection
