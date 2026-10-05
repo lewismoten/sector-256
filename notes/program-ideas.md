@@ -99,6 +99,8 @@ Completed: SQUARES — added an odd-number-sums square proof to MATH.
 
 Completed: PENALTY — added a random-keeper penalty shootout to GAMES.
 
+Completed: XORPAT — added a classic x-XOR-y character texture to DEMOS.
+
 ## GAMES
 
 118 ideas.

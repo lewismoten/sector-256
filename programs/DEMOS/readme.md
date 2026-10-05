@@ -9,6 +9,7 @@ PIXELS, SOUND AND TINY SHOWS.
 * ![EQUALIZR](EQUALIZR/icon.png) [EQUALIZR](#equalizr)
 * ![MAZE10](MAZE10/icon.png) [MAZE10](#maze10)
 * ![SNOW](SNOW/icon-preview.gif) [SNOW](#snow)
+* ![XORPAT](XORPAT/icon.png) [XORPAT](#xorpat)
 
 ---
 
@@ -62,8 +63,18 @@ Stored payload: **255 bytes**.
 
 ![SNOW preview](SNOW/preview.gif)
 
+## XORPAT
+
+A CLASSIC X-XOR-Y CHARACTER TEXTURE.
+
+Stored payload: **45 bytes**.
+
+[Assembly source](XORPAT/main.asm)
+
+![XORPAT preview](XORPAT/preview.png)
+
 ---
-**5 programs · 874 bytes total · 406 bytes to spare in this category**
+**6 programs · 919 bytes total · 617 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
