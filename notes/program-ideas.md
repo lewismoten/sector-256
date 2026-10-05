@@ -251,6 +251,8 @@ Completed: TIMESDRL — added a compact multiplication drill to EDU.
 
 Completed: DIVISORS — added a compact divisor reference to MATH.
 
+Completed: CATEYES — added a compact key-stepped cat-eyes toy to TOYS.
+
 ## GAMES
 
 118 ideas.

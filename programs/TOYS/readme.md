@@ -7,6 +7,7 @@ SMALL THINGS TO PLAY WITH.
 | Icon | Program | Description |
 | --- | --- | --- |
 | ![BINCLOCK](BINCLOCK/icon.png) | [BINCLOCK](#binclock) | SHOW BINARY DIGITS AS A CLOCK-STYLE DISPLAY. |
+| ![CATEYES](CATEYES/icon.png) | [CATEYES](#cateyes) | Steps through four character-art cat-eye directions. |
 | ![CONFETTI](CONFETTI/icon.png) | [CONFETTI](#confetti) | A random PETSCII confetti burst on every key press. |
 | ![DOODLE](DOODLE/icon.png) | [DOODLE](#doodle) | A WASD SKETCHPAD. C CLEARS THE SCREEN. |
 | ![FACES](FACES/icon.png) | [FACES](#faces) | A RANDOM CHARACTER-ART FACE ON EACH KEYPRESS. |
@@ -27,6 +28,16 @@ Stored payload: **88 bytes**.
 [Assembly source](BINCLOCK/main.asm)
 
 ![BINCLOCK preview](BINCLOCK/preview.png)
+
+## CATEYES
+
+Steps through four character-art cat-eye directions.
+
+Stored payload: **163 bytes**.
+
+[Assembly source](CATEYES/main.asm)
+
+![CATEYES preview](CATEYES/preview.png)
 
 ## CONFETTI
 
@@ -109,7 +120,7 @@ Stored payload: **191 bytes**.
 ![WINDMILL preview](WINDMILL/preview.png)
 
 ---
-**9 programs · 1,334 bytes total · 970 bytes to spare in this category**
+**10 programs · 1,497 bytes total · 1063 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
