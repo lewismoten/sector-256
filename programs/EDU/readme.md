@@ -12,6 +12,7 @@ SHORT LESSONS AND PRACTICE.
 * ![DIVIDE](DIVIDE/icon.png) [DIVIDE](#divide)
 * ![FRACTION](FRACTION/icon.png) [FRACTION](#fraction)
 * ![MULTIPLY](MULTIPLY/icon.png) [MULTIPLY](#multiply)
+* ![ODDEVEN](ODDEVEN/icon.png) [ODDEVEN](#oddeven)
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
 * ![SHAPES](SHAPES/icon.png) [SHAPES](#shapes)
 * ![SPELLING](SPELLING/icon.png) [SPELLING](#spelling)
@@ -99,6 +100,16 @@ Stored payload: **147 bytes**.
 
 ![MULTIPLY preview](MULTIPLY/preview.png)
 
+## ODDEVEN
+
+MARK RANDOM NUMBERS ODD WITH O OR EVEN WITH E.
+
+Stored payload: **156 bytes**.
+
+[Assembly source](ODDEVEN/main.asm)
+
+![ODDEVEN preview](ODDEVEN/preview.png)
+
 ## QUIZ
 
 ANSWER THREE SHORT ADDITION QUESTIONS.
@@ -140,7 +151,7 @@ Stored payload: **147 bytes**.
 ![SUBTRACT preview](SUBTRACT/preview.png)
 
 ---
-**12 programs · 1,851 bytes total · 1221 bytes to spare in this category**
+**13 programs · 2,007 bytes total · 1321 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
