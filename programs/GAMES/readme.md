@@ -64,6 +64,7 @@ SMALL GAMES. BIG FUN.
 * ![MINES](MINES/icon.png) [MINES](#mines)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
 * ![NIM](NIM/icon.png) [NIM](#nim)
+* ![NUMRACE](NUMRACE/icon.png) [NUMRACE](#numrace)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 
 ---
@@ -656,6 +657,16 @@ Stored payload: **157 bytes**.
 
 ![NIM preview](NIM/preview.png)
 
+## NUMRACE
+
+TWO PLAYERS ADD 1 OR 2. HIT TEN EXACTLY TO WIN.
+
+Stored payload: **166 bytes**.
+
+[Assembly source](NUMRACE/main.asm)
+
+![NUMRACE preview](NUMRACE/preview.png)
+
 ## TICTACTO
 
 TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE.
@@ -667,7 +678,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**61 programs · 11,461 bytes total · 4155 bytes to spare in this category**
+**62 programs · 11,627 bytes total · 4245 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
