@@ -9,6 +9,7 @@ PIXELS, SOUND AND TINY SHOWS.
 | ![ATOM](ATOM/icon.png) | [ATOM](#atom) | Cycles a single electron around a tiny character-mode atom. |
 | ![CANDLE](CANDLE/icon.png) | [CANDLE](#candle) | SHOW A CHARACTER-ART CANDLE WITH RANDOM FLAME FRAMES. |
 | ![CITYLGT](CITYLGT/icon.png) | [CITYLGT](#citylgt) | Randomizes a row of glowing windows beneath a tiny city skyline. |
+| ![COLORCYC](COLORCYC/icon.png) | [COLORCYC](#colorcyc) | Steps the VIC-II background through all sixteen C64 colors. |
 | ![CREDITS](CREDITS/icon.png) | [CREDITS](#credits) | Alternates two compact character-mode credit pages. |
 | ![CUBE3D](CUBE3D/icon-preview.gif) | [CUBE3D](#cube3d) | A ROTATING 3D WIREFRAME CUBE.   RUN/STOP TO RETURN TO LAUNCHER. |
 | ![DANCE](DANCE/icon-preview.gif) | [DANCE](#dance) | DISCO LADY: FOUR VECTOR DANCE POSES. RUN/STOP TO RETURN. |
@@ -63,6 +64,16 @@ Stored payload: **106 bytes**.
 [Assembly source](CITYLGT/main.asm)
 
 ![CITYLGT preview](CITYLGT/preview.png)
+
+## COLORCYC
+
+Steps the VIC-II background through all sixteen C64 colors.
+
+Stored payload: **88 bytes**.
+
+[Assembly source](COLORCYC/main.asm)
+
+![COLORCYC preview](COLORCYC/preview.png)
 
 ## CREDITS
 
@@ -285,7 +296,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**25 programs · 3,529 bytes total · 2871 bytes to spare in this category**
+**26 programs · 3,617 bytes total · 3039 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

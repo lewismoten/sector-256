@@ -293,6 +293,8 @@ Completed: SCROLLX — added a compact VIC horizontal-scroll experiment to LAB.
 
 Completed: RASTBARS — added a compact character raster-bar demo to DEMOS.
 
+Completed: COLORCYC — added a compact VIC background color-cycle demo to DEMOS.
+
 ## GAMES
 
 118 ideas.
