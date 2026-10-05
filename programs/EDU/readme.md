@@ -8,6 +8,7 @@ SHORT LESSONS AND PRACTICE.
 * ![COLORS](COLORS/icon.png) [COLORS](#colors)
 * ![COUNTING](COUNTING/icon.png) [COUNTING](#counting)
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
+* ![SHAPES](SHAPES/icon.png) [SHAPES](#shapes)
 * ![SPELLING](SPELLING/icon.png) [SPELLING](#spelling)
 
 ---
@@ -52,6 +53,16 @@ Stored payload: **147 bytes**.
 
 ![QUIZ preview](QUIZ/preview.png)
 
+## SHAPES
+
+IDENTIFY CIRCLE, SQUARE, AND TRIANGLE BY NUMBER.
+
+Stored payload: **163 bytes**.
+
+[Assembly source](SHAPES/main.asm)
+
+![SHAPES preview](SHAPES/preview.png)
+
 ## SPELLING
 
 FILL IN MISSING LETTERS FOR THREE SHORT WORDS.
@@ -63,7 +74,7 @@ Stored payload: **144 bytes**.
 ![SPELLING preview](SPELLING/preview.png)
 
 ---
-**5 programs · 768 bytes total · 512 bytes to spare in this category**
+**6 programs · 931 bytes total · 605 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
