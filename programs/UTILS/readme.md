@@ -7,6 +7,7 @@ HANDY LITTLE TOOLS.
 * ![BANKVIEW](BANKVIEW/icon.png) [BANKVIEW](#bankview)
 * ![COINTOSS](COINTOSS/icon.png) [COINTOSS](#cointoss)
 * ![COLORSET](COLORSET/icon.png) [COLORSET](#colorset)
+* ![JOYTEST](JOYTEST/icon.png) [JOYTEST](#joytest)
 * ![MAZEGEN](MAZEGEN/icon-preview.gif) [MAZEGEN](#mazegen)
 * ![REGVIEW](REGVIEW/icon.png) [REGVIEW](#regview)
 * ![SCORE](SCORE/icon.png) [SCORE](#score)
@@ -43,6 +44,16 @@ Stored payload: **169 bytes**.
 [Assembly source](COLORSET/main.asm)
 
 ![COLORSET preview](COLORSET/preview.png)
+
+## JOYTEST
+
+SHOW BOTH JOYSTICK PORTS AS ACTIVE-LOW UDLRF BITS.
+
+Stored payload: **149 bytes**.
+
+[Assembly source](JOYTEST/main.asm)
+
+![JOYTEST preview](JOYTEST/preview.png)
 
 ## MAZEGEN
 
@@ -85,7 +96,7 @@ Stored payload: **256 bytes**.
 ![SWATCH preview](SWATCH/preview.gif)
 
 ---
-**7 programs · 1,118 bytes total · 674 bytes to spare in this category**
+**8 programs · 1,267 bytes total · 781 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
