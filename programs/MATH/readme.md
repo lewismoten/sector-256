@@ -21,6 +21,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![MODCLOCK](MODCLOCK/icon.png) [MODCLOCK](#modclock)
 * ![MULTAB](MULTAB/icon.png) [MULTAB](#multab)
 * ![PASCAL](PASCAL/icon.png) [PASCAL](#pascal)
+* ![PERFECT](PERFECT/icon.png) [PERFECT](#perfect)
 * ![POWERS2](POWERS2/icon.png) [POWERS2](#powers2)
 * ![PRIMES](PRIMES/icon.png) [PRIMES](#primes)
 * ![PYTHTRIP](PYTHTRIP/icon.png) [PYTHTRIP](#pythtrip)
@@ -201,6 +202,16 @@ Stored payload: **136 bytes**.
 
 ![PASCAL preview](PASCAL/preview.png)
 
+## PERFECT
+
+SHOW EARLY PERFECT NUMBERS AS DIVISOR SUMS.
+
+Stored payload: **104 bytes**.
+
+[Assembly source](PERFECT/main.asm)
+
+![PERFECT preview](PERFECT/preview.png)
+
 ## POWERS2
 
 POWERS OF TWO THROUGH THE 16-BIT LIMIT.
@@ -272,7 +283,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**24 programs · 2,979 bytes total · 3165 bytes to spare in this category**
+**25 programs · 3,083 bytes total · 3317 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

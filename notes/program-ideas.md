@@ -191,6 +191,8 @@ Completed: DIGROOT — added a digital-root worked example to MATH.
 
 Completed: CIRCLE — added a character-mode circle reference to MATH.
 
+Completed: PERFECT — added a perfect-number divisor-sum reference to MATH.
+
 ## GAMES
 
 118 ideas.
