@@ -6,6 +6,7 @@ TINY SID SOUNDS AND MUSICAL EXPERIMENTS.
 
 * ![ARPEGGIO](ARPEGGIO/icon.png) [ARPEGGIO](#arpeggio)
 * ![BEEPER](BEEPER/icon.png) [BEEPER](#beeper)
+* ![CHORDS](CHORDS/icon.png) [CHORDS](#chords)
 * ![DOORBELL](DOORBELL/icon.png) [DOORBELL](#doorbell)
 * ![PIANO](PIANO/icon.png) [PIANO](#piano)
 * ![SCALE](SCALE/icon.png) [SCALE](#scale)
@@ -32,6 +33,16 @@ Stored payload: **95 bytes**.
 [Assembly source](BEEPER/main.asm)
 
 ![BEEPER preview](BEEPER/preview.png)
+
+## CHORDS
+
+C F G PLAY THREE-VOICE SID MAJOR CHORDS.
+
+Stored payload: **186 bytes**.
+
+[Assembly source](CHORDS/main.asm)
+
+![CHORDS preview](CHORDS/preview.png)
 
 ## DOORBELL
 
@@ -74,7 +85,7 @@ Stored payload: **113 bytes**.
 ![SIREN preview](SIREN/preview.png)
 
 ---
-**6 programs · 700 bytes total · 836 bytes to spare in this category**
+**7 programs · 886 bytes total · 906 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

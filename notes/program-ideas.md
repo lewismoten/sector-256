@@ -87,6 +87,8 @@ Completed: PIANO — added a four-key SID piano to SOUND.
 
 Completed: BEEPER — added typed-key SID feedback to SOUND.
 
+Completed: CHORDS — added three-voice SID major chords to SOUND.
+
 ## GAMES
 
 118 ideas.
