@@ -9,6 +9,7 @@ HANDY LITTLE TOOLS.
 * ![COLORSET](COLORSET/icon.png) [COLORSET](#colorset)
 * ![JOYTEST](JOYTEST/icon.png) [JOYTEST](#joytest)
 * ![MAZEGEN](MAZEGEN/icon-preview.gif) [MAZEGEN](#mazegen)
+* ![PALNTSC](PALNTSC/icon.png) [PALNTSC](#palntsc)
 * ![REGVIEW](REGVIEW/icon.png) [REGVIEW](#regview)
 * ![SCORE](SCORE/icon.png) [SCORE](#score)
 * ![SWATCH](SWATCH/icon-preview.gif) [SWATCH](#swatch)
@@ -65,6 +66,16 @@ Stored payload: **183 bytes**.
 
 ![MAZEGEN preview](MAZEGEN/preview.png)
 
+## PALNTSC
+
+REPORT THE KERNAL PAL OR NTSC VIDEO-STANDARD FLAG.
+
+Stored payload: **92 bytes**.
+
+[Assembly source](PALNTSC/main.asm)
+
+![PALNTSC preview](PALNTSC/preview.png)
+
 ## REGVIEW
 
 SHOW VIC-II BORDER AND BACKGROUND REGISTERS IN HEX.
@@ -96,7 +107,7 @@ Stored payload: **256 bytes**.
 ![SWATCH preview](SWATCH/preview.gif)
 
 ---
-**8 programs · 1,267 bytes total · 781 bytes to spare in this category**
+**9 programs · 1,359 bytes total · 945 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

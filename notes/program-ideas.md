@@ -119,6 +119,8 @@ Completed: NUMMEM — added a three-digit memory game to GAMES.
 
 Completed: MUSICBOX — added a compact SID music-box phrase to SOUND.
 
+Completed: PALNTSC — added a KERNAL PAL/NTSC video-standard reporter to UTILS.
+
 ## GAMES
 
 118 ideas.
