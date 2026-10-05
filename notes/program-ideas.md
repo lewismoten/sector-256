@@ -283,6 +283,8 @@ Completed: GLITCH — added a compact random character-corruption demo to DEMOS.
 
 Completed: HEXFLOW — added a compact random hexadecimal-flow demo to DEMOS.
 
+Completed: HYPNO — added a compact character-ring hypnotic demo to DEMOS.
+
 ## GAMES
 
 118 ideas.

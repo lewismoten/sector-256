@@ -17,6 +17,7 @@ PIXELS, SOUND AND TINY SHOWS.
 | ![GLITCH](GLITCH/icon.png) | [GLITCH](#glitch) | Generates a new randomized character-corruption field. |
 | ![HEARTBT](HEARTBT/icon.png) | [HEARTBT](#heartbt) | Alternates character-heart frames with a SID pulse. |
 | ![HEXFLOW](HEXFLOW/icon.png) | [HEXFLOW](#hexflow) | Generates a fresh random field of hexadecimal digits. |
+| ![HYPNO](HYPNO/icon.png) | [HYPNO](#hypno) | Alternates two compact character-ring hypnotic frames. |
 | ![MARQUEE](MARQUEE/icon.png) | [MARQUEE](#marquee) | A tiny character-mode chasing-light marquee. |
 | ![MAZE10](MAZE10/icon.png) | [MAZE10](#maze10) | A CLASSIC RANDOM DIAGONAL CHARACTER MAZE. |
 | ![MUNCHING](MUNCHING/icon.png) | [MUNCHING](#munching) | CLASSIC MUNCHING XOR SQUARES WITH A CHANGING PHASE. |
@@ -140,6 +141,16 @@ Stored payload: **93 bytes**.
 
 ![HEXFLOW preview](HEXFLOW/preview.png)
 
+## HYPNO
+
+Alternates two compact character-ring hypnotic frames.
+
+Stored payload: **199 bytes**.
+
+[Assembly source](HYPNO/main.asm)
+
+![HYPNO preview](HYPNO/preview.png)
+
 ## MARQUEE
 
 A tiny character-mode chasing-light marquee.
@@ -241,7 +252,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**21 programs · 2,794 bytes total · 2582 bytes to spare in this category**
+**22 programs · 2,993 bytes total · 2639 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
