@@ -179,6 +179,8 @@ Completed: METRONOM — added a SID metronome tick to SOUND.
 
 Completed: NUMLINE — added a number-line reading drill to EDU.
 
+Completed: PETSCII — added a common PETSCII-code reference to UTILS.
+
 ## GAMES
 
 118 ideas.

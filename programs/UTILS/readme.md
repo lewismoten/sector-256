@@ -11,6 +11,7 @@ HANDY LITTLE TOOLS.
 * ![JOYTEST](JOYTEST/icon.png) [JOYTEST](#joytest)
 * ![MAZEGEN](MAZEGEN/icon-preview.gif) [MAZEGEN](#mazegen)
 * ![PALNTSC](PALNTSC/icon.png) [PALNTSC](#palntsc)
+* ![PETSCII](PETSCII/icon.png) [PETSCII](#petscii)
 * ![REGVIEW](REGVIEW/icon.png) [REGVIEW](#regview)
 * ![SCORE](SCORE/icon.png) [SCORE](#score)
 * ![SWATCH](SWATCH/icon-preview.gif) [SWATCH](#swatch)
@@ -88,6 +89,16 @@ Stored payload: **92 bytes**.
 
 ![PALNTSC preview](PALNTSC/preview.png)
 
+## PETSCII
+
+DISPLAY COMMON PETSCII CONTROL AND LETTER CODES.
+
+Stored payload: **102 bytes**.
+
+[Assembly source](PETSCII/main.asm)
+
+![PETSCII preview](PETSCII/preview.png)
+
 ## REGVIEW
 
 SHOW VIC-II BORDER AND BACKGROUND REGISTERS IN HEX.
@@ -129,7 +140,7 @@ Stored payload: **108 bytes**.
 ![TALLY preview](TALLY/preview.png)
 
 ---
-**11 programs · 1,673 bytes total · 1143 bytes to spare in this category**
+**12 programs · 1,775 bytes total · 1297 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
