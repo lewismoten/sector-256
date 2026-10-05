@@ -6,7 +6,7 @@ tick = $02
 flake = $03
 ptr = $20
 fx = $c200
-fy = $c220
+fy = $c240
 height = $c300
 
     jsr HIRES
@@ -19,12 +19,12 @@ white:
     inx
     bne white
     txa
-    ldx #39
+    ldx #127
 clear_heights:
     sta height,x
     dex
     bpl clear_heights
-    lda #31
+    lda #63
     sta flake
 seed:
     ldx flake
@@ -39,7 +39,7 @@ seed:
 frame:
     jsr POLLKEY
     inc tick
-    lda #31
+    lda #63
     sta flake
 snow:
     clc
@@ -53,16 +53,6 @@ snow:
 fall:
     inc fy,x
 no_fall:
-    lda tick
-    and #7
-    bne no_wave
-    lda flake
-    and #3
-    bne no_wave
-    lda fx,x
-    eor #1
-    sta fx,x
-no_wave:
     ldy fx,x
     lda fy,x
     clc
@@ -70,7 +60,8 @@ no_wave:
     cmp #199
     bcc draw_flake
     lda height,y
-    bmi respawn
+    cmp #8
+    bcs respawn
     lda #199
     sec
     sbc height,y
@@ -95,7 +86,7 @@ wait_raster:
 
 new_x:
     jsr RANDOM
-    and #31
+    and #127
     sta fx,x
     rts
 
@@ -125,6 +116,8 @@ plot:
     sta ptr+1
     ldx flake
     lda fx,x
+    lsr
+    lsr
     asl
     asl
     asl
@@ -137,17 +130,24 @@ pixel_addr_ready:
     lda fy,x
     and #7
     tay
+    lda fx,x
+    and #3
+    asl
+    sta $04
     txa
     and #1
+    ora $04
     tax
     plp
-    lda masks,x
     bcc moving_mask
-    lda #$18
+    txa
+    and #$fe
+    tax
 moving_mask:
+    lda masks,x
     eor (ptr),y
     sta (ptr),y
     ldx flake
     rts
 row_lo: .byte $20,$60,$a0,$e0
-masks: .byte $18,$10
+masks: .byte $c0,$80,$30,$20,$0c,$08,$03,$02

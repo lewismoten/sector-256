@@ -262,45 +262,48 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('category_id'), 2)
         self.assertEqual(machine.var('selected'), 1)
 
-    def test_snowfall_speed_width_drift_and_stacks(self):
+    def test_snowfall_speed_density_and_short_stacks(self):
         machine = Machine()
         machine.boot()
         machine.key(0x1d)
         machine.key(0x1d)
         machine.key(13)
         machine.launch(2, wait_address=0x100c)
-        live_at_start = [(machine.memory[0xc200+i], machine.memory[0xc220+i])
-                         for i in range(32)]
+        live_at_start = [(machine.memory[0xc200+i], machine.memory[0xc240+i])
+                         for i in range(64)]
         for parity, width in ((0, 2), (1, 1)):
             x, y = next(position for i, position in enumerate(live_at_start)
-                        if i % 2 == parity and live_at_start.count(position) == 1)
-            address = 0x6000 + (y // 8) * 320 + (x + 4) * 8 + y % 8
+                        if i % 2 == parity and
+                        sum((other_x // 4, other_y) == (position[0] // 4, position[1])
+                            for other_x, other_y in live_at_start) == 1)
+            address = 0x6000 + (y // 8) * 320 + (x // 4 + 4) * 8 + y % 8
             self.assertEqual(machine.memory[address].bit_count(), width)
-        start_fast = machine.memory[0xc220]
-        start_slow = machine.memory[0xc221]
-        first_x = machine.memory[0xc200]
-        for frame in range(320):
+        start_fast = machine.memory[0xc240]
+        start_slow = machine.memory[0xc241]
+        for frame in range(500):
             machine.step()
             machine.run_until(lambda: machine.cpu.pc == 0x100c)
             if frame == 3:
-                self.assertEqual(machine.memory[0xc220], start_fast + 4)
-                self.assertEqual(machine.memory[0xc221], start_slow + 2)
-            if frame == 7:
-                self.assertEqual(machine.memory[0xc200], first_x ^ 1)
-        heights = machine.memory[0xc300:0xc328]
-        self.assertGreater(sum(heights), 10)
-        self.assertLess(sum(h > 0 for h in heights), 32)
+                self.assertEqual(machine.memory[0xc240], start_fast + 4)
+                self.assertEqual(machine.memory[0xc241], start_slow + 2)
+        heights = machine.memory[0xc300:0xc380]
+        self.assertGreater(sum(h > 0 for h in heights), 80)
+        self.assertLessEqual(max(heights), 8)
+        masks = (0xc0, 0x30, 0x0c, 0x03)
         for x, height in enumerate(heights):
             for offset in range(height):
                 y = 199 - offset
-                address = 0x6000 + (y // 8) * 320 + (x + 4) * 8 + y % 8
-                self.assertEqual(machine.memory[address], 0x18)
-                color = machine.memory[0x4000 + (y // 8) * 40 + x + 4]
+                address = 0x6000 + (y // 8) * 320 + (x // 4 + 4) * 8 + y % 8
+                self.assertEqual(machine.memory[address] & masks[x % 4], masks[x % 4])
+                color = machine.memory[0x4000 + (y // 8) * 40 + x // 4 + 4]
                 self.assertEqual(color >> 4, 1)
-        bottom = [machine.memory[0x6000 + 24 * 320 + (x+4) * 8 + 7]
-                  for x in range(32)]
-        self.assertGreater(sum(value != 0 for value in bottom), 0)
-        self.assertLess(sum(value != 0 for value in bottom), 32)
+        column = machine.memory[0xc200]
+        machine.memory[0xc300 + column] = 8
+        machine.memory[0xc240] = 198
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        self.assertEqual(machine.memory[0xc300 + column], 8)
+        self.assertEqual(machine.memory[0xc240], 0)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 2)
         self.assertEqual(machine.var('selected'), 2)
