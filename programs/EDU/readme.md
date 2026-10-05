@@ -30,6 +30,7 @@ SHORT LESSONS AND PRACTICE.
 * ![PLANETS](PLANETS/icon.png) [PLANETS](#planets)
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
 * ![RHYMES](RHYMES/icon.png) [RHYMES](#rhymes)
+* ![SCHOOL](SCHOOL/icon.png) [SCHOOL](#school)
 * ![SHAPES](SHAPES/icon.png) [SHAPES](#shapes)
 * ![SPACE](SPACE/icon.png) [SPACE](#space)
 * ![SPELLING](SPELLING/icon.png) [SPELLING](#spelling)
@@ -300,6 +301,16 @@ Stored payload: **172 bytes**.
 
 ![RHYMES preview](RHYMES/preview.png)
 
+## SCHOOL
+
+PICK THE FIRST LETTER OF THREE SCHOOL WORDS.
+
+Stored payload: **171 bytes**.
+
+[Assembly source](SCHOOL/main.asm)
+
+![SCHOOL preview](SCHOOL/preview.png)
+
 ## SHAPES
 
 IDENTIFY CIRCLE, SQUARE, AND TRIANGLE BY NUMBER.
@@ -371,7 +382,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**33 programs · 5,418 bytes total · 3030 bytes to spare in this category**
+**34 programs · 5,589 bytes total · 3115 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
