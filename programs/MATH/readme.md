@@ -16,6 +16,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![PASCAL](PASCAL/icon.png) [PASCAL](#pascal)
 * ![POWERS2](POWERS2/icon.png) [POWERS2](#powers2)
 * ![PRIMES](PRIMES/icon.png) [PRIMES](#primes)
+* ![PYTHTRIP](PYTHTRIP/icon.png) [PYTHTRIP](#pythtrip)
 * ![SQUARES](SQUARES/icon.png) [SQUARES](#squares)
 * ![TRIANGNU](TRIANGNU/icon.png) [TRIANGNU](#triangnu)
 
@@ -141,6 +142,14 @@ Stored payload: **115 bytes**.
 
 ![PRIMES preview](PRIMES/preview.png)
 
+## PYTHTRIP
+
+SHOW THREE CLASSIC PYTHAGOREAN TRIPLES.
+
+Stored payload: **108 bytes**.
+
+[Assembly source](PYTHTRIP/main.asm)
+
 ## SQUARES
 
 ODD-NUMBER SUMS THAT BUILD PERFECT SQUARES.
@@ -162,7 +171,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**14 programs · 1,967 bytes total · 1617 bytes to spare in this category**
+**15 programs · 2,075 bytes total · 1765 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

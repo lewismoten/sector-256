@@ -143,6 +143,8 @@ Completed: PETSCIIQ — added a PETSCII-code quiz to EDU.
 
 Completed: ROUNDING — added a nearest-ten rounding drill to EDU.
 
+Completed: PYTHTRIP — added a Pythagorean-triple reference to MATH.
+
 ## GAMES
 
 118 ideas.
