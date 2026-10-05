@@ -9,6 +9,7 @@ HANDY LITTLE TOOLS.
 * ![COLORSET](COLORSET/icon.png) [COLORSET](#colorset)
 * ![MAZEGEN](MAZEGEN/icon-preview.gif) [MAZEGEN](#mazegen)
 * ![REGVIEW](REGVIEW/icon.png) [REGVIEW](#regview)
+* ![SCORE](SCORE/icon.png) [SCORE](#score)
 * ![SWATCH](SWATCH/icon-preview.gif) [SWATCH](#swatch)
 
 ---
@@ -63,6 +64,16 @@ Stored payload: **120 bytes**.
 
 ![REGVIEW preview](REGVIEW/preview.png)
 
+## SCORE
+
+A TWO-PLAYER SCOREBOARD. A AND L ADD POINTS.
+
+Stored payload: **145 bytes**.
+
+[Assembly source](SCORE/main.asm)
+
+![SCORE preview](SCORE/preview.png)
+
 ## SWATCH
 
 ALL 16 COLORS + 120 PAIRS. 1-9:RATE M:MIX SPACE:HOLD STOP:EXIT.
@@ -74,7 +85,7 @@ Stored payload: **256 bytes**.
 ![SWATCH preview](SWATCH/preview.gif)
 
 ---
-**6 programs · 973 bytes total · 563 bytes to spare in this category**
+**7 programs · 1,118 bytes total · 674 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

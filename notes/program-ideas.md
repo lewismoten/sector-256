@@ -81,6 +81,8 @@ Completed: KEYFIND — added a keyboard-location drill to EDU.
 
 Completed: REGVIEW — added a live VIC-II color-register display to UTILS.
 
+Completed: SCORE — added a two-player tabletop scorekeeper to UTILS.
+
 ## GAMES
 
 118 ideas.
