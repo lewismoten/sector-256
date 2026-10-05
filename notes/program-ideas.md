@@ -173,6 +173,8 @@ Completed: SHAPEQZ — added a visual shape-identification quiz to EDU.
 
 Completed: COLLATZ — added a Collatz-sequence example to MATH.
 
+Completed: RAIN — added a randomized character rain field to DEMOS.
+
 ## GAMES
 
 118 ideas.

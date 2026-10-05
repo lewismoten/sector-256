@@ -9,6 +9,7 @@ PIXELS, SOUND AND TINY SHOWS.
 * ![EQUALIZR](EQUALIZR/icon.png) [EQUALIZR](#equalizr)
 * ![MAZE10](MAZE10/icon.png) [MAZE10](#maze10)
 * ![MUNCHING](MUNCHING/icon.png) [MUNCHING](#munching)
+* ![RAIN](RAIN/icon.png) [RAIN](#rain)
 * ![SNOW](SNOW/icon-preview.gif) [SNOW](#snow)
 * ![XORPAT](XORPAT/icon.png) [XORPAT](#xorpat)
 
@@ -64,6 +65,16 @@ Stored payload: **49 bytes**.
 
 ![MUNCHING preview](MUNCHING/preview.png)
 
+## RAIN
+
+REPAINT A SPARSE GREEN CHARACTER-RAIN FIELD.
+
+Stored payload: **78 bytes**.
+
+[Assembly source](RAIN/main.asm)
+
+![RAIN preview](RAIN/preview.png)
+
 ## SNOW
 
 PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT.
@@ -85,7 +96,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**7 programs · 968 bytes total · 824 bytes to spare in this category**
+**8 programs · 1,046 bytes total · 1002 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
