@@ -14,6 +14,7 @@ SHORT LESSONS AND PRACTICE.
 * ![FRACTION](FRACTION/icon.png) [FRACTION](#fraction)
 * ![MEMORY](MEMORY/icon.png) [MEMORY](#memory)
 * ![MULTIPLY](MULTIPLY/icon.png) [MULTIPLY](#multiply)
+* ![OCEANS](OCEANS/icon.png) [OCEANS](#oceans)
 * ![ODDEVEN](ODDEVEN/icon.png) [ODDEVEN](#oddeven)
 * ![PLANETS](PLANETS/icon.png) [PLANETS](#planets)
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
@@ -124,6 +125,16 @@ Stored payload: **147 bytes**.
 
 ![MULTIPLY preview](MULTIPLY/preview.png)
 
+## OCEANS
+
+PICK THE FIRST LETTER OF THREE OCEAN NAMES.
+
+Stored payload: **181 bytes**.
+
+[Assembly source](OCEANS/main.asm)
+
+![OCEANS preview](OCEANS/preview.png)
+
 ## ODDEVEN
 
 MARK RANDOM NUMBERS ODD WITH O OR EVEN WITH E.
@@ -195,7 +206,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**17 programs · 2,660 bytes total · 1692 bytes to spare in this category**
+**18 programs · 2,841 bytes total · 1767 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
