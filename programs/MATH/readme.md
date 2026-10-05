@@ -7,6 +7,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![ARMSTRNG](ARMSTRNG/icon.png) [ARMSTRNG](#armstrng)
 * ![BASECONV](BASECONV/icon.png) [BASECONV](#baseconv)
 * ![BINCOUNT](BINCOUNT/icon.png) [BINCOUNT](#bincount)
+* ![BINOMIAL](BINOMIAL/icon.png) [BINOMIAL](#binomial)
 * ![CANTOR](CANTOR/icon.png) [CANTOR](#cantor)
 * ![CATALAN](CATALAN/icon.png) [CATALAN](#catalan)
 * ![CIRCLE](CIRCLE/icon.png) [CIRCLE](#circle)
@@ -65,6 +66,16 @@ Stored payload: **72 bytes**.
 [Assembly source](BINCOUNT/main.asm)
 
 ![BINCOUNT preview](BINCOUNT/preview.png)
+
+## BINOMIAL
+
+DISPLAY EARLY BINOMIAL COEFFICIENTS.
+
+Stored payload: **117 bytes**.
+
+[Assembly source](BINOMIAL/main.asm)
+
+![BINOMIAL preview](BINOMIAL/preview.png)
 
 ## CANTOR
 
@@ -327,7 +338,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**29 programs · 3,417 bytes total · 4007 bytes to spare in this category**
+**30 programs · 3,534 bytes total · 4146 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
