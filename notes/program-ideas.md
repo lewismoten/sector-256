@@ -59,6 +59,8 @@ Completed: FORTUNE — added random fortune-cookie messages to TOYS.
 
 Completed: ROCKPAPR — added a random rock-paper-scissors game to GAMES.
 
+Completed: SLOTS — added a three-reel slot machine to GAMES.
+
 ## GAMES
 
 118 ideas.
