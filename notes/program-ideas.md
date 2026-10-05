@@ -207,6 +207,8 @@ Completed: PERMUTE — added an ABCD permutation reference to MATH.
 
 Completed: FACTORL — added a factorial reference to MATH.
 
+Completed: PALINDRM — added a reverse-and-add palindrome example to MATH.
+
 ## GAMES
 
 118 ideas.

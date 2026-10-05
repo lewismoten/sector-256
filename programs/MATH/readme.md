@@ -25,6 +25,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![LUCAS](LUCAS/icon.png) [LUCAS](#lucas)
 * ![MODCLOCK](MODCLOCK/icon.png) [MODCLOCK](#modclock)
 * ![MULTAB](MULTAB/icon.png) [MULTAB](#multab)
+* ![PALINDRM](PALINDRM/icon.png) [PALINDRM](#palindrm)
 * ![PASCAL](PASCAL/icon.png) [PASCAL](#pascal)
 * ![PERFECT](PERFECT/icon.png) [PERFECT](#perfect)
 * ![PERMUTE](PERMUTE/icon.png) [PERMUTE](#permute)
@@ -249,6 +250,16 @@ Stored payload: **155 bytes**.
 
 ![MULTAB preview](MULTAB/preview.png)
 
+## PALINDRM
+
+SHOW A REVERSE-AND-ADD PALINDROME EXAMPLE.
+
+Stored payload: **81 bytes**.
+
+[Assembly source](PALINDRM/main.asm)
+
+![PALINDRM preview](PALINDRM/preview.png)
+
 ## PASCAL
 
 THE FIRST SIX ROWS OF PASCAL'S TRIANGLE.
@@ -360,7 +371,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**32 programs · 3,804 bytes total · 4388 bytes to spare in this category**
+**33 programs · 3,885 bytes total · 4563 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
