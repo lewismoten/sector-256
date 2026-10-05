@@ -15,6 +15,7 @@ SHORT LESSONS AND PRACTICE.
 * ![COMPASS](COMPASS/icon.png) [COMPASS](#compass)
 * ![COUNTING](COUNTING/icon.png) [COUNTING](#counting)
 * ![DAYS](DAYS/icon.png) [DAYS](#days)
+* ![DAYSWK](DAYSWK/icon.png) [DAYSWK](#dayswk)
 * ![DIVIDE](DIVIDE/icon.png) [DIVIDE](#divide)
 * ![FAMILY](FAMILY/icon.png) [FAMILY](#family)
 * ![FOOD](FOOD/icon.png) [FOOD](#food)
@@ -163,6 +164,16 @@ Stored payload: **180 bytes**.
 [Assembly source](DAYS/main.asm)
 
 ![DAYS preview](DAYS/preview.png)
+
+## DAYSWK
+
+TYPE THE FIRST LETTER OF THE NEXT WEEKDAY.
+
+Stored payload: **197 bytes**.
+
+[Assembly source](DAYSWK/main.asm)
+
+![DAYSWK preview](DAYSWK/preview.png)
 
 ## DIVIDE
 
@@ -525,7 +536,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**47 programs · 7,868 bytes total · 4164 bytes to spare in this category**
+**48 programs · 8,065 bytes total · 4223 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

@@ -121,6 +121,8 @@ Completed: MUSICBOX — added a compact SID music-box phrase to SOUND.
 
 Completed: PALNTSC — added a KERNAL PAL/NTSC video-standard reporter to UTILS.
 
+Completed: DAYSWK — added a next-weekday drill to EDU.
+
 ## GAMES
 
 118 ideas.
