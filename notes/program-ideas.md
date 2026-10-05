@@ -51,6 +51,8 @@ Completed: DOORBELL — added a two-note SID doorbell chime to SOUND.
 
 Completed: SIREN — added a four-tone SID siren wail to SOUND.
 
+Completed: DOODLE — added a WASD sketchpad to the TOYS category.
+
 ## GAMES
 
 118 ideas.
