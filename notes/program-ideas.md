@@ -127,6 +127,8 @@ Completed: ESTIMATE — added a briefly flashed dot-counting drill to EDU.
 
 Completed: ARMSTRNG — added three-digit Armstrong-number identities to MATH.
 
+Completed: MUNCHING — added phased munching XOR squares to DEMOS.
+
 ## GAMES
 
 118 ideas.

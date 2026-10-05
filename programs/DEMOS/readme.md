@@ -8,6 +8,7 @@ PIXELS, SOUND AND TINY SHOWS.
 * ![DANCE](DANCE/icon-preview.gif) [DANCE](#dance)
 * ![EQUALIZR](EQUALIZR/icon.png) [EQUALIZR](#equalizr)
 * ![MAZE10](MAZE10/icon.png) [MAZE10](#maze10)
+* ![MUNCHING](MUNCHING/icon.png) [MUNCHING](#munching)
 * ![SNOW](SNOW/icon-preview.gif) [SNOW](#snow)
 * ![XORPAT](XORPAT/icon.png) [XORPAT](#xorpat)
 
@@ -53,6 +54,16 @@ Stored payload: **35 bytes**.
 
 ![MAZE10 preview](MAZE10/preview.png)
 
+## MUNCHING
+
+CLASSIC MUNCHING XOR SQUARES WITH A CHANGING PHASE.
+
+Stored payload: **49 bytes**.
+
+[Assembly source](MUNCHING/main.asm)
+
+![MUNCHING preview](MUNCHING/preview.png)
+
 ## SNOW
 
 PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT.
@@ -74,7 +85,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**6 programs · 919 bytes total · 617 bytes to spare in this category**
+**7 programs · 968 bytes total · 824 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
