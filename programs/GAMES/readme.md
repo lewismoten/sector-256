@@ -15,6 +15,7 @@ SMALL GAMES. BIG FUN.
 * ![HILO](HILO/icon.png) [HILO](#hilo)
 * ![HORSES](HORSES/icon.png) [HORSES](#horses)
 * ![HOTPOT](HOTPOT/icon.png) [HOTPOT](#hotpot)
+* ![LOTTO](LOTTO/icon.png) [LOTTO](#lotto)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 
@@ -130,6 +131,16 @@ Stored payload: **162 bytes**.
 
 ![HOTPOT preview](HOTPOT/preview.png)
 
+## LOTTO
+
+PICK SIX 1-9 DIGITS, THEN MATCH THE RANDOM LOTTO DRAW.
+
+Stored payload: **177 bytes**.
+
+[Assembly source](LOTTO/main.asm)
+
+![LOTTO preview](LOTTO/preview.png)
+
 ## MONTY
 
 PICK 1-3. MONTY OPENS A GOAT. S:SWITCH K:KEEP. STOP:EXIT.
@@ -151,7 +162,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**13 programs · 2,729 bytes total · 599 bytes to spare in this category**
+**14 programs · 2,906 bytes total · 678 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

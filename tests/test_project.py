@@ -407,6 +407,23 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('category_id'), 0)
         self.assertEqual(machine.cpu.sp, 0xff)
 
+    def test_lotto_records_six_picks_draws_and_restarts(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        self.launch_named(machine, 'LOTTO')
+        for digit in '123456':
+            machine.game_key(digit)
+        self.assertEqual(bytes(machine.memory[0x20:0x26]), b'654321')
+        self.assertLessEqual(machine.memory[3], 6)
+        self.assertIn('DRAW:', machine.output)
+        self.assertIn('MATCHES ', machine.output)
+        machine.game_key(13)
+        self.assertEqual(machine.memory[2], 6)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
     def test_monty_hall_reveal_choices_and_score(self):
         machine = Machine()
         machine.boot()
