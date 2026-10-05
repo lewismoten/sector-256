@@ -412,10 +412,10 @@ class ProjectTests(unittest.TestCase):
         machine.launch(0, wait_address=0x100c)
 
         grid = set()
-        x, y, direction = 20, 12, 0
+        x, y, direction = 128, 100, 0
         vectors = ((0, -1), (1, 0), (0, 1), (-1, 0))
         for _ in range(8):
-            for _ in range(8):
+            for _ in range(16):
                 position = (x, y)
                 if position in grid:
                     grid.remove(position)
@@ -424,21 +424,40 @@ class ProjectTests(unittest.TestCase):
                     grid.add(position)
                     direction = (direction + 1) & 3
                 dx, dy = vectors[direction]
-                x, y = (x + dx) % 40, (y + dy) % 25
+                x, y = (x + dx) % 256, (y + dy) % 200
             machine.step()
             machine.run_until(lambda: machine.cpu.pc == 0x100c)
-            actual = {(offset % 40, offset // 40)
-                      for offset, value in enumerate(machine.memory[0xc400:0xc7e8])
-                      if value}
-            self.assertEqual(actual, grid)
+            bitmap = machine.memory[0x6000:0x8000]
+            self.assertEqual(sum(value.bit_count() for value in bitmap), len(grid))
+            for cell_x, cell_y in grid:
+                address = (0x6000 + (cell_y // 8) * 320
+                           + ((cell_x + 32) // 8) * 8 + cell_y % 8)
+                self.assertTrue(machine.memory[address] & (128 >> (cell_x & 7)))
             self.assertEqual(tuple(machine.memory[2:5]), (x, y, direction))
-            self.assertEqual(machine.memory[0x0400 + y * 40 + x], 42)
+
+        for _ in range(8, 700):
+            for _ in range(16):
+                position = (x, y)
+                if position in grid:
+                    grid.remove(position)
+                    direction = (direction - 1) & 3
+                else:
+                    grid.add(position)
+                    direction = (direction + 1) & 3
+                dx, dy = vectors[direction]
+                x, y = (x + dx) % 256, (y + dy) % 200
+            machine.step()
+            machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        self.assertEqual(tuple(machine.memory[2:5]), (x, y, direction))
+        self.assertGreater(abs(x - 128), 32)  # the highway escaped the seed pattern
+        self.assertEqual(sum(value.bit_count()
+                             for value in machine.memory[0x6000:0x8000]), len(grid))
 
         machine.keys.append(32)
         machine.step()
         machine.run_until(lambda: machine.cpu.pc == 0x100c)
-        self.assertEqual(bytes(machine.memory[0xc400:0xc7e8]), bytes(1000))
-        self.assertEqual(tuple(machine.memory[2:5]), (20, 12, 0))
+        self.assertEqual(bytes(machine.memory[0x6000:0x8000]), bytes(8192))
+        self.assertEqual(tuple(machine.memory[2:5]), (128, 100, 0))
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 3)
         self.assertEqual(machine.var('selected'), 0)

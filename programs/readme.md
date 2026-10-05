@@ -18,9 +18,9 @@ in any program to return to the launcher.
 ---
 ## ANT
 
-LANGTON'S ANT. SPACE:RESET. RUN/STOP:RETURN.
+LANGTON'S ANT ON 256X200 HIRES. SPACE:RESET. STOP:RETURN.
 
-Category: LAB. Stored payload: **237 bytes**.
+Category: LAB. Stored payload: **223 bytes**.
 
 [Assembly source](ANT/main.asm)
 
@@ -117,7 +117,7 @@ Category: GAMES. Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**10 programs · 2,423 bytes total · 137 bytes to spare across the whole set**
+**10 programs · 2,409 bytes total · 151 bytes to spare across the whole set**
 
 Want to add one? See [Add a program](../docs/add_program.md) 
 and the [program interface](../docs/program-api.md). 

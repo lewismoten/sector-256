@@ -1,4 +1,4 @@
-; Langton's Ant on a wrapping 40 x 25 field, eight ant steps per video frame.
+; Langton's Ant on a centered 256 x 200 high-resolution, wrapping field.
 .include "api.inc"
 .cpu "6502"
 * = $c000
@@ -6,32 +6,14 @@ xpos = $02
 ypos = $03
 direction = $04               ; 0 up, 1 right, 2 down, 3 left
 steps = $05
+mask = $06
 cell = $20
-grid = $c400
 
-    lda #0
-    sta $d020
-    sta $d021
 reset:
-    jsr CLEAR
-    lda #3                     ; cyan trail on black
-    ldx #0
-color:
-.for i in range(4)
-    sta $d800+i*$100,x
-.endfor
-    inx
-    bne color
-    txa                        ; X and A are both zero here
-clear:
-.for i in range(4)
-    sta grid+i*$100,x
-.endfor
-    inx
-    bne clear
-    lda #20
+    jsr HIRES                  ; clear both bitmaps; display cyan on black
+    lda #128
     sta xpos
-    lda #12
+    lda #100
     sta ypos
     lda #0
     sta direction
@@ -40,76 +22,66 @@ frame:
     jsr POLLKEY
     cmp #32
     beq reset
-    lda #8
+    lda #16                    ; 800 ant steps/second on a PAL C64
     sta steps
 step:
     jsr address
-    ldy #0
     lda (cell),y
+    and mask
     beq white
 black:
-    lda #0                     ; black: turn left and make the cell white
-    sta (cell),y
-    lda #32
-    jsr plot
-    lda direction
+    lda direction             ; black: turn left
     sec
     sbc #1
     jmp turned
 white:
-    lda #1                     ; white: turn right and make the cell black
-    sta (cell),y
-    lda #$a0
-    jsr plot
-    lda direction
+    lda direction             ; white: turn right
     clc
     adc #1
 turned:
     and #3
     sta direction
+    lda (cell),y              ; flip the current high-resolution cell
+    eor mask
+    sta (cell),y
     jsr move
     dec steps
     bne step
-    jsr address
-    lda #42                    ; show the ant over its underlying cell state
-    jsr plot
 wait_raster:
     lda $d012
     bne wait_raster
     jmp frame
 
-; Form $c400 + y*40 + x. Repeated addition is compact and fast enough here.
+; Locate pixel (x+32,y) in the VIC-II's interleaved $6000 bitmap.
 address:
-    lda xpos
-    sta cell
-    lda #>grid
-    sta cell+1
-    ldx ypos
-    beq addressed
-add_row:
+    lda ypos
+    lsr
+    lsr
+    lsr
+    tax
     clc
-    lda cell
-    adc #40
+    lda row_lo,x
+    adc #32                    ; center the 256-pixel field on the screen
     sta cell
-    bcc row_added
+    lda row_hi,x
+    adc #0
+    sta cell+1
+    lda xpos
+    and #$f8
+    clc
+    adc cell
+    sta cell
+    bcc column_ready
     inc cell+1
-row_added:
-    dex
-    bne add_row
-addressed:
-    rts
-
-; The grid and screen have matching low bytes; their high bytes differ by $c0.
-plot:
-    pha
-    lda cell+1
-    eor #$c0
-    sta cell+1
-    pla
-    sta (cell),y
-    lda cell+1
-    eor #$c0
-    sta cell+1
+column_ready:
+    lda ypos
+    and #7
+    tay
+    lda xpos
+    and #7
+    tax
+    lda masks,x
+    sta mask
     rts
 
 move:
@@ -120,31 +92,29 @@ move:
     dex
     beq down
 left:
-    dec xpos
-    bpl moved
-    lda #39
-    sta xpos
-    bpl moved
+    dec xpos                   ; 8-bit X wraps across all 256 columns
+    rts
 up:
     dec ypos
-    bpl moved
-    lda #24
+    lda ypos
+    cmp #$ff
+    bne moved
+    lda #199
     sta ypos
-    bpl moved
+    rts
 right:
-    inc xpos
-    lda xpos
-    cmp #40
-    bcc moved
-    lda #0
-    sta xpos
-    beq moved
+    inc xpos                   ; 8-bit X wraps across all 256 columns
+    rts
 down:
     inc ypos
     lda ypos
-    cmp #25
+    cmp #200
     bcc moved
     lda #0
     sta ypos
 moved:
     rts
+
+masks: .byte $80,$40,$20,$10,8,4,2,1
+row_lo: .byte <($6000+range(25)*320)
+row_hi: .byte >($6000+range(25)*320)
