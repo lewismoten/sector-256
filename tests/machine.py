@@ -198,7 +198,9 @@ class Machine:
                 cell = cy * 40 + cx
                 if text:
                     code = self.memory[0x0400 + cell]
-                    glyph = self.memory[0x5800 + code * 8:0x5800 + code * 8 + 8]
+                    glyph = self.memory[0x5800 + (code & 0x7f) * 8:0x5800 + (code & 0x7f) * 8 + 8]
+                    if code & 0x80:
+                        glyph = [value ^ 0xff for value in glyph]
                     foreground = self.memory[0xd800 + cell] & 15
                     background = self.memory[0xd021] & 15
                 else:
