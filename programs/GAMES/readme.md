@@ -76,6 +76,7 @@ SMALL GAMES. BIG FUN.
 | ![PIG](PIG/icon.png) | [PIG](#pig) | ROLL TOWARD NINE, OR HOLD BEFORE A ONE BUSTS. |
 | ![POKER](POKER/icon.png) | [POKER](#poker) | SPACE DEALS A TINY FIVE-CARD POKER HAND. |
 | ![PONG](PONG/icon.png) | [PONG](#pong) | RETURN THE BALL WITH A ON LEFT OR D ON RIGHT. |
+| ![REACTION](REACTION/icon.png) | [REACTION](#reaction) | Wait for GO, then hit a key as quickly as you can. |
 | ![ROCKPAPR](ROCKPAPR/icon.png) | [ROCKPAPR](#rockpapr) | ROCK, PAPER, SCISSORS AGAINST A RANDOM COMPUTER PICK. |
 | ![SLOTS](SLOTS/icon.png) | [SLOTS](#slots) | THREE-REEL SLOTS. MATCH ALL THREE TO WIN. |
 | ![TICTACTO](TICTACTO/icon-preview.gif) | [TICTACTO](#tictacto) | TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE. |
@@ -784,6 +785,16 @@ Stored payload: **187 bytes**.
 
 ![PONG preview](PONG/preview.png)
 
+## REACTION
+
+Wait for GO, then hit a key as quickly as you can.
+
+Stored payload: **135 bytes**.
+
+[Assembly source](REACTION/main.asm)
+
+![REACTION preview](REACTION/preview.png)
+
 ## ROCKPAPR
 
 ROCK, PAPER, SCISSORS AGAINST A RANDOM COMPUTER PICK.
@@ -835,7 +846,7 @@ Stored payload: **166 bytes**.
 ![WHACK preview](WHACK/preview.png)
 
 ---
-**75 programs · 13,988 bytes total · 5212 bytes to spare in this category**
+**76 programs · 14,123 bytes total · 5333 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

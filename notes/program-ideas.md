@@ -231,6 +231,8 @@ Completed: BINCLOCK — added a binary clock reference to TOYS.
 
 Completed: CITYLGT — added a compact random city-window demo to DEMOS.
 
+Completed: REACTION — added a compact wait-for-GO reaction game to GAMES.
+
 ## GAMES
 
 118 ideas.
