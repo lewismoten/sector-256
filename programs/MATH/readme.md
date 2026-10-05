@@ -14,6 +14,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![COLLATZ](COLLATZ/icon.png) [COLLATZ](#collatz)
 * ![DIGROOT](DIGROOT/icon.png) [DIGROOT](#digroot)
 * ![EDIGITS](EDIGITS/icon.png) [EDIGITS](#edigits)
+* ![FACTORL](FACTORL/icon.png) [FACTORL](#factorl)
 * ![FIB](FIB/icon.png) [FIB](#fib)
 * ![GCD](GCD/icon.png) [GCD](#gcd)
 * ![GOLDEN](GOLDEN/icon.png) [GOLDEN](#golden)
@@ -137,6 +138,16 @@ Stored payload: **84 bytes**.
 [Assembly source](EDIGITS/main.asm)
 
 ![EDIGITS preview](EDIGITS/preview.png)
+
+## FACTORL
+
+DISPLAY FACTORIAL VALUES THROUGH EIGHT FACTORIAL.
+
+Stored payload: **101 bytes**.
+
+[Assembly source](FACTORL/main.asm)
+
+![FACTORL preview](FACTORL/preview.png)
 
 ## FIB
 
@@ -349,7 +360,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**31 programs · 3,703 bytes total · 4233 bytes to spare in this category**
+**32 programs · 3,804 bytes total · 4388 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

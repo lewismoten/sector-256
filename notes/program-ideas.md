@@ -205,6 +205,8 @@ Completed: BINOMIAL — added a binomial-coefficient reference to MATH.
 
 Completed: PERMUTE — added an ABCD permutation reference to MATH.
 
+Completed: FACTORL — added a factorial reference to MATH.
+
 ## GAMES
 
 118 ideas.
