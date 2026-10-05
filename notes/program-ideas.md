@@ -239,6 +239,8 @@ Completed: CONFETTI — added a compact randomized confetti toy to TOYS.
 
 Completed: KLAXON — added a compact two-tone SID klaxon to SOUND.
 
+Completed: LFSR — added an eight-bit feedback-register visualizer to LAB.
+
 ## GAMES
 
 118 ideas.

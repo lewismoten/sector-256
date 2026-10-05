@@ -10,6 +10,7 @@ EXPERIMENTS AND PROOF OF CONCEPTS.
 | ![ANT](ANT/icon.png) | [ANT](#ant) | LANGTON'S ANT ON 256X200 HIRES. SPACE:RESET. STOP:RETURN. |
 | ![BEATS](BEATS/icon.png) | [BEATS](#beats) | HEAR BEATS FROM TWO SLIGHTLY DETUNED SID VOICES. |
 | ![CHAOS](CHAOS/icon.png) | [CHAOS](#chaos) | CHAOS GAME BUILDS A FRACTAL. SPACE:RESET. RUN/STOP:RETURN. |
+| ![LFSR](LFSR/icon.png) | [LFSR](#lfsr) | Steps an eight-bit feedback shift register one key at a time. |
 | ![LIFE](LIFE/icon.png) | [LIFE](#life) | CONWAY LIFE. SPACE:RANDOMIZE. RUN/STOP:RETURN. |
 | ![RULE30](RULE30/icon.png) | [RULE30](#rule30) | RULE 30 FROM ONE CELL. SPACE:RESET. RUN/STOP:RETURN. |
 | ![SANDPILE](SANDPILE/icon.png) | [SANDPILE](#sandpile) | SANDPILE FRACTAL. SPACE:RESET WITH NEW COLORS. RUN/STOP:RETURN. |
@@ -56,6 +57,16 @@ Stored payload: **187 bytes**.
 
 ![CHAOS preview](CHAOS/preview.png)
 
+## LFSR
+
+Steps an eight-bit feedback shift register one key at a time.
+
+Stored payload: **85 bytes**.
+
+[Assembly source](LFSR/main.asm)
+
+![LFSR preview](LFSR/preview.png)
+
 ## LIFE
 
 CONWAY LIFE. SPACE:RANDOMIZE. RUN/STOP:RETURN.
@@ -87,7 +98,7 @@ Stored payload: **244 bytes**.
 ![SANDPILE preview](SANDPILE/preview.png)
 
 ---
-**7 programs · 1,343 bytes total · 449 bytes to spare in this category**
+**8 programs · 1,428 bytes total · 620 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
