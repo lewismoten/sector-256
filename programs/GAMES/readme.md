@@ -91,6 +91,8 @@ Stored payload: **176 bytes**.
 
 [Assembly source](BOUNCE/main.asm)
 
+![BOUNCE preview](BOUNCE/preview.png)
+
 ## BOWLING
 
 A/D AIM, SPACE ROLLS. ACCOUNT FOR THE RANDOM CURVE.
