@@ -125,7 +125,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('category_mode'), 1)
         self.enter_category(machine, 'DEMOS')
         self.assertGreaterEqual(machine.var('page_count'), 2)
-        self.assertIn(b'MAZE10  ', bytes(machine.memory[0x4800:0x4800 + 12 * 96]))
+        self.assertIn(b'ATOM    ', bytes(machine.memory[0x4800:0x4800 + 12 * 96]))
         machine.key(0x87)
         self.assertEqual(machine.var('page_count'), 8)
 
