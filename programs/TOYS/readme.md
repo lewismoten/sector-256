@@ -12,6 +12,7 @@ SMALL THINGS TO PLAY WITH.
 | ![CONFETTI](CONFETTI/icon.png) | [CONFETTI](#confetti) | A random PETSCII confetti burst on every key press. |
 | ![DOODLE](DOODLE/icon.png) | [DOODLE](#doodle) | A WASD SKETCHPAD. C CLEARS THE SCREEN. |
 | ![FACES](FACES/icon.png) | [FACES](#faces) | A RANDOM CHARACTER-ART FACE ON EACH KEYPRESS. |
+| ![FLOWERS](FLOWERS/icon.png) | [FLOWERS](#flowers) | Generates a fresh random field of character flowers. |
 | ![FORTUNE](FORTUNE/icon.png) | [FORTUNE](#fortune) | A RANDOM FORTUNE COOKIE MESSAGE ON EACH KEYPRESS. |
 | ![ORACLE](ORACLE/icon.png) | [ORACLE](#oracle) | GET A RANDOM YES-OR-NO STYLE ANSWER. |
 | ![SPARKLER](SPARKLER/icon.png) | [SPARKLER](#sparkler) | Generates a fresh random field of character sparks. |
@@ -81,6 +82,16 @@ Stored payload: **229 bytes**.
 
 ![FACES preview](FACES/preview.png)
 
+## FLOWERS
+
+Generates a fresh random field of character flowers.
+
+Stored payload: **80 bytes**.
+
+[Assembly source](FLOWERS/main.asm)
+
+![FLOWERS preview](FLOWERS/preview.png)
+
 ## FORTUNE
 
 A RANDOM FORTUNE COOKIE MESSAGE ON EACH KEYPRESS.
@@ -142,7 +153,7 @@ Stored payload: **191 bytes**.
 ![WINDMILL preview](WINDMILL/preview.png)
 
 ---
-**12 programs · 1,659 bytes total · 1413 bytes to spare in this category**
+**13 programs · 1,739 bytes total · 1589 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

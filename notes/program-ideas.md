@@ -307,6 +307,8 @@ Completed: SPARKLER — added a compact random character-spark toy to TOYS.
 
 Completed: COINSND — added a compact SID arcade-coin sound program to SOUND.
 
+Completed: FLOWERS — added a compact random character-flower toy to TOYS.
+
 ## GAMES
 
 118 ideas.
