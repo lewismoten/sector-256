@@ -6,6 +6,7 @@ SHORT LESSONS AND PRACTICE.
 
 * ![ADDITION](ADDITION/icon.png) [ADDITION](#addition)
 * ![ALPHABET](ALPHABET/icon.png) [ALPHABET](#alphabet)
+* ![CLOCK](CLOCK/icon.png) [CLOCK](#clock)
 * ![COLORS](COLORS/icon.png) [COLORS](#colors)
 * ![COUNTING](COUNTING/icon.png) [COUNTING](#counting)
 * ![DIVIDE](DIVIDE/icon.png) [DIVIDE](#divide)
@@ -37,6 +38,16 @@ Stored payload: **150 bytes**.
 [Assembly source](ALPHABET/main.asm)
 
 ![ALPHABET preview](ALPHABET/preview.png)
+
+## CLOCK
+
+READ THREE SIMPLE ON-THE-HOUR CLOCK TIMES.
+
+Stored payload: **171 bytes**.
+
+[Assembly source](CLOCK/main.asm)
+
+![CLOCK preview](CLOCK/preview.png)
 
 ## COLORS
 
@@ -129,7 +140,7 @@ Stored payload: **147 bytes**.
 ![SUBTRACT preview](SUBTRACT/preview.png)
 
 ---
-**11 programs · 1,680 bytes total · 1136 bytes to spare in this category**
+**12 programs · 1,851 bytes total · 1221 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
