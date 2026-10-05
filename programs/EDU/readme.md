@@ -6,6 +6,7 @@ SHORT LESSONS AND PRACTICE.
 
 * ![ADDITION](ADDITION/icon.png) [ADDITION](#addition)
 * ![ALPHABET](ALPHABET/icon.png) [ALPHABET](#alphabet)
+* ![ANIMALS](ANIMALS/icon.png) [ANIMALS](#animals)
 * ![CLOCK](CLOCK/icon.png) [CLOCK](#clock)
 * ![COLORS](COLORS/icon.png) [COLORS](#colors)
 * ![COUNTING](COUNTING/icon.png) [COUNTING](#counting)
@@ -41,6 +42,16 @@ Stored payload: **150 bytes**.
 [Assembly source](ALPHABET/main.asm)
 
 ![ALPHABET preview](ALPHABET/preview.png)
+
+## ANIMALS
+
+PICK THE FIRST LETTER OF THREE ANIMAL NAMES.
+
+Stored payload: **171 bytes**.
+
+[Assembly source](ANIMALS/main.asm)
+
+![ANIMALS preview](ANIMALS/preview.png)
 
 ## CLOCK
 
@@ -173,7 +184,7 @@ Stored payload: **147 bytes**.
 ![SUBTRACT preview](SUBTRACT/preview.png)
 
 ---
-**15 programs · 2,317 bytes total · 1523 bytes to spare in this category**
+**16 programs · 2,488 bytes total · 1608 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
