@@ -4,10 +4,21 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
+* ![BINCOUNT](BINCOUNT/icon.png) [BINCOUNT](#bincount)
 * ![CANTOR](CANTOR/icon.png) [CANTOR](#cantor)
 * ![FIB](FIB/icon.png) [FIB](#fib)
 
 ---
+
+## BINCOUNT
+
+AN EIGHT-BIT COUNTER ADVANCED ONE KEY AT A TIME.
+
+Stored payload: **72 bytes**.
+
+[Assembly source](BINCOUNT/main.asm)
+
+![BINCOUNT preview](BINCOUNT/preview.png)
 
 ## CANTOR
 
@@ -30,7 +41,7 @@ Stored payload: **164 bytes**.
 ![FIB preview](FIB/preview.png)
 
 ---
-**2 programs · 334 bytes total · 178 bytes to spare in this category**
+**3 programs · 406 bytes total · 362 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

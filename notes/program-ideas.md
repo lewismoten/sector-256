@@ -37,6 +37,8 @@ Completed: CANTOR — added a character-mode Cantor set to the MATH category.
 
 Completed: FIB — added the Fibonacci sequence through the 16-bit limit to MATH.
 
+Completed: BINCOUNT — added an interactive eight-bit binary counter to MATH.
+
 ## GAMES
 
 118 ideas.
