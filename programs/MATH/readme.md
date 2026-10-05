@@ -15,6 +15,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![KAPREKAR](KAPREKAR/icon.png) [KAPREKAR](#kaprekar)
 * ![LOOKSAY](LOOKSAY/icon.png) [LOOKSAY](#looksay)
 * ![LUCAS](LUCAS/icon.png) [LUCAS](#lucas)
+* ![MODCLOCK](MODCLOCK/icon.png) [MODCLOCK](#modclock)
 * ![MULTAB](MULTAB/icon.png) [MULTAB](#multab)
 * ![PASCAL](PASCAL/icon.png) [PASCAL](#pascal)
 * ![POWERS2](POWERS2/icon.png) [POWERS2](#powers2)
@@ -136,6 +137,16 @@ Stored payload: **157 bytes**.
 
 ![LUCAS preview](LUCAS/preview.png)
 
+## MODCLOCK
+
+ADVANCE A TWELVE-HOUR CLOCK WITH MODULAR ARITHMETIC.
+
+Stored payload: **132 bytes**.
+
+[Assembly source](MODCLOCK/main.asm)
+
+![MODCLOCK preview](MODCLOCK/preview.png)
+
 ## MULTAB
 
 A COMPACT ONE-THROUGH-FIVE MULTIPLICATION TABLE.
@@ -217,7 +228,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**19 programs · 2,489 bytes total · 2375 bytes to spare in this category**
+**20 programs · 2,621 bytes total · 2499 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

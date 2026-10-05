@@ -167,6 +167,8 @@ Completed: WINDMILL — added a four-frame spinning windmill toy to TOYS.
 
 Completed: LOOKSAY — added a look-and-say sequence reference to MATH.
 
+Completed: MODCLOCK — added an interactive twelve-hour modular clock to MATH.
+
 ## GAMES
 
 118 ideas.
