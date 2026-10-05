@@ -187,6 +187,8 @@ Completed: MEASURE — added a bar-length estimation drill to EDU.
 
 Completed: ROMAN — added a Roman-numeral reference to MATH.
 
+Completed: DIGROOT — added a digital-root worked example to MATH.
+
 ## GAMES
 
 118 ideas.

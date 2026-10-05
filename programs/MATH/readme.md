@@ -9,6 +9,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![BINCOUNT](BINCOUNT/icon.png) [BINCOUNT](#bincount)
 * ![CANTOR](CANTOR/icon.png) [CANTOR](#cantor)
 * ![COLLATZ](COLLATZ/icon.png) [COLLATZ](#collatz)
+* ![DIGROOT](DIGROOT/icon.png) [DIGROOT](#digroot)
 * ![FIB](FIB/icon.png) [FIB](#fib)
 * ![GCD](GCD/icon.png) [GCD](#gcd)
 * ![GRAYCODE](GRAYCODE/icon.png) [GRAYCODE](#graycode)
@@ -78,6 +79,16 @@ Stored payload: **89 bytes**.
 [Assembly source](COLLATZ/main.asm)
 
 ![COLLATZ preview](COLLATZ/preview.png)
+
+## DIGROOT
+
+SHOW A REPEATED-DIGIT-SUM DIGITAL ROOT EXAMPLE.
+
+Stored payload: **77 bytes**.
+
+[Assembly source](DIGROOT/main.asm)
+
+![DIGROOT preview](DIGROOT/preview.png)
 
 ## FIB
 
@@ -250,7 +261,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**22 programs · 2,817 bytes total · 2815 bytes to spare in this category**
+**23 programs · 2,894 bytes total · 2994 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
