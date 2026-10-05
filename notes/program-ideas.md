@@ -199,6 +199,8 @@ Completed: EDIGITS — added a leading-digits reference for e to MATH.
 
 Completed: PI — added a leading-digits reference for pi to MATH.
 
+Completed: GOLDEN — added a golden-ratio reference to MATH.
+
 ## GAMES
 
 118 ideas.

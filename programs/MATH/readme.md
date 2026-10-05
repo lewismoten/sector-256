@@ -15,6 +15,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![EDIGITS](EDIGITS/icon.png) [EDIGITS](#edigits)
 * ![FIB](FIB/icon.png) [FIB](#fib)
 * ![GCD](GCD/icon.png) [GCD](#gcd)
+* ![GOLDEN](GOLDEN/icon.png) [GOLDEN](#golden)
 * ![GRAYCODE](GRAYCODE/icon.png) [GRAYCODE](#graycode)
 * ![HAPPY](HAPPY/icon.png) [HAPPY](#happy)
 * ![KAPREKAR](KAPREKAR/icon.png) [KAPREKAR](#kaprekar)
@@ -144,6 +145,16 @@ Stored payload: **110 bytes**.
 [Assembly source](GCD/main.asm)
 
 ![GCD preview](GCD/preview.png)
+
+## GOLDEN
+
+DISPLAY THE GOLDEN RATIO AND ITS RECIPROCAL RULE.
+
+Stored payload: **80 bytes**.
+
+[Assembly source](GOLDEN/main.asm)
+
+![GOLDEN preview](GOLDEN/preview.png)
 
 ## GRAYCODE
 
@@ -316,7 +327,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**28 programs · 3,337 bytes total · 3831 bytes to spare in this category**
+**29 programs · 3,417 bytes total · 4007 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
