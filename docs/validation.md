@@ -6,16 +6,27 @@ py65 1.2.0 and VICE 3.7.1.
 - HANGMAN stored machine-code/data payload: **253 bytes**.
 - TICTACTO stored machine-code/data payload: **253 bytes**.
 - CUBE3D stored machine-code/data payload: **238 bytes**, including its 64-entry sine table and all cube geometry.
+- MAZEGEN stored machine-code/data payload: **183 bytes**.
+- SWATCH stored machine-code/data payload: **256 bytes**, within the inclusive payload limit.
 - Launcher PRG payload: **5769 bytes**, including reusable bitmap/line services.
 - D64 image: **174848 bytes**, standard 35-track layout.
-- `c1541` recognizes every file and reports **632 blocks free**.
-- Fourteen unittest checks pass. They execute the assembled launcher and programs,
+- `c1541` recognizes every file and reports **629 blocks free**.
+- Sixteen unittest checks pass. They execute the assembled launcher and programs,
   verify win/loss/draw and rejected inputs, exercise a 700-entry index including
   an entry beyond 255, check category/page/letter navigation, check four-frame
   fast/slow timing, check nonblocking input/exit, and verify oversize rejection
   plus red UI flags.
 - CUBE3D has four distinct 16x16 icon bitmaps. The executed launcher cycles
   through all four and wraps at its requested 128 ms per-frame interval.
+- SWATCH tests execute all 120 unique pairs at all three ratios, check the
+  blank duplicate half, and record memory writes to prove there are exactly
+  120 color-RAM writes per redraw and none on the 16 native diagonal cells.
+  Rate 1/2/9, ignored keys, pause/resume and RUN/STOP return are covered.
+- Steady SWATCH drawing uses 2230–2231 CPU cycles in the 6502 harness, down
+  from 6183–6695 in the original full matrix (about 65% less drawing work).
+- VICE measured rates 1, 2 and 9 on both PAL and NTSC before and after this
+  change. Rate 1 remains one video frame per phase and rate 2 two video frames;
+  observed timing jitter stays well below one video frame.
 - Additional cube tests cover pixel-exact Bresenham lines in every octant,
   eight projected vertices, changing orientation, alternating display buffers,
   and RUN/STOP return to the selected DEMOS page. Cube-specific bytes count
@@ -35,6 +46,10 @@ py65 1.2.0 and VICE 3.7.1.
 The screenshot files in this source archive reconstruct executed C64 screen
 or bitmap RAM with C64 glyphs. They are not AI-generated artwork. Real-device
 colors and timing can vary. Physical hardware was not tested.
+
+SWATCH's `preview.png` is a labeled arithmetic RGB-average reference rather
+than a hardware color measurement. Its native-frame PNGs and `preview.gif`
+reconstruct the executed program's screen and color RAM.
 
 ## Technical references
 

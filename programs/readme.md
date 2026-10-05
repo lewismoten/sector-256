@@ -36,7 +36,7 @@ Category: UTILS. Stored payload: **183 bytes**.
 
 ALL 16 COLORS + 120 PAIRS. 1-9:RATE M:MIX SPACE:HOLD STOP:EXIT.
 
-Category: UTILS. Stored payload: **253 bytes**.
+Category: UTILS. Stored payload: **256 bytes**.
 
 [Assembly source](SWATCH/main.asm)
 

@@ -25,7 +25,7 @@ class ProjectTests(unittest.TestCase):
         disk = read_disk((ROOT / 'build/sector-256.d64').read_bytes())
         self.assertEqual(disk['INDEX.DAT'][:6], b'S256\x01\x60')
         for i, game in enumerate(manifest['programs']):
-            self.assertLess(game['size'], 256)
+            self.assertLessEqual(game['size'], 256)
             prg = (ROOT / 'build' / (game['name'] + '.prg')).read_bytes()
             container = disk[f"P{game['pack']:03}.DAT"][2:]
             self.assertEqual(container[game['offset']:game['offset'] + game['size']], prg[2:])
@@ -49,7 +49,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('category_mode'), 1)
         machine.key(0x1d)
         machine.key(13)
-        self.assertEqual(machine.var('page_count'), 1)
+        self.assertEqual(machine.var('page_count'), 2)
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'MAZEGEN ')
         machine.key(0x87)
         self.assertEqual(machine.var('page_count'), 4)

@@ -199,7 +199,8 @@ class Machine:
                 if text:
                     code = self.memory[0x0400 + cell]
                     glyph = self.memory[0x5800 + code * 8:0x5800 + code * 8 + 8]
-                    foreground, background = 1, 0
+                    foreground = self.memory[0xd800 + cell] & 15
+                    background = self.memory[0xd021] & 15
                 else:
                     glyph = self.memory[bitmap_base + cell * 8:bitmap_base + cell * 8 + 8]
                     colors = self.memory[screen_base + cell]

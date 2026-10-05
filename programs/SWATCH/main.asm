@@ -1,6 +1,6 @@
-; Sector 256: every ordered pair of the 16 C64 colors, temporally swatched.
+; Sector 256: each distinct pair of the 16 C64 colors, temporally swatched.
 ; Rows = color A; columns = color B. Four-frame duty: 1:3, 2:2, or 3:1.
-; Diagonal patches always show the original hardware colors.
+; Draw the lower triangle; initialize the native-color diagonal only once.
 .include "api.inc"
 .cpu "6502"
 * = $c000
@@ -18,14 +18,16 @@ banner_loop:
     inx
     bne banner_loop
 setup_grid:
-    lda #<$0483              ; screen row 3, column 11: row label
+    lda #<$047f              ; screen row 3, column 7: row label
     sta ptr
-    lda #>$0483
+    lda #>$047f
     sta ptr+1
     ldx #0
 init_row:
+    txa
+    tay
+    iny                      ; mixed cells plus the diagonal, no duplicate half
     lda #$a0                 ; inverse spaces: solid swatches
-    ldy #16
 init_cell:
     sta (ptr),y
     dey
@@ -45,29 +47,37 @@ init_cell:
     sta rate
     sta ticks
 draw:
-    lda #<$d884              ; color RAM at row 3, column 12
+    lda phase
+    cmp weight
+    lda #$8a                 ; TXA: color A is the row number
+    bcc set_source
+    lda #$98                 ; TYA: color B is the column number
+set_source:
+    sta color_source         ; decide once per phase instead of once per cell
+    lda #<$d880              ; color RAM at row 3, column 8
     sta ptr
-    lda #>$d884
+    lda #>$d880
     sta ptr+1
     ldx #0
 draw_row:
-    ldy #15
+    txa
+    tay
+skip_diagonal:
+    nop                      ; becomes DEY after the initial native-color fill
+    bmi next_row             ; row 0 has no mixed cells after initialization
 draw_cell:
-    lda phase
-    cmp weight
-    bcc color_a
-    tya                      ; B: column number
-    bcs paint
-color_a:
-    txa                      ; A: row number
-paint:
+color_source:
+    txa                      ; patched to TXA/TYA by set_source
     sta (ptr),y
     dey
     bpl draw_cell
+next_row:
     jsr advance_row
     inx
     cpx #16
     bne draw_row
+    lda #$88                 ; DEY excludes the fixed diagonal from later fills
+    sta skip_diagonal
 poll:
     lda rate
     ora #48
@@ -90,8 +100,7 @@ mix_key:
     lda #3
     sta weight
 rate_key:
-    sec
-    sbc #49                  ; keys 1..9 = video frames per animation phase
+    sbc #48                  ; CMP #77 left C=0 for numeric keys: A - 49
     cmp #9
     bcs raster_low
     adc #1
@@ -127,9 +136,9 @@ advance_row:
 advanced:
     rts
 banner:
-    .text "1-9:1 M:2/4 SPACE STOP"
+    .text "1-9:1 M:2/4 SPACE"
     .byte 13,13
-    .text "            "
+    .text "        "
 hex:
     .text "0123456789ABCDEF"
     .byte 0
