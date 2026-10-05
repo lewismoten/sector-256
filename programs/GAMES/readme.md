@@ -11,6 +11,7 @@ SMALL GAMES. BIG FUN.
 * ![BEAM](BEAM/icon.png) [BEAM](#beam)
 * ![BOUNCE](BOUNCE/icon.png) [BOUNCE](#bounce)
 * ![BOWLING](BOWLING/icon.png) [BOWLING](#bowling)
+* ![BUMPCAR](BUMPCAR/icon.png) [BUMPCAR](#bumpcar)
 * ![CATCHER](CATCHER/icon.png) [CATCHER](#catcher)
 * ![CAVE](CAVE/icon.png) [CAVE](#cave)
 * ![CHICKEN](CHICKEN/icon.png) [CHICKEN](#chicken)
@@ -116,6 +117,14 @@ Stored payload: **217 bytes**.
 [Assembly source](BOWLING/main.asm)
 
 ![BOWLING preview](BOWLING/preview.png)
+
+## BUMPCAR
+
+A/D STEERS THE CAR. SPACE RAMS THE OTHER CAR.
+
+Stored payload: **177 bytes**.
+
+[Assembly source](BUMPCAR/main.asm)
 
 ## CATCHER
 
@@ -462,7 +471,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**42 programs · 7,858 bytes total · 2894 bytes to spare in this category**
+**43 programs · 8,035 bytes total · 2973 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
