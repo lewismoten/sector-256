@@ -85,6 +85,8 @@ Completed: SCORE — added a two-player tabletop scorekeeper to UTILS.
 
 Completed: PIANO — added a four-key SID piano to SOUND.
 
+Completed: BEEPER — added typed-key SID feedback to SOUND.
+
 ## GAMES
 
 118 ideas.

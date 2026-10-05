@@ -5,6 +5,7 @@ TINY SID SOUNDS AND MUSICAL EXPERIMENTS.
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
 * ![ARPEGGIO](ARPEGGIO/icon.png) [ARPEGGIO](#arpeggio)
+* ![BEEPER](BEEPER/icon.png) [BEEPER](#beeper)
 * ![DOORBELL](DOORBELL/icon.png) [DOORBELL](#doorbell)
 * ![PIANO](PIANO/icon.png) [PIANO](#piano)
 * ![SCALE](SCALE/icon.png) [SCALE](#scale)
@@ -21,6 +22,16 @@ Stored payload: **120 bytes**.
 [Assembly source](ARPEGGIO/main.asm)
 
 ![ARPEGGIO preview](ARPEGGIO/preview.png)
+
+## BEEPER
+
+TYPE KEYS TO ECHO THEM WITH SHORT SID BEEPS.
+
+Stored payload: **95 bytes**.
+
+[Assembly source](BEEPER/main.asm)
+
+![BEEPER preview](BEEPER/preview.png)
 
 ## DOORBELL
 
@@ -63,7 +74,7 @@ Stored payload: **113 bytes**.
 ![SIREN preview](SIREN/preview.png)
 
 ---
-**5 programs · 605 bytes total · 675 bytes to spare in this category**
+**6 programs · 700 bytes total · 836 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
