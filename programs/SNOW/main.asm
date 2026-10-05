@@ -1,136 +1,145 @@
-; SNOW: twenty-four drifting flakes settle into a growing white snowbank.
+; SNOW: one- and two-pixel flakes settle into uneven pixel-high drifts.
 .include "api.inc"
 .cpu "6502"
 * = $c000
-depth = $02
-row = $03
-landings = $04
-flake = $05
-top = $20
-ptr = $21
-flake_x = $c200
-flake_y = $c218
+tick = $02
+flake = $03
+ptr = $20
+fx = $c200
+fy = $c220
+height = $c300
 
     jsr HIRES
-    ; Both bitmap buffers use white on black, like a winter night.
-    lda #$10
+    lda #$10                   ; white pixels on black in the visible bitmap
     ldx #0
 white:
 .for i in range(4)
     sta $4000+i*$100,x
-    sta $8000+i*$100,x
 .endfor
     inx
     bne white
-    lda #0
-    sta landings
-    lda #1
-    sta depth
-    ldx #23
+    txa
+    ldx #39
+clear_heights:
+    sta height,x
+    dex
+    bpl clear_heights
+    lda #31
+    sta flake
 seed:
-    jsr RANDOM
-    sta flake_x,x
+    ldx flake
+    jsr new_x
     jsr RANDOM
     and #$bf
-    sta flake_y,x
-    dex
+    sta fy,x
+    jsr plot
+    dec flake
     bpl seed
 frame:
     jsr POLLKEY
-    jsr NEWFRAME
-    lda #199
-    sec
-    sbc depth
-    sta top
-    lda #23
+    inc tick
+    lda #31
     sta flake
 snow:
-    ldx flake
-    lda flake_y,x
-    clc
-    adc #1
-    cmp top
-    bcc falling
-    lda #0
-    sta flake_y,x
-    jsr RANDOM
-    sta flake_x,x
-    inc landings
-    lda landings
+    jsr plot                    ; erase the previous position
+    lda flake
+    and #1
+    beq fall
+    lda tick
+    and #1
+    bne no_fall
+fall:
+    inc fy,x
+no_fall:
+    lda tick
+    and #7
+    bne no_wave
+    lda flake
     and #3
-    bne next_flake
-    lda depth
-    cmp #18
-    bcs next_flake
-    inc depth
-    jmp next_flake
-falling:
-    sta flake_y,x
-    sta LINE_Y0
-    sta LINE_Y1
-    lda flake_x,x
-    sta LINE_X0
+    bne no_wave
+    lda fx,x
+    eor #1
+    sta fx,x
+no_wave:
+    ldy fx,x
+    lda fy,x
     clc
-    adc #1
-    sta LINE_X1
-    jsr LINE
-next_flake:
-    dec flake
-    bpl snow
-    lda #255
-    sta LINE_X1
-    lda depth
-    sta row
-bank:
-    lda #0
-    sta LINE_X0
+    adc height,y
+    cmp #199
+    bcc draw_flake
+    lda height,y
+    bmi respawn
     lda #199
     sec
-    sbc row
-    sta LINE_Y0
-    sta LINE_Y1
-    jsr LINE
-    jsr right_bank
-    dec row
-    bpl bank
-    jsr FLIP
+    sbc height,y
+    sta fy,x
+    tya
+    tax
+    inc height,x
+    jsr plot                    ; this flake remains in its stack
+respawn:
+    jsr new_x
+    lda #0
+    sta fy,x
+draw_flake:
+    jsr plot
+    dec flake
+    bpl snow
+wait_raster:
+    lda $d012
+    bne wait_raster
     jmp frame
 
-; The shared LINE routine reaches X=255. Fill X=256..319 directly in the
-; hidden bitmap so the bank spans the entire 320-pixel screen.
-right_bank:
-    lda LINE_Y0
+new_x:
+    jsr RANDOM
+    and #31
+    sta fx,x
+    rts
+
+; Toggle one or two pixels in the front bitmap at ((column+4)*8, y).
+; Every flake owns a fixed bit mask; X is restored to its flake index.
+plot:
+    ldx flake
+    lda fy,x
     lsr
     lsr
     lsr
-    sec
-    sbc #22
     tax
-    lda bank_lo,x
-    sta ptr
-    lda bank_hi,x
-    sta ptr+1
-    lda $dd00
     and #3
-    cmp #1
-    bne bank_addr_ready
-    lda ptr+1
-    eor #$c0
+    tay
+    lda row_lo,y
+    sta ptr
+    txa
+    clc
+    adc #$60
     sta ptr+1
-bank_addr_ready:
-    lda LINE_Y0
+    txa
+    lsr
+    lsr
+    clc
+    adc ptr+1
+    sta ptr+1
+    ldx flake
+    lda fx,x
+    asl
+    asl
+    asl
+    clc
+    adc ptr
+    sta ptr
+    bcc pixel_addr_ready
+    inc ptr+1
+pixel_addr_ready:
+    lda fy,x
     and #7
     tay
-    ldx #8
-right_cells:
-    lda #$ff
+    txa
+    and #7
+    tax
+    lda masks,x
+    eor (ptr),y
     sta (ptr),y
-    tya
-    clc
-    adc #8
-    tay
-    dex
-    bne right_cells
+    ldx flake
     rts
-bank_lo: .byte $80,$c0,$00
-bank_hi: .byte $bc,$bd,$bf
+row_lo: .byte $20,$60,$a0,$e0
+masks: .byte $c0,$10,$30,$04,$0c,$80,$03,$20

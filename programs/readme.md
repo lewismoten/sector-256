@@ -44,9 +44,9 @@ Category: UTILS. Stored payload: **183 bytes**.
 
 ## SNOW
 
-FALLING SNOW BUILDS A SNOWBANK. RUN/STOP TO RETURN.
+PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT.
 
-Category: DEMOS. Stored payload: **241 bytes**.
+Category: DEMOS. Stored payload: **250 bytes**.
 
 [Assembly source](SNOW/main.asm)
 
