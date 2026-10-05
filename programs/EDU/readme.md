@@ -27,6 +27,7 @@ SHORT LESSONS AND PRACTICE.
 * ![PLANETS](PLANETS/icon.png) [PLANETS](#planets)
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
 * ![SHAPES](SHAPES/icon.png) [SHAPES](#shapes)
+* ![SPACE](SPACE/icon.png) [SPACE](#space)
 * ![SPELLING](SPELLING/icon.png) [SPELLING](#spelling)
 * ![SPORTS](SPORTS/icon.png) [SPORTS](#sports)
 * ![SUBTRACT](SUBTRACT/icon.png) [SUBTRACT](#subtract)
@@ -265,6 +266,16 @@ Stored payload: **163 bytes**.
 
 ![SHAPES preview](SHAPES/preview.png)
 
+## SPACE
+
+PICK THE FIRST LETTER OF THREE SPACE WORDS.
+
+Stored payload: **173 bytes**.
+
+[Assembly source](SPACE/main.asm)
+
+![SPACE preview](SPACE/preview.png)
+
 ## SPELLING
 
 FILL IN MISSING LETTERS FOR THREE SHORT WORDS.
@@ -316,7 +327,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**28 programs · 4,563 bytes total · 2605 bytes to spare in this category**
+**29 programs · 4,736 bytes total · 2688 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
