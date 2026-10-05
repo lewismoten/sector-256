@@ -247,6 +247,8 @@ Completed: SPINTOP — added a compact key-stepped spinning-top toy to TOYS.
 
 Completed: SCANNER — added a compact character-mode scanner sweep demo to DEMOS.
 
+Completed: TIMESDRL — added a compact multiplication drill to EDU.
+
 ## GAMES
 
 118 ideas.

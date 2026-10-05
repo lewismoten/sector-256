@@ -61,6 +61,7 @@ SHORT LESSONS AND PRACTICE.
 | ![SPORTS](SPORTS/icon.png) | [SPORTS](#sports) | PICK THE FIRST LETTER OF THREE SPORT WORDS. |
 | ![SQUAREQZ](SQUAREQZ/icon.png) | [SQUAREQZ](#squareqz) | RECALL FOUR SMALL SQUARE-NUMBER PRODUCTS. |
 | ![SUBTRACT](SUBTRACT/icon.png) | [SUBTRACT](#subtract) | SOLVE THREE ONE-DIGIT SUBTRACTION QUESTIONS. |
+| ![TIMESDRL](TIMESDRL/icon.png) | [TIMESDRL](#timesdrl) | Cycles through four compact multiplication facts. |
 | ![TRANSPRT](TRANSPRT/icon.png) | [TRANSPRT](#transprt) | PICK THE FIRST LETTER OF THREE TRANSPORT WORDS. |
 | ![WEATHER](WEATHER/icon.png) | [WEATHER](#weather) | PICK THE FIRST LETTER OF THREE WEATHER WORDS. |
 
@@ -616,6 +617,16 @@ Stored payload: **147 bytes**.
 
 ![SUBTRACT preview](SUBTRACT/preview.png)
 
+## TIMESDRL
+
+Cycles through four compact multiplication facts.
+
+Stored payload: **162 bytes**.
+
+[Assembly source](TIMESDRL/main.asm)
+
+![TIMESDRL preview](TIMESDRL/preview.png)
+
 ## TRANSPRT
 
 PICK THE FIRST LETTER OF THREE TRANSPORT WORDS.
@@ -637,7 +648,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**57 programs · 9,846 bytes total · 4746 bytes to spare in this category**
+**58 programs · 10,008 bytes total · 4840 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
