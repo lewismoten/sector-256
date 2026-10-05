@@ -4,10 +4,21 @@ SHORT LESSONS AND PRACTICE.
 
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
+* ![ALPHABET](ALPHABET/icon.png) [ALPHABET](#alphabet)
 * ![COUNTING](COUNTING/icon.png) [COUNTING](#counting)
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
 
 ---
+
+## ALPHABET
+
+FIND THE NEXT LETTER IN THREE SHORT SEQUENCES.
+
+Stored payload: **150 bytes**.
+
+[Assembly source](ALPHABET/main.asm)
+
+![ALPHABET preview](ALPHABET/preview.png)
 
 ## COUNTING
 
@@ -30,7 +41,7 @@ Stored payload: **147 bytes**.
 ![QUIZ preview](QUIZ/preview.png)
 
 ---
-**2 programs · 298 bytes total · 214 bytes to spare in this category**
+**3 programs · 448 bytes total · 320 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
