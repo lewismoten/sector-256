@@ -537,6 +537,17 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('category_id'), 0)
         self.assertEqual(machine.cpu.sp, 0xff)
 
+    def test_lockpick_opens_when_dial_matches_notch(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        self.launch_named(machine, 'LOCKPICK')
+        machine.memory[2:4] = [4, 4]
+        machine.game_key(' ')
+        self.assertIn('OPEN!', machine.output)
+        machine.stop_game()
+        self.assertEqual(machine.cpu.sp, 0xff)
+
     def test_monty_hall_reveal_choices_and_score(self):
         machine = Machine()
         machine.boot()

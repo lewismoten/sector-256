@@ -22,6 +22,7 @@ SMALL GAMES. BIG FUN.
 * ![HORSES](HORSES/icon.png) [HORSES](#horses)
 * ![HOTPOT](HOTPOT/icon.png) [HOTPOT](#hotpot)
 * ![HUNT](HUNT/icon.png) [HUNT](#hunt)
+* ![LOCKPICK](LOCKPICK/icon.png) [LOCKPICK](#lockpick)
 * ![LOTTO](LOTTO/icon.png) [LOTTO](#lotto)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
@@ -208,6 +209,16 @@ Stored payload: **157 bytes**.
 
 ![HUNT preview](HUNT/preview.png)
 
+## LOCKPICK
+
+A/D TURNS THE DIAL. FIND THE CLICK, THEN SPACE TO OPEN.
+
+Stored payload: **203 bytes**.
+
+[Assembly source](LOCKPICK/main.asm)
+
+![LOCKPICK preview](LOCKPICK/preview.png)
+
 ## LOTTO
 
 PICK SIX 1-9 DIGITS, THEN MATCH THE RANDOM LOTTO DRAW.
@@ -239,7 +250,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**21 programs · 4,246 bytes total · 1130 bytes to spare in this category**
+**22 programs · 4,449 bytes total · 1183 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
