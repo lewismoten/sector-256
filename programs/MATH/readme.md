@@ -5,6 +5,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
 * ![CANTOR](CANTOR/icon.png) [CANTOR](#cantor)
+* ![FIB](FIB/icon.png) [FIB](#fib)
 
 ---
 
@@ -18,8 +19,18 @@ Stored payload: **170 bytes**.
 
 ![CANTOR preview](CANTOR/preview.png)
 
+## FIB
+
+FIBONACCI NUMBERS THROUGH THE 16-BIT LIMIT.
+
+Stored payload: **164 bytes**.
+
+[Assembly source](FIB/main.asm)
+
+![FIB preview](FIB/preview.png)
+
 ---
-**1 programs · 170 bytes total · 86 bytes to spare in this category**
+**2 programs · 334 bytes total · 178 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

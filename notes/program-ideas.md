@@ -35,6 +35,8 @@ Completed: BINQUIZ — added a binary-to-decimal lesson to EDU.
 
 Completed: CANTOR — added a character-mode Cantor set to the MATH category.
 
+Completed: FIB — added the Fibonacci sequence through the 16-bit limit to MATH.
+
 ## GAMES
 
 118 ideas.
