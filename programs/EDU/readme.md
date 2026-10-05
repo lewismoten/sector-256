@@ -17,6 +17,7 @@ SHORT LESSONS AND PRACTICE.
 * ![FAMILY](FAMILY/icon.png) [FAMILY](#family)
 * ![FOOD](FOOD/icon.png) [FOOD](#food)
 * ![FRACTION](FRACTION/icon.png) [FRACTION](#fraction)
+* ![GREATER](GREATER/icon.png) [GREATER](#greater)
 * ![HOME](HOME/icon.png) [HOME](#home)
 * ![JOBS](JOBS/icon.png) [JOBS](#jobs)
 * ![LANDMARK](LANDMARK/icon.png) [LANDMARK](#landmark)
@@ -176,6 +177,16 @@ Stored payload: **163 bytes**.
 [Assembly source](FRACTION/main.asm)
 
 ![FRACTION preview](FRACTION/preview.png)
+
+## GREATER
+
+CHOOSE LESS-THAN OR GREATER-THAN FOR EACH PAIR.
+
+Stored payload: **158 bytes**.
+
+[Assembly source](GREATER/main.asm)
+
+![GREATER preview](GREATER/preview.png)
 
 ## HOME
 
@@ -448,7 +459,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**40 programs · 6,668 bytes total · 3572 bytes to spare in this category**
+**41 programs · 6,826 bytes total · 3670 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
