@@ -22,6 +22,7 @@ PIXELS, SOUND AND TINY SHOWS.
 | ![RAIN](RAIN/icon.png) | [RAIN](#rain) | REPAINT A SPARSE GREEN CHARACTER-RAIN FIELD. |
 | ![SCANNER](SCANNER/icon.png) | [SCANNER](#scanner) | Steps a bright scanner marker across a character line. |
 | ![SNOW](SNOW/icon-preview.gif) | [SNOW](#snow) | PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT. |
+| ![TRUCHET](TRUCHET/icon.png) | [TRUCHET](#truchet) | Generates a fresh random field of diagonal character tiles. |
 | ![XORPAT](XORPAT/icon.png) | [XORPAT](#xorpat) | A CLASSIC X-XOR-Y CHARACTER TEXTURE. |
 
 ---
@@ -186,6 +187,16 @@ Stored payload: **255 bytes**.
 
 ![SNOW preview](SNOW/preview.gif)
 
+## TRUCHET
+
+Generates a fresh random field of diagonal character tiles.
+
+Stored payload: **79 bytes**.
+
+[Assembly source](TRUCHET/main.asm)
+
+![TRUCHET preview](TRUCHET/preview.png)
+
 ## XORPAT
 
 A CLASSIC X-XOR-Y CHARACTER TEXTURE.
@@ -197,7 +208,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**17 programs · 2,469 bytes total · 1883 bytes to spare in this category**
+**18 programs · 2,548 bytes total · 2060 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
