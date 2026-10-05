@@ -89,6 +89,8 @@ Completed: BEEPER — added typed-key SID feedback to SOUND.
 
 Completed: CHORDS — added three-voice SID major chords to SOUND.
 
+Completed: MULTAB — added a one-through-five multiplication table to MATH.
+
 ## GAMES
 
 118 ideas.

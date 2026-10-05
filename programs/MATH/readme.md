@@ -8,6 +8,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![CANTOR](CANTOR/icon.png) [CANTOR](#cantor)
 * ![FIB](FIB/icon.png) [FIB](#fib)
 * ![GRAYCODE](GRAYCODE/icon.png) [GRAYCODE](#graycode)
+* ![MULTAB](MULTAB/icon.png) [MULTAB](#multab)
 * ![PASCAL](PASCAL/icon.png) [PASCAL](#pascal)
 
 ---
@@ -52,6 +53,16 @@ Stored payload: **70 bytes**.
 
 ![GRAYCODE preview](GRAYCODE/preview.png)
 
+## MULTAB
+
+A COMPACT ONE-THROUGH-FIVE MULTIPLICATION TABLE.
+
+Stored payload: **155 bytes**.
+
+[Assembly source](MULTAB/main.asm)
+
+![MULTAB preview](MULTAB/preview.png)
+
 ## PASCAL
 
 THE FIRST SIX ROWS OF PASCAL'S TRIANGLE.
@@ -63,7 +74,7 @@ Stored payload: **136 bytes**.
 ![PASCAL preview](PASCAL/preview.png)
 
 ---
-**5 programs · 612 bytes total · 668 bytes to spare in this category**
+**6 programs · 767 bytes total · 769 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
