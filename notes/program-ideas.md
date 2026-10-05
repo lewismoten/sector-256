@@ -269,6 +269,8 @@ Completed: NEON — added a compact flickering character-neon demo to DEMOS.
 
 Completed: OCEAN — added a compact character-wave demo to DEMOS.
 
+Completed: COLORRAM — added a compact color-RAM randomizer to LAB.
+
 ## GAMES
 
 118 ideas.

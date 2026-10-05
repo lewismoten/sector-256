@@ -1,0 +1,4 @@
+{
+  "description": "Randomizes the text screen through color RAM's four bits.",
+  "animation_speed": 8
+}
