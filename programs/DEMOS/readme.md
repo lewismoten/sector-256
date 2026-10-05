@@ -6,6 +6,7 @@ PIXELS, SOUND AND TINY SHOWS.
 
 * ![CUBE3D](CUBE3D/icon-preview.gif) [CUBE3D](#cube3d)
 * ![DANCE](DANCE/icon-preview.gif) [DANCE](#dance)
+* ![EQUALIZR](EQUALIZR/icon.png) [EQUALIZR](#equalizr)
 * ![MAZE10](MAZE10/icon.png) [MAZE10](#maze10)
 * ![SNOW](SNOW/icon-preview.gif) [SNOW](#snow)
 
@@ -31,6 +32,16 @@ Stored payload: **249 bytes**.
 
 ![DANCE preview](DANCE/preview.gif)
 
+## EQUALIZR
+
+RANDOM CHARACTER-MODE EQUALIZER BARS.
+
+Stored payload: **97 bytes**.
+
+[Assembly source](EQUALIZR/main.asm)
+
+![EQUALIZR preview](EQUALIZR/preview.png)
+
 ## MAZE10
 
 A CLASSIC RANDOM DIAGONAL CHARACTER MAZE.
@@ -52,7 +63,7 @@ Stored payload: **255 bytes**.
 ![SNOW preview](SNOW/preview.gif)
 
 ---
-**4 programs · 777 bytes total · 247 bytes to spare in this category**
+**5 programs · 874 bytes total · 406 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

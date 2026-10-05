@@ -71,6 +71,8 @@ Completed: COLORSET — added a border and background color picker to UTILS.
 
 Completed: MAZE10 — added the classic random diagonal character maze to DEMOS.
 
+Completed: EQUALIZR — added random character-mode equalizer bars to DEMOS.
+
 ## GAMES
 
 118 ideas.
