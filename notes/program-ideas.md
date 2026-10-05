@@ -63,6 +63,8 @@ Completed: SLOTS — added a three-reel slot machine to GAMES.
 
 Completed: TUGOWAR — added a two-player Q-versus-P tug of war to GAMES.
 
+Completed: BANKVIEW — added a processor-port memory-bank display to UTILS.
+
 ## GAMES
 
 118 ideas.
