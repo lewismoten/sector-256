@@ -57,6 +57,7 @@ SMALL GAMES. BIG FUN.
 * ![LOCKPICK](LOCKPICK/icon.png) [LOCKPICK](#lockpick)
 * ![LOTTO](LOTTO/icon.png) [LOTTO](#lotto)
 * ![MANCALA](MANCALA/icon.png) [MANCALA](#mancala)
+* ![MATCH](MATCH/icon.png) [MATCH](#match)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 
@@ -580,6 +581,16 @@ Stored payload: **166 bytes**.
 
 ![MANCALA preview](MANCALA/preview.png)
 
+## MATCH
+
+PICK TWO CARDS 1-4. CARDS 1/3 AND 2/4 ARE PAIRS.
+
+Stored payload: **180 bytes**.
+
+[Assembly source](MATCH/main.asm)
+
+![MATCH preview](MATCH/preview.png)
+
 ## MONTY
 
 PICK 1-3. MONTY OPENS A GOAT. S:SWITCH K:KEEP. STOP:EXIT.
@@ -601,7 +612,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**55 programs · 10,397 bytes total · 3683 bytes to spare in this category**
+**56 programs · 10,577 bytes total · 3759 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
