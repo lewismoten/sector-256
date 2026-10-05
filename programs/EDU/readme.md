@@ -16,6 +16,7 @@ SHORT LESSONS AND PRACTICE.
 * ![FOOD](FOOD/icon.png) [FOOD](#food)
 * ![FRACTION](FRACTION/icon.png) [FRACTION](#fraction)
 * ![HOME](HOME/icon.png) [HOME](#home)
+* ![JOBS](JOBS/icon.png) [JOBS](#jobs)
 * ![MAPS](MAPS/icon.png) [MAPS](#maps)
 * ![MEMORY](MEMORY/icon.png) [MEMORY](#memory)
 * ![MONTHS](MONTHS/icon.png) [MONTHS](#months)
@@ -155,6 +156,16 @@ Stored payload: **172 bytes**.
 [Assembly source](HOME/main.asm)
 
 ![HOME preview](HOME/preview.png)
+
+## JOBS
+
+PICK THE FIRST LETTER OF THREE JOB WORDS.
+
+Stored payload: **176 bytes**.
+
+[Assembly source](JOBS/main.asm)
+
+![JOBS preview](JOBS/preview.png)
 
 ## MAPS
 
@@ -327,7 +338,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**29 programs · 4,736 bytes total · 2688 bytes to spare in this category**
+**30 programs · 4,912 bytes total · 2768 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
