@@ -19,6 +19,7 @@ SHORT LESSONS AND PRACTICE.
 | ![DAYS](DAYS/icon.png) | [DAYS](#days) | PICK THE FIRST LETTER OF THREE WEEKDAY NAMES. |
 | ![DAYSWK](DAYSWK/icon.png) | [DAYSWK](#dayswk) | TYPE THE FIRST LETTER OF THE NEXT WEEKDAY. |
 | ![DIVIDE](DIVIDE/icon.png) | [DIVIDE](#divide) | SOLVE THREE SMALL DIVISION QUESTIONS. |
+| ![DIVQUIZ](DIVQUIZ/icon.png) | [DIVQUIZ](#divquiz) | Cycles through four compact division facts. |
 | ![ESTIMATE](ESTIMATE/icon.png) | [ESTIMATE](#estimate) | COUNT A BRIEFLY FLASHED GROUP OF DOTS. |
 | ![FAMILY](FAMILY/icon.png) | [FAMILY](#family) | PICK THE FIRST LETTER OF THREE FAMILY WORDS. |
 | ![FOOD](FOOD/icon.png) | [FOOD](#food) | PICK THE FIRST LETTER OF THREE FOOD WORDS. |
@@ -197,6 +198,16 @@ Stored payload: **145 bytes**.
 [Assembly source](DIVIDE/main.asm)
 
 ![DIVIDE preview](DIVIDE/preview.png)
+
+## DIVQUIZ
+
+Cycles through four compact division facts.
+
+Stored payload: **165 bytes**.
+
+[Assembly source](DIVQUIZ/main.asm)
+
+![DIVQUIZ preview](DIVQUIZ/preview.png)
 
 ## ESTIMATE
 
@@ -659,7 +670,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**59 programs · 10,200 bytes total · 4904 bytes to spare in this category**
+**60 programs · 10,365 bytes total · 4995 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
