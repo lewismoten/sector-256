@@ -9,6 +9,7 @@ SMALL GAMES. BIG FUN.
 * ![BALLOON](BALLOON/icon.png) [BALLOON](#balloon)
 * ![BASKETBL](BASKETBL/icon.png) [BASKETBL](#basketbl)
 * ![BEAM](BEAM/icon.png) [BEAM](#beam)
+* ![BLACKJCK](BLACKJCK/icon.png) [BLACKJCK](#blackjck)
 * ![BOUNCE](BOUNCE/icon.png) [BOUNCE](#bounce)
 * ![BOWLING](BOWLING/icon.png) [BOWLING](#bowling)
 * ![BOXPUSH](BOXPUSH/icon.png) [BOXPUSH](#boxpush)
@@ -128,6 +129,16 @@ Stored payload: **175 bytes**.
 [Assembly source](BEAM/main.asm)
 
 ![BEAM preview](BEAM/preview.png)
+
+## BLACKJCK
+
+DRAW OR STAND AGAINST A RANDOM DEALER TOTAL.
+
+Stored payload: **248 bytes**.
+
+[Assembly source](BLACKJCK/main.asm)
+
+![BLACKJCK preview](BLACKJCK/preview.png)
 
 ## BOUNCE
 
@@ -810,7 +821,7 @@ Stored payload: **166 bytes**.
 ![WHACK preview](WHACK/preview.png)
 
 ---
-**74 programs · 13,740 bytes total · 5204 bytes to spare in this category**
+**75 programs · 13,988 bytes total · 5212 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

@@ -151,6 +151,8 @@ Completed: BASECONV — added a binary, decimal, and hexadecimal reference to MA
 
 Completed: TALLY — added an up/down tally counter to UTILS.
 
+Completed: BLACKJCK — added a compact draw-or-stand card game to GAMES.
+
 ## GAMES
 
 118 ideas.
