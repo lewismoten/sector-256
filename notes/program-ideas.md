@@ -123,6 +123,8 @@ Completed: PALNTSC — added a KERNAL PAL/NTSC video-standard reporter to UTILS.
 
 Completed: DAYSWK — added a next-weekday drill to EDU.
 
+Completed: ESTIMATE — added a briefly flashed dot-counting drill to EDU.
+
 ## GAMES
 
 118 ideas.

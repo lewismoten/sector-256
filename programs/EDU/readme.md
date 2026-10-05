@@ -17,6 +17,7 @@ SHORT LESSONS AND PRACTICE.
 * ![DAYS](DAYS/icon.png) [DAYS](#days)
 * ![DAYSWK](DAYSWK/icon.png) [DAYSWK](#dayswk)
 * ![DIVIDE](DIVIDE/icon.png) [DIVIDE](#divide)
+* ![ESTIMATE](ESTIMATE/icon.png) [ESTIMATE](#estimate)
 * ![FAMILY](FAMILY/icon.png) [FAMILY](#family)
 * ![FOOD](FOOD/icon.png) [FOOD](#food)
 * ![FRACTION](FRACTION/icon.png) [FRACTION](#fraction)
@@ -184,6 +185,16 @@ Stored payload: **145 bytes**.
 [Assembly source](DIVIDE/main.asm)
 
 ![DIVIDE preview](DIVIDE/preview.png)
+
+## ESTIMATE
+
+COUNT A BRIEFLY FLASHED GROUP OF DOTS.
+
+Stored payload: **149 bytes**.
+
+[Assembly source](ESTIMATE/main.asm)
+
+![ESTIMATE preview](ESTIMATE/preview.png)
 
 ## FAMILY
 
@@ -536,7 +547,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**48 programs · 8,065 bytes total · 4223 bytes to spare in this category**
+**49 programs · 8,214 bytes total · 4330 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
