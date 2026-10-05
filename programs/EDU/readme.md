@@ -29,6 +29,7 @@ SHORT LESSONS AND PRACTICE.
 * ![ODDEVEN](ODDEVEN/icon.png) [ODDEVEN](#oddeven)
 * ![OPPOSITE](OPPOSITE/icon.png) [OPPOSITE](#opposite)
 * ![PLANETS](PLANETS/icon.png) [PLANETS](#planets)
+* ![PLANTS](PLANTS/icon.png) [PLANTS](#plants)
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
 * ![RHYMES](RHYMES/icon.png) [RHYMES](#rhymes)
 * ![SCHOOL](SCHOOL/icon.png) [SCHOOL](#school)
@@ -292,6 +293,14 @@ Stored payload: **170 bytes**.
 
 ![PLANETS preview](PLANETS/preview.png)
 
+## PLANTS
+
+PICK THE FIRST LETTER OF THREE PLANT WORDS.
+
+Stored payload: **174 bytes**.
+
+[Assembly source](PLANTS/main.asm)
+
 ## QUIZ
 
 ANSWER THREE SHORT ADDITION QUESTIONS.
@@ -393,7 +402,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**35 programs · 5,764 bytes total · 3196 bytes to spare in this category**
+**36 programs · 5,938 bytes total · 3278 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
