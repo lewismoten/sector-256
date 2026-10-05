@@ -225,6 +225,8 @@ Completed: LINES — added a character-mode radial-line diagram to MATH.
 
 Completed: ALIASING — added a two-frame sampling demo to LAB.
 
+Working: BINCLOCK — add a binary clock reference to TOYS.
+
 ## GAMES
 
 118 ideas.

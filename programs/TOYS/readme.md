@@ -6,6 +6,7 @@ SMALL THINGS TO PLAY WITH.
 
 | Icon | Program | Description |
 | --- | --- | --- |
+| ![BINCLOCK](BINCLOCK/icon.png) | [BINCLOCK](#binclock) | SHOW BINARY DIGITS AS A CLOCK-STYLE DISPLAY. |
 | ![DOODLE](DOODLE/icon.png) | [DOODLE](#doodle) | A WASD SKETCHPAD. C CLEARS THE SCREEN. |
 | ![FACES](FACES/icon.png) | [FACES](#faces) | A RANDOM CHARACTER-ART FACE ON EACH KEYPRESS. |
 | ![FORTUNE](FORTUNE/icon.png) | [FORTUNE](#fortune) | A RANDOM FORTUNE COOKIE MESSAGE ON EACH KEYPRESS. |
@@ -14,6 +15,16 @@ SMALL THINGS TO PLAY WITH.
 | ![WINDMILL](WINDMILL/icon.png) | [WINDMILL](#windmill) | SPIN A FOUR-FRAME CHARACTER-ART WINDMILL. |
 
 ---
+
+## BINCLOCK
+
+SHOW BINARY DIGITS AS A CLOCK-STYLE DISPLAY.
+
+Stored payload: **88 bytes**.
+
+[Assembly source](BINCLOCK/main.asm)
+
+![BINCLOCK preview](BINCLOCK/preview.png)
 
 ## DOODLE
 
@@ -76,7 +87,7 @@ Stored payload: **191 bytes**.
 ![WINDMILL preview](WINDMILL/preview.png)
 
 ---
-**6 programs · 982 bytes total · 554 bytes to spare in this category**
+**7 programs · 1,070 bytes total · 722 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
