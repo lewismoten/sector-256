@@ -221,6 +221,8 @@ Completed: MAGICSQ — added a 3x3 magic-square reference to MATH.
 
 Completed: SQRT — added a perfect-square and square-root reference to MATH.
 
+Completed: LINES — added a character-mode radial-line diagram to MATH.
+
 ## GAMES
 
 118 ideas.
