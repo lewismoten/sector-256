@@ -571,6 +571,16 @@ class ProjectTests(unittest.TestCase):
         machine.stop_game()
         self.assertEqual(machine.cpu.sp, 0xff)
 
+    def test_bowling_strikes_when_aim_and_curve_reach_pins(self):
+        machine = Machine()
+        machine.boot(); machine.key(13)
+        self.launch_named(machine, 'BOWLING')
+        machine.memory[2:5] = [4, 4, 0]
+        machine.game_key(' ')
+        self.assertIn('STRIKE!', machine.output)
+        machine.stop_game()
+        self.assertEqual(machine.cpu.sp, 0xff)
+
     def test_monty_hall_reveal_choices_and_score(self):
         machine = Machine()
         machine.boot()

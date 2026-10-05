@@ -6,6 +6,7 @@ SMALL GAMES. BIG FUN.
 
 * ![ARCHERY](ARCHERY/icon.png) [ARCHERY](#archery)
 * ![BALLOON](BALLOON/icon.png) [BALLOON](#balloon)
+* ![BOWLING](BOWLING/icon.png) [BOWLING](#bowling)
 * ![CATCHER](CATCHER/icon.png) [CATCHER](#catcher)
 * ![CHICKEN](CHICKEN/icon.png) [CHICKEN](#chicken)
 * ![CHOMP](CHOMP/icon.png) [CHOMP](#chomp)
@@ -52,6 +53,16 @@ Stored payload: **181 bytes**.
 [Assembly source](BALLOON/main.asm)
 
 ![BALLOON preview](BALLOON/preview.png)
+
+## BOWLING
+
+A/D AIM, SPACE ROLLS. ACCOUNT FOR THE RANDOM CURVE.
+
+Stored payload: **217 bytes**.
+
+[Assembly source](BOWLING/main.asm)
+
+![BOWLING preview](BOWLING/preview.png)
 
 ## CATCHER
 
@@ -292,7 +303,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**26 programs · 5,133 bytes total · 1523 bytes to spare in this category**
+**27 programs · 5,350 bytes total · 1562 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
