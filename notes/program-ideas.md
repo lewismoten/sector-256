@@ -83,6 +83,8 @@ Completed: REGVIEW — added a live VIC-II color-register display to UTILS.
 
 Completed: SCORE — added a two-player tabletop scorekeeper to UTILS.
 
+Completed: PIANO — added a four-key SID piano to SOUND.
+
 ## GAMES
 
 118 ideas.

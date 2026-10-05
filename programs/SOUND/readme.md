@@ -6,6 +6,7 @@ TINY SID SOUNDS AND MUSICAL EXPERIMENTS.
 
 * ![ARPEGGIO](ARPEGGIO/icon.png) [ARPEGGIO](#arpeggio)
 * ![DOORBELL](DOORBELL/icon.png) [DOORBELL](#doorbell)
+* ![PIANO](PIANO/icon.png) [PIANO](#piano)
 * ![SCALE](SCALE/icon.png) [SCALE](#scale)
 * ![SIREN](SIREN/icon.png) [SIREN](#siren)
 
@@ -31,6 +32,16 @@ Stored payload: **109 bytes**.
 
 ![DOORBELL preview](DOORBELL/preview.png)
 
+## PIANO
+
+A S D F PLAY FOUR SID PIANO NOTES.
+
+Stored payload: **142 bytes**.
+
+[Assembly source](PIANO/main.asm)
+
+![PIANO preview](PIANO/preview.png)
+
 ## SCALE
 
 AN ASCENDING C-MAJOR SID SCALE. PRESS A KEY TO REPEAT.
@@ -52,7 +63,7 @@ Stored payload: **113 bytes**.
 ![SIREN preview](SIREN/preview.png)
 
 ---
-**4 programs · 463 bytes total · 561 bytes to spare in this category**
+**5 programs · 605 bytes total · 675 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
