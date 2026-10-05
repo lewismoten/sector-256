@@ -43,6 +43,8 @@ Completed: PASCAL — added the first six rows of Pascal's triangle to MATH.
 
 Completed: GRAYCODE — added an interactive eight-bit Gray-code counter to MATH.
 
+Completed: SCALE — added an ascending SID scale to the SOUND category.
+
 ## GAMES
 
 118 ideas.
