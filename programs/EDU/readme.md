@@ -14,6 +14,7 @@ SHORT LESSONS AND PRACTICE.
 * ![MEMORY](MEMORY/icon.png) [MEMORY](#memory)
 * ![MULTIPLY](MULTIPLY/icon.png) [MULTIPLY](#multiply)
 * ![ODDEVEN](ODDEVEN/icon.png) [ODDEVEN](#oddeven)
+* ![PLANETS](PLANETS/icon.png) [PLANETS](#planets)
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
 * ![SHAPES](SHAPES/icon.png) [SHAPES](#shapes)
 * ![SPELLING](SPELLING/icon.png) [SPELLING](#spelling)
@@ -121,6 +122,16 @@ Stored payload: **156 bytes**.
 
 ![ODDEVEN preview](ODDEVEN/preview.png)
 
+## PLANETS
+
+PICK THE NEXT INNER PLANET INITIAL IN ORDER.
+
+Stored payload: **170 bytes**.
+
+[Assembly source](PLANETS/main.asm)
+
+![PLANETS preview](PLANETS/preview.png)
+
 ## QUIZ
 
 ANSWER THREE SHORT ADDITION QUESTIONS.
@@ -162,7 +173,7 @@ Stored payload: **147 bytes**.
 ![SUBTRACT preview](SUBTRACT/preview.png)
 
 ---
-**14 programs · 2,147 bytes total · 1437 bytes to spare in this category**
+**15 programs · 2,317 bytes total · 1523 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
