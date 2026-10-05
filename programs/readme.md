@@ -8,7 +8,7 @@ A ROTATING 3D WIREFRAME CUBE.   RUN/STOP TO RETURN TO LAUNCHER.
 
 Category: DEMOS. Stored payload: **238 bytes**.
 
-[Assembly source](programs/CUBE3D/main.asm)
+[Assembly source](CUBE3D/main.asm)
 
 ![CUBE3D preview](CUBE3D/preview.png)
 
@@ -18,7 +18,7 @@ GUESS A SIX-LETTER WORD.         SIX MISSES AND YOU LOSE.
 
 Category: GAMES. Stored payload: **253 bytes**.
 
-[Assembly source](programs/HANGMAN/main.asm)
+[Assembly source](HANGMAN/main.asm)
 
 ![HANGMAN preview](HANGMAN/preview.png)
 
@@ -28,7 +28,7 @@ Category: GAMES. Stored payload: **253 bytes**.
 
 Category: UTILS. Stored payload: **183 bytes**.
 
-[Assembly source](programs/MAZEGEN/main.asm)
+[Assembly source](MAZEGEN/main.asm)
 
 ![MAZEGEN preview](MAZEGEN/preview.png)
 
@@ -38,7 +38,7 @@ ALL 16 COLORS + 120 PAIRS. 1-9:RATE M:MIX SPACE:HOLD STOP:EXIT.
 
 Category: UTILS. Stored payload: **253 bytes**.
 
-[Assembly source](programs/SWATCH/main.asm)
+[Assembly source](SWATCH/main.asm)
 
 ![SWATCH preview](SWATCH/preview.png)
 
@@ -48,6 +48,6 @@ TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE.
 
 Category: GAMES. Stored payload: **253 bytes**.
 
-[Assembly source](programs/TICTACTO/main.asm)
+[Assembly source](TICTACTO/main.asm)
 
 ![TICTACTO preview](TICTACTO/preview.png)

@@ -18,7 +18,7 @@ def generate(root=ROOT):
         name = folder.name.upper()
         lines += [f"## {name}", "", data["description"], "",
                   f"Category: {data['category']}. " + (f"Stored payload: **{sizes[name]} bytes**." if name in sizes else "Build to calculate size."), "",
-                  f"[Assembly source](programs/{folder.name}/main.asm)", ""]
+                  f"[Assembly source]({folder.name}/main.asm)", ""]
         if (folder / "preview.png").exists():
             lines += [f"![{name} preview]({folder.name}/preview.png)", ""]
     (root / "programs/readme.md").write_text("\n".join(lines))
