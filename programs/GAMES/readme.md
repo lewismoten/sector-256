@@ -47,6 +47,7 @@ SMALL GAMES. BIG FUN.
 * ![HOTPOT](HOTPOT/icon.png) [HOTPOT](#hotpot)
 * ![HUNT](HUNT/icon.png) [HUNT](#hunt)
 * ![HURDLES](HURDLES/icon.png) [HURDLES](#hurdles)
+* ![ICEPATH](ICEPATH/icon.png) [ICEPATH](#icepath)
 * ![INVADE](INVADE/icon.png) [INVADE](#invade)
 * ![JUGGLE](JUGGLE/icon.png) [JUGGLE](#juggle)
 * ![LOCKPICK](LOCKPICK/icon.png) [LOCKPICK](#lockpick)
@@ -474,6 +475,16 @@ Stored payload: **156 bytes**.
 
 ![HURDLES preview](HURDLES/preview.png)
 
+## ICEPATH
+
+SLIDE TO THE WALLS WITH A/D/W/S, THEN REACH THE EXIT.
+
+Stored payload: **187 bytes**.
+
+[Assembly source](ICEPATH/main.asm)
+
+![ICEPATH preview](ICEPATH/preview.png)
+
 ## INVADE
 
 A/D MOVES THE CANNON; SPACE ZAPS THE INVADER.
@@ -535,7 +546,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**49 programs · 9,287 bytes total · 3257 bytes to spare in this category**
+**50 programs · 9,474 bytes total · 3326 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
