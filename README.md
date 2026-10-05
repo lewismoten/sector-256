@@ -1,5 +1,7 @@
 # Sector 256
 
+![Sector 256: One block. Many worlds.](docs/social-preview.jpg)
+
 **One block. Many worlds.** A graphical Commodore 64 launcher for games,
 utilities, demos, and experiments whose individual stored payloads are at most
 256 bytes.

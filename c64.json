@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "title": "Sector 256",
+  "description": "**One block. Many worlds.** A graphical Commodore 64 launcher for games, utilities, demos, and experiments whose individual stored payloads are at most 256 bytes.",
+  "preview": "docs/social-preview.jpg",
+  "logo": "docs/logo.png",
+  "screenshot": "docs/launcher.png",
+  "file": "release/sector-256.d64",
+  "source": "https://github.com/lewismoten/sector-256"
+}
