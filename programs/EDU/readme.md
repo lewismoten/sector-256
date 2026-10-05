@@ -7,6 +7,7 @@ SHORT LESSONS AND PRACTICE.
 * ![ALPHABET](ALPHABET/icon.png) [ALPHABET](#alphabet)
 * ![COUNTING](COUNTING/icon.png) [COUNTING](#counting)
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
+* ![SPELLING](SPELLING/icon.png) [SPELLING](#spelling)
 
 ---
 
@@ -40,8 +41,18 @@ Stored payload: **147 bytes**.
 
 ![QUIZ preview](QUIZ/preview.png)
 
+## SPELLING
+
+FILL IN MISSING LETTERS FOR THREE SHORT WORDS.
+
+Stored payload: **144 bytes**.
+
+[Assembly source](SPELLING/main.asm)
+
+![SPELLING preview](SPELLING/preview.png)
+
 ---
-**3 programs · 448 bytes total · 320 bytes to spare in this category**
+**4 programs · 592 bytes total · 432 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
