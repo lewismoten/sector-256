@@ -73,6 +73,8 @@ Completed: MAZE10 — added the classic random diagonal character maze to DEMOS.
 
 Completed: EQUALIZR — added random character-mode equalizer bars to DEMOS.
 
+Completed: SEQUENCE — added a number-pattern quiz to EDU.
+
 ## GAMES
 
 118 ideas.

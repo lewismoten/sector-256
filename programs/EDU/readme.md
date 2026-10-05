@@ -39,6 +39,7 @@ SHORT LESSONS AND PRACTICE.
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
 * ![RHYMES](RHYMES/icon.png) [RHYMES](#rhymes)
 * ![SCHOOL](SCHOOL/icon.png) [SCHOOL](#school)
+* ![SEQUENCE](SEQUENCE/icon.png) [SEQUENCE](#sequence)
 * ![SHAPES](SHAPES/icon.png) [SHAPES](#shapes)
 * ![SPACE](SPACE/icon.png) [SPACE](#space)
 * ![SPELLING](SPELLING/icon.png) [SPELLING](#spelling)
@@ -399,6 +400,16 @@ Stored payload: **171 bytes**.
 
 ![SCHOOL preview](SCHOOL/preview.png)
 
+## SEQUENCE
+
+COMPLETE THREE SIMPLE NUMBER SEQUENCES.
+
+Stored payload: **163 bytes**.
+
+[Assembly source](SEQUENCE/main.asm)
+
+![SEQUENCE preview](SEQUENCE/preview.png)
+
 ## SHAPES
 
 IDENTIFY CIRCLE, SQUARE, AND TRIANGLE BY NUMBER.
@@ -470,7 +481,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**42 programs · 7,000 bytes total · 3752 bytes to spare in this category**
+**43 programs · 7,163 bytes total · 3845 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
