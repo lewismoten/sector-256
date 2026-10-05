@@ -67,6 +67,7 @@ SMALL GAMES. BIG FUN.
 * ![NUMRACE](NUMRACE/icon.png) [NUMRACE](#numrace)
 * ![OTHELLO](OTHELLO/icon.png) [OTHELLO](#othello)
 * ![PAIRS](PAIRS/icon.png) [PAIRS](#pairs)
+* ![PEGS](PEGS/icon.png) [PEGS](#pegs)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 
 ---
@@ -689,6 +690,16 @@ Stored payload: **180 bytes**.
 
 ![PAIRS preview](PAIRS/preview.png)
 
+## PEGS
+
+MAKE JUMPS 0, 1, AND 2 TO LEAVE ONE PEG.
+
+Stored payload: **140 bytes**.
+
+[Assembly source](PEGS/main.asm)
+
+![PEGS preview](PEGS/preview.png)
+
 ## TICTACTO
 
 TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE.
@@ -700,7 +711,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**64 programs · 11,934 bytes total · 4450 bytes to spare in this category**
+**65 programs · 12,074 bytes total · 4566 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
