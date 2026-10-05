@@ -75,6 +75,7 @@ SMALL GAMES. BIG FUN.
 * ![SLOTS](SLOTS/icon.png) [SLOTS](#slots)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 * ![TUGOWAR](TUGOWAR/icon.png) [TUGOWAR](#tugowar)
+* ![WHACK](WHACK/icon.png) [WHACK](#whack)
 
 ---
 
@@ -776,8 +777,18 @@ Stored payload: **163 bytes**.
 
 ![TUGOWAR preview](TUGOWAR/preview.png)
 
+## WHACK
+
+HIT THE DISPLAYED NUMBER KEY FIVE TIMES.
+
+Stored payload: **166 bytes**.
+
+[Assembly source](WHACK/main.asm)
+
+![WHACK preview](WHACK/preview.png)
+
 ---
-**71 programs · 13,250 bytes total · 4926 bytes to spare in this category**
+**72 programs · 13,416 bytes total · 5016 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
