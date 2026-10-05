@@ -34,6 +34,7 @@ SMALL GAMES. BIG FUN.
 * ![FALLDOWN](FALLDOWN/icon.png) [FALLDOWN](#falldown)
 * ![FIREMAN](FIREMAN/icon.png) [FIREMAN](#fireman)
 * ![FISHING](FISHING/icon.png) [FISHING](#fishing)
+* ![FIVEDICE](FIVEDICE/icon.png) [FIVEDICE](#fivedice)
 * ![FLIPPER](FLIPPER/icon.png) [FLIPPER](#flipper)
 * ![FLOOD](FLOOD/icon.png) [FLOOD](#flood)
 * ![FLUTTER](FLUTTER/icon.png) [FLUTTER](#flutter)
@@ -342,6 +343,16 @@ Stored payload: **213 bytes**.
 
 ![FISHING preview](FISHING/preview.png)
 
+## FIVEDICE
+
+ROLL FIVE DICE THREE TIMES. SIXES BUILD YOUR SCORE.
+
+Stored payload: **196 bytes**.
+
+[Assembly source](FIVEDICE/main.asm)
+
+![FIVEDICE preview](FIVEDICE/preview.png)
+
 ## FLIPPER
 
 HIT A OR D FOR THE FLIPPER UNDER THE FALLING BALL.
@@ -513,7 +524,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**47 programs · 8,845 bytes total · 3187 bytes to spare in this category**
+**48 programs · 9,041 bytes total · 3247 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
