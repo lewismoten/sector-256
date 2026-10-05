@@ -548,6 +548,18 @@ class ProjectTests(unittest.TestCase):
         machine.stop_game()
         self.assertEqual(machine.cpu.sp, 0xff)
 
+    def test_flood_requires_the_adjacent_color_sequence(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        self.launch_named(machine, 'FLOOD')
+        machine.game_key('B')
+        self.assertEqual(machine.memory[2], 1)
+        machine.game_key('C')
+        self.assertIn('FLOODED!', machine.output)
+        machine.stop_game()
+        self.assertEqual(machine.cpu.sp, 0xff)
+
     def test_monty_hall_reveal_choices_and_score(self):
         machine = Machine()
         machine.boot()

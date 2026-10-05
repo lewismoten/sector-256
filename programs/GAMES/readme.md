@@ -16,6 +16,7 @@ SMALL GAMES. BIG FUN.
 * ![DUEL](DUEL/icon.png) [DUEL](#duel)
 * ![ECHOSEQ](ECHOSEQ/icon.png) [ECHOSEQ](#echoseq)
 * ![FISHING](FISHING/icon.png) [FISHING](#fishing)
+* ![FLOOD](FLOOD/icon.png) [FLOOD](#flood)
 * ![GUESSNUM](GUESSNUM/icon.png) [GUESSNUM](#guessnum)
 * ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
 * ![HILO](HILO/icon.png) [HILO](#hilo)
@@ -149,6 +150,16 @@ Stored payload: **213 bytes**.
 
 ![FISHING preview](FISHING/preview.png)
 
+## FLOOD
+
+TINY FLOOD-FILL: RECOLOR THE TOP-LEFT REGION B, THEN C.
+
+Stored payload: **201 bytes**.
+
+[Assembly source](FLOOD/main.asm)
+
+![FLOOD preview](FLOOD/preview.png)
+
 ## GUESSNUM
 
 GUESS 00-99. COMPUTER SAYS HIGH, LOW, OR WIN.
@@ -250,7 +261,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**22 programs · 4,449 bytes total · 1183 bytes to spare in this category**
+**23 programs · 4,650 bytes total · 1238 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
