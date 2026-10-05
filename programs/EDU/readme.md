@@ -19,6 +19,7 @@ SHORT LESSONS AND PRACTICE.
 * ![FOOD](FOOD/icon.png) [FOOD](#food)
 * ![FRACTION](FRACTION/icon.png) [FRACTION](#fraction)
 * ![GREATER](GREATER/icon.png) [GREATER](#greater)
+* ![HEXQUIZ](HEXQUIZ/icon.png) [HEXQUIZ](#hexquiz)
 * ![HOME](HOME/icon.png) [HOME](#home)
 * ![JOBS](JOBS/icon.png) [JOBS](#jobs)
 * ![KEYFIND](KEYFIND/icon.png) [KEYFIND](#keyfind)
@@ -201,6 +202,16 @@ Stored payload: **158 bytes**.
 [Assembly source](GREATER/main.asm)
 
 ![GREATER preview](GREATER/preview.png)
+
+## HEXQUIZ
+
+CONVERT FOUR DECIMAL VALUES TO HEX DIGITS.
+
+Stored payload: **179 bytes**.
+
+[Assembly source](HEXQUIZ/main.asm)
+
+![HEXQUIZ preview](HEXQUIZ/preview.png)
 
 ## HOME
 
@@ -503,7 +514,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**45 programs · 7,508 bytes total · 4012 bytes to spare in this category**
+**46 programs · 7,687 bytes total · 4089 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

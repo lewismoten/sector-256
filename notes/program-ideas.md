@@ -109,6 +109,8 @@ Completed: LUCAS — added Lucas numbers through the 16-bit limit to MATH.
 
 Completed: POWERS2 — added powers of two through the 16-bit limit to MATH.
 
+Completed: HEXQUIZ — added decimal-to-hex digit practice to EDU.
+
 ## GAMES
 
 118 ideas.
