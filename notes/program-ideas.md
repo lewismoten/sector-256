@@ -259,6 +259,8 @@ Completed: MAPGRID — added a compact coordinate-grid reference to EDU.
 
 Completed: RANDPICK — added a compact random one-through-six picker to UTILS.
 
+Completed: BUBBLES — added a compact randomized character-bubble toy to TOYS.
+
 ## GAMES
 
 118 ideas.

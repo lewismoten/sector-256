@@ -7,6 +7,7 @@ SMALL THINGS TO PLAY WITH.
 | Icon | Program | Description |
 | --- | --- | --- |
 | ![BINCLOCK](BINCLOCK/icon.png) | [BINCLOCK](#binclock) | SHOW BINARY DIGITS AS A CLOCK-STYLE DISPLAY. |
+| ![BUBBLES](BUBBLES/icon.png) | [BUBBLES](#bubbles) | Draws a fresh random field of character bubbles. |
 | ![CATEYES](CATEYES/icon.png) | [CATEYES](#cateyes) | Steps through four character-art cat-eye directions. |
 | ![CONFETTI](CONFETTI/icon.png) | [CONFETTI](#confetti) | A random PETSCII confetti burst on every key press. |
 | ![DOODLE](DOODLE/icon.png) | [DOODLE](#doodle) | A WASD SKETCHPAD. C CLEARS THE SCREEN. |
@@ -28,6 +29,16 @@ Stored payload: **88 bytes**.
 [Assembly source](BINCLOCK/main.asm)
 
 ![BINCLOCK preview](BINCLOCK/preview.png)
+
+## BUBBLES
+
+Draws a fresh random field of character bubbles.
+
+Stored payload: **81 bytes**.
+
+[Assembly source](BUBBLES/main.asm)
+
+![BUBBLES preview](BUBBLES/preview.png)
 
 ## CATEYES
 
@@ -120,7 +131,7 @@ Stored payload: **191 bytes**.
 ![WINDMILL preview](WINDMILL/preview.png)
 
 ---
-**10 programs · 1,497 bytes total · 1063 bytes to spare in this category**
+**11 programs · 1,578 bytes total · 1238 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
