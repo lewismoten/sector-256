@@ -5,17 +5,17 @@ Commodore 64 launcher, and each one's stored payload fits in
 **256 bytes or less**. Choose a category to browse its programs.
 
 * ![ARCADE](ARCADE/icon.png) [ARCADE](ARCADE/readme.md) — FAST ACTION. QUICK REFLEXES. HIGH SCORES. (23 programs)
-* ![PUZZLES](PUZZLES/icon.png) [PUZZLES](PUZZLES/readme.md) — THINK IT THROUGH. ONE MOVE AT A TIME. (19 programs)
-* ![TABLETOP](TABLETOP/icon.png) [TABLETOP](TABLETOP/readme.md) — CLASSIC TABLE GAMES FOR ONE OR TWO PLAYERS. (15 programs)
-* ![CHANCE](CHANCE/icon.png) [CHANCE](CHANCE/readme.md) — ROLL, DEAL, PICK, AND PRESS YOUR LUCK. (11 programs)
-* ![SPORTS](SPORTS/icon.png) [SPORTS](SPORTS/readme.md) — AIM, THROW, RACE, AND SCORE. (10 programs)
-* ![UTILS](UTILS/icon.png) [UTILS](UTILS/readme.md) — HANDY LITTLE TOOLS. (13 programs)
-* ![DEMOS](DEMOS/icon.png) [DEMOS](DEMOS/readme.md) — PIXELS, SOUND AND TINY SHOWS. (26 programs)
-* ![LAB](LAB/icon.png) [LAB](LAB/readme.md) — EXPERIMENTS AND PROOF OF CONCEPTS. (10 programs)
-* ![EDU](EDU/icon.png) [EDU](EDU/readme.md) — SHORT LESSONS AND PRACTICE. (61 programs)
-* ![MATH](MATH/icon.png) [MATH](MATH/readme.md) — NUMBERS, PATTERNS, AND SMALL PROOFS. (41 programs)
-* ![SOUND](SOUND/icon.png) [SOUND](SOUND/readme.md) — TINY SID SOUNDS AND MUSICAL EXPERIMENTS. (15 programs)
-* ![TOYS](TOYS/icon.png) [TOYS](TOYS/readme.md) — SMALL THINGS TO PLAY WITH. (14 programs)
+* ![PLAY](PLAY/icon.png) [PLAY](PLAY/readme.md) — GAMES OF CHANCE, SKILL, AND SPORT. (21 programs)
+* ![TABLETOP](TABLETOP/icon.png) [TABLETOP](TABLETOP/readme.md) — BOARD, CARD, AND TACTICAL GAMES. (24 programs)
+* ![QUESTS](QUESTS/icon.png) [QUESTS](QUESTS/readme.md) — PUZZLES, CHALLENGES, AND TINY ADVENTURES. (24 programs)
+* ![TOOLS](TOOLS/icon.png) [TOOLS](TOOLS/readme.md) — USEFUL UTILITIES AND EXPERIMENTS. (23 programs)
+* ![SHOWS](SHOWS/icon.png) [SHOWS](SHOWS/readme.md) — SOUND, LIGHT, AND MINIATURE PERFORMANCES. (24 programs)
+* ![VISUALS](VISUALS/icon.png) [VISUALS](VISUALS/readme.md) — PIXELS, MOTION, AND VISUAL EFFECTS. (17 programs)
+* ![WORDS](WORDS/icon.png) [WORDS](WORDS/readme.md) — WORDS, LANGUAGE, AND GENERAL KNOWLEDGE. (24 programs)
+* ![LESSONS](LESSONS/icon.png) [LESSONS](LESSONS/readme.md) — CORE FACTS, MATH, AND LOGIC PRACTICE. (24 programs)
+* ![STUDY](STUDY/icon.png) [STUDY](STUDY/readme.md) — EXTRA PRACTICE, SHAPES, AND TOPIC STUDY. (13 programs)
+* ![NUMBERS](NUMBERS/icon.png) [NUMBERS](NUMBERS/readme.md) — NUMBER THEORY, SEQUENCES, AND CONSTANTS. (21 programs)
+* ![PATTERNS](PATTERNS/icon.png) [PATTERNS](PATTERNS/readme.md) — GEOMETRY, PATTERNS, AND MATHEMATICAL FORMS. (20 programs)
 
 ---
 **258 programs · 40,234 bytes total · 25814 bytes to spare across the whole set**

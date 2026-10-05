@@ -7,7 +7,7 @@ globally, and space-padded to eight bytes in the index.
 
 ```text
 programs/
-  UTILS/
+  TOOLS/
     category.json
     icon.png
     MYTOOL/

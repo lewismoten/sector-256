@@ -36,7 +36,7 @@ class SwatchTests(unittest.TestCase):
                 self.assertTrue(machine.var('has_next'), name)
                 machine.key(0x86)
 
-        machine.set_var('selected', find_named('UTILS'))
+        machine.set_var('selected', find_named('TOOLS'))
         machine.key(13)
         swatch_index = find_named('SWATCH')
         machine.launch(swatch_index, wait_address=symbols['poll'])
@@ -126,7 +126,7 @@ class SwatchTests(unittest.TestCase):
         self.assertEqual(machine.memory[0x0404], ord('1'))
         self.assertEqual(machine.memory[0x0408], ord('3'))
         machine.stop_game()
-        self.assertEqual(machine.var('category_id'), 5)
+        self.assertEqual(machine.var('category_id'), 4)
         self.assertEqual(machine.var('selected'), swatch_index)
         self.assertEqual(machine.cpu.sp, 0xff)
 

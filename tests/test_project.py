@@ -16,23 +16,23 @@ from programs_md import generate as generate_programs_md
 
 class ProjectTests(unittest.TestCase):
     CATEGORY_ORDERS = {
-        'ARCADE': 0, 'PUZZLES': 1, 'TABLETOP': 2, 'CHANCE': 3, 'SPORTS': 4,
-        'UTILS': 5, 'DEMOS': 6, 'LAB': 7, 'EDU': 8, 'MATH': 9, 'SOUND': 10,
-        'TOYS': 11,
+        'ARCADE': 0, 'PLAY': 1, 'TABLETOP': 2, 'QUESTS': 3, 'TOOLS': 4,
+        'SHOWS': 5, 'VISUALS': 6, 'WORDS': 7, 'LESSONS': 8, 'STUDY': 9,
+        'NUMBERS': 10, 'PATTERNS': 11,
     }
     CATEGORY_PROGRAMS = {
         'ARCADE': 'BALLOON BEAM BOUNCE BRICKS BUMPCAR CATCHER CAVE COPTER DOCKING DODGE ELEVATOR ESCAPE FALLDOWN FIREMAN FLIPPER FLUTTER INVADE JUGGLE JUMPER LANDER LAVA PONG ZAP'.split(),
-        'PUZZLES': 'BOXPUSH DEFUSE ECHOSEQ FLOOD GUESSNUM HANGMAN HUNT ICEPATH KNIGHTS LOCKPICK MAZE3D MAZEDARK MAZERUN MINES NUMMEM ODDONE PEGS REACTION WHACK'.split(),
-        'TABLETOP': 'CHICKEN CHOMP COWBULL DROP4 DUEL FOXGEESE MANCALA MATCH NIM NUMRACE OTHELLO PAIRS ROCKPAPR TICTACTO TUGOWAR'.split(),
-        'CHANCE': 'BLACKJCK CRAPS DICE FIVEDICE HILO HOTPOT LOTTO MONTY PIG POKER SLOTS'.split(),
-        'SPORTS': 'ARCHERY ARTILLRY BASKETBL BOWLING DARTS FISHING GOLF HORSES HURDLES PENALTY'.split(),
-        'UTILS': 'BANKVIEW COINTOSS COLORSET CRTTEST JOYTEST MAZEGEN PALNTSC PETSCII RANDPICK REGVIEW SCORE SWATCH TALLY'.split(),
-        'DEMOS': 'ATOM CANDLE CITYLGT COLORCYC CREDITS CUBE3D DANCE EQUALIZR FIREFLY GLITCH HEARTBT HEXFLOW HYPNO MARQUEE MAZE10 MUNCHING NEON OCEAN RAIN RASTBARS SCANNER SNOW SUNSET TRUCHET WORMS XORPAT'.split(),
-        'LAB': 'ALIASING ANT BEATS CHAOS COLORRAM LFSR LIFE RULE30 SANDPILE SCROLLX'.split(),
-        'EDU': 'ADDITION ALPHABET ANIMALS BINQUIZ BITOPS BODY CLOCK COLORS COMPASS COUNTING DAYS DAYSWK DIVIDE DIVQUIZ ESTIMATE FAMILY FOOD FRACTION GRAPHPT GREATER HEXQUIZ HOME JOBS KEYFIND LANDMARK LOGIC MAPGRID MAPS MATHQUIZ MEASURE MEMORY MONTHS MULTIPLY MUSIC NATURE NUMBERS NUMLINE OCEANLIF OCEANS ODDEVEN OPPOSITE PETSCIIQ PLANETS PLANTS PLANTS2 PRIMEQZ QUIZ RHYMES ROUNDING SCHOOL SEQUENCE SHAPEQZ SHAPES SPACE SPELLING SPORTS SQUAREQZ SUBTRACT TIMESDRL TRANSPRT WEATHER'.split(),
-        'MATH': 'ARMSTRNG BASECONV BINCOUNT BINOMIAL CANTOR CATALAN CIRCLE COLLATZ DIGROOT DIVISORS EDIGITS FACTORL FIB GCD GOLDEN GRAYCODE HAPPY HILBERT KAPREKAR KOCH LINES LOOKSAY LUCAS MAGICSQ MODCLOCK MULTAB PALINDRM PASCAL PERFECT PERMUTE PI POWERS2 PRIMES PYTHTRIP ROMAN SIERPCAR SINTABLE SQRT SQUARES TOTIENT TRIANGNU'.split(),
-        'SOUND': 'ARPEGGIO BEEPER BELLS CHORDS COINSND DOORBELL KLAXON METRONOM MUSICBOX PHONERNG PIANO SCALE SIREN SWEEP TONEGEN'.split(),
-        'TOYS': 'BINCLOCK BUBBLES CATEYES CONFETTI DOODLE FACES FLOWERS FORTUNE ORACLE POPCORN SPARKLER SPINNER SPINTOP WINDMILL'.split(),
+        'PLAY': 'ARCHERY ARTILLRY BASKETBL BLACKJCK BOWLING CRAPS DARTS DICE FISHING FIVEDICE GOLF HILO HORSES HOTPOT HURDLES LOTTO MONTY PENALTY PIG POKER SLOTS'.split(),
+        'TABLETOP': 'BOXPUSH CHICKEN CHOMP COWBULL DROP4 DUEL FLOOD FOXGEESE ICEPATH KNIGHTS MANCALA MATCH MAZE3D MAZEDARK MAZERUN MINES NIM NUMRACE OTHELLO PAIRS PEGS ROCKPAPR TICTACTO TUGOWAR'.split(),
+        'QUESTS': 'BINCLOCK BUBBLES CATEYES CONFETTI DEFUSE DOODLE ECHOSEQ FACES FLOWERS FORTUNE GUESSNUM HANGMAN HUNT LOCKPICK NUMMEM ODDONE ORACLE POPCORN REACTION SPARKLER SPINNER SPINTOP WHACK WINDMILL'.split(),
+        'TOOLS': 'ALIASING ANT BANKVIEW BEATS CHAOS COINTOSS COLORRAM COLORSET CRTTEST JOYTEST LFSR LIFE MAZEGEN PALNTSC PETSCII RANDPICK REGVIEW RULE30 SANDPILE SCORE SCROLLX SWATCH TALLY'.split(),
+        'SHOWS': 'ARPEGGIO BEEPER BELLS CANDLE CHORDS COINSND CUBE3D DANCE DOORBELL EQUALIZR HEARTBT KLAXON METRONOM MUSICBOX NEON PHONERNG PIANO RASTBARS SCALE SIREN SNOW SUNSET SWEEP TONEGEN'.split(),
+        'VISUALS': 'ATOM CITYLGT COLORCYC CREDITS FIREFLY GLITCH HEXFLOW HYPNO MARQUEE MAZE10 MUNCHING OCEAN RAIN SCANNER TRUCHET WORMS XORPAT'.split(),
+        'WORDS': 'ALPHABET ANIMALS BODY DAYS DAYSWK FAMILY FOOD HOME JOBS LANDMARK MAPS MONTHS MUSIC NATURE NUMBERS OCEANLIF OCEANS OPPOSITE PLANETS PLANTS PLANTS2 RHYMES SCHOOL SPELLING'.split(),
+        'LESSONS': 'ADDITION BINQUIZ BITOPS CLOCK COLORS COMPASS COUNTING DIVIDE DIVQUIZ ESTIMATE FRACTION GRAPHPT GREATER HEXQUIZ KEYFIND LOGIC MAPGRID MATHQUIZ MEASURE MULTIPLY NUMLINE ODDEVEN PRIMEQZ QUIZ'.split(),
+        'STUDY': 'MEMORY PETSCIIQ ROUNDING SEQUENCE SHAPEQZ SHAPES SPACE SPORTS SQUAREQZ SUBTRACT TIMESDRL TRANSPRT WEATHER'.split(),
+        'NUMBERS': 'ARMSTRNG BASECONV BINCOUNT CATALAN COLLATZ DIGROOT DIVISORS EDIGITS FACTORL FIB GCD GOLDEN GRAYCODE HAPPY KAPREKAR LUCAS PALINDRM PERFECT PI POWERS2 PRIMES'.split(),
+        'PATTERNS': 'BINOMIAL CANTOR CIRCLE HILBERT KOCH LINES LOOKSAY MAGICSQ MODCLOCK MULTAB PASCAL PERMUTE PYTHTRIP ROMAN SIERPCAR SINTABLE SQRT SQUARES TOTIENT TRIANGNU'.split(),
     }
 
     def category_id(self, name):
@@ -171,8 +171,9 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'ZAP     ')
         machine.key(0x87)
         self.assertEqual(machine.var('category_mode'), 1)
-        self.enter_category(machine, 'DEMOS')
-        self.assertGreaterEqual(machine.var('page_count'), 2)
+        self.enter_category(machine, 'VISUALS')
+        self.assertEqual(machine.var('page_count'), 12)
+        self.assertEqual(machine.var('has_next'), 1)
         self.assertIn(b'ATOM    ', bytes(machine.memory[0x4800:0x4800 + 12 * 96]))
         machine.key(0x87)
         self.assertEqual(machine.var('page_count'), 12)
@@ -191,9 +192,11 @@ class ProjectTests(unittest.TestCase):
                     for i in range(8)]
 
         self.assertEqual(occupied(1), [False] + [True]*6 + [False])  # ARCADE
-        self.assertEqual(occupied(31), [False] + [True]*6 + [False])  # PUZZLES
-        self.enter_category(machine, 'DEMOS')
+        self.assertEqual(occupied(31), [False] + [True]*6 + [False])  # QUESTS
+        self.enter_category(machine, 'VISUALS')
         self.assertEqual(occupied(1), [False]*2 + [True]*4 + [False]*2)  # ATOM
+        machine.key(0x87)
+        self.enter_category(machine, 'SHOWS')
         self.assertEqual(occupied(11), [False] + [True]*6 + [False])  # CANDLE
 
     def test_pagination_and_letter_jump_for_700_records(self):
@@ -710,13 +713,13 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.memory[machine.labels['elapsed_lo']], 24)  # 4040ms - 4032ms, in thirds
 
     def test_cube_icon_rotation_frames(self):
-        frames, animation = collect_frames(ROOT / 'programs/DEMOS/CUBE3D', 8)
+        frames, animation = collect_frames(ROOT / 'programs/SHOWS/CUBE3D', 8)
         self.assertEqual(len(frames), 4)
         self.assertEqual(len({frame[:32] for frame in frames}), 4)
         self.assertEqual(animation, 0xc8)
         machine = Machine()
         machine.boot()
-        self.enter_category(machine, 'DEMOS')
+        self.enter_category(machine, 'SHOWS')
         cube_index = self.program_index(machine, 'CUBE3D')
         self.assertEqual(bytes(machine.memory[0x4800 + cube_index * 96:0x4808 + cube_index * 96]), b'CUBE3D  ')
         machine.set_var('selected', cube_index)
@@ -780,7 +783,7 @@ class ProjectTests(unittest.TestCase):
     def test_cube_rotation_buffers_and_return(self):
         machine = Machine()
         machine.boot()
-        self.enter_category(machine, 'DEMOS')
+        self.enter_category(machine, 'SHOWS')
         cube_index = self.launch_named(machine, 'CUBE3D', wait_address=0x100c)
         previous = None
         for frame in range(16):
@@ -811,12 +814,12 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('selected'), cube_index)
 
     def test_dance_poses_and_return(self):
-        frames, animation = collect_frames(ROOT / 'programs/DEMOS/DANCE', 7)
+        frames, animation = collect_frames(ROOT / 'programs/SHOWS/DANCE', 7)
         self.assertEqual(len({frame[:32] for frame in frames}), 4)
         self.assertEqual(animation, 0xc7)
         machine = Machine()
         machine.boot()
-        self.enter_category(machine, 'DEMOS')
+        self.enter_category(machine, 'SHOWS')
         dance_index = self.launch_named(machine, 'DANCE', wait_address=0x100c)
         poses = []
         for frame in range(20):
@@ -834,7 +837,7 @@ class ProjectTests(unittest.TestCase):
     def test_sandpile_matches_abelian_model_reset_and_return(self):
         machine = Machine()
         machine.boot()
-        self.enter_category(machine, 'LAB')
+        self.enter_category(machine, 'TOOLS')
         sandpile_index = self.launch_named(machine, 'SANDPILE', wait_address=0x100c)
 
         expected = [[0] * 40 for _ in range(25)]
@@ -879,7 +882,7 @@ class ProjectTests(unittest.TestCase):
     def test_snowfall_speed_density_and_short_stacks(self):
         machine = Machine()
         machine.boot()
-        self.enter_category(machine, 'DEMOS')
+        self.enter_category(machine, 'SHOWS')
         snow_index = self.launch_named(machine, 'SNOW', wait_address=0x100c)
         live_at_start = [(machine.memory[0xc200+i], machine.memory[0xc240+i])
                          for i in range(64)]
@@ -923,7 +926,7 @@ class ProjectTests(unittest.TestCase):
     def test_maze_connected_acyclic_and_regeneration(self):
         machine = Machine()
         machine.boot()
-        self.enter_category(machine, 'UTILS')
+        self.enter_category(machine, 'TOOLS')
         maze_index = self.launch_named(machine, 'MAZEGEN')
 
         def check_maze():
@@ -974,7 +977,7 @@ class ProjectTests(unittest.TestCase):
     def test_langtons_ant_rules_reset_and_return(self):
         machine = Machine()
         machine.boot()
-        self.enter_category(machine, 'LAB')
+        self.enter_category(machine, 'TOOLS')
         ant_index = self.launch_named(machine, 'ANT', wait_address=0x100c)
 
         grid = set()
@@ -1032,7 +1035,7 @@ class ProjectTests(unittest.TestCase):
     def test_chaos_game_points_reset_and_return(self):
         machine = Machine()
         machine.boot()
-        self.enter_category(machine, 'LAB')
+        self.enter_category(machine, 'TOOLS')
         chaos_index = self.launch_named(machine, 'CHAOS', wait_address=0x100c)
         machine.memory[machine.labels['random_state']] = 1
         machine.memory[0x00a2] = 0
@@ -1078,7 +1081,7 @@ class ProjectTests(unittest.TestCase):
     def test_life_blinker_randomize_and_return(self):
         machine = Machine()
         machine.boot()
-        self.enter_category(machine, 'LAB')
+        self.enter_category(machine, 'TOOLS')
         life_index = self.launch_named(machine, 'LIFE', wait_address=0x100c)
 
         machine.memory[0x0400:0x0800] = [32] * 1024
@@ -1104,7 +1107,7 @@ class ProjectTests(unittest.TestCase):
     def test_rule30_generations_completion_reset_and_return(self):
         machine = Machine()
         machine.boot()
-        self.enter_category(machine, 'LAB')
+        self.enter_category(machine, 'TOOLS')
         rule_index = self.launch_named(machine, 'RULE30', wait_address=0x100c)
 
         row = [0] * 256
@@ -1186,7 +1189,7 @@ class ProjectTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / 'project'
             shutil.copytree(ROOT, root, ignore=shutil.ignore_patterns('build', '__pycache__'))
-            source = root / 'programs/PUZZLES/HANGMAN/main.asm'
+            source = root / 'programs/QUESTS/HANGMAN/main.asm'
             source.write_text(source.read_text() + '\n.fill 10,0\n')
             with self.assertRaisesRegex(ValueError, 'exceeds 256'):
                 build(root=root, assembler=ASSEMBLER)
@@ -1194,7 +1197,7 @@ class ProjectTests(unittest.TestCase):
             self.assertEqual(next(p for p in result['programs'] if p['name'] == 'HANGMAN')['flags'], 1)
             machine = Machine(root)
             machine.boot()
-            self.enter_category(machine, 'PUZZLES')
+            self.enter_category(machine, 'QUESTS')
             hangman_index = self.program_index(machine, 'HANGMAN')
             for _ in range(hangman_index):
                 machine.key(0x1d)

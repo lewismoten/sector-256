@@ -29,9 +29,9 @@ py65 1.2.0 and VICE 3.7.1.
   observed timing jitter stays well below one video frame.
 - Additional cube tests cover pixel-exact Bresenham lines in every octant,
   eight projected vertices, changing orientation, alternating display buffers,
-  and RUN/STOP return to the selected DEMOS page. Cube-specific bytes count
+  and RUN/STOP return to the selected SHOWS page. Cube-specific bytes count
   toward the limit; general drawing and input routines live in the launcher.
-- VICE ran ten rendered CUBE3D frames and returned to DEMOS/CUBE3D after
+- VICE ran ten rendered CUBE3D frames and returned to SHOWS/CUBE3D after
   RUN/STOP. Both 8 KB bitmap buffers and the sixteen projected coordinate bytes
   match the deterministic 6502 harness byte-for-byte at that frame.
 - VICE boots the disk through real C64 and 1541 ROMs. Category selection,
