@@ -23,7 +23,7 @@ class Machine:
     def __init__(self, root=ROOT, font=None):
         self.root = Path(root)
         self.labels = labels(self.root / 'build/launcher.labels')
-        self.files = read_disk((self.root / 'build/sector-256.d64').read_bytes())
+        self.files = read_disk((self.root / 'release/sector-256.d64').read_bytes())
         self.cpu = MPU()
         self.memory = self.cpu.memory
         binary = self.files['LOADER']

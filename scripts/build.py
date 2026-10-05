@@ -159,7 +159,10 @@ def build(allow_oversize=False, root=ROOT, assembler="64tass"):
     for filename, payload, _ in files:
         (out / filename).write_bytes(payload)
     disk = make_disk(files)
-    (out / "sector-256.d64").write_bytes(disk)
+    release = root / "release"
+    release.mkdir(exist_ok=True)
+    (release / "sector-256.d64").write_bytes(disk)
+    (out / "sector-256.d64").unlink(missing_ok=True)
     report = dict(programs=programs, categories=categories, pack_bytes=[len(p) for p in packs],
                   launcher_bytes=len(launcher), disk_bytes=len(disk), disk_files=[f[0] for f in files])
     (out / "manifest.json").write_text(json.dumps(report, indent=2) + "\n")
@@ -177,7 +180,7 @@ def main():
         parser.exit(1, f"Build failed: {getattr(exc, 'stderr', None) or exc}\n")
     for p in result["programs"]:
         print(f"{p['name']:<8} {p['size']:4} bytes" + ("  ! OVER 256" if p["flags"] else ""))
-    print(f"Built build/sector-256.d64 ({result['disk_bytes']} bytes)")
+    print(f"Built release/sector-256.d64 ({result['disk_bytes']} bytes)")
 
 
 if __name__ == "__main__":

@@ -24,7 +24,7 @@ python scripts/build.py
 python scripts/programs_md.py
 ```
 
-The playable image is `build/sector-256.d64`. Attach it to drive 8 in VICE or
+The playable image is `release/sector-256.d64`. Attach it to drive 8 in VICE or
 write it to a real 1541 disk. Load the first program:
 
 ```basic
@@ -66,3 +66,4 @@ redistributed in this project.
 | `scripts/programs_md.py` | Generate preview/source catalog |
 | `tests/` | Machine-code and packaging verification |
 | `build/manifest.json` | Generated sizes, offsets, flags, and pack assignments |
+| `release/sector-256.d64` | Playable disk image |

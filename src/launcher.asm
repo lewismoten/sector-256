@@ -788,6 +788,18 @@ name_slot_loop:
     lda #$13
     sta ink
 name_color_ready:
+    ldy #7
+find_name_end:
+    lda (ptr),y
+    cmp #32
+    bne name_end_found
+    dey
+    bpl find_name_end
+name_end_found:
+    tya
+    eor #7                      ; trailing spaces in the eight-byte name
+    lsr                         ; leading half centers the visible letters
+    sta name_pad
     ldx slot
     lda slot_columns,x
     sta column
@@ -798,8 +810,16 @@ name_color_ready:
     lda #0
     sta name_index
 name_character_loop:
-    ldy name_index
+    lda name_index
+    sec
+    sbc name_pad
+    bcc name_leading_space
+    tay
     lda (ptr),y
+    bcs name_draw_character
+name_leading_space:
+    lda #32
+name_draw_character:
     jsr draw_character
     inc name_index
     lda name_index
@@ -1509,6 +1529,7 @@ column: .byte 0
 ink: .byte $10
 text_index: .byte 0
 name_index: .byte 0
+name_pad: .byte 0
 description_index: .byte 0
 number: .word 0
 divisor: .word 0

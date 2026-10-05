@@ -22,7 +22,7 @@ class ProjectTests(unittest.TestCase):
 
     def test_games_fit_and_catalog_matches_disk(self):
         manifest = json.loads((ROOT / 'build/manifest.json').read_text())
-        disk = read_disk((ROOT / 'build/sector-256.d64').read_bytes())
+        disk = read_disk((ROOT / 'release/sector-256.d64').read_bytes())
         self.assertEqual(disk['INDEX.DAT'][:6], b'S256\x01\x60')
         for i, game in enumerate(manifest['programs']):
             self.assertLessEqual(game['size'], 256)
@@ -53,6 +53,28 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'MAZEGEN ')
         machine.key(0x87)
         self.assertEqual(machine.var('page_count'), 4)
+
+    def test_short_names_center_under_icons(self):
+        machine = Machine()
+        machine.boot()
+        font = [255] * 2048
+        font[32*8:33*8] = [0] * 8
+        machine.memory[0x5800:0x6000] = font
+        machine.call('draw_page')
+
+        def occupied(start):
+            return [any(machine.memory[0x6000 + 6*320 + (start+i)*8:
+                                       0x6000 + 6*320 + (start+i+1)*8])
+                    for i in range(8)]
+
+        self.assertEqual(occupied(1), [False] + [True]*5 + [False]*2)  # GAMES
+        self.assertEqual(occupied(31), [False]*2 + [True]*3 + [False]*3)  # LAB
+        machine.key(0x1d)
+        machine.key(0x1d)
+        machine.key(13)
+        self.assertEqual(occupied(1), [False] + [True]*6 + [False])  # CUBE3D
+        self.assertEqual(occupied(11), [False] + [True]*5 + [False]*2)  # DANCE
+        self.assertEqual(occupied(21), [False]*2 + [True]*4 + [False]*2)  # SNOW
 
     def test_pagination_and_letter_jump_for_700_records(self):
         machine = Machine()
