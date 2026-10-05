@@ -10,6 +10,7 @@ SHORT LESSONS AND PRACTICE.
 * ![CLOCK](CLOCK/icon.png) [CLOCK](#clock)
 * ![COLORS](COLORS/icon.png) [COLORS](#colors)
 * ![COUNTING](COUNTING/icon.png) [COUNTING](#counting)
+* ![DAYS](DAYS/icon.png) [DAYS](#days)
 * ![DIVIDE](DIVIDE/icon.png) [DIVIDE](#divide)
 * ![FRACTION](FRACTION/icon.png) [FRACTION](#fraction)
 * ![MAPS](MAPS/icon.png) [MAPS](#maps)
@@ -85,6 +86,16 @@ Stored payload: **151 bytes**.
 [Assembly source](COUNTING/main.asm)
 
 ![COUNTING preview](COUNTING/preview.png)
+
+## DAYS
+
+PICK THE FIRST LETTER OF THREE WEEKDAY NAMES.
+
+Stored payload: **180 bytes**.
+
+[Assembly source](DAYS/main.asm)
+
+![DAYS preview](DAYS/preview.png)
 
 ## DIVIDE
 
@@ -217,7 +228,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**19 programs · 2,998 bytes total · 1866 bytes to spare in this category**
+**20 programs · 3,178 bytes total · 1942 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
