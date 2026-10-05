@@ -73,6 +73,7 @@ SMALL GAMES. BIG FUN.
 * ![ROCKPAPR](ROCKPAPR/icon.png) [ROCKPAPR](#rockpapr)
 * ![SLOTS](SLOTS/icon.png) [SLOTS](#slots)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
+* ![TUGOWAR](TUGOWAR/icon.png) [TUGOWAR](#tugowar)
 
 ---
 
@@ -754,8 +755,18 @@ Stored payload: **253 bytes**.
 
 ![TICTACTO preview](TICTACTO/preview.png)
 
+## TUGOWAR
+
+TWO-PLAYER TUG OF WAR. Q PULLS LEFT, P PULLS RIGHT.
+
+Stored payload: **163 bytes**.
+
+[Assembly source](TUGOWAR/main.asm)
+
+![TUGOWAR preview](TUGOWAR/preview.png)
+
 ---
-**69 programs · 12,883 bytes total · 4781 bytes to spare in this category**
+**70 programs · 13,046 bytes total · 4874 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

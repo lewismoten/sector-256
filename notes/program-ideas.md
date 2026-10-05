@@ -61,6 +61,8 @@ Completed: ROCKPAPR — added a random rock-paper-scissors game to GAMES.
 
 Completed: SLOTS — added a three-reel slot machine to GAMES.
 
+Completed: TUGOWAR — added a two-player Q-versus-P tug of war to GAMES.
+
 ## GAMES
 
 118 ideas.
