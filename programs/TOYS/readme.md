@@ -14,6 +14,7 @@ SMALL THINGS TO PLAY WITH.
 | ![FACES](FACES/icon.png) | [FACES](#faces) | A RANDOM CHARACTER-ART FACE ON EACH KEYPRESS. |
 | ![FORTUNE](FORTUNE/icon.png) | [FORTUNE](#fortune) | A RANDOM FORTUNE COOKIE MESSAGE ON EACH KEYPRESS. |
 | ![ORACLE](ORACLE/icon.png) | [ORACLE](#oracle) | GET A RANDOM YES-OR-NO STYLE ANSWER. |
+| ![SPARKLER](SPARKLER/icon.png) | [SPARKLER](#sparkler) | Generates a fresh random field of character sparks. |
 | ![SPINNER](SPINNER/icon.png) | [SPINNER](#spinner) | SPIN A RANDOM DIRECTION FOR BOARD GAMES. |
 | ![SPINTOP](SPINTOP/icon.png) | [SPINTOP](#spintop) | Steps through four character frames of a spinning top. |
 | ![WINDMILL](WINDMILL/icon.png) | [WINDMILL](#windmill) | SPIN A FOUR-FRAME CHARACTER-ART WINDMILL. |
@@ -100,6 +101,16 @@ Stored payload: **125 bytes**.
 
 ![ORACLE preview](ORACLE/preview.png)
 
+## SPARKLER
+
+Generates a fresh random field of character sparks.
+
+Stored payload: **81 bytes**.
+
+[Assembly source](SPARKLER/main.asm)
+
+![SPARKLER preview](SPARKLER/preview.png)
+
 ## SPINNER
 
 SPIN A RANDOM DIRECTION FOR BOARD GAMES.
@@ -131,7 +142,7 @@ Stored payload: **191 bytes**.
 ![WINDMILL preview](WINDMILL/preview.png)
 
 ---
-**11 programs · 1,578 bytes total · 1238 bytes to spare in this category**
+**12 programs · 1,659 bytes total · 1413 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

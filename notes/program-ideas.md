@@ -303,6 +303,8 @@ Completed: MATHQUIZ — added a compact mixed arithmetic-facts quiz to EDU.
 
 Completed: BELLS — added a compact two-pitch SID bell program to SOUND.
 
+Completed: SPARKLER — added a compact random character-spark toy to TOYS.
+
 ## GAMES
 
 118 ideas.
