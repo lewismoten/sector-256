@@ -272,7 +272,7 @@ class ProjectTests(unittest.TestCase):
             for offset in range(height):
                 y = 199 - offset
                 address = 0x6000 + (y // 8) * 320 + (x + 4) * 8 + y % 8
-                self.assertNotEqual(machine.memory[address], 0)
+                self.assertEqual(machine.memory[address], 0x18)
                 color = machine.memory[0x4000 + (y // 8) * 40 + x + 4]
                 self.assertEqual(color >> 4, 1)
         bottom = [machine.memory[0x6000 + 24 * 320 + (x+4) * 8 + 7]

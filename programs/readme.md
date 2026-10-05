@@ -46,7 +46,7 @@ Category: UTILS. Stored payload: **183 bytes**.
 
 PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT.
 
-Category: DEMOS. Stored payload: **250 bytes**.
+Category: DEMOS. Stored payload: **253 bytes**.
 
 [Assembly source](SNOW/main.asm)
 

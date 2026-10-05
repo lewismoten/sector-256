@@ -32,6 +32,7 @@ seed:
     jsr RANDOM
     and #$bf
     sta fy,x
+    clc
     jsr plot
     dec flake
     bpl seed
@@ -41,6 +42,7 @@ frame:
     lda #31
     sta flake
 snow:
+    clc
     jsr plot                    ; erase the previous position
     lda flake
     and #1
@@ -82,6 +84,7 @@ respawn:
     lda #0
     sta fy,x
 draw_flake:
+    clc
     jsr plot
     dec flake
     bpl snow
@@ -96,9 +99,10 @@ new_x:
     sta fx,x
     rts
 
-; Toggle one or two pixels in the front bitmap at ((column+4)*8, y).
-; Every flake owns a fixed bit mask; X is restored to its flake index.
+; Carry selects the solid two-pixel settled mask; moving flakes use their size.
+; X is restored to the flake index before returning.
 plot:
+    php
     ldx flake
     lda fy,x
     lsr
@@ -134,12 +138,16 @@ pixel_addr_ready:
     and #7
     tay
     txa
-    and #7
+    and #1
     tax
+    plp
     lda masks,x
+    bcc moving_mask
+    lda #$18
+moving_mask:
     eor (ptr),y
     sta (ptr),y
     ldx flake
     rts
 row_lo: .byte $20,$60,$a0,$e0
-masks: .byte $c0,$10,$30,$04,$0c,$80,$03,$20
+masks: .byte $18,$10
