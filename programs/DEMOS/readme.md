@@ -6,6 +6,7 @@ PIXELS, SOUND AND TINY SHOWS.
 
 * ![CUBE3D](CUBE3D/icon-preview.gif) [CUBE3D](#cube3d)
 * ![DANCE](DANCE/icon-preview.gif) [DANCE](#dance)
+* ![MAZE10](MAZE10/icon.png) [MAZE10](#maze10)
 * ![SNOW](SNOW/icon-preview.gif) [SNOW](#snow)
 
 ---
@@ -30,6 +31,16 @@ Stored payload: **249 bytes**.
 
 ![DANCE preview](DANCE/preview.gif)
 
+## MAZE10
+
+A CLASSIC RANDOM DIAGONAL CHARACTER MAZE.
+
+Stored payload: **35 bytes**.
+
+[Assembly source](MAZE10/main.asm)
+
+![MAZE10 preview](MAZE10/preview.png)
+
 ## SNOW
 
 PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT.
@@ -41,7 +52,7 @@ Stored payload: **255 bytes**.
 ![SNOW preview](SNOW/preview.gif)
 
 ---
-**3 programs · 742 bytes total · 26 bytes to spare in this category**
+**4 programs · 777 bytes total · 247 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

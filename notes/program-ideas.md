@@ -69,6 +69,8 @@ Completed: COINTOSS — added a random coin toss with tallies to UTILS.
 
 Completed: COLORSET — added a border and background color picker to UTILS.
 
+Completed: MAZE10 — added the classic random diagonal character maze to DEMOS.
+
 ## GAMES
 
 118 ideas.
