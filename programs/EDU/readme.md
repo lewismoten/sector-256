@@ -15,6 +15,7 @@ SHORT LESSONS AND PRACTICE.
 * ![FRACTION](FRACTION/icon.png) [FRACTION](#fraction)
 * ![MAPS](MAPS/icon.png) [MAPS](#maps)
 * ![MEMORY](MEMORY/icon.png) [MEMORY](#memory)
+* ![MONTHS](MONTHS/icon.png) [MONTHS](#months)
 * ![MULTIPLY](MULTIPLY/icon.png) [MULTIPLY](#multiply)
 * ![OCEANS](OCEANS/icon.png) [OCEANS](#oceans)
 * ![ODDEVEN](ODDEVEN/icon.png) [ODDEVEN](#oddeven)
@@ -137,6 +138,16 @@ Stored payload: **140 bytes**.
 
 ![MEMORY preview](MEMORY/preview.png)
 
+## MONTHS
+
+PICK THE FIRST LETTER OF THREE MONTH NAMES.
+
+Stored payload: **180 bytes**.
+
+[Assembly source](MONTHS/main.asm)
+
+![MONTHS preview](MONTHS/preview.png)
+
 ## MULTIPLY
 
 SOLVE THREE SMALL MULTIPLICATION QUESTIONS.
@@ -228,7 +239,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**20 programs · 3,178 bytes total · 1942 bytes to spare in this category**
+**21 programs · 3,358 bytes total · 2018 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
