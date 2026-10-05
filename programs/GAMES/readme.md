@@ -14,6 +14,7 @@ SMALL GAMES. BIG FUN.
 * ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
 * ![HILO](HILO/icon.png) [HILO](#hilo)
 * ![HORSES](HORSES/icon.png) [HORSES](#horses)
+* ![HOTPOT](HOTPOT/icon.png) [HOTPOT](#hotpot)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 
@@ -119,6 +120,16 @@ Stored payload: **256 bytes**.
 
 ![HORSES preview](HORSES/preview.png)
 
+## HOTPOT
+
+PASS THE KEYBOARD. A HIDDEN RANDOM FUSE GOES BOOM.
+
+Stored payload: **162 bytes**.
+
+[Assembly source](HOTPOT/main.asm)
+
+![HOTPOT preview](HOTPOT/preview.png)
+
 ## MONTY
 
 PICK 1-3. MONTY OPENS A GOAT. S:SWITCH K:KEEP. STOP:EXIT.
@@ -140,7 +151,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**12 programs · 2,567 bytes total · 505 bytes to spare in this category**
+**13 programs · 2,729 bytes total · 599 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

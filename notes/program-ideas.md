@@ -19,10 +19,10 @@
 ## Progress
 
 Completed: ANT, BALLOON, CATCHER, CHAOS, COWBULL, CUBE3D, DANCE, DICE,
-DODGE, FISHING, GUESSNUM, HANGMAN, HILO, HORSES, LIFE, MAZEGEN, MONTY, RULE30, SANDPILE,
+DODGE, FISHING, GUESSNUM, HANGMAN, HILO, HORSES, HOTPOT, LIFE, MAZEGEN, MONTY, RULE30, SANDPILE,
 SNOW, SWATCH, TICTACTO.
 
-Working: HOTPOT — pass the keyboard until the hidden timer expires in GAMES.
+Working: LOTTO — pick six numbers and compare them with a randomized draw in GAMES.
 
 ## GAMES
 

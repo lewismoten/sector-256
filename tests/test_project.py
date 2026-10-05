@@ -17,10 +17,14 @@ from programs_md import generate as generate_programs_md
 class ProjectTests(unittest.TestCase):
     def program_index(self, machine, name):
         target = name.encode().ljust(8)
-        for index in range(machine.var('page_count')):
-            address = 0x4800 + index * 96
-            if bytes(machine.memory[address:address + 8]) == target:
-                return index
+        while True:
+            for index in range(machine.var('page_count')):
+                address = 0x4800 + index * 96
+                if bytes(machine.memory[address:address + 8]) == target:
+                    return index
+            if not machine.var('has_next'):
+                break
+            machine.key(0x86)
         self.fail(f'{name} is not visible on the current launcher page')
 
     def launch_named(self, machine, name, wait_address=0x1000):
@@ -384,6 +388,21 @@ class ProjectTests(unittest.TestCase):
         machine.step()
         machine.run_until(lambda: machine.output.count('HORSE 1-5?') == 2)
         self.assertIn('HORSE 1-5?', machine.output)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
+    def test_hotpot_explodes_on_its_hidden_fuse_and_restarts(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        self.launch_named(machine, 'HOTPOT')
+        machine.memory[2] = 1
+        machine.game_key('X')
+        self.assertIn('BOOM! PASS 0', machine.output)
+        machine.game_key(13)
+        self.assertGreaterEqual(machine.memory[2], 5)
+        self.assertLessEqual(machine.memory[2], 20)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 0)
         self.assertEqual(machine.cpu.sp, 0xff)
