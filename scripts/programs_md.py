@@ -27,8 +27,13 @@ def generate(root=ROOT):
         data = json.loads((folder / "program.json").read_text())
         name = folder.name.upper()
         icon = "icon-preview.gif" if (folder / "icon-preview.gif").exists() else "icon.png"
+        lines += [f"* [![{name}]({folder.name}/{icon})](#{name.lower()})"]
+    lines += ["---"]
+    for folder in folders:
+        data = json.loads((folder / "program.json").read_text())
+        name = folder.name.upper()
         preview = "preview.gif" if (folder / "preview.gif").exists() else "preview.png"
-        lines += [f"## ![{name}]({folder.name}/{icon}) {name}", "", data["description"], "",
+        lines += [f"## {name}", "", data["description"], "",
                   f"Category: {data['category']}. " + (f"Stored payload: **{sizes[name]} bytes**." if name in sizes else "Build to calculate size."), "",
                   f"[Assembly source]({folder.name}/main.asm)", ""]
         if (folder / preview).exists():
