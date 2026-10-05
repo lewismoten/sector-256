@@ -4,13 +4,13 @@ Every program here runs from the [Sector 256](../README.md)
 Commodore 64 launcher, and each one's stored payload fits in
 **256 bytes or less**. Choose a category to browse its programs.
 
-* ![GAMES](GAMES/icon.png) [GAMES](GAMES/readme.md) — SMALL GAMES. BIG FUN. (51 programs)
+* ![GAMES](GAMES/icon.png) [GAMES](GAMES/readme.md) — SMALL GAMES. BIG FUN. (52 programs)
 * ![UTILS](UTILS/icon.png) [UTILS](UTILS/readme.md) — HANDY LITTLE TOOLS. (2 programs)
 * ![DEMOS](DEMOS/icon.png) [DEMOS](DEMOS/readme.md) — PIXELS, SOUND AND TINY SHOWS. (3 programs)
 * ![LAB](LAB/icon.png) [LAB](LAB/readme.md) — EXPERIMENTS AND PROOF OF CONCEPTS. (5 programs)
 
 ---
-**61 programs · 11,957 bytes total · 3659 bytes to spare across the whole set**
+**62 programs · 12,172 bytes total · 3700 bytes to spare across the whole set**
 
 Want to add one? See [Add a program](../docs/add_program.md)
 and the [program interface](../docs/program-api.md).
