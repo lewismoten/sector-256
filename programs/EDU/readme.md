@@ -20,6 +20,7 @@ SHORT LESSONS AND PRACTICE.
 * ![MEMORY](MEMORY/icon.png) [MEMORY](#memory)
 * ![MONTHS](MONTHS/icon.png) [MONTHS](#months)
 * ![MULTIPLY](MULTIPLY/icon.png) [MULTIPLY](#multiply)
+* ![NATURE](NATURE/icon.png) [NATURE](#nature)
 * ![OCEANS](OCEANS/icon.png) [OCEANS](#oceans)
 * ![ODDEVEN](ODDEVEN/icon.png) [ODDEVEN](#oddeven)
 * ![PLANETS](PLANETS/icon.png) [PLANETS](#planets)
@@ -192,6 +193,16 @@ Stored payload: **147 bytes**.
 
 ![MULTIPLY preview](MULTIPLY/preview.png)
 
+## NATURE
+
+PICK THE FIRST LETTER OF THREE NATURE WORDS.
+
+Stored payload: **174 bytes**.
+
+[Assembly source](NATURE/main.asm)
+
+![NATURE preview](NATURE/preview.png)
+
 ## OCEANS
 
 PICK THE FIRST LETTER OF THREE OCEAN NAMES.
@@ -283,7 +294,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**25 programs · 4,044 bytes total · 2356 bytes to spare in this category**
+**26 programs · 4,218 bytes total · 2438 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
