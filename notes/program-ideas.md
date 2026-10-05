@@ -297,6 +297,8 @@ Completed: COLORCYC — added a compact VIC background color-cycle demo to DEMOS
 
 Completed: DIVQUIZ — added a compact division-facts drill to EDU.
 
+Completed: TONEGEN — added a compact SID pitch-preset tone generator to SOUND.
+
 ## GAMES
 
 118 ideas.

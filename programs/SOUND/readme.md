@@ -18,6 +18,7 @@ TINY SID SOUNDS AND MUSICAL EXPERIMENTS.
 | ![SCALE](SCALE/icon.png) | [SCALE](#scale) | AN ASCENDING C-MAJOR SID SCALE. PRESS A KEY TO REPEAT. |
 | ![SIREN](SIREN/icon.png) | [SIREN](#siren) | A FOUR-TONE SID SIREN WAIL. PRESS A KEY TO REPEAT. |
 | ![SWEEP](SWEEP/icon.png) | [SWEEP](#sweep) | Steps a SID sawtooth tone through rising frequencies. |
+| ![TONEGEN](TONEGEN/icon.png) | [TONEGEN](#tonegen) | Steps a SID voice through four interactive pitch presets. |
 
 ---
 
@@ -141,8 +142,18 @@ Stored payload: **101 bytes**.
 
 ![SWEEP preview](SWEEP/preview.png)
 
+## TONEGEN
+
+Steps a SID voice through four interactive pitch presets.
+
+Stored payload: **118 bytes**.
+
+[Assembly source](TONEGEN/main.asm)
+
+![TONEGEN preview](TONEGEN/preview.png)
+
 ---
-**12 programs · 1,443 bytes total · 1629 bytes to spare in this category**
+**13 programs · 1,561 bytes total · 1767 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
