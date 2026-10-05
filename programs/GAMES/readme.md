@@ -27,6 +27,7 @@ SMALL GAMES. BIG FUN.
 * ![FIREMAN](FIREMAN/icon.png) [FIREMAN](#fireman)
 * ![FISHING](FISHING/icon.png) [FISHING](#fishing)
 * ![FLOOD](FLOOD/icon.png) [FLOOD](#flood)
+* ![FLUTTER](FLUTTER/icon.png) [FLUTTER](#flutter)
 * ![GOLF](GOLF/icon.png) [GOLF](#golf)
 * ![GUESSNUM](GUESSNUM/icon.png) [GUESSNUM](#guessnum)
 * ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
@@ -272,6 +273,14 @@ Stored payload: **201 bytes**.
 
 ![FLOOD preview](FLOOD/preview.png)
 
+## FLUTTER
+
+SPACE FLAPS; RETURN FLIES THROUGH THE CAVE OPENING.
+
+Stored payload: **170 bytes**.
+
+[Assembly source](FLUTTER/main.asm)
+
 ## GOLF
 
 A BUILDS PUTT POWER; SPACE SHOOTS FOR THE RANDOM HOLE.
@@ -413,7 +422,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**37 programs · 7,011 bytes total · 2461 bytes to spare in this category**
+**38 programs · 7,181 bytes total · 2547 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
