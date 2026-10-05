@@ -8,6 +8,7 @@ SMALL GAMES. BIG FUN.
 * ![CATCHER](CATCHER/icon.png) [CATCHER](#catcher)
 * ![COWBULL](COWBULL/icon.png) [COWBULL](#cowbull)
 * ![DICE](DICE/icon.png) [DICE](#dice)
+* ![DODGE](DODGE/icon.png) [DODGE](#dodge)
 * ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
@@ -54,6 +55,16 @@ Stored payload: **120 bytes**.
 
 ![DICE preview](DICE/preview.png)
 
+## DODGE
+
+A/D DODGE FALLING BLOCKS. SURVIVE FOR SCORE.
+
+Stored payload: **208 bytes**.
+
+[Assembly source](DODGE/main.asm)
+
+![DODGE preview](DODGE/preview.png)
+
 ## HANGMAN
 
 GUESS A SIX-LETTER WORD.         SIX MISSES AND YOU LOSE.
@@ -85,7 +96,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**7 programs · 1,479 bytes total · 313 bytes to spare in this category**
+**8 programs · 1,687 bytes total · 361 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

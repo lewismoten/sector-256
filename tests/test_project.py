@@ -93,7 +93,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'GAMES   ')
         machine.key(13)
         self.assertEqual(machine.var('category_mode'), 0)
-        self.assertEqual(machine.var('page_count'), 7)
+        self.assertEqual(machine.var('page_count'), 8)
         machine.key(0x1d)
         self.assertEqual(machine.var('selected'), 1)
         machine.key('H')
@@ -257,6 +257,35 @@ class ProjectTests(unittest.TestCase):
             machine.step()
             machine.run_until(lambda: machine.cpu.pc == 0x100c)
         self.assertEqual(machine.memory[2], 0)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
+    def test_dodge_scores_survival_and_detects_collision(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        self.launch_named(machine, 'DODGE', wait_address=0x100c)
+        machine.keys.append(ord('D'))
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        self.assertEqual(machine.memory[4], 16)
+
+        machine.memory[2:4] = [0, 22]
+        machine.memory[0x20:0x22] = [0, 4]
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        self.assertEqual(machine.memory[0x040b], ord('1'))
+
+        machine.memory[2:4] = [16, 22]
+        machine.memory[0x20:0x22] = [0, 4]
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x1000)
+        self.assertIn('CRASH!', machine.output)
+        machine.keys.append(13)
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        self.assertEqual(machine.memory[4], 15)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 0)
         self.assertEqual(machine.cpu.sp, 0xff)
