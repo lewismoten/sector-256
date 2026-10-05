@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate programs/readme.md from program metadata and optional preview.png files."""
+"""Regenerate programs/readme.md from program metadata and preview artwork."""
 import json
 from pathlib import Path
 
@@ -24,11 +24,13 @@ def generate(root=ROOT):
     for folder in folders:
         data = json.loads((folder / "program.json").read_text())
         name = folder.name.upper()
-        lines += [f"## ![{name}]({folder.name}/icon.png) {name}", "", data["description"], "",
+        icon = "icon-preview.gif" if (folder / "icon-preview.gif").exists() else "icon.png"
+        preview = "preview.gif" if (folder / "preview.gif").exists() else "preview.png"
+        lines += [f"## ![{name}]({folder.name}/{icon}) {name}", "", data["description"], "",
                   f"Category: {data['category']}. " + (f"Stored payload: **{sizes[name]} bytes**." if name in sizes else "Build to calculate size."), "",
                   f"[Assembly source]({folder.name}/main.asm)", ""]
-        if (folder / "preview.png").exists():
-            lines += [f"![{name} preview]({folder.name}/preview.png)", ""]
+        if (folder / preview).exists():
+            lines += [f"![{name} preview]({folder.name}/{preview})", ""]
     total = sum(sizes.get(folder.name.upper(), 0) for folder in folders)
     summary = (f"**{len(folders)} programs · {total:,} bytes total · "
                f"{len(folders) * 256 - total} bytes to spare across the whole set**"

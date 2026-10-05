@@ -5,7 +5,7 @@ Commodore 64 launcher, and each one's stored payload fits in
 **256 bytes or less**. That's one disk block. Press RUN/STOP 
 in any program to return to the launcher.
 
-## ![CUBE3D](CUBE3D/icon.png) CUBE3D
+## ![CUBE3D](CUBE3D/icon-preview.gif) CUBE3D
 
 A ROTATING 3D WIREFRAME CUBE.   RUN/STOP TO RETURN TO LAUNCHER.
 
@@ -13,7 +13,7 @@ Category: DEMOS. Stored payload: **238 bytes**.
 
 [Assembly source](CUBE3D/main.asm)
 
-![CUBE3D preview](CUBE3D/preview.png)
+![CUBE3D preview](CUBE3D/preview.gif)
 
 ## ![DANCE](DANCE/icon.png) DANCE
 
@@ -23,7 +23,7 @@ Category: DEMOS. Stored payload: **249 bytes**.
 
 [Assembly source](DANCE/main.asm)
 
-![DANCE preview](DANCE/preview.png)
+![DANCE preview](DANCE/preview.gif)
 
 ## ![HANGMAN](HANGMAN/icon.png) HANGMAN
 
@@ -35,7 +35,7 @@ Category: GAMES. Stored payload: **253 bytes**.
 
 ![HANGMAN preview](HANGMAN/preview.png)
 
-## ![MAZEGEN](MAZEGEN/icon.png) MAZEGEN
+## ![MAZEGEN](MAZEGEN/icon-preview.gif) MAZEGEN
 
 190-ROOM PERFECT MAZE. SPACE:NEW. RUN/STOP:RETURN.
 
@@ -63,9 +63,9 @@ Category: DEMOS. Stored payload: **255 bytes**.
 
 [Assembly source](SNOW/main.asm)
 
-![SNOW preview](SNOW/preview.png)
+![SNOW preview](SNOW/preview.gif)
 
-## ![SWATCH](SWATCH/icon.png) SWATCH
+## ![SWATCH](SWATCH/icon-preview.gif) SWATCH
 
 ALL 16 COLORS + 120 PAIRS. 1-9:RATE M:MIX SPACE:HOLD STOP:EXIT.
 
@@ -73,7 +73,7 @@ Category: UTILS. Stored payload: **256 bytes**.
 
 [Assembly source](SWATCH/main.asm)
 
-![SWATCH preview](SWATCH/preview.png)
+![SWATCH preview](SWATCH/preview.gif)
 
 ## ![TICTACTO](TICTACTO/icon.png) TICTACTO
 
