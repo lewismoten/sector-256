@@ -18,12 +18,12 @@
 
 ## Progress
 
-Completed: ANT, BALLOON, CATCHER, CHAOS, CHICKEN, COWBULL, CUBE3D, DANCE,
+Completed: ANT, ARCHERY, BALLOON, CATCHER, CHAOS, CHICKEN, COWBULL, CUBE3D, DANCE,
 DICE, DODGE, FISHING, GUESSNUM, HANGMAN, HILO, HORSES, HOTPOT, HUNT, LIFE, LOTTO,
 MAZEGEN, MONTY, RULE30, SANDPILE,
 SNOW, SWATCH, TICTACTO.
 
-Working: ARCHERY — account for a random wind while aiming for a target in GAMES.
+Working: DEFUSE — cut wires in a randomized safe order before the timer expires in GAMES.
 
 ## GAMES
 

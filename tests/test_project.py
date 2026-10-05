@@ -187,7 +187,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.memory[2], 0)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 0)
-        self.assertEqual(machine.var('selected'), 0)
+        self.assertEqual(machine.var('selected'), 1)
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_catcher_moves_catches_and_ends_after_three_misses(self):
@@ -454,6 +454,23 @@ class ProjectTests(unittest.TestCase):
         machine.game_key(13)
         self.assertGreaterEqual(machine.memory[2], 1)
         self.assertLessEqual(machine.memory[2], 8)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
+    def test_archery_aims_with_wind_and_restarts(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        self.launch_named(machine, 'ARCHERY')
+        machine.memory[2:5] = [4, 4, 0]
+        machine.game_key(' ')
+        self.assertIn('BULLSEYE!', machine.output)
+        machine.game_key(13)
+        self.assertEqual(machine.memory[2], 4)
+        self.assertGreaterEqual(machine.memory[3], 1)
+        self.assertLessEqual(machine.memory[3], 8)
+        self.assertLessEqual(machine.memory[4], 1)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 0)
         self.assertEqual(machine.cpu.sp, 0xff)

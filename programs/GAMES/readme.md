@@ -4,6 +4,7 @@ SMALL GAMES. BIG FUN.
 
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
+* ![ARCHERY](ARCHERY/icon.png) [ARCHERY](#archery)
 * ![BALLOON](BALLOON/icon.png) [BALLOON](#balloon)
 * ![CATCHER](CATCHER/icon.png) [CATCHER](#catcher)
 * ![CHICKEN](CHICKEN/icon.png) [CHICKEN](#chicken)
@@ -22,6 +23,16 @@ SMALL GAMES. BIG FUN.
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 
 ---
+
+## ARCHERY
+
+A/D AIM, SPACE FIRES. ACCOUNT FOR THE RANDOM WIND.
+
+Stored payload: **223 bytes**.
+
+[Assembly source](ARCHERY/main.asm)
+
+![ARCHERY preview](ARCHERY/preview.png)
 
 ## BALLOON
 
@@ -184,7 +195,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**16 programs · 3,254 bytes total · 842 bytes to spare in this category**
+**17 programs · 3,477 bytes total · 875 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
