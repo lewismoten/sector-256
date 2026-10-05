@@ -28,6 +28,7 @@ SHORT LESSONS AND PRACTICE.
 * ![OPPOSITE](OPPOSITE/icon.png) [OPPOSITE](#opposite)
 * ![PLANETS](PLANETS/icon.png) [PLANETS](#planets)
 * ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
+* ![RHYMES](RHYMES/icon.png) [RHYMES](#rhymes)
 * ![SHAPES](SHAPES/icon.png) [SHAPES](#shapes)
 * ![SPACE](SPACE/icon.png) [SPACE](#space)
 * ![SPELLING](SPELLING/icon.png) [SPELLING](#spelling)
@@ -278,6 +279,16 @@ Stored payload: **147 bytes**.
 
 ![QUIZ preview](QUIZ/preview.png)
 
+## RHYMES
+
+PICK THE FIRST LETTER OF THREE SIMPLE RHYMING WORDS.
+
+Stored payload: **172 bytes**.
+
+[Assembly source](RHYMES/main.asm)
+
+![RHYMES preview](RHYMES/preview.png)
+
 ## SHAPES
 
 IDENTIFY CIRCLE, SQUARE, AND TRIANGLE BY NUMBER.
@@ -349,7 +360,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**31 programs · 5,074 bytes total · 2862 bytes to spare in this category**
+**32 programs · 5,246 bytes total · 2946 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
