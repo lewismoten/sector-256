@@ -93,7 +93,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'GAMES   ')
         machine.key(13)
         self.assertEqual(machine.var('category_mode'), 0)
-        self.assertEqual(machine.var('page_count'), 9)
+        self.assertEqual(machine.var('page_count'), 10)
         machine.key(0x1d)
         self.assertEqual(machine.var('selected'), 1)
         machine.key('H')
@@ -317,6 +317,27 @@ class ProjectTests(unittest.TestCase):
         machine.step()
         machine.run_until(lambda: machine.cpu.pc == 0x100c)
         self.assertIn('TOO SOON!', machine.output)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
+    def test_guessnum_reports_low_high_and_win(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        self.launch_named(machine, 'GUESSNUM')
+        machine.memory[2] = 42
+        for digit in '41':
+            machine.game_key(digit)
+        self.assertIn('LOW', machine.output)
+        for digit in '43':
+            machine.game_key(digit)
+        self.assertIn('HIGH', machine.output)
+        for digit in '42':
+            machine.game_key(digit)
+        self.assertIn('WIN!', machine.output)
+        machine.game_key(13)
+        self.assertLess(machine.memory[2], 100)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 0)
         self.assertEqual(machine.cpu.sp, 0xff)

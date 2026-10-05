@@ -10,6 +10,7 @@ SMALL GAMES. BIG FUN.
 * ![DICE](DICE/icon.png) [DICE](#dice)
 * ![DODGE](DODGE/icon.png) [DODGE](#dodge)
 * ![FISHING](FISHING/icon.png) [FISHING](#fishing)
+* ![GUESSNUM](GUESSNUM/icon.png) [GUESSNUM](#guessnum)
 * ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
@@ -76,6 +77,16 @@ Stored payload: **213 bytes**.
 
 ![FISHING preview](FISHING/preview.png)
 
+## GUESSNUM
+
+GUESS 00-99. COMPUTER SAYS HIGH, LOW, OR WIN.
+
+Stored payload: **194 bytes**.
+
+[Assembly source](GUESSNUM/main.asm)
+
+![GUESSNUM preview](GUESSNUM/preview.png)
+
 ## HANGMAN
 
 GUESS A SIX-LETTER WORD.         SIX MISSES AND YOU LOSE.
@@ -107,7 +118,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**9 programs · 1,900 bytes total · 404 bytes to spare in this category**
+**10 programs · 2,094 bytes total · 466 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
