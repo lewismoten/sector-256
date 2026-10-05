@@ -150,6 +150,8 @@ Stored payload: **108 bytes**.
 
 [Assembly source](PYTHTRIP/main.asm)
 
+![PYTHTRIP preview](PYTHTRIP/preview.png)
+
 ## SQUARES
 
 ODD-NUMBER SUMS THAT BUILD PERFECT SQUARES.

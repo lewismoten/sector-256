@@ -499,6 +499,8 @@ Stored payload: **182 bytes**.
 
 [Assembly source](ROUNDING/main.asm)
 
+![ROUNDING preview](ROUNDING/preview.png)
+
 ## SCHOOL
 
 PICK THE FIRST LETTER OF THREE SCHOOL WORDS.
