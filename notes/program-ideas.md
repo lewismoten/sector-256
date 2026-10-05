@@ -273,6 +273,8 @@ Completed: COLORRAM — added a compact color-RAM randomizer to LAB.
 
 Completed: ZAP — added a compact random-target zap game to GAMES.
 
+Completed: PHONERNG — added a compact two-tone SID telephone ring to SOUND.
+
 ## GAMES
 
 118 ideas.

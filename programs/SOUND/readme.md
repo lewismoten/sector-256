@@ -13,6 +13,7 @@ TINY SID SOUNDS AND MUSICAL EXPERIMENTS.
 | ![KLAXON](KLAXON/icon.png) | [KLAXON](#klaxon) | Alternates high and low sawtooth SID klaxon tones. |
 | ![METRONOM](METRONOM/icon.png) | [METRONOM](#metronom) | PLAY A SHORT SID TICK ON EACH SPACE PRESS. |
 | ![MUSICBOX](MUSICBOX/icon.png) | [MUSICBOX](#musicbox) | THE OPENING TWINKLE PHRASE ON SID. PRESS A KEY TO REPEAT. |
+| ![PHONERNG](PHONERNG/icon.png) | [PHONERNG](#phonerng) | Alternates two SID tones in a telephone-ring cadence. |
 | ![PIANO](PIANO/icon.png) | [PIANO](#piano) | A S D F PLAY FOUR SID PIANO NOTES. |
 | ![SCALE](SCALE/icon.png) | [SCALE](#scale) | AN ASCENDING C-MAJOR SID SCALE. PRESS A KEY TO REPEAT. |
 | ![SIREN](SIREN/icon.png) | [SIREN](#siren) | A FOUR-TONE SID SIREN WAIL. PRESS A KEY TO REPEAT. |
@@ -90,6 +91,16 @@ Stored payload: **121 bytes**.
 
 ![MUSICBOX preview](MUSICBOX/preview.png)
 
+## PHONERNG
+
+Alternates two SID tones in a telephone-ring cadence.
+
+Stored payload: **111 bytes**.
+
+[Assembly source](PHONERNG/main.asm)
+
+![PHONERNG preview](PHONERNG/preview.png)
+
 ## PIANO
 
 A S D F PLAY FOUR SID PIANO NOTES.
@@ -131,7 +142,7 @@ Stored payload: **101 bytes**.
 ![SWEEP preview](SWEEP/preview.png)
 
 ---
-**11 programs · 1,332 bytes total · 1484 bytes to spare in this category**
+**12 programs · 1,443 bytes total · 1629 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
