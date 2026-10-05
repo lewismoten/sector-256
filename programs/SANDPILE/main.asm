@@ -5,6 +5,7 @@
 rows = $02
 stack_size = $03
 drops = $04
+palette = $05
 cell = $20
 neighbor = $22
 center = $d9f4                ; screen row 12, column 20
@@ -13,9 +14,13 @@ stack_hi = $c900
 
 reset:
     jsr CLEAR                 ; spaces form the one-cell absorbing border
+    jsr RANDOM
+    and #15                   ; select and permute one of four color quartets
+    sta palette
     lda #0
     sta $d020
     sta $d021
+    lda palette
     ldx #0
 clear_colors:
 .for i in range(4)
@@ -58,12 +63,17 @@ frame:
     sta drops
 drop:
     lda center
-    and #15
+    eor palette
+    and #3
     clc
     adc #1
-    sta center
     cmp #4
-    bne drop_done
+    bcc store_center
+    lda #0                     ; topple immediately, keeping states below four
+store_center:
+    eor palette
+    sta center
+    bcc drop_done
     lda #<center
     sta neighbor
     lda #>center
@@ -78,20 +88,6 @@ relax:
     sta cell
     lda stack_hi,y
     sta cell+1
-    ldy #0
-    lda (cell),y
-    and #15
-    sec
-    sbc #4
-    sta (cell),y
-    cmp #4
-    bcc neighbors
-    lda cell
-    sta neighbor
-    lda cell+1
-    sta neighbor+1
-    jsr push                    ; a heavily loaded cell may topple again
-neighbors:
     ldx #3
 neighbor_loop:
     ldy #0                     ; push uses Y as its stack index
@@ -113,12 +109,17 @@ neighbor_loop:
     cmp #$a0
     bne next_neighbor
     lda (neighbor),y
-    and #15
+    eor palette
+    and #3
     clc
     adc #1
-    sta (neighbor),y
     cmp #4
-    bne next_neighbor
+    bcc store_neighbor
+    lda #0
+store_neighbor:
+    eor palette
+    sta (neighbor),y
+    bcc next_neighbor
     jsr push
 next_neighbor:
     dex

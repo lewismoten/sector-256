@@ -333,7 +333,9 @@ class ProjectTests(unittest.TestCase):
             machine.step()
             machine.run_until(lambda: machine.cpu.pc == 0x100c)
 
-        actual = [[machine.memory[0xd800 + row*40 + column] & 15
+        palette = machine.memory[5]
+        self.assertIn(palette, range(16))
+        actual = [[(machine.memory[0xd800 + row*40 + column] ^ palette) & 3
                    for column in range(40)] for row in range(25)]
         self.assertEqual(actual, expected)
         self.assertLess(max(map(max, actual)), 4)
@@ -342,8 +344,10 @@ class ProjectTests(unittest.TestCase):
         machine.keys.append(32)
         machine.step()
         machine.run_until(lambda: machine.cpu.pc == 0x100c)
-        self.assertEqual(bytes(value & 15 for value in machine.memory[0xd800:0xdbe8]),
-                         bytes(1000))
+        new_palette = machine.memory[5]
+        self.assertNotEqual(new_palette, palette)
+        self.assertEqual([value & 15 for value in machine.memory[0xd800:0xdbe8]],
+                         [new_palette] * 1000)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 3)
         self.assertEqual(machine.var('selected'), 4)

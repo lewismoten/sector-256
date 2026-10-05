@@ -111,9 +111,9 @@ Category: LAB. Stored payload: **220 bytes**.
 
 ## SANDPILE
 
-SANDPILE FRACTAL. SPACE:RESET. RUN/STOP:RETURN.
+SANDPILE FRACTAL. SPACE:RESET WITH NEW COLORS. RUN/STOP:RETURN.
 
-Category: LAB. Stored payload: **248 bytes**.
+Category: LAB. Stored payload: **244 bytes**.
 
 [Assembly source](SANDPILE/main.asm)
 
@@ -150,7 +150,7 @@ Category: GAMES. Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**13 programs · 3,064 bytes total · 264 bytes to spare across the whole set**
+**13 programs · 3,060 bytes total · 268 bytes to spare across the whole set**
 
 Want to add one? See [Add a program](../docs/add_program.md) 
 and the [program interface](../docs/program-api.md). 
