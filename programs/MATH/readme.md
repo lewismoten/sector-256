@@ -8,6 +8,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![CANTOR](CANTOR/icon.png) [CANTOR](#cantor)
 * ![FIB](FIB/icon.png) [FIB](#fib)
 * ![GRAYCODE](GRAYCODE/icon.png) [GRAYCODE](#graycode)
+* ![LUCAS](LUCAS/icon.png) [LUCAS](#lucas)
 * ![MULTAB](MULTAB/icon.png) [MULTAB](#multab)
 * ![PASCAL](PASCAL/icon.png) [PASCAL](#pascal)
 * ![SQUARES](SQUARES/icon.png) [SQUARES](#squares)
@@ -55,6 +56,16 @@ Stored payload: **70 bytes**.
 
 ![GRAYCODE preview](GRAYCODE/preview.png)
 
+## LUCAS
+
+LUCAS NUMBERS THROUGH THE 16-BIT LIMIT.
+
+Stored payload: **157 bytes**.
+
+[Assembly source](LUCAS/main.asm)
+
+![LUCAS preview](LUCAS/preview.png)
+
 ## MULTAB
 
 A COMPACT ONE-THROUGH-FIVE MULTIPLICATION TABLE.
@@ -96,7 +107,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**8 programs · 1,088 bytes total · 960 bytes to spare in this category**
+**9 programs · 1,245 bytes total · 1059 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

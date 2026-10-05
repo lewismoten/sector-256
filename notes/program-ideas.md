@@ -105,6 +105,8 @@ Completed: JOYTEST — added a dual-port joystick bit display to UTILS.
 
 Completed: TRIANGNU — added the first ten triangular numbers to MATH.
 
+Completed: LUCAS — added Lucas numbers through the 16-bit limit to MATH.
+
 ## GAMES
 
 118 ideas.
