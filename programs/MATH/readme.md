@@ -11,6 +11,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![LUCAS](LUCAS/icon.png) [LUCAS](#lucas)
 * ![MULTAB](MULTAB/icon.png) [MULTAB](#multab)
 * ![PASCAL](PASCAL/icon.png) [PASCAL](#pascal)
+* ![POWERS2](POWERS2/icon.png) [POWERS2](#powers2)
 * ![SQUARES](SQUARES/icon.png) [SQUARES](#squares)
 * ![TRIANGNU](TRIANGNU/icon.png) [TRIANGNU](#triangnu)
 
@@ -86,6 +87,16 @@ Stored payload: **136 bytes**.
 
 ![PASCAL preview](PASCAL/preview.png)
 
+## POWERS2
+
+POWERS OF TWO THROUGH THE 16-BIT LIMIT.
+
+Stored payload: **224 bytes**.
+
+[Assembly source](POWERS2/main.asm)
+
+![POWERS2 preview](POWERS2/preview.png)
+
 ## SQUARES
 
 ODD-NUMBER SUMS THAT BUILD PERFECT SQUARES.
@@ -107,7 +118,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**9 programs · 1,245 bytes total · 1059 bytes to spare in this category**
+**10 programs · 1,469 bytes total · 1091 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
