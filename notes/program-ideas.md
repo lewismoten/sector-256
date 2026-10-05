@@ -255,6 +255,8 @@ Completed: CATEYES — added a compact key-stepped cat-eyes toy to TOYS.
 
 Completed: SWEEP — added a compact SID frequency sweep to SOUND.
 
+Completed: MAPGRID — added a compact coordinate-grid reference to EDU.
+
 ## GAMES
 
 118 ideas.

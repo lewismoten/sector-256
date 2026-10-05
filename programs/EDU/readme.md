@@ -31,6 +31,7 @@ SHORT LESSONS AND PRACTICE.
 | ![KEYFIND](KEYFIND/icon.png) | [KEYFIND](#keyfind) | FIND AND PRESS EACH HIGHLIGHTED KEY. |
 | ![LANDMARK](LANDMARK/icon.png) | [LANDMARK](#landmark) | PICK THE FIRST LETTER OF THREE LANDMARK WORDS. |
 | ![LOGIC](LOGIC/icon.png) | [LOGIC](#logic) | TOGGLE TWO INPUTS AND VIEW THEIR AND-GATE OUTPUT. |
+| ![MAPGRID](MAPGRID/icon.png) | [MAPGRID](#mapgrid) | Cycles through coordinate prompts on a lettered grid. |
 | ![MAPS](MAPS/icon.png) | [MAPS](#maps) | PRACTICE THE FIRST LETTERS OF COMPASS DIRECTIONS. |
 | ![MEASURE](MEASURE/icon.png) | [MEASURE](#measure) | ESTIMATE BAR LENGTHS IN CHARACTER CELLS. |
 | ![MEMORY](MEMORY/icon.png) | [MEMORY](#memory) | REPEAT THE THREE-NUMBER SEQUENCE FROM MEMORY. |
@@ -316,6 +317,16 @@ Stored payload: **139 bytes**.
 [Assembly source](LOGIC/main.asm)
 
 ![LOGIC preview](LOGIC/preview.png)
+
+## MAPGRID
+
+Cycles through coordinate prompts on a lettered grid.
+
+Stored payload: **192 bytes**.
+
+[Assembly source](MAPGRID/main.asm)
+
+![MAPGRID preview](MAPGRID/preview.png)
 
 ## MAPS
 
@@ -648,7 +659,7 @@ Stored payload: **172 bytes**.
 ![WEATHER preview](WEATHER/preview.png)
 
 ---
-**58 programs · 10,008 bytes total · 4840 bytes to spare in this category**
+**59 programs · 10,200 bytes total · 4904 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
