@@ -16,6 +16,7 @@ TINY SID SOUNDS AND MUSICAL EXPERIMENTS.
 | ![PIANO](PIANO/icon.png) | [PIANO](#piano) | A S D F PLAY FOUR SID PIANO NOTES. |
 | ![SCALE](SCALE/icon.png) | [SCALE](#scale) | AN ASCENDING C-MAJOR SID SCALE. PRESS A KEY TO REPEAT. |
 | ![SIREN](SIREN/icon.png) | [SIREN](#siren) | A FOUR-TONE SID SIREN WAIL. PRESS A KEY TO REPEAT. |
+| ![SWEEP](SWEEP/icon.png) | [SWEEP](#sweep) | Steps a SID sawtooth tone through rising frequencies. |
 
 ---
 
@@ -119,8 +120,18 @@ Stored payload: **113 bytes**.
 
 ![SIREN preview](SIREN/preview.png)
 
+## SWEEP
+
+Steps a SID sawtooth tone through rising frequencies.
+
+Stored payload: **101 bytes**.
+
+[Assembly source](SWEEP/main.asm)
+
+![SWEEP preview](SWEEP/preview.png)
+
 ---
-**10 programs · 1,231 bytes total · 1329 bytes to spare in this category**
+**11 programs · 1,332 bytes total · 1484 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

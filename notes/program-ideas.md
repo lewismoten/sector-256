@@ -253,6 +253,8 @@ Completed: DIVISORS — added a compact divisor reference to MATH.
 
 Completed: CATEYES — added a compact key-stepped cat-eyes toy to TOYS.
 
+Completed: SWEEP — added a compact SID frequency sweep to SOUND.
+
 ## GAMES
 
 118 ideas.
