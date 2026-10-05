@@ -243,6 +243,8 @@ Completed: LFSR — added an eight-bit feedback-register visualizer to LAB.
 
 Completed: ODDONE — added a compact odd-character spotting game to GAMES.
 
+Completed: SPINTOP — added a compact key-stepped spinning-top toy to TOYS.
+
 ## GAMES
 
 118 ideas.

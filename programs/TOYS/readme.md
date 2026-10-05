@@ -13,6 +13,7 @@ SMALL THINGS TO PLAY WITH.
 | ![FORTUNE](FORTUNE/icon.png) | [FORTUNE](#fortune) | A RANDOM FORTUNE COOKIE MESSAGE ON EACH KEYPRESS. |
 | ![ORACLE](ORACLE/icon.png) | [ORACLE](#oracle) | GET A RANDOM YES-OR-NO STYLE ANSWER. |
 | ![SPINNER](SPINNER/icon.png) | [SPINNER](#spinner) | SPIN A RANDOM DIRECTION FOR BOARD GAMES. |
+| ![SPINTOP](SPINTOP/icon.png) | [SPINTOP](#spintop) | Steps through four character frames of a spinning top. |
 | ![WINDMILL](WINDMILL/icon.png) | [WINDMILL](#windmill) | SPIN A FOUR-FRAME CHARACTER-ART WINDMILL. |
 
 ---
@@ -87,6 +88,16 @@ Stored payload: **136 bytes**.
 
 ![SPINNER preview](SPINNER/preview.png)
 
+## SPINTOP
+
+Steps through four character frames of a spinning top.
+
+Stored payload: **173 bytes**.
+
+[Assembly source](SPINTOP/main.asm)
+
+![SPINTOP preview](SPINTOP/preview.png)
+
 ## WINDMILL
 
 SPIN A FOUR-FRAME CHARACTER-ART WINDMILL.
@@ -98,7 +109,7 @@ Stored payload: **191 bytes**.
 ![WINDMILL preview](WINDMILL/preview.png)
 
 ---
-**8 programs · 1,161 bytes total · 887 bytes to spare in this category**
+**9 programs · 1,334 bytes total · 970 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
