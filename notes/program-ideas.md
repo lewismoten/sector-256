@@ -181,6 +181,8 @@ Completed: NUMLINE — added a number-line reading drill to EDU.
 
 Completed: PETSCII — added a common PETSCII-code reference to UTILS.
 
+Completed: CANDLE — added a randomized flickering candle demo to DEMOS.
+
 ## GAMES
 
 118 ideas.

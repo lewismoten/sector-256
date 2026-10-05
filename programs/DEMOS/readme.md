@@ -4,6 +4,7 @@ PIXELS, SOUND AND TINY SHOWS.
 
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
+* ![CANDLE](CANDLE/icon.png) [CANDLE](#candle)
 * ![CUBE3D](CUBE3D/icon-preview.gif) [CUBE3D](#cube3d)
 * ![DANCE](DANCE/icon-preview.gif) [DANCE](#dance)
 * ![EQUALIZR](EQUALIZR/icon.png) [EQUALIZR](#equalizr)
@@ -14,6 +15,16 @@ PIXELS, SOUND AND TINY SHOWS.
 * ![XORPAT](XORPAT/icon.png) [XORPAT](#xorpat)
 
 ---
+
+## CANDLE
+
+SHOW A CHARACTER-ART CANDLE WITH RANDOM FLAME FRAMES.
+
+Stored payload: **253 bytes**.
+
+[Assembly source](CANDLE/main.asm)
+
+![CANDLE preview](CANDLE/preview.png)
 
 ## CUBE3D
 
@@ -96,7 +107,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**8 programs · 1,046 bytes total · 1002 bytes to spare in this category**
+**9 programs · 1,299 bytes total · 1005 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
