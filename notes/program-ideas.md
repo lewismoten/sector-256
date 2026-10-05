@@ -53,6 +53,8 @@ Completed: SIREN — added a four-tone SID siren wail to SOUND.
 
 Completed: DOODLE — added a WASD sketchpad to the TOYS category.
 
+Completed: FACES — added random character-art faces to TOYS.
+
 ## GAMES
 
 118 ideas.

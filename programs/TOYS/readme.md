@@ -5,6 +5,7 @@ SMALL THINGS TO PLAY WITH.
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
 * ![DOODLE](DOODLE/icon.png) [DOODLE](#doodle)
+* ![FACES](FACES/icon.png) [FACES](#faces)
 
 ---
 
@@ -18,8 +19,18 @@ Stored payload: **144 bytes**.
 
 ![DOODLE preview](DOODLE/preview.png)
 
+## FACES
+
+A RANDOM CHARACTER-ART FACE ON EACH KEYPRESS.
+
+Stored payload: **229 bytes**.
+
+[Assembly source](FACES/main.asm)
+
+![FACES preview](FACES/preview.png)
+
 ---
-**1 programs · 144 bytes total · 112 bytes to spare in this category**
+**2 programs · 373 bytes total · 139 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
