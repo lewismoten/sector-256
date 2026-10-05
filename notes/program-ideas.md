@@ -301,6 +301,8 @@ Completed: TONEGEN — added a compact SID pitch-preset tone generator to SOUND.
 
 Completed: MATHQUIZ — added a compact mixed arithmetic-facts quiz to EDU.
 
+Completed: BELLS — added a compact two-pitch SID bell program to SOUND.
+
 ## GAMES
 
 118 ideas.

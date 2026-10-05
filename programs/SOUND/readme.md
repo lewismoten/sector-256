@@ -8,6 +8,7 @@ TINY SID SOUNDS AND MUSICAL EXPERIMENTS.
 | --- | --- | --- |
 | ![ARPEGGIO](ARPEGGIO/icon.png) | [ARPEGGIO](#arpeggio) | EIGHT FAST C-MAJOR SID ARPEGGIOS. PRESS A KEY TO REPEAT. |
 | ![BEEPER](BEEPER/icon.png) | [BEEPER](#beeper) | TYPE KEYS TO ECHO THEM WITH SHORT SID BEEPS. |
+| ![BELLS](BELLS/icon.png) | [BELLS](#bells) | Alternates two bright SID bell-like pitches. |
 | ![CHORDS](CHORDS/icon.png) | [CHORDS](#chords) | C F G PLAY THREE-VOICE SID MAJOR CHORDS. |
 | ![DOORBELL](DOORBELL/icon.png) | [DOORBELL](#doorbell) | A TWO-NOTE SID DOORBELL CHIME. PRESS A KEY TO REPEAT. |
 | ![KLAXON](KLAXON/icon.png) | [KLAXON](#klaxon) | Alternates high and low sawtooth SID klaxon tones. |
@@ -41,6 +42,16 @@ Stored payload: **95 bytes**.
 [Assembly source](BEEPER/main.asm)
 
 ![BEEPER preview](BEEPER/preview.png)
+
+## BELLS
+
+Alternates two bright SID bell-like pitches.
+
+Stored payload: **106 bytes**.
+
+[Assembly source](BELLS/main.asm)
+
+![BELLS preview](BELLS/preview.png)
 
 ## CHORDS
 
@@ -153,7 +164,7 @@ Stored payload: **118 bytes**.
 ![TONEGEN preview](TONEGEN/preview.png)
 
 ---
-**13 programs · 1,561 bytes total · 1767 bytes to spare in this category**
+**14 programs · 1,667 bytes total · 1917 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
