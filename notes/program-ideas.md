@@ -219,6 +219,8 @@ Completed: SIERPCAR — added a character-mode Sierpinski carpet to MATH.
 
 Completed: MAGICSQ — added a 3x3 magic-square reference to MATH.
 
+Completed: SQRT — added a perfect-square and square-root reference to MATH.
+
 ## GAMES
 
 118 ideas.

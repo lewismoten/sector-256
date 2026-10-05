@@ -39,6 +39,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![ROMAN](ROMAN/icon.png) [ROMAN](#roman)
 * ![SIERPCAR](SIERPCAR/icon.png) [SIERPCAR](#sierpcar)
 * ![SINTABLE](SINTABLE/icon.png) [SINTABLE](#sintable)
+* ![SQRT](SQRT/icon.png) [SQRT](#sqrt)
 * ![SQUARES](SQUARES/icon.png) [SQUARES](#squares)
 * ![TOTIENT](TOTIENT/icon.png) [TOTIENT](#totient)
 * ![TRIANGNU](TRIANGNU/icon.png) [TRIANGNU](#triangnu)
@@ -395,6 +396,16 @@ Stored payload: **102 bytes**.
 
 ![SINTABLE preview](SINTABLE/preview.png)
 
+## SQRT
+
+DISPLAY SMALL PERFECT SQUARES AND THEIR ROOTS.
+
+Stored payload: **101 bytes**.
+
+[Assembly source](SQRT/main.asm)
+
+![SQRT preview](SQRT/preview.png)
+
 ## SQUARES
 
 ODD-NUMBER SUMS THAT BUILD PERFECT SQUARES.
@@ -426,7 +437,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**38 programs · 4,365 bytes total · 5363 bytes to spare in this category**
+**39 programs · 4,466 bytes total · 5518 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
