@@ -407,7 +407,7 @@ class ProjectTests(unittest.TestCase):
         for _ in range(3):
             machine.key(0x1d)
         machine.key(13)
-        self.assertEqual(machine.var('page_count'), 3)
+        self.assertEqual(machine.var('page_count'), 4)
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'ANT     ')
         machine.launch(0, wait_address=0x100c)
 
@@ -463,6 +463,54 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('selected'), 0)
         self.assertEqual(machine.cpu.sp, 0xff)
 
+    def test_chaos_game_points_reset_and_return(self):
+        machine = Machine()
+        machine.boot()
+        for _ in range(3):
+            machine.key(0x1d)
+        machine.key(13)
+        machine.launch(1, wait_address=0x100c)
+        machine.memory[machine.labels['random_state']] = 1
+        machine.memory[0x00a2] = 0
+
+        state = 1
+        x, y = 128, 100
+        expected = set()
+        vertices = ((128, 8), (16, 190), (240, 190))
+        for _ in range(64):
+            carry = state >> 7
+            state = (state << 1) & 255
+            if carry:
+                state ^= 0x1d
+            if state == 0:
+                state = 0xa7
+            vx, vy = vertices[state % 3]
+            x, y = (x + vx) // 2, (y + vy) // 2
+            expected.add((x, y))
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x100c)
+
+        actual = set()
+        for pixel_y in range(200):
+            for pixel_x in range(256):
+                address = (0x6000 + (pixel_y // 8) * 320
+                           + ((pixel_x + 32) // 8) * 8 + pixel_y % 8)
+                if machine.memory[address] & (128 >> (pixel_x & 7)):
+                    actual.add((pixel_x, pixel_y))
+        self.assertEqual(actual, expected)
+        self.assertEqual(tuple(machine.memory[2:4]), (x, y))
+        self.assertEqual(machine.memory[machine.labels['random_state']], state)
+
+        machine.keys.append(32)
+        machine.step()
+        machine.run_until(lambda: machine.cpu.pc == 0x100c)
+        self.assertEqual(bytes(machine.memory[0x6000:0x8000]), bytes(8192))
+        self.assertEqual(tuple(machine.memory[2:4]), (128, 100))
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 3)
+        self.assertEqual(machine.var('selected'), 1)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
     def test_life_blinker_randomize_and_return(self):
         machine = Machine()
         machine.boot()
@@ -470,9 +518,10 @@ class ProjectTests(unittest.TestCase):
             machine.key(0x1d)
         machine.key(13)
         machine.key(0x1d)
-        self.assertEqual(machine.var('selected'), 1)
-        self.assertEqual(bytes(machine.memory[0x4860:0x4868]), b'LIFE    ')
-        machine.launch(1, wait_address=0x100c)
+        machine.key(0x1d)
+        self.assertEqual(machine.var('selected'), 2)
+        self.assertEqual(bytes(machine.memory[0x48c0:0x48c8]), b'LIFE    ')
+        machine.launch(2, wait_address=0x100c)
 
         machine.memory[0x0400:0x0800] = [32] * 1024
         for column in (19, 20, 21):
@@ -491,7 +540,7 @@ class ProjectTests(unittest.TestCase):
         self.assertNotEqual(bytes(machine.memory[0x0400:0x07e8]), before)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 3)
-        self.assertEqual(machine.var('selected'), 1)
+        self.assertEqual(machine.var('selected'), 2)
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_rule30_generations_completion_reset_and_return(self):
@@ -500,7 +549,7 @@ class ProjectTests(unittest.TestCase):
         for _ in range(3):
             machine.key(0x1d)
         machine.key(13)
-        machine.launch(2, wait_address=0x100c)
+        machine.launch(3, wait_address=0x100c)
 
         row = [0] * 256
         row[128] = 1
@@ -529,7 +578,7 @@ class ProjectTests(unittest.TestCase):
                              for value in machine.memory[0x6000:0x8000]), 1)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 3)
-        self.assertEqual(machine.var('selected'), 2)
+        self.assertEqual(machine.var('selected'), 3)
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_hangman_win_loss_and_repeated_guess(self):

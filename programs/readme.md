@@ -6,6 +6,7 @@ Commodore 64 launcher, and each one's stored payload fits in
 in any program to return to the launcher.
 
 * ![ANT](ANT/icon.png) [ANT](#ant)
+* ![CHAOS](CHAOS/icon.png) [CHAOS](#chaos)
 * ![CUBE3D](CUBE3D/icon-preview.gif) [CUBE3D](#cube3d)
 * ![DANCE](DANCE/icon-preview.gif) [DANCE](#dance)
 * ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
@@ -26,6 +27,16 @@ Category: LAB. Stored payload: **223 bytes**.
 [Assembly source](ANT/main.asm)
 
 ![ANT preview](ANT/preview.png)
+
+## CHAOS
+
+CHAOS GAME BUILDS A FRACTAL. SPACE:RESET. RUN/STOP:RETURN.
+
+Category: LAB. Stored payload: **187 bytes**.
+
+[Assembly source](CHAOS/main.asm)
+
+![CHAOS preview](CHAOS/preview.png)
 
 ## CUBE3D
 
@@ -128,7 +139,7 @@ Category: GAMES. Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**11 programs · 2,629 bytes total · 187 bytes to spare across the whole set**
+**12 programs · 2,816 bytes total · 256 bytes to spare across the whole set**
 
 Want to add one? See [Add a program](../docs/add_program.md) 
 and the [program interface](../docs/program-api.md). 
