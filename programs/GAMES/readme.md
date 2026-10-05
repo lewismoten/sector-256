@@ -63,6 +63,7 @@ SMALL GAMES. BIG FUN.
 * ![MAZERUN](MAZERUN/icon.png) [MAZERUN](#mazerun)
 * ![MINES](MINES/icon.png) [MINES](#mines)
 * ![MONTY](MONTY/icon.png) [MONTY](#monty)
+* ![NIM](NIM/icon.png) [NIM](#nim)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 
 ---
@@ -645,6 +646,16 @@ Stored payload: **256 bytes**.
 
 ![MONTY preview](MONTY/preview.png)
 
+## NIM
+
+TWO PLAYERS TAKE 1-3 COUNTERS. TAKE THE LAST TO WIN.
+
+Stored payload: **157 bytes**.
+
+[Assembly source](NIM/main.asm)
+
+![NIM preview](NIM/preview.png)
+
 ## TICTACTO
 
 TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE.
@@ -656,7 +667,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**60 programs · 11,304 bytes total · 4056 bytes to spare in this category**
+**61 programs · 11,461 bytes total · 4155 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
