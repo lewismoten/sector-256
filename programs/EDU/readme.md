@@ -192,6 +192,8 @@ Stored payload: **172 bytes**.
 
 [Assembly source](WEATHER/main.asm)
 
+![WEATHER preview](WEATHER/preview.png)
+
 ---
 **17 programs · 2,660 bytes total · 1692 bytes to spare in this category**
 
