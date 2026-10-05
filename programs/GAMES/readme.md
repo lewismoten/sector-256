@@ -14,6 +14,7 @@ SMALL GAMES. BIG FUN.
 * ![DEFUSE](DEFUSE/icon.png) [DEFUSE](#defuse)
 * ![DICE](DICE/icon.png) [DICE](#dice)
 * ![DODGE](DODGE/icon.png) [DODGE](#dodge)
+* ![DROP4](DROP4/icon.png) [DROP4](#drop4)
 * ![DUEL](DUEL/icon.png) [DUEL](#duel)
 * ![ECHOSEQ](ECHOSEQ/icon.png) [ECHOSEQ](#echoseq)
 * ![FISHING](FISHING/icon.png) [FISHING](#fishing)
@@ -130,6 +131,14 @@ Stored payload: **208 bytes**.
 [Assembly source](DODGE/main.asm)
 
 ![DODGE preview](DODGE/preview.png)
+
+## DROP4
+
+TWO-PLAYER DROP4. PICK A COLUMN; COMPLETE A FOUR-HIGH STACK.
+
+Stored payload: **137 bytes**.
+
+[Assembly source](DROP4/main.asm)
 
 ## DUEL
 
@@ -272,7 +281,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**24 programs · 4,804 bytes total · 1340 bytes to spare in this category**
+**25 programs · 4,941 bytes total · 1459 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
