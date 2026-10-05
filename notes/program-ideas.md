@@ -215,6 +215,8 @@ Completed: HILBERT — added a character-mode Hilbert curve to MATH.
 
 Completed: KOCH — added a character-mode Koch-curve motif to MATH.
 
+Completed: SIERPCAR — added a character-mode Sierpinski carpet to MATH.
+
 ## GAMES
 
 118 ideas.

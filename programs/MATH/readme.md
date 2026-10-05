@@ -36,6 +36,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![PRIMES](PRIMES/icon.png) [PRIMES](#primes)
 * ![PYTHTRIP](PYTHTRIP/icon.png) [PYTHTRIP](#pythtrip)
 * ![ROMAN](ROMAN/icon.png) [ROMAN](#roman)
+* ![SIERPCAR](SIERPCAR/icon.png) [SIERPCAR](#sierpcar)
 * ![SINTABLE](SINTABLE/icon.png) [SINTABLE](#sintable)
 * ![SQUARES](SQUARES/icon.png) [SQUARES](#squares)
 * ![TOTIENT](TOTIENT/icon.png) [TOTIENT](#totient)
@@ -363,6 +364,16 @@ Stored payload: **107 bytes**.
 
 ![ROMAN preview](ROMAN/preview.png)
 
+## SIERPCAR
+
+DISPLAY A CHARACTER-MODE SIERPINSKI CARPET.
+
+Stored payload: **128 bytes**.
+
+[Assembly source](SIERPCAR/main.asm)
+
+![SIERPCAR preview](SIERPCAR/preview.png)
+
 ## SINTABLE
 
 DISPLAY COMMON-ANGLE SINE VALUES.
@@ -404,7 +415,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**36 programs · 4,149 bytes total · 5067 bytes to spare in this category**
+**37 programs · 4,277 bytes total · 5195 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
