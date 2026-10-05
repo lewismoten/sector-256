@@ -45,6 +45,8 @@ Completed: GRAYCODE — added an interactive eight-bit Gray-code counter to MATH
 
 Completed: SCALE — added an ascending SID scale to the SOUND category.
 
+Completed: ARPEGGIO — added a fast SID C-major arpeggio to SOUND.
+
 ## GAMES
 
 118 ideas.
