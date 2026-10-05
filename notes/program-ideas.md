@@ -261,6 +261,8 @@ Completed: RANDPICK — added a compact random one-through-six picker to UTILS.
 
 Completed: BUBBLES — added a compact randomized character-bubble toy to TOYS.
 
+Completed: CREDITS — added a compact paged credits-roll demo to DEMOS.
+
 ## GAMES
 
 118 ideas.

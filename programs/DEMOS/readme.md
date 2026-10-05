@@ -9,6 +9,7 @@ PIXELS, SOUND AND TINY SHOWS.
 | ![ATOM](ATOM/icon.png) | [ATOM](#atom) | Cycles a single electron around a tiny character-mode atom. |
 | ![CANDLE](CANDLE/icon.png) | [CANDLE](#candle) | SHOW A CHARACTER-ART CANDLE WITH RANDOM FLAME FRAMES. |
 | ![CITYLGT](CITYLGT/icon.png) | [CITYLGT](#citylgt) | Randomizes a row of glowing windows beneath a tiny city skyline. |
+| ![CREDITS](CREDITS/icon.png) | [CREDITS](#credits) | Alternates two compact character-mode credit pages. |
 | ![CUBE3D](CUBE3D/icon-preview.gif) | [CUBE3D](#cube3d) | A ROTATING 3D WIREFRAME CUBE.   RUN/STOP TO RETURN TO LAUNCHER. |
 | ![DANCE](DANCE/icon-preview.gif) | [DANCE](#dance) | DISCO LADY: FOUR VECTOR DANCE POSES. RUN/STOP TO RETURN. |
 | ![EQUALIZR](EQUALIZR/icon.png) | [EQUALIZR](#equalizr) | RANDOM CHARACTER-MODE EQUALIZER BARS. |
@@ -51,6 +52,16 @@ Stored payload: **106 bytes**.
 [Assembly source](CITYLGT/main.asm)
 
 ![CITYLGT preview](CITYLGT/preview.png)
+
+## CREDITS
+
+Alternates two compact character-mode credit pages.
+
+Stored payload: **188 bytes**.
+
+[Assembly source](CREDITS/main.asm)
+
+![CREDITS preview](CREDITS/preview.png)
 
 ## CUBE3D
 
@@ -153,7 +164,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**13 programs · 1,699 bytes total · 1629 bytes to spare in this category**
+**14 programs · 1,887 bytes total · 1697 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
