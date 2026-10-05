@@ -163,6 +163,8 @@ Completed: HAPPY — added a happy-number reference to MATH.
 
 Completed: BEATS — added a two-voice SID interference experiment to LAB.
 
+Completed: WINDMILL — added a four-frame spinning windmill toy to TOYS.
+
 ## GAMES
 
 118 ideas.

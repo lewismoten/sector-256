@@ -9,6 +9,7 @@ SMALL THINGS TO PLAY WITH.
 * ![FORTUNE](FORTUNE/icon.png) [FORTUNE](#fortune)
 * ![ORACLE](ORACLE/icon.png) [ORACLE](#oracle)
 * ![SPINNER](SPINNER/icon.png) [SPINNER](#spinner)
+* ![WINDMILL](WINDMILL/icon.png) [WINDMILL](#windmill)
 
 ---
 
@@ -62,8 +63,18 @@ Stored payload: **136 bytes**.
 
 ![SPINNER preview](SPINNER/preview.png)
 
+## WINDMILL
+
+SPIN A FOUR-FRAME CHARACTER-ART WINDMILL.
+
+Stored payload: **191 bytes**.
+
+[Assembly source](WINDMILL/main.asm)
+
+![WINDMILL preview](WINDMILL/preview.png)
+
 ---
-**5 programs · 791 bytes total · 489 bytes to spare in this category**
+**6 programs · 982 bytes total · 554 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
