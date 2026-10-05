@@ -267,6 +267,8 @@ Completed: HEARTBT — added a compact character heart-beat demo to DEMOS.
 
 Completed: NEON — added a compact flickering character-neon demo to DEMOS.
 
+Completed: OCEAN — added a compact character-wave demo to DEMOS.
+
 ## GAMES
 
 118 ideas.

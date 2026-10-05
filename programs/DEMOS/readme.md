@@ -18,6 +18,7 @@ PIXELS, SOUND AND TINY SHOWS.
 | ![MAZE10](MAZE10/icon.png) | [MAZE10](#maze10) | A CLASSIC RANDOM DIAGONAL CHARACTER MAZE. |
 | ![MUNCHING](MUNCHING/icon.png) | [MUNCHING](#munching) | CLASSIC MUNCHING XOR SQUARES WITH A CHANGING PHASE. |
 | ![NEON](NEON/icon.png) | [NEON](#neon) | Alternates bright and dim character-neon sign frames. |
+| ![OCEAN](OCEAN/icon.png) | [OCEAN](#ocean) | Alternates two compact character-mode ocean wave scenes. |
 | ![RAIN](RAIN/icon.png) | [RAIN](#rain) | REPAINT A SPARSE GREEN CHARACTER-RAIN FIELD. |
 | ![SCANNER](SCANNER/icon.png) | [SCANNER](#scanner) | Steps a bright scanner marker across a character line. |
 | ![SNOW](SNOW/icon-preview.gif) | [SNOW](#snow) | PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT. |
@@ -145,6 +146,16 @@ Stored payload: **197 bytes**.
 
 ![NEON preview](NEON/preview.png)
 
+## OCEAN
+
+Alternates two compact character-mode ocean wave scenes.
+
+Stored payload: **196 bytes**.
+
+[Assembly source](OCEAN/main.asm)
+
+![OCEAN preview](OCEAN/preview.png)
+
 ## RAIN
 
 REPAINT A SPARSE GREEN CHARACTER-RAIN FIELD.
@@ -186,7 +197,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**16 programs · 2,273 bytes total · 1823 bytes to spare in this category**
+**17 programs · 2,469 bytes total · 1883 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
