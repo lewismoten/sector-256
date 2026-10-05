@@ -8,10 +8,10 @@ Commodore 64 launcher, and each one's stored payload fits in
 * ![UTILS](UTILS/icon.png) [UTILS](UTILS/readme.md) — HANDY LITTLE TOOLS. (2 programs)
 * ![DEMOS](DEMOS/icon.png) [DEMOS](DEMOS/readme.md) — PIXELS, SOUND AND TINY SHOWS. (3 programs)
 * ![LAB](LAB/icon.png) [LAB](LAB/readme.md) — EXPERIMENTS AND PROOF OF CONCEPTS. (5 programs)
-* ![EDU](EDU/icon.png) [EDU](EDU/readme.md) — SHORT LESSONS AND PRACTICE. (36 programs)
+* ![EDU](EDU/icon.png) [EDU](EDU/readme.md) — SHORT LESSONS AND PRACTICE. (37 programs)
 
 ---
-**113 programs · 20,680 bytes total · 8248 bytes to spare across the whole set**
+**114 programs · 20,855 bytes total · 8329 bytes to spare across the whole set**
 
 Want to add one? See [Add a program](../docs/add_program.md)
 and the [program interface](../docs/program-api.md).
