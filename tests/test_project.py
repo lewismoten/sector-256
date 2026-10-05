@@ -72,6 +72,12 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(read_disk(data), {'A': bytes(range(256)), 'B': b'123'})
         self.assertEqual(sum(data[0x16500 + 4 + i * 4] for i in range(35)), 678)
 
+    def test_disk_allocates_boot_files_next_to_directory_track(self):
+        data = make_disk([('LOADER', b'boot', 'PRG'), ('CATS.DAT', b'cats', 'SEQ')])
+        directory = 0x16600
+        self.assertEqual(tuple(data[directory + 3:directory + 5]), (17, 0))
+        self.assertEqual(tuple(data[directory + 35:directory + 37]), (17, 1))
+
     def test_games_fit_and_catalog_matches_disk(self):
         manifest = json.loads((ROOT / 'build/manifest.json').read_text())
         disk = read_disk((ROOT / 'release/sector-256.d64').read_bytes())
