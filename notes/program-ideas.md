@@ -155,6 +155,8 @@ Completed: BLACKJCK — added a compact draw-or-stand card game to GAMES.
 
 Completed: CRTTEST — added a CRT convergence grid to UTILS.
 
+Completed: SPINNER — added a random board-game spinner to TOYS.
+
 ## GAMES
 
 118 ideas.

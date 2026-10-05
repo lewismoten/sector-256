@@ -7,6 +7,7 @@ SMALL THINGS TO PLAY WITH.
 * ![DOODLE](DOODLE/icon.png) [DOODLE](#doodle)
 * ![FACES](FACES/icon.png) [FACES](#faces)
 * ![FORTUNE](FORTUNE/icon.png) [FORTUNE](#fortune)
+* ![SPINNER](SPINNER/icon.png) [SPINNER](#spinner)
 
 ---
 
@@ -40,8 +41,18 @@ Stored payload: **157 bytes**.
 
 ![FORTUNE preview](FORTUNE/preview.png)
 
+## SPINNER
+
+SPIN A RANDOM DIRECTION FOR BOARD GAMES.
+
+Stored payload: **136 bytes**.
+
+[Assembly source](SPINNER/main.asm)
+
+![SPINNER preview](SPINNER/preview.png)
+
 ---
-**3 programs · 530 bytes total · 238 bytes to spare in this category**
+**4 programs · 666 bytes total · 358 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
