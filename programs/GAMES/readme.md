@@ -4,81 +4,83 @@ SMALL GAMES. BIG FUN.
 
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
-* ![ARCHERY](ARCHERY/icon.png) [ARCHERY](#archery)
-* ![ARTILLRY](ARTILLRY/icon.png) [ARTILLRY](#artillry)
-* ![BALLOON](BALLOON/icon.png) [BALLOON](#balloon)
-* ![BASKETBL](BASKETBL/icon.png) [BASKETBL](#basketbl)
-* ![BEAM](BEAM/icon.png) [BEAM](#beam)
-* ![BLACKJCK](BLACKJCK/icon.png) [BLACKJCK](#blackjck)
-* ![BOUNCE](BOUNCE/icon.png) [BOUNCE](#bounce)
-* ![BOWLING](BOWLING/icon.png) [BOWLING](#bowling)
-* ![BOXPUSH](BOXPUSH/icon.png) [BOXPUSH](#boxpush)
-* ![BRICKS](BRICKS/icon.png) [BRICKS](#bricks)
-* ![BUMPCAR](BUMPCAR/icon.png) [BUMPCAR](#bumpcar)
-* ![CATCHER](CATCHER/icon.png) [CATCHER](#catcher)
-* ![CAVE](CAVE/icon.png) [CAVE](#cave)
-* ![CHICKEN](CHICKEN/icon.png) [CHICKEN](#chicken)
-* ![CHOMP](CHOMP/icon.png) [CHOMP](#chomp)
-* ![COPTER](COPTER/icon.png) [COPTER](#copter)
-* ![COWBULL](COWBULL/icon.png) [COWBULL](#cowbull)
-* ![CRAPS](CRAPS/icon.png) [CRAPS](#craps)
-* ![DARTS](DARTS/icon.png) [DARTS](#darts)
-* ![DEFUSE](DEFUSE/icon.png) [DEFUSE](#defuse)
-* ![DICE](DICE/icon.png) [DICE](#dice)
-* ![DOCKING](DOCKING/icon.png) [DOCKING](#docking)
-* ![DODGE](DODGE/icon.png) [DODGE](#dodge)
-* ![DROP4](DROP4/icon.png) [DROP4](#drop4)
-* ![DUEL](DUEL/icon.png) [DUEL](#duel)
-* ![ECHOSEQ](ECHOSEQ/icon.png) [ECHOSEQ](#echoseq)
-* ![ELEVATOR](ELEVATOR/icon.png) [ELEVATOR](#elevator)
-* ![ESCAPE](ESCAPE/icon.png) [ESCAPE](#escape)
-* ![FALLDOWN](FALLDOWN/icon.png) [FALLDOWN](#falldown)
-* ![FIREMAN](FIREMAN/icon.png) [FIREMAN](#fireman)
-* ![FISHING](FISHING/icon.png) [FISHING](#fishing)
-* ![FIVEDICE](FIVEDICE/icon.png) [FIVEDICE](#fivedice)
-* ![FLIPPER](FLIPPER/icon.png) [FLIPPER](#flipper)
-* ![FLOOD](FLOOD/icon.png) [FLOOD](#flood)
-* ![FLUTTER](FLUTTER/icon.png) [FLUTTER](#flutter)
-* ![FOXGEESE](FOXGEESE/icon.png) [FOXGEESE](#foxgeese)
-* ![GOLF](GOLF/icon.png) [GOLF](#golf)
-* ![GUESSNUM](GUESSNUM/icon.png) [GUESSNUM](#guessnum)
-* ![HANGMAN](HANGMAN/icon-preview.gif) [HANGMAN](#hangman)
-* ![HILO](HILO/icon.png) [HILO](#hilo)
-* ![HORSES](HORSES/icon.png) [HORSES](#horses)
-* ![HOTPOT](HOTPOT/icon.png) [HOTPOT](#hotpot)
-* ![HUNT](HUNT/icon.png) [HUNT](#hunt)
-* ![HURDLES](HURDLES/icon.png) [HURDLES](#hurdles)
-* ![ICEPATH](ICEPATH/icon.png) [ICEPATH](#icepath)
-* ![INVADE](INVADE/icon.png) [INVADE](#invade)
-* ![JUGGLE](JUGGLE/icon.png) [JUGGLE](#juggle)
-* ![JUMPER](JUMPER/icon.png) [JUMPER](#jumper)
-* ![KNIGHTS](KNIGHTS/icon.png) [KNIGHTS](#knights)
-* ![LANDER](LANDER/icon.png) [LANDER](#lander)
-* ![LAVA](LAVA/icon.png) [LAVA](#lava)
-* ![LOCKPICK](LOCKPICK/icon.png) [LOCKPICK](#lockpick)
-* ![LOTTO](LOTTO/icon.png) [LOTTO](#lotto)
-* ![MANCALA](MANCALA/icon.png) [MANCALA](#mancala)
-* ![MATCH](MATCH/icon.png) [MATCH](#match)
-* ![MAZE3D](MAZE3D/icon.png) [MAZE3D](#maze3d)
-* ![MAZEDARK](MAZEDARK/icon.png) [MAZEDARK](#mazedark)
-* ![MAZERUN](MAZERUN/icon.png) [MAZERUN](#mazerun)
-* ![MINES](MINES/icon.png) [MINES](#mines)
-* ![MONTY](MONTY/icon.png) [MONTY](#monty)
-* ![NIM](NIM/icon.png) [NIM](#nim)
-* ![NUMMEM](NUMMEM/icon.png) [NUMMEM](#nummem)
-* ![NUMRACE](NUMRACE/icon.png) [NUMRACE](#numrace)
-* ![OTHELLO](OTHELLO/icon.png) [OTHELLO](#othello)
-* ![PAIRS](PAIRS/icon.png) [PAIRS](#pairs)
-* ![PEGS](PEGS/icon.png) [PEGS](#pegs)
-* ![PENALTY](PENALTY/icon.png) [PENALTY](#penalty)
-* ![PIG](PIG/icon.png) [PIG](#pig)
-* ![POKER](POKER/icon.png) [POKER](#poker)
-* ![PONG](PONG/icon.png) [PONG](#pong)
-* ![ROCKPAPR](ROCKPAPR/icon.png) [ROCKPAPR](#rockpapr)
-* ![SLOTS](SLOTS/icon.png) [SLOTS](#slots)
-* ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
-* ![TUGOWAR](TUGOWAR/icon.png) [TUGOWAR](#tugowar)
-* ![WHACK](WHACK/icon.png) [WHACK](#whack)
+| Icon | Program | Description |
+| --- | --- | --- |
+| ![ARCHERY](ARCHERY/icon.png) | [ARCHERY](#archery) | A/D AIM, SPACE FIRES. ACCOUNT FOR THE RANDOM WIND. |
+| ![ARTILLRY](ARTILLRY/icon.png) | [ARTILLRY](#artillry) | A BUILDS SHELL POWER; SPACE FIRES THE CANNON. |
+| ![BALLOON](BALLOON/icon.png) | [BALLOON](#balloon) | PUMP WITH SPACE FOR POINTS. POP AND THE ROUND ENDS. |
+| ![BASKETBL](BASKETBL/icon.png) | [BASKETBL](#basketbl) | A BUILDS SHOT POWER; SPACE RELEASES THE FREE THROW. |
+| ![BEAM](BEAM/icon.png) | [BEAM](#beam) | A/D ROTATES THE TURRET. SPACE FIRES THE BEAM. |
+| ![BLACKJCK](BLACKJCK/icon.png) | [BLACKJCK](#blackjck) | DRAW OR STAND AGAINST A RANDOM DEALER TOTAL. |
+| ![BOUNCE](BOUNCE/icon.png) | [BOUNCE](#bounce) | A/D SHIFTS THE BALL; SPACE LANDS ON THE PLATFORM. |
+| ![BOWLING](BOWLING/icon.png) | [BOWLING](#bowling) | A/D AIM, SPACE ROLLS. ACCOUNT FOR THE RANDOM CURVE. |
+| ![BOXPUSH](BOXPUSH/icon.png) | [BOXPUSH](#boxpush) | PUSH THE CRATE ONTO THE TARGET WITH A AND D. |
+| ![BRICKS](BRICKS/icon.png) | [BRICKS](#bricks) | A/D MOVES THE PADDLE. SPACE SMASHES THE BRICK ROW. |
+| ![BUMPCAR](BUMPCAR/icon.png) | [BUMPCAR](#bumpcar) | A/D STEERS THE CAR. SPACE RAMS THE OTHER CAR. |
+| ![CATCHER](CATCHER/icon.png) | [CATCHER](#catcher) | A/D MOVE BASKET. CATCH STARS. THREE MISSES ENDS GAME. |
+| ![CAVE](CAVE/icon.png) | [CAVE](#cave) | SPACE CLIMBS; RETURN FLIES THROUGH THE CAVE OPENING. |
+| ![CHICKEN](CHICKEN/icon.png) | [CHICKEN](#chicken) | TWO-PLAYER CHICKEN. WAIT FOR GO; A OR L SWERVES. |
+| ![CHOMP](CHOMP/icon.png) | [CHOMP](#chomp) | TWO-PLAYER CHOMP. PICK 2-5; SQUARE 1 IS POISON. |
+| ![COPTER](COPTER/icon.png) | [COPTER](#copter) | SPACE CLIMBS; RETURN FLIES THROUGH THE CAVE OPENING. |
+| ![COWBULL](COWBULL/icon.png) | [COWBULL](#cowbull) | GUESS FOUR 0-7 DIGITS. B=PLACE C=DIGIT. RETURN=NEW. |
+| ![CRAPS](CRAPS/icon.png) | [CRAPS](#craps) | CRAPS: SPACE ROLLS. MAKE THE POINT BEFORE ROLLING SEVEN. |
+| ![DARTS](DARTS/icon.png) | [DARTS](#darts) | A/D MOVES THE CROSSHAIR. SPACE THROWS AT THE BULL. |
+| ![DEFUSE](DEFUSE/icon.png) | [DEFUSE](#defuse) | CUT WIRES 1-3. THREE SAFE CUTS DEFUSE THE BOMB. |
+| ![DICE](DICE/icon.png) | [DICE](#dice) | SPACE ROLLS TWO DICE WITH A QUICK TUMBLE. |
+| ![DOCKING](DOCKING/icon.png) | [DOCKING](#docking) | A/D ADJUST VELOCITY; SPACE DOCKS AT THE TARGET. |
+| ![DODGE](DODGE/icon.png) | [DODGE](#dodge) | A/D DODGE FALLING BLOCKS. SURVIVE FOR SCORE. |
+| ![DROP4](DROP4/icon.png) | [DROP4](#drop4) | TWO-PLAYER DROP4. PICK A COLUMN; COMPLETE A FOUR-HIGH STACK. |
+| ![DUEL](DUEL/icon.png) | [DUEL](#duel) | TWO-PLAYER DUEL. WAIT FOR DRAW; A OR L FIRES. |
+| ![ECHOSEQ](ECHOSEQ/icon.png) | [ECHOSEQ](#echoseq) | WATCH THE GROWING A-D SIGNAL SEQUENCE, THEN REPEAT IT. |
+| ![ELEVATOR](ELEVATOR/icon.png) | [ELEVATOR](#elevator) | A/D ADJUST VELOCITY; SPACE DOCKS AT THE TARGET. |
+| ![ESCAPE](ESCAPE/icon.png) | [ESCAPE](#escape) | A/D MOVES THE RUNNER. SPACE ESCAPES THE ROBOT LANE. |
+| ![FALLDOWN](FALLDOWN/icon.png) | [FALLDOWN](#falldown) | LINE UP WITH EACH RISING FLOOR GAP. A/D MOVE; SPACE FALLS. |
+| ![FIREMAN](FIREMAN/icon.png) | [FIREMAN](#fireman) | A/D MOVES THE NET. SPACE CATCHES THE RANDOM JUMPER. |
+| ![FISHING](FISHING/icon.png) | [FISHING](#fishing) | SPACE CASTS. STRIKE ONLY AFTER BITE! APPEARS. |
+| ![FIVEDICE](FIVEDICE/icon.png) | [FIVEDICE](#fivedice) | ROLL FIVE DICE THREE TIMES. SIXES BUILD YOUR SCORE. |
+| ![FLIPPER](FLIPPER/icon.png) | [FLIPPER](#flipper) | HIT A OR D FOR THE FLIPPER UNDER THE FALLING BALL. |
+| ![FLOOD](FLOOD/icon.png) | [FLOOD](#flood) | TINY FLOOD-FILL: RECOLOR THE TOP-LEFT REGION B, THEN C. |
+| ![FLUTTER](FLUTTER/icon.png) | [FLUTTER](#flutter) | SPACE FLAPS; RETURN FLIES THROUGH THE CAVE OPENING. |
+| ![FOXGEESE](FOXGEESE/icon.png) | [FOXGEESE](#foxgeese) | TWO-PLAYER FOX AND GOOSE CHASE ON A SEVEN-SPACE BOARD. |
+| ![GOLF](GOLF/icon.png) | [GOLF](#golf) | A BUILDS PUTT POWER; SPACE SHOOTS FOR THE RANDOM HOLE. |
+| ![GUESSNUM](GUESSNUM/icon.png) | [GUESSNUM](#guessnum) | GUESS 00-99. COMPUTER SAYS HIGH, LOW, OR WIN. |
+| ![HANGMAN](HANGMAN/icon-preview.gif) | [HANGMAN](#hangman) | GUESS A SIX-LETTER WORD.         SIX MISSES AND YOU LOSE. |
+| ![HILO](HILO/icon.png) | [HILO](#hilo) | HILO CARD GAME. H=HIGH, L=LOW. GUESS THE NEXT RANK. |
+| ![HORSES](HORSES/icon.png) | [HORSES](#horses) | HORSE RACE. PICK 1-5; FIRST HORSE TO THE FINISH WINS. |
+| ![HOTPOT](HOTPOT/icon.png) | [HOTPOT](#hotpot) | PASS THE KEYBOARD. A HIDDEN RANDOM FUSE GOES BOOM. |
+| ![HUNT](HUNT/icon.png) | [HUNT](#hunt) | HUNT THE TREASURE 1-8. WARM/COLD HINTS GUIDE YOU. |
+| ![HURDLES](HURDLES/icon.png) | [HURDLES](#hurdles) | A BUILDS SPEED; SPACE JUMPS THE RANDOM HURDLE. |
+| ![ICEPATH](ICEPATH/icon.png) | [ICEPATH](#icepath) | SLIDE TO THE WALLS WITH A/D/W/S, THEN REACH THE EXIT. |
+| ![INVADE](INVADE/icon.png) | [INVADE](#invade) | A/D MOVES THE CANNON; SPACE ZAPS THE INVADER. |
+| ![JUGGLE](JUGGLE/icon.png) | [JUGGLE](#juggle) | SPACE JUGGLES. RANDOM DROPS REDUCE YOUR THREE BALLS. |
+| ![JUMPER](JUMPER/icon.png) | [JUMPER](#jumper) | CHARGE A JUMP WITH A, THEN SPACE OVER EACH WALL. |
+| ![KNIGHTS](KNIGHTS/icon.png) | [KNIGHTS](#knights) | MAKE KNIGHT MOVES WITH A/D/J/L TO REACH C3 R4. |
+| ![LANDER](LANDER/icon.png) | [LANDER](#lander) | FIRE A TO THRUST. KEEP DESCENT SPEED BELOW THREE. |
+| ![LAVA](LAVA/icon.png) | [LAVA](#lava) | MOVE A/D BEFORE THE CURRENT TILE BURNS. KEEP RUNNING. |
+| ![LOCKPICK](LOCKPICK/icon.png) | [LOCKPICK](#lockpick) | A/D TURNS THE DIAL. FIND THE CLICK, THEN SPACE TO OPEN. |
+| ![LOTTO](LOTTO/icon.png) | [LOTTO](#lotto) | PICK SIX 1-9 DIGITS, THEN MATCH THE RANDOM LOTTO DRAW. |
+| ![MANCALA](MANCALA/icon.png) | [MANCALA](#mancala) | TWO PLAYERS TAKE 1-3 STONES. TAKE THE LAST TO WIN. |
+| ![MATCH](MATCH/icon.png) | [MATCH](#match) | PICK TWO CARDS 1-4. CARDS 1/3 AND 2/4 ARE PAIRS. |
+| ![MAZE3D](MAZE3D/icon.png) | [MAZE3D](#maze3d) | CHOOSE THE OPEN CORRIDOR WITH A OR D THROUGH FIVE TURNS. |
+| ![MAZEDARK](MAZEDARK/icon.png) | [MAZEDARK](#mazedark) | FOLLOW THE GLOWING LEFT OR RIGHT PASSAGE THROUGH THE DARK. |
+| ![MAZERUN](MAZERUN/icon.png) | [MAZERUN](#mazerun) | FOLLOW OPEN CORRIDORS. ESCAPE IN FIVE TURNS WITHIN SEVEN MOVES. |
+| ![MINES](MINES/icon.png) | [MINES](#mines) | PICK SAFE TILES 1-8. CLEAR FIVE FIELDS WITHOUT A MINE. |
+| ![MONTY](MONTY/icon.png) | [MONTY](#monty) | PICK 1-3. MONTY OPENS A GOAT. S:SWITCH K:KEEP. STOP:EXIT. |
+| ![NIM](NIM/icon.png) | [NIM](#nim) | TWO PLAYERS TAKE 1-3 COUNTERS. TAKE THE LAST TO WIN. |
+| ![NUMMEM](NUMMEM/icon.png) | [NUMMEM](#nummem) | MEMORIZE AND REPEAT A THREE-DIGIT SEQUENCE. |
+| ![NUMRACE](NUMRACE/icon.png) | [NUMRACE](#numrace) | TWO PLAYERS ADD 1 OR 2. HIT TEN EXACTLY TO WIN. |
+| ![OTHELLO](OTHELLO/icon.png) | [OTHELLO](#othello) | PLACE BLACK AT 4 TO BRACKET AND FLIP THE WHITE ROW. |
+| ![PAIRS](PAIRS/icon.png) | [PAIRS](#pairs) | PICK TWO OF FOUR CARDS. MATCH THREE PAIRS TO WIN. |
+| ![PEGS](PEGS/icon.png) | [PEGS](#pegs) | MAKE JUMPS 0, 1, AND 2 TO LEAVE ONE PEG. |
+| ![PENALTY](PENALTY/icon.png) | [PENALTY](#penalty) | PICK A CORNER BEFORE THE RANDOM KEEPER SAVES IT. |
+| ![PIG](PIG/icon.png) | [PIG](#pig) | ROLL TOWARD NINE, OR HOLD BEFORE A ONE BUSTS. |
+| ![POKER](POKER/icon.png) | [POKER](#poker) | SPACE DEALS A TINY FIVE-CARD POKER HAND. |
+| ![PONG](PONG/icon.png) | [PONG](#pong) | RETURN THE BALL WITH A ON LEFT OR D ON RIGHT. |
+| ![ROCKPAPR](ROCKPAPR/icon.png) | [ROCKPAPR](#rockpapr) | ROCK, PAPER, SCISSORS AGAINST A RANDOM COMPUTER PICK. |
+| ![SLOTS](SLOTS/icon.png) | [SLOTS](#slots) | THREE-REEL SLOTS. MATCH ALL THREE TO WIN. |
+| ![TICTACTO](TICTACTO/icon-preview.gif) | [TICTACTO](#tictacto) | TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE. |
+| ![TUGOWAR](TUGOWAR/icon.png) | [TUGOWAR](#tugowar) | TWO-PLAYER TUG OF WAR. Q PULLS LEFT, P PULLS RIGHT. |
+| ![WHACK](WHACK/icon.png) | [WHACK](#whack) | HIT THE DISPLAYED NUMBER KEY FIVE TIMES. |
 
 ---
 

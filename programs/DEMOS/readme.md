@@ -4,15 +4,17 @@ PIXELS, SOUND AND TINY SHOWS.
 
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
-* ![CANDLE](CANDLE/icon.png) [CANDLE](#candle)
-* ![CUBE3D](CUBE3D/icon-preview.gif) [CUBE3D](#cube3d)
-* ![DANCE](DANCE/icon-preview.gif) [DANCE](#dance)
-* ![EQUALIZR](EQUALIZR/icon.png) [EQUALIZR](#equalizr)
-* ![MAZE10](MAZE10/icon.png) [MAZE10](#maze10)
-* ![MUNCHING](MUNCHING/icon.png) [MUNCHING](#munching)
-* ![RAIN](RAIN/icon.png) [RAIN](#rain)
-* ![SNOW](SNOW/icon-preview.gif) [SNOW](#snow)
-* ![XORPAT](XORPAT/icon.png) [XORPAT](#xorpat)
+| Icon | Program | Description |
+| --- | --- | --- |
+| ![CANDLE](CANDLE/icon.png) | [CANDLE](#candle) | SHOW A CHARACTER-ART CANDLE WITH RANDOM FLAME FRAMES. |
+| ![CUBE3D](CUBE3D/icon-preview.gif) | [CUBE3D](#cube3d) | A ROTATING 3D WIREFRAME CUBE.   RUN/STOP TO RETURN TO LAUNCHER. |
+| ![DANCE](DANCE/icon-preview.gif) | [DANCE](#dance) | DISCO LADY: FOUR VECTOR DANCE POSES. RUN/STOP TO RETURN. |
+| ![EQUALIZR](EQUALIZR/icon.png) | [EQUALIZR](#equalizr) | RANDOM CHARACTER-MODE EQUALIZER BARS. |
+| ![MAZE10](MAZE10/icon.png) | [MAZE10](#maze10) | A CLASSIC RANDOM DIAGONAL CHARACTER MAZE. |
+| ![MUNCHING](MUNCHING/icon.png) | [MUNCHING](#munching) | CLASSIC MUNCHING XOR SQUARES WITH A CHANGING PHASE. |
+| ![RAIN](RAIN/icon.png) | [RAIN](#rain) | REPAINT A SPARSE GREEN CHARACTER-RAIN FIELD. |
+| ![SNOW](SNOW/icon-preview.gif) | [SNOW](#snow) | PIXEL SNOW: BRIGHT FLAKES FALL FAST AND STACK. RUN/STOP:EXIT. |
+| ![XORPAT](XORPAT/icon.png) | [XORPAT](#xorpat) | A CLASSIC X-XOR-Y CHARACTER TEXTURE. |
 
 ---
 

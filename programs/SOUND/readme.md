@@ -4,15 +4,17 @@ TINY SID SOUNDS AND MUSICAL EXPERIMENTS.
 
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
-* ![ARPEGGIO](ARPEGGIO/icon.png) [ARPEGGIO](#arpeggio)
-* ![BEEPER](BEEPER/icon.png) [BEEPER](#beeper)
-* ![CHORDS](CHORDS/icon.png) [CHORDS](#chords)
-* ![DOORBELL](DOORBELL/icon.png) [DOORBELL](#doorbell)
-* ![METRONOM](METRONOM/icon.png) [METRONOM](#metronom)
-* ![MUSICBOX](MUSICBOX/icon.png) [MUSICBOX](#musicbox)
-* ![PIANO](PIANO/icon.png) [PIANO](#piano)
-* ![SCALE](SCALE/icon.png) [SCALE](#scale)
-* ![SIREN](SIREN/icon.png) [SIREN](#siren)
+| Icon | Program | Description |
+| --- | --- | --- |
+| ![ARPEGGIO](ARPEGGIO/icon.png) | [ARPEGGIO](#arpeggio) | EIGHT FAST C-MAJOR SID ARPEGGIOS. PRESS A KEY TO REPEAT. |
+| ![BEEPER](BEEPER/icon.png) | [BEEPER](#beeper) | TYPE KEYS TO ECHO THEM WITH SHORT SID BEEPS. |
+| ![CHORDS](CHORDS/icon.png) | [CHORDS](#chords) | C F G PLAY THREE-VOICE SID MAJOR CHORDS. |
+| ![DOORBELL](DOORBELL/icon.png) | [DOORBELL](#doorbell) | A TWO-NOTE SID DOORBELL CHIME. PRESS A KEY TO REPEAT. |
+| ![METRONOM](METRONOM/icon.png) | [METRONOM](#metronom) | PLAY A SHORT SID TICK ON EACH SPACE PRESS. |
+| ![MUSICBOX](MUSICBOX/icon.png) | [MUSICBOX](#musicbox) | THE OPENING TWINKLE PHRASE ON SID. PRESS A KEY TO REPEAT. |
+| ![PIANO](PIANO/icon.png) | [PIANO](#piano) | A S D F PLAY FOUR SID PIANO NOTES. |
+| ![SCALE](SCALE/icon.png) | [SCALE](#scale) | AN ASCENDING C-MAJOR SID SCALE. PRESS A KEY TO REPEAT. |
+| ![SIREN](SIREN/icon.png) | [SIREN](#siren) | A FOUR-TONE SID SIREN WAIL. PRESS A KEY TO REPEAT. |
 
 ---
 

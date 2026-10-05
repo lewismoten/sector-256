@@ -4,63 +4,65 @@ SHORT LESSONS AND PRACTICE.
 
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
-* ![ADDITION](ADDITION/icon.png) [ADDITION](#addition)
-* ![ALPHABET](ALPHABET/icon.png) [ALPHABET](#alphabet)
-* ![ANIMALS](ANIMALS/icon.png) [ANIMALS](#animals)
-* ![BINQUIZ](BINQUIZ/icon.png) [BINQUIZ](#binquiz)
-* ![BITOPS](BITOPS/icon.png) [BITOPS](#bitops)
-* ![BODY](BODY/icon.png) [BODY](#body)
-* ![CLOCK](CLOCK/icon.png) [CLOCK](#clock)
-* ![COLORS](COLORS/icon.png) [COLORS](#colors)
-* ![COMPASS](COMPASS/icon.png) [COMPASS](#compass)
-* ![COUNTING](COUNTING/icon.png) [COUNTING](#counting)
-* ![DAYS](DAYS/icon.png) [DAYS](#days)
-* ![DAYSWK](DAYSWK/icon.png) [DAYSWK](#dayswk)
-* ![DIVIDE](DIVIDE/icon.png) [DIVIDE](#divide)
-* ![ESTIMATE](ESTIMATE/icon.png) [ESTIMATE](#estimate)
-* ![FAMILY](FAMILY/icon.png) [FAMILY](#family)
-* ![FOOD](FOOD/icon.png) [FOOD](#food)
-* ![FRACTION](FRACTION/icon.png) [FRACTION](#fraction)
-* ![GRAPHPT](GRAPHPT/icon.png) [GRAPHPT](#graphpt)
-* ![GREATER](GREATER/icon.png) [GREATER](#greater)
-* ![HEXQUIZ](HEXQUIZ/icon.png) [HEXQUIZ](#hexquiz)
-* ![HOME](HOME/icon.png) [HOME](#home)
-* ![JOBS](JOBS/icon.png) [JOBS](#jobs)
-* ![KEYFIND](KEYFIND/icon.png) [KEYFIND](#keyfind)
-* ![LANDMARK](LANDMARK/icon.png) [LANDMARK](#landmark)
-* ![LOGIC](LOGIC/icon.png) [LOGIC](#logic)
-* ![MAPS](MAPS/icon.png) [MAPS](#maps)
-* ![MEASURE](MEASURE/icon.png) [MEASURE](#measure)
-* ![MEMORY](MEMORY/icon.png) [MEMORY](#memory)
-* ![MONTHS](MONTHS/icon.png) [MONTHS](#months)
-* ![MULTIPLY](MULTIPLY/icon.png) [MULTIPLY](#multiply)
-* ![MUSIC](MUSIC/icon.png) [MUSIC](#music)
-* ![NATURE](NATURE/icon.png) [NATURE](#nature)
-* ![NUMBERS](NUMBERS/icon.png) [NUMBERS](#numbers)
-* ![NUMLINE](NUMLINE/icon.png) [NUMLINE](#numline)
-* ![OCEANLIF](OCEANLIF/icon.png) [OCEANLIF](#oceanlif)
-* ![OCEANS](OCEANS/icon.png) [OCEANS](#oceans)
-* ![ODDEVEN](ODDEVEN/icon.png) [ODDEVEN](#oddeven)
-* ![OPPOSITE](OPPOSITE/icon.png) [OPPOSITE](#opposite)
-* ![PETSCIIQ](PETSCIIQ/icon.png) [PETSCIIQ](#petsciiq)
-* ![PLANETS](PLANETS/icon.png) [PLANETS](#planets)
-* ![PLANTS](PLANTS/icon.png) [PLANTS](#plants)
-* ![PLANTS2](PLANTS2/icon.png) [PLANTS2](#plants2)
-* ![PRIMEQZ](PRIMEQZ/icon.png) [PRIMEQZ](#primeqz)
-* ![QUIZ](QUIZ/icon.png) [QUIZ](#quiz)
-* ![RHYMES](RHYMES/icon.png) [RHYMES](#rhymes)
-* ![ROUNDING](ROUNDING/icon.png) [ROUNDING](#rounding)
-* ![SCHOOL](SCHOOL/icon.png) [SCHOOL](#school)
-* ![SEQUENCE](SEQUENCE/icon.png) [SEQUENCE](#sequence)
-* ![SHAPEQZ](SHAPEQZ/icon.png) [SHAPEQZ](#shapeqz)
-* ![SHAPES](SHAPES/icon.png) [SHAPES](#shapes)
-* ![SPACE](SPACE/icon.png) [SPACE](#space)
-* ![SPELLING](SPELLING/icon.png) [SPELLING](#spelling)
-* ![SPORTS](SPORTS/icon.png) [SPORTS](#sports)
-* ![SQUAREQZ](SQUAREQZ/icon.png) [SQUAREQZ](#squareqz)
-* ![SUBTRACT](SUBTRACT/icon.png) [SUBTRACT](#subtract)
-* ![TRANSPRT](TRANSPRT/icon.png) [TRANSPRT](#transprt)
-* ![WEATHER](WEATHER/icon.png) [WEATHER](#weather)
+| Icon | Program | Description |
+| --- | --- | --- |
+| ![ADDITION](ADDITION/icon.png) | [ADDITION](#addition) | SOLVE THREE ONE-DIGIT ADDITION QUESTIONS. |
+| ![ALPHABET](ALPHABET/icon.png) | [ALPHABET](#alphabet) | FIND THE NEXT LETTER IN THREE SHORT SEQUENCES. |
+| ![ANIMALS](ANIMALS/icon.png) | [ANIMALS](#animals) | PICK THE FIRST LETTER OF THREE ANIMAL NAMES. |
+| ![BINQUIZ](BINQUIZ/icon.png) | [BINQUIZ](#binquiz) | CONVERT FOUR SIMPLE BINARY VALUES TO DECIMAL. |
+| ![BITOPS](BITOPS/icon.png) | [BITOPS](#bitops) | SOLVE FOUR ONE-BIT AND OR XOR OPERATIONS. |
+| ![BODY](BODY/icon.png) | [BODY](#body) | PICK THE FIRST LETTER OF THREE BODY PARTS. |
+| ![CLOCK](CLOCK/icon.png) | [CLOCK](#clock) | READ THREE SIMPLE ON-THE-HOUR CLOCK TIMES. |
+| ![COLORS](COLORS/icon.png) | [COLORS](#colors) | PRACTICE THE C64 COLOR NUMBERS FOR RED, BLUE, AND WHITE. |
+| ![COMPASS](COMPASS/icon.png) | [COMPASS](#compass) | NAME THE CARDINAL DIRECTION OF EACH ARROW. |
+| ![COUNTING](COUNTING/icon.png) | [COUNTING](#counting) | COUNT THE STARS AND ENTER THE NUMBER. THREE CORRECT WINS. |
+| ![DAYS](DAYS/icon.png) | [DAYS](#days) | PICK THE FIRST LETTER OF THREE WEEKDAY NAMES. |
+| ![DAYSWK](DAYSWK/icon.png) | [DAYSWK](#dayswk) | TYPE THE FIRST LETTER OF THE NEXT WEEKDAY. |
+| ![DIVIDE](DIVIDE/icon.png) | [DIVIDE](#divide) | SOLVE THREE SMALL DIVISION QUESTIONS. |
+| ![ESTIMATE](ESTIMATE/icon.png) | [ESTIMATE](#estimate) | COUNT A BRIEFLY FLASHED GROUP OF DOTS. |
+| ![FAMILY](FAMILY/icon.png) | [FAMILY](#family) | PICK THE FIRST LETTER OF THREE FAMILY WORDS. |
+| ![FOOD](FOOD/icon.png) | [FOOD](#food) | PICK THE FIRST LETTER OF THREE FOOD WORDS. |
+| ![FRACTION](FRACTION/icon.png) | [FRACTION](#fraction) | IDENTIFY THE TOP NUMBER IN THREE SIMPLE FRACTIONS. |
+| ![GRAPHPT](GRAPHPT/icon.png) | [GRAPHPT](#graphpt) | READ A MARKED POINT ON A SMALL COORDINATE GRID. |
+| ![GREATER](GREATER/icon.png) | [GREATER](#greater) | CHOOSE LESS-THAN OR GREATER-THAN FOR EACH PAIR. |
+| ![HEXQUIZ](HEXQUIZ/icon.png) | [HEXQUIZ](#hexquiz) | CONVERT FOUR DECIMAL VALUES TO HEX DIGITS. |
+| ![HOME](HOME/icon.png) | [HOME](#home) | PICK THE FIRST LETTER OF THREE HOUSEHOLD WORDS. |
+| ![JOBS](JOBS/icon.png) | [JOBS](#jobs) | PICK THE FIRST LETTER OF THREE JOB WORDS. |
+| ![KEYFIND](KEYFIND/icon.png) | [KEYFIND](#keyfind) | FIND AND PRESS EACH HIGHLIGHTED KEY. |
+| ![LANDMARK](LANDMARK/icon.png) | [LANDMARK](#landmark) | PICK THE FIRST LETTER OF THREE LANDMARK WORDS. |
+| ![LOGIC](LOGIC/icon.png) | [LOGIC](#logic) | TOGGLE TWO INPUTS AND VIEW THEIR AND-GATE OUTPUT. |
+| ![MAPS](MAPS/icon.png) | [MAPS](#maps) | PRACTICE THE FIRST LETTERS OF COMPASS DIRECTIONS. |
+| ![MEASURE](MEASURE/icon.png) | [MEASURE](#measure) | ESTIMATE BAR LENGTHS IN CHARACTER CELLS. |
+| ![MEMORY](MEMORY/icon.png) | [MEMORY](#memory) | REPEAT THE THREE-NUMBER SEQUENCE FROM MEMORY. |
+| ![MONTHS](MONTHS/icon.png) | [MONTHS](#months) | PICK THE FIRST LETTER OF THREE MONTH NAMES. |
+| ![MULTIPLY](MULTIPLY/icon.png) | [MULTIPLY](#multiply) | SOLVE THREE SMALL MULTIPLICATION QUESTIONS. |
+| ![MUSIC](MUSIC/icon.png) | [MUSIC](#music) | PICK THE FIRST LETTER OF THREE MUSIC WORDS. |
+| ![NATURE](NATURE/icon.png) | [NATURE](#nature) | PICK THE FIRST LETTER OF THREE NATURE WORDS. |
+| ![NUMBERS](NUMBERS/icon.png) | [NUMBERS](#numbers) | PICK THE FIRST LETTER OF THREE NUMBER NAMES. |
+| ![NUMLINE](NUMLINE/icon.png) | [NUMLINE](#numline) | READ MARKED VALUES ON SIMPLE NUMBER LINES. |
+| ![OCEANLIF](OCEANLIF/icon.png) | [OCEANLIF](#oceanlif) | PICK THE FIRST LETTER OF THREE SEA-LIFE WORDS. |
+| ![OCEANS](OCEANS/icon.png) | [OCEANS](#oceans) | PICK THE FIRST LETTER OF THREE OCEAN NAMES. |
+| ![ODDEVEN](ODDEVEN/icon.png) | [ODDEVEN](#oddeven) | MARK RANDOM NUMBERS ODD WITH O OR EVEN WITH E. |
+| ![OPPOSITE](OPPOSITE/icon.png) | [OPPOSITE](#opposite) | PICK THE FIRST LETTER OF THREE OPPOSITE WORDS. |
+| ![PETSCIIQ](PETSCIIQ/icon.png) | [PETSCIIQ](#petsciiq) | TYPE THE DECIMAL PETSCII CODES OF DISPLAYED LETTERS. |
+| ![PLANETS](PLANETS/icon.png) | [PLANETS](#planets) | PICK THE NEXT INNER PLANET INITIAL IN ORDER. |
+| ![PLANTS](PLANTS/icon.png) | [PLANTS](#plants) | PICK THE FIRST LETTER OF THREE PLANT WORDS. |
+| ![PLANTS2](PLANTS2/icon.png) | [PLANTS2](#plants2) | PICK THE FIRST LETTER OF THREE MORE PLANT WORDS. |
+| ![PRIMEQZ](PRIMEQZ/icon.png) | [PRIMEQZ](#primeqz) | DECIDE WHETHER FOUR NUMBERS ARE PRIME WITH Y OR N. |
+| ![QUIZ](QUIZ/icon.png) | [QUIZ](#quiz) | ANSWER THREE SHORT ADDITION QUESTIONS. |
+| ![RHYMES](RHYMES/icon.png) | [RHYMES](#rhymes) | PICK THE FIRST LETTER OF THREE SIMPLE RHYMING WORDS. |
+| ![ROUNDING](ROUNDING/icon.png) | [ROUNDING](#rounding) | ROUND TWO-DIGIT NUMBERS TO THE NEAREST TEN. |
+| ![SCHOOL](SCHOOL/icon.png) | [SCHOOL](#school) | PICK THE FIRST LETTER OF THREE SCHOOL WORDS. |
+| ![SEQUENCE](SEQUENCE/icon.png) | [SEQUENCE](#sequence) | COMPLETE THREE SIMPLE NUMBER SEQUENCES. |
+| ![SHAPEQZ](SHAPEQZ/icon.png) | [SHAPEQZ](#shapeqz) | IDENTIFY SIMPLE SHAPES BY THEIR NUMBER OF SIDES. |
+| ![SHAPES](SHAPES/icon.png) | [SHAPES](#shapes) | IDENTIFY CIRCLE, SQUARE, AND TRIANGLE BY NUMBER. |
+| ![SPACE](SPACE/icon.png) | [SPACE](#space) | PICK THE FIRST LETTER OF THREE SPACE WORDS. |
+| ![SPELLING](SPELLING/icon.png) | [SPELLING](#spelling) | FILL IN MISSING LETTERS FOR THREE SHORT WORDS. |
+| ![SPORTS](SPORTS/icon.png) | [SPORTS](#sports) | PICK THE FIRST LETTER OF THREE SPORT WORDS. |
+| ![SQUAREQZ](SQUAREQZ/icon.png) | [SQUAREQZ](#squareqz) | RECALL FOUR SMALL SQUARE-NUMBER PRODUCTS. |
+| ![SUBTRACT](SUBTRACT/icon.png) | [SUBTRACT](#subtract) | SOLVE THREE ONE-DIGIT SUBTRACTION QUESTIONS. |
+| ![TRANSPRT](TRANSPRT/icon.png) | [TRANSPRT](#transprt) | PICK THE FIRST LETTER OF THREE TRANSPORT WORDS. |
+| ![WEATHER](WEATHER/icon.png) | [WEATHER](#weather) | PICK THE FIRST LETTER OF THREE WEATHER WORDS. |
 
 ---
 

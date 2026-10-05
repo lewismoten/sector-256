@@ -26,10 +26,18 @@ def generate_category_readme(category_folder, metadata, folders, sizes):
         "[All categories](../readme.md) · [Sector 256](../../README.md)",
         "",
     ]
-    for folder in folders:
-        name = folder.name.upper()
-        icon = "icon-preview.gif" if (folder / "icon-preview.gif").exists() else "icon.png"
-        lines += [f"* ![{name}]({folder.name}/{icon}) [{name}](#{name.lower()})"]
+    if len(folders) > 5:
+        lines += ["| Icon | Program | Description |", "| --- | --- | --- |"]
+        for folder in folders:
+            data = json.loads((folder / "program.json").read_text())
+            name = folder.name.upper()
+            icon = "icon-preview.gif" if (folder / "icon-preview.gif").exists() else "icon.png"
+            lines += [f"| ![{name}]({folder.name}/{icon}) | [{name}](#{name.lower()}) | {data['description']} |"]
+    else:
+        for folder in folders:
+            name = folder.name.upper()
+            icon = "icon-preview.gif" if (folder / "icon-preview.gif").exists() else "icon.png"
+            lines += [f"* ![{name}]({folder.name}/{icon}) [{name}](#{name.lower()})"]
     lines += ["", "---", ""]
     for folder in folders:
         data = json.loads((folder / "program.json").read_text())

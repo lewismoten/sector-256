@@ -4,12 +4,14 @@ SMALL THINGS TO PLAY WITH.
 
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
-* ![DOODLE](DOODLE/icon.png) [DOODLE](#doodle)
-* ![FACES](FACES/icon.png) [FACES](#faces)
-* ![FORTUNE](FORTUNE/icon.png) [FORTUNE](#fortune)
-* ![ORACLE](ORACLE/icon.png) [ORACLE](#oracle)
-* ![SPINNER](SPINNER/icon.png) [SPINNER](#spinner)
-* ![WINDMILL](WINDMILL/icon.png) [WINDMILL](#windmill)
+| Icon | Program | Description |
+| --- | --- | --- |
+| ![DOODLE](DOODLE/icon.png) | [DOODLE](#doodle) | A WASD SKETCHPAD. C CLEARS THE SCREEN. |
+| ![FACES](FACES/icon.png) | [FACES](#faces) | A RANDOM CHARACTER-ART FACE ON EACH KEYPRESS. |
+| ![FORTUNE](FORTUNE/icon.png) | [FORTUNE](#fortune) | A RANDOM FORTUNE COOKIE MESSAGE ON EACH KEYPRESS. |
+| ![ORACLE](ORACLE/icon.png) | [ORACLE](#oracle) | GET A RANDOM YES-OR-NO STYLE ANSWER. |
+| ![SPINNER](SPINNER/icon.png) | [SPINNER](#spinner) | SPIN A RANDOM DIRECTION FOR BOARD GAMES. |
+| ![WINDMILL](WINDMILL/icon.png) | [WINDMILL](#windmill) | SPIN A FOUR-FRAME CHARACTER-ART WINDMILL. |
 
 ---
 

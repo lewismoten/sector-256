@@ -4,12 +4,14 @@ EXPERIMENTS AND PROOF OF CONCEPTS.
 
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
-* ![ANT](ANT/icon.png) [ANT](#ant)
-* ![BEATS](BEATS/icon.png) [BEATS](#beats)
-* ![CHAOS](CHAOS/icon.png) [CHAOS](#chaos)
-* ![LIFE](LIFE/icon.png) [LIFE](#life)
-* ![RULE30](RULE30/icon.png) [RULE30](#rule30)
-* ![SANDPILE](SANDPILE/icon.png) [SANDPILE](#sandpile)
+| Icon | Program | Description |
+| --- | --- | --- |
+| ![ANT](ANT/icon.png) | [ANT](#ant) | LANGTON'S ANT ON 256X200 HIRES. SPACE:RESET. STOP:RETURN. |
+| ![BEATS](BEATS/icon.png) | [BEATS](#beats) | HEAR BEATS FROM TWO SLIGHTLY DETUNED SID VOICES. |
+| ![CHAOS](CHAOS/icon.png) | [CHAOS](#chaos) | CHAOS GAME BUILDS A FRACTAL. SPACE:RESET. RUN/STOP:RETURN. |
+| ![LIFE](LIFE/icon.png) | [LIFE](#life) | CONWAY LIFE. SPACE:RANDOMIZE. RUN/STOP:RETURN. |
+| ![RULE30](RULE30/icon.png) | [RULE30](#rule30) | RULE 30 FROM ONE CELL. SPACE:RESET. RUN/STOP:RETURN. |
+| ![SANDPILE](SANDPILE/icon.png) | [SANDPILE](#sandpile) | SANDPILE FRACTAL. SPACE:RESET WITH NEW COLORS. RUN/STOP:RETURN. |
 
 ---
 

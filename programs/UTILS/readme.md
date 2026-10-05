@@ -4,18 +4,20 @@ HANDY LITTLE TOOLS.
 
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
-* ![BANKVIEW](BANKVIEW/icon.png) [BANKVIEW](#bankview)
-* ![COINTOSS](COINTOSS/icon.png) [COINTOSS](#cointoss)
-* ![COLORSET](COLORSET/icon.png) [COLORSET](#colorset)
-* ![CRTTEST](CRTTEST/icon.png) [CRTTEST](#crttest)
-* ![JOYTEST](JOYTEST/icon.png) [JOYTEST](#joytest)
-* ![MAZEGEN](MAZEGEN/icon-preview.gif) [MAZEGEN](#mazegen)
-* ![PALNTSC](PALNTSC/icon.png) [PALNTSC](#palntsc)
-* ![PETSCII](PETSCII/icon.png) [PETSCII](#petscii)
-* ![REGVIEW](REGVIEW/icon.png) [REGVIEW](#regview)
-* ![SCORE](SCORE/icon.png) [SCORE](#score)
-* ![SWATCH](SWATCH/icon-preview.gif) [SWATCH](#swatch)
-* ![TALLY](TALLY/icon.png) [TALLY](#tally)
+| Icon | Program | Description |
+| --- | --- | --- |
+| ![BANKVIEW](BANKVIEW/icon.png) | [BANKVIEW](#bankview) | DISPLAY THE EIGHT MEMORY-CONFIGURATION BITS IN PORT $01. |
+| ![COINTOSS](COINTOSS/icon.png) | [COINTOSS](#cointoss) | FLIP A RANDOM COIN WITH HEADS AND TAILS TALLIES. |
+| ![COLORSET](COLORSET/icon.png) | [COLORSET](#colorset) | SET BORDER OR BACKGROUND COLORS WITH B G AND 0-7. |
+| ![CRTTEST](CRTTEST/icon.png) | [CRTTEST](#crttest) | DISPLAY A CRT CONVERGENCE GRID. |
+| ![JOYTEST](JOYTEST/icon.png) | [JOYTEST](#joytest) | SHOW BOTH JOYSTICK PORTS AS ACTIVE-LOW UDLRF BITS. |
+| ![MAZEGEN](MAZEGEN/icon-preview.gif) | [MAZEGEN](#mazegen) | 190-ROOM PERFECT MAZE. SPACE:NEW. RUN/STOP:RETURN. |
+| ![PALNTSC](PALNTSC/icon.png) | [PALNTSC](#palntsc) | REPORT THE KERNAL PAL OR NTSC VIDEO-STANDARD FLAG. |
+| ![PETSCII](PETSCII/icon.png) | [PETSCII](#petscii) | DISPLAY COMMON PETSCII CONTROL AND LETTER CODES. |
+| ![REGVIEW](REGVIEW/icon.png) | [REGVIEW](#regview) | SHOW VIC-II BORDER AND BACKGROUND REGISTERS IN HEX. |
+| ![SCORE](SCORE/icon.png) | [SCORE](#score) | A TWO-PLAYER SCOREBOARD. A AND L ADD POINTS. |
+| ![SWATCH](SWATCH/icon-preview.gif) | [SWATCH](#swatch) | ALL 16 COLORS + 120 PAIRS. 1-9:RATE M:MIX SPACE:HOLD STOP:EXIT. |
+| ![TALLY](TALLY/icon.png) | [TALLY](#tally) | COUNT UP OR DOWN WITH A AND Z. |
 
 ---
 

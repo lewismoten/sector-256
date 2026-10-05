@@ -4,46 +4,48 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 
 [All categories](../readme.md) · [Sector 256](../../README.md)
 
-* ![ARMSTRNG](ARMSTRNG/icon.png) [ARMSTRNG](#armstrng)
-* ![BASECONV](BASECONV/icon.png) [BASECONV](#baseconv)
-* ![BINCOUNT](BINCOUNT/icon.png) [BINCOUNT](#bincount)
-* ![BINOMIAL](BINOMIAL/icon.png) [BINOMIAL](#binomial)
-* ![CANTOR](CANTOR/icon.png) [CANTOR](#cantor)
-* ![CATALAN](CATALAN/icon.png) [CATALAN](#catalan)
-* ![CIRCLE](CIRCLE/icon.png) [CIRCLE](#circle)
-* ![COLLATZ](COLLATZ/icon.png) [COLLATZ](#collatz)
-* ![DIGROOT](DIGROOT/icon.png) [DIGROOT](#digroot)
-* ![EDIGITS](EDIGITS/icon.png) [EDIGITS](#edigits)
-* ![FACTORL](FACTORL/icon.png) [FACTORL](#factorl)
-* ![FIB](FIB/icon.png) [FIB](#fib)
-* ![GCD](GCD/icon.png) [GCD](#gcd)
-* ![GOLDEN](GOLDEN/icon.png) [GOLDEN](#golden)
-* ![GRAYCODE](GRAYCODE/icon.png) [GRAYCODE](#graycode)
-* ![HAPPY](HAPPY/icon.png) [HAPPY](#happy)
-* ![HILBERT](HILBERT/icon.png) [HILBERT](#hilbert)
-* ![KAPREKAR](KAPREKAR/icon.png) [KAPREKAR](#kaprekar)
-* ![KOCH](KOCH/icon.png) [KOCH](#koch)
-* ![LINES](LINES/icon.png) [LINES](#lines)
-* ![LOOKSAY](LOOKSAY/icon.png) [LOOKSAY](#looksay)
-* ![LUCAS](LUCAS/icon.png) [LUCAS](#lucas)
-* ![MAGICSQ](MAGICSQ/icon.png) [MAGICSQ](#magicsq)
-* ![MODCLOCK](MODCLOCK/icon.png) [MODCLOCK](#modclock)
-* ![MULTAB](MULTAB/icon.png) [MULTAB](#multab)
-* ![PALINDRM](PALINDRM/icon.png) [PALINDRM](#palindrm)
-* ![PASCAL](PASCAL/icon.png) [PASCAL](#pascal)
-* ![PERFECT](PERFECT/icon.png) [PERFECT](#perfect)
-* ![PERMUTE](PERMUTE/icon.png) [PERMUTE](#permute)
-* ![PI](PI/icon.png) [PI](#pi)
-* ![POWERS2](POWERS2/icon.png) [POWERS2](#powers2)
-* ![PRIMES](PRIMES/icon.png) [PRIMES](#primes)
-* ![PYTHTRIP](PYTHTRIP/icon.png) [PYTHTRIP](#pythtrip)
-* ![ROMAN](ROMAN/icon.png) [ROMAN](#roman)
-* ![SIERPCAR](SIERPCAR/icon.png) [SIERPCAR](#sierpcar)
-* ![SINTABLE](SINTABLE/icon.png) [SINTABLE](#sintable)
-* ![SQRT](SQRT/icon.png) [SQRT](#sqrt)
-* ![SQUARES](SQUARES/icon.png) [SQUARES](#squares)
-* ![TOTIENT](TOTIENT/icon.png) [TOTIENT](#totient)
-* ![TRIANGNU](TRIANGNU/icon.png) [TRIANGNU](#triangnu)
+| Icon | Program | Description |
+| --- | --- | --- |
+| ![ARMSTRNG](ARMSTRNG/icon.png) | [ARMSTRNG](#armstrng) | THREE-DIGIT ARMSTRONG NUMBERS AS SUMS OF CUBES. |
+| ![BASECONV](BASECONV/icon.png) | [BASECONV](#baseconv) | SHOW SMALL VALUES IN BINARY, DECIMAL, AND HEX. |
+| ![BINCOUNT](BINCOUNT/icon.png) | [BINCOUNT](#bincount) | AN EIGHT-BIT COUNTER ADVANCED ONE KEY AT A TIME. |
+| ![BINOMIAL](BINOMIAL/icon.png) | [BINOMIAL](#binomial) | DISPLAY EARLY BINOMIAL COEFFICIENTS. |
+| ![CANTOR](CANTOR/icon.png) | [CANTOR](#cantor) | FOUR LEVELS OF THE CANTOR SET IN CHARACTERS. |
+| ![CATALAN](CATALAN/icon.png) | [CATALAN](#catalan) | SHOW EARLY CATALAN NUMBERS AND THEIR USE. |
+| ![CIRCLE](CIRCLE/icon.png) | [CIRCLE](#circle) | DISPLAY A CHARACTER-MODE CIRCLE WITH AXES. |
+| ![COLLATZ](COLLATZ/icon.png) | [COLLATZ](#collatz) | SHOW A COLLATZ SEQUENCE AND ITS TWO RULES. |
+| ![DIGROOT](DIGROOT/icon.png) | [DIGROOT](#digroot) | SHOW A REPEATED-DIGIT-SUM DIGITAL ROOT EXAMPLE. |
+| ![EDIGITS](EDIGITS/icon.png) | [EDIGITS](#edigits) | DISPLAY LEADING DECIMAL DIGITS OF E. |
+| ![FACTORL](FACTORL/icon.png) | [FACTORL](#factorl) | DISPLAY FACTORIAL VALUES THROUGH EIGHT FACTORIAL. |
+| ![FIB](FIB/icon.png) | [FIB](#fib) | FIBONACCI NUMBERS THROUGH THE 16-BIT LIMIT. |
+| ![GCD](GCD/icon.png) | [GCD](#gcd) | EUCLID'S GCD ALGORITHM STEPPED THROUGH AN EXAMPLE. |
+| ![GOLDEN](GOLDEN/icon.png) | [GOLDEN](#golden) | DISPLAY THE GOLDEN RATIO AND ITS RECIPROCAL RULE. |
+| ![GRAYCODE](GRAYCODE/icon.png) | [GRAYCODE](#graycode) | AN EIGHT-BIT GRAY CODE, ONE BIT CHANGE PER STEP. |
+| ![HAPPY](HAPPY/icon.png) | [HAPPY](#happy) | INTRODUCE HAPPY NUMBERS AND THEIR FIRST VALUES. |
+| ![HILBERT](HILBERT/icon.png) | [HILBERT](#hilbert) | DISPLAY A SMALL CHARACTER-MODE HILBERT CURVE. |
+| ![KAPREKAR](KAPREKAR/icon.png) | [KAPREKAR](#kaprekar) | THE FOUR-DIGIT KAPREKAR ROUTINE TO 6174. |
+| ![KOCH](KOCH/icon.png) | [KOCH](#koch) | DISPLAY A CHARACTER-MODE KOCH-CURVE MOTIF. |
+| ![LINES](LINES/icon.png) | [LINES](#lines) | DISPLAY A CHARACTER-MODE RADIAL-LINE DIAGRAM. |
+| ![LOOKSAY](LOOKSAY/icon.png) | [LOOKSAY](#looksay) | SHOW EARLY TERMS OF THE LOOK-AND-SAY SEQUENCE. |
+| ![LUCAS](LUCAS/icon.png) | [LUCAS](#lucas) | LUCAS NUMBERS THROUGH THE 16-BIT LIMIT. |
+| ![MAGICSQ](MAGICSQ/icon.png) | [MAGICSQ](#magicsq) | DISPLAY THE CLASSIC 3X3 MAGIC SQUARE. |
+| ![MODCLOCK](MODCLOCK/icon.png) | [MODCLOCK](#modclock) | ADVANCE A TWELVE-HOUR CLOCK WITH MODULAR ARITHMETIC. |
+| ![MULTAB](MULTAB/icon.png) | [MULTAB](#multab) | A COMPACT ONE-THROUGH-FIVE MULTIPLICATION TABLE. |
+| ![PALINDRM](PALINDRM/icon.png) | [PALINDRM](#palindrm) | SHOW A REVERSE-AND-ADD PALINDROME EXAMPLE. |
+| ![PASCAL](PASCAL/icon.png) | [PASCAL](#pascal) | THE FIRST SIX ROWS OF PASCAL'S TRIANGLE. |
+| ![PERFECT](PERFECT/icon.png) | [PERFECT](#perfect) | SHOW EARLY PERFECT NUMBERS AS DIVISOR SUMS. |
+| ![PERMUTE](PERMUTE/icon.png) | [PERMUTE](#permute) | LIST ALL 24 PERMUTATIONS OF ABCD. |
+| ![PI](PI/icon.png) | [PI](#pi) | DISPLAY LEADING DECIMAL DIGITS OF PI. |
+| ![POWERS2](POWERS2/icon.png) | [POWERS2](#powers2) | POWERS OF TWO THROUGH THE 16-BIT LIMIT. |
+| ![PRIMES](PRIMES/icon.png) | [PRIMES](#primes) | A COMPACT LIST OF PRIME NUMBERS THROUGH 97. |
+| ![PYTHTRIP](PYTHTRIP/icon.png) | [PYTHTRIP](#pythtrip) | SHOW THREE CLASSIC PYTHAGOREAN TRIPLES. |
+| ![ROMAN](ROMAN/icon.png) | [ROMAN](#roman) | DISPLAY ROMAN NUMERALS FROM ONE THROUGH TEN. |
+| ![SIERPCAR](SIERPCAR/icon.png) | [SIERPCAR](#sierpcar) | DISPLAY A CHARACTER-MODE SIERPINSKI CARPET. |
+| ![SINTABLE](SINTABLE/icon.png) | [SINTABLE](#sintable) | DISPLAY COMMON-ANGLE SINE VALUES. |
+| ![SQRT](SQRT/icon.png) | [SQRT](#sqrt) | DISPLAY SMALL PERFECT SQUARES AND THEIR ROOTS. |
+| ![SQUARES](SQUARES/icon.png) | [SQUARES](#squares) | ODD-NUMBER SUMS THAT BUILD PERFECT SQUARES. |
+| ![TOTIENT](TOTIENT/icon.png) | [TOTIENT](#totient) | DISPLAY EULER TOTIENT VALUES THROUGH TEN. |
+| ![TRIANGNU](TRIANGNU/icon.png) | [TRIANGNU](#triangnu) | THE FIRST TEN TRIANGULAR NUMBERS AS RUNNING SUMS. |
 
 ---
 
