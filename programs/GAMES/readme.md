@@ -68,6 +68,7 @@ SMALL GAMES. BIG FUN.
 * ![OTHELLO](OTHELLO/icon.png) [OTHELLO](#othello)
 * ![PAIRS](PAIRS/icon.png) [PAIRS](#pairs)
 * ![PEGS](PEGS/icon.png) [PEGS](#pegs)
+* ![PENALTY](PENALTY/icon.png) [PENALTY](#penalty)
 * ![PIG](PIG/icon.png) [PIG](#pig)
 * ![POKER](POKER/icon.png) [POKER](#poker)
 * ![PONG](PONG/icon.png) [PONG](#pong)
@@ -707,6 +708,16 @@ Stored payload: **140 bytes**.
 
 ![PEGS preview](PEGS/preview.png)
 
+## PENALTY
+
+PICK A CORNER BEFORE THE RANDOM KEEPER SAVES IT.
+
+Stored payload: **153 bytes**.
+
+[Assembly source](PENALTY/main.asm)
+
+![PENALTY preview](PENALTY/preview.png)
+
 ## PIG
 
 ROLL TOWARD NINE, OR HOLD BEFORE A ONE BUSTS.
@@ -788,7 +799,7 @@ Stored payload: **166 bytes**.
 ![WHACK preview](WHACK/preview.png)
 
 ---
-**72 programs · 13,416 bytes total · 5016 bytes to spare in this category**
+**73 programs · 13,569 bytes total · 5119 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

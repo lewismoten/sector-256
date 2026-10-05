@@ -97,6 +97,8 @@ Completed: WHACK — added a five-hit number-key reaction game to GAMES.
 
 Completed: SQUARES — added an odd-number-sums square proof to MATH.
 
+Completed: PENALTY — added a random-keeper penalty shootout to GAMES.
+
 ## GAMES
 
 118 ideas.
