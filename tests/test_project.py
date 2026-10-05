@@ -32,6 +32,17 @@ class ProjectTests(unittest.TestCase):
         machine.launch(index, wait_address=wait_address)
         return index
 
+    def enter_category(self, machine, name):
+        """Open a category by its catalog name, independent of its slot."""
+        target = name.encode().ljust(8)
+        for index in range(machine.var('page_count')):
+            address = 0x4800 + index * 96
+            if bytes(machine.memory[address:address + 8]) == target:
+                machine.set_var('selected', index)
+                machine.key(13)
+                return
+        self.fail(f'{name} is not visible in the category catalog')
+
     def test_program_readmes_are_grouped_by_category(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -93,7 +104,7 @@ class ProjectTests(unittest.TestCase):
     def test_launcher_category_and_selection(self):
         machine = Machine()
         machine.boot()
-        self.assertEqual(machine.var('page_count'), 4)
+        self.assertEqual(machine.var('page_count'), 8)
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'GAMES   ')
         machine.key(13)
         self.assertEqual(machine.var('category_mode'), 0)
@@ -106,12 +117,11 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'TICTACTO')
         machine.key(0x87)
         self.assertEqual(machine.var('category_mode'), 1)
-        machine.key(0x1d)
-        machine.key(13)
-        self.assertEqual(machine.var('page_count'), 2)
-        self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'MAZEGEN ')
+        self.enter_category(machine, 'DEMOS')
+        self.assertGreaterEqual(machine.var('page_count'), 2)
+        self.assertIn(b'MAZE10  ', bytes(machine.memory[0x4800:0x4800 + 12 * 96]))
         machine.key(0x87)
-        self.assertEqual(machine.var('page_count'), 4)
+        self.assertEqual(machine.var('page_count'), 8)
 
     def test_short_names_center_under_icons(self):
         machine = Machine()
@@ -128,12 +138,9 @@ class ProjectTests(unittest.TestCase):
 
         self.assertEqual(occupied(1), [False] + [True]*5 + [False]*2)  # GAMES
         self.assertEqual(occupied(31), [False]*2 + [True]*3 + [False]*3)  # LAB
-        machine.key(0x1d)
-        machine.key(0x1d)
-        machine.key(13)
-        self.assertEqual(occupied(1), [False] + [True]*6 + [False])  # CUBE3D
-        self.assertEqual(occupied(11), [False] + [True]*5 + [False]*2)  # DANCE
-        self.assertEqual(occupied(21), [False]*2 + [True]*4 + [False]*2)  # SNOW
+        self.enter_category(machine, 'DEMOS')
+        self.assertEqual(occupied(1), [False]*2 + [True]*4 + [False]*2)  # ATOM
+        self.assertEqual(occupied(11), [False] + [True]*6 + [False])  # CANDLE
 
     def test_pagination_and_letter_jump_for_700_records(self):
         machine = Machine()
@@ -655,16 +662,17 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(animation, 0xc8)
         machine = Machine()
         machine.boot()
-        machine.key(0x1d)
-        machine.key(0x1d)
-        machine.key(13)
-        self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'CUBE3D  ')
-        self.assertEqual(machine.memory[machine.labels['frame_counts']], 4)
+        self.enter_category(machine, 'DEMOS')
+        cube_index = self.program_index(machine, 'CUBE3D')
+        self.assertEqual(bytes(machine.memory[0x4800 + cube_index * 96:0x4808 + cube_index * 96]), b'CUBE3D  ')
+        machine.set_var('selected', cube_index)
+        machine.call('load_icons')
+        self.assertEqual(machine.memory[machine.labels['frame_counts'] + cube_index], 4)
         seen = []
         for tick in range(1, 27):
             machine.video_tick()
             if tick in (7, 13, 20, 26):
-                seen.append(machine.memory[machine.labels['current_frames']])
+                seen.append(machine.memory[machine.labels['current_frames'] + cube_index])
         self.assertEqual(seen, [1, 2, 3, 0])
 
     def test_nonblocking_input_and_explicit_exit(self):
@@ -718,11 +726,8 @@ class ProjectTests(unittest.TestCase):
     def test_cube_rotation_buffers_and_return(self):
         machine = Machine()
         machine.boot()
-        machine.key(0x1d)
-        machine.key(0x1d)
-        machine.key(13)
-        self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'CUBE3D  ')
-        machine.launch(0, wait_address=0x100c)
+        self.enter_category(machine, 'DEMOS')
+        cube_index = self.launch_named(machine, 'CUBE3D', wait_address=0x100c)
         previous = None
         for frame in range(16):
             machine.step()
@@ -749,7 +754,7 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.memory[0xdd00] & 3, 2)
         self.assertEqual(machine.cpu.sp, 0xff)
         self.assertEqual(machine.var('category_id'), 2)
-        self.assertEqual(machine.var('selected'), 0)
+        self.assertEqual(machine.var('selected'), cube_index)
 
     def test_dance_poses_and_return(self):
         frames, animation = collect_frames(ROOT / 'programs/DEMOS/DANCE', 7)
@@ -757,10 +762,8 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(animation, 0xc7)
         machine = Machine()
         machine.boot()
-        machine.key(0x1d)
-        machine.key(0x1d)
-        machine.key(13)
-        machine.launch(1, wait_address=0x100c)
+        self.enter_category(machine, 'DEMOS')
+        dance_index = self.launch_named(machine, 'DANCE', wait_address=0x100c)
         poses = []
         for frame in range(20):
             machine.step()
@@ -772,16 +775,13 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(len(set(poses)), 4)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 2)
-        self.assertEqual(machine.var('selected'), 1)
+        self.assertEqual(machine.var('selected'), dance_index)
 
     def test_sandpile_matches_abelian_model_reset_and_return(self):
         machine = Machine()
         machine.boot()
-        machine.key(0x1d)
-        machine.key(0x1d)
-        machine.key(0x1d)
-        machine.key(13)
-        machine.launch(4, wait_address=0x100c)
+        self.enter_category(machine, 'LAB')
+        sandpile_index = self.launch_named(machine, 'SANDPILE', wait_address=0x100c)
 
         expected = [[0] * 40 for _ in range(25)]
         for _ in range(64):
@@ -819,16 +819,14 @@ class ProjectTests(unittest.TestCase):
                          [new_palette] * 1000)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 3)
-        self.assertEqual(machine.var('selected'), 4)
+        self.assertEqual(machine.var('selected'), sandpile_index)
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_snowfall_speed_density_and_short_stacks(self):
         machine = Machine()
         machine.boot()
-        machine.key(0x1d)
-        machine.key(0x1d)
-        machine.key(13)
-        machine.launch(2, wait_address=0x100c)
+        self.enter_category(machine, 'DEMOS')
+        snow_index = self.launch_named(machine, 'SNOW', wait_address=0x100c)
         live_at_start = [(machine.memory[0xc200+i], machine.memory[0xc240+i])
                          for i in range(64)]
         for parity, width in ((0, 2), (1, 1)):
@@ -866,14 +864,13 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.memory[0xc240], 0)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 2)
-        self.assertEqual(machine.var('selected'), 2)
+        self.assertEqual(machine.var('selected'), snow_index)
 
     def test_maze_connected_acyclic_and_regeneration(self):
         machine = Machine()
         machine.boot()
-        machine.key(0x1d)
-        machine.key(13)
-        machine.launch(0)
+        self.enter_category(machine, 'UTILS')
+        maze_index = self.launch_named(machine, 'MAZEGEN')
 
         def check_maze():
             grid = [machine.memory[0x0450+y*40:0x0450+y*40+39] for y in range(21)]
@@ -911,22 +908,20 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(len(snapshots), 4)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 1)
-        self.assertEqual(machine.var('selected'), 0)
+        self.assertEqual(machine.var('selected'), maze_index)
         self.assertEqual(machine.cpu.sp, 0xff)
-        machine.launch(0, wait_address=0x100c)
+        self.launch_named(machine, 'MAZEGEN', wait_address=0x100c)
         machine.stop_game()  # exit also works while carving the maze
         self.assertEqual(machine.cpu.sp, 0xff)
-        self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'MAZEGEN ')
+        maze_after_exit = self.program_index(machine, 'MAZEGEN')
+        record = 0x4800 + maze_after_exit * 96
+        self.assertEqual(bytes(machine.memory[record:record + 8]), b'MAZEGEN ')
 
     def test_langtons_ant_rules_reset_and_return(self):
         machine = Machine()
         machine.boot()
-        for _ in range(3):
-            machine.key(0x1d)
-        machine.key(13)
-        self.assertEqual(machine.var('page_count'), 5)
-        self.assertEqual(bytes(machine.memory[0x4800:0x4808]), b'ANT     ')
-        machine.launch(0, wait_address=0x100c)
+        self.enter_category(machine, 'LAB')
+        ant_index = self.launch_named(machine, 'ANT', wait_address=0x100c)
 
         grid = set()
         x, y, direction = 128, 100, 0
@@ -977,16 +972,14 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(tuple(machine.memory[2:5]), (128, 100, 0))
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 3)
-        self.assertEqual(machine.var('selected'), 0)
+        self.assertEqual(machine.var('selected'), ant_index)
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_chaos_game_points_reset_and_return(self):
         machine = Machine()
         machine.boot()
-        for _ in range(3):
-            machine.key(0x1d)
-        machine.key(13)
-        machine.launch(1, wait_address=0x100c)
+        self.enter_category(machine, 'LAB')
+        chaos_index = self.launch_named(machine, 'CHAOS', wait_address=0x100c)
         machine.memory[machine.labels['random_state']] = 1
         machine.memory[0x00a2] = 0
 
@@ -1025,20 +1018,14 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(tuple(machine.memory[2:4]), (128, 100))
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 3)
-        self.assertEqual(machine.var('selected'), 1)
+        self.assertEqual(machine.var('selected'), chaos_index)
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_life_blinker_randomize_and_return(self):
         machine = Machine()
         machine.boot()
-        for _ in range(3):
-            machine.key(0x1d)
-        machine.key(13)
-        machine.key(0x1d)
-        machine.key(0x1d)
-        self.assertEqual(machine.var('selected'), 2)
-        self.assertEqual(bytes(machine.memory[0x48c0:0x48c8]), b'LIFE    ')
-        machine.launch(2, wait_address=0x100c)
+        self.enter_category(machine, 'LAB')
+        life_index = self.launch_named(machine, 'LIFE', wait_address=0x100c)
 
         machine.memory[0x0400:0x0800] = [32] * 1024
         for column in (19, 20, 21):
@@ -1057,16 +1044,14 @@ class ProjectTests(unittest.TestCase):
         self.assertNotEqual(bytes(machine.memory[0x0400:0x07e8]), before)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 3)
-        self.assertEqual(machine.var('selected'), 2)
+        self.assertEqual(machine.var('selected'), life_index)
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_rule30_generations_completion_reset_and_return(self):
         machine = Machine()
         machine.boot()
-        for _ in range(3):
-            machine.key(0x1d)
-        machine.key(13)
-        machine.launch(3, wait_address=0x100c)
+        self.enter_category(machine, 'LAB')
+        rule_index = self.launch_named(machine, 'RULE30', wait_address=0x100c)
 
         row = [0] * 256
         row[128] = 1
@@ -1095,7 +1080,7 @@ class ProjectTests(unittest.TestCase):
                              for value in machine.memory[0x6000:0x8000]), 1)
         machine.stop_game()
         self.assertEqual(machine.var('category_id'), 3)
-        self.assertEqual(machine.var('selected'), 3)
+        self.assertEqual(machine.var('selected'), rule_index)
         self.assertEqual(machine.cpu.sp, 0xff)
 
     def test_hangman_win_loss_and_repeated_guess(self):
