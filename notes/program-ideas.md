@@ -39,6 +39,8 @@ Completed: FIB — added the Fibonacci sequence through the 16-bit limit to MATH
 
 Completed: BINCOUNT — added an interactive eight-bit binary counter to MATH.
 
+Completed: PASCAL — added the first six rows of Pascal's triangle to MATH.
+
 ## GAMES
 
 118 ideas.

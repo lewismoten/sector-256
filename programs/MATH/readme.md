@@ -7,6 +7,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![BINCOUNT](BINCOUNT/icon.png) [BINCOUNT](#bincount)
 * ![CANTOR](CANTOR/icon.png) [CANTOR](#cantor)
 * ![FIB](FIB/icon.png) [FIB](#fib)
+* ![PASCAL](PASCAL/icon.png) [PASCAL](#pascal)
 
 ---
 
@@ -40,8 +41,18 @@ Stored payload: **164 bytes**.
 
 ![FIB preview](FIB/preview.png)
 
+## PASCAL
+
+THE FIRST SIX ROWS OF PASCAL'S TRIANGLE.
+
+Stored payload: **136 bytes**.
+
+[Assembly source](PASCAL/main.asm)
+
+![PASCAL preview](PASCAL/preview.png)
+
 ---
-**3 programs · 406 bytes total · 362 bytes to spare in this category**
+**4 programs · 542 bytes total · 482 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
