@@ -475,6 +475,22 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(machine.var('category_id'), 0)
         self.assertEqual(machine.cpu.sp, 0xff)
 
+    def test_defuse_requires_three_safe_wire_cuts(self):
+        machine = Machine()
+        machine.boot()
+        machine.key(13)
+        self.launch_named(machine, 'DEFUSE')
+        for count in range(1, 4):
+            machine.memory[2] = 1
+            machine.game_key('1')
+            self.assertEqual(machine.memory[3], count)
+        self.assertIn('DEFUSED!', machine.output)
+        machine.game_key(13)
+        self.assertEqual(machine.memory[3], 0)
+        machine.stop_game()
+        self.assertEqual(machine.var('category_id'), 0)
+        self.assertEqual(machine.cpu.sp, 0xff)
+
     def test_monty_hall_reveal_choices_and_score(self):
         machine = Machine()
         machine.boot()

@@ -18,12 +18,13 @@
 
 ## Progress
 
-Completed: ANT, ARCHERY, BALLOON, CATCHER, CHAOS, CHICKEN, COWBULL, CUBE3D, DANCE,
-DICE, DODGE, FISHING, GUESSNUM, HANGMAN, HILO, HORSES, HOTPOT, HUNT, LIFE, LOTTO,
+Completed: ANT, ARCHERY, BALLOON, CATCHER, CHAOS, CHICKEN, COWBULL, CUBE3D,
+DANCE, DEFUSE, DICE, DODGE, FISHING, GUESSNUM, HANGMAN, HILO, HORSES, HOTPOT,
+HUNT, LIFE, LOTTO,
 MAZEGEN, MONTY, RULE30, SANDPILE,
 SNOW, SWATCH, TICTACTO.
 
-Working: DEFUSE — cut wires in a randomized safe order before the timer expires in GAMES.
+Working: DUEL — wait for a random signal and fire before the other gunslinger in GAMES.
 
 ## GAMES
 

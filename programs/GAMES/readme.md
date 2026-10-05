@@ -9,6 +9,7 @@ SMALL GAMES. BIG FUN.
 * ![CATCHER](CATCHER/icon.png) [CATCHER](#catcher)
 * ![CHICKEN](CHICKEN/icon.png) [CHICKEN](#chicken)
 * ![COWBULL](COWBULL/icon.png) [COWBULL](#cowbull)
+* ![DEFUSE](DEFUSE/icon.png) [DEFUSE](#defuse)
 * ![DICE](DICE/icon.png) [DICE](#dice)
 * ![DODGE](DODGE/icon.png) [DODGE](#dodge)
 * ![FISHING](FISHING/icon.png) [FISHING](#fishing)
@@ -73,6 +74,16 @@ Stored payload: **175 bytes**.
 [Assembly source](COWBULL/main.asm)
 
 ![COWBULL preview](COWBULL/preview.png)
+
+## DEFUSE
+
+CUT WIRES 1-3. THREE SAFE CUTS DEFUSE THE BOMB.
+
+Stored payload: **155 bytes**.
+
+[Assembly source](DEFUSE/main.asm)
+
+![DEFUSE preview](DEFUSE/preview.png)
 
 ## DICE
 
@@ -195,7 +206,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**17 programs · 3,477 bytes total · 875 bytes to spare in this category**
+**18 programs · 3,632 bytes total · 976 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
