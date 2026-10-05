@@ -235,6 +235,8 @@ Completed: REACTION — added a compact wait-for-GO reaction game to GAMES.
 
 Completed: MARQUEE — added a compact chasing-light border demo to DEMOS.
 
+Completed: CONFETTI — added a compact randomized confetti toy to TOYS.
+
 ## GAMES
 
 118 ideas.
