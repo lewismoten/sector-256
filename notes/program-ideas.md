@@ -223,6 +223,8 @@ Completed: SQRT — added a perfect-square and square-root reference to MATH.
 
 Completed: LINES — added a character-mode radial-line diagram to MATH.
 
+Completed: ATOM — added a compact character-mode orbiting electron demo to DEMOS.
+
 Completed: ALIASING — added a two-frame sampling demo to LAB.
 
 Completed: BINCLOCK — added a binary clock reference to TOYS.

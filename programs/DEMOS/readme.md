@@ -6,6 +6,7 @@ PIXELS, SOUND AND TINY SHOWS.
 
 | Icon | Program | Description |
 | --- | --- | --- |
+| ![ATOM](ATOM/icon.png) | [ATOM](#atom) | Cycles a single electron around a tiny character-mode atom. |
 | ![CANDLE](CANDLE/icon.png) | [CANDLE](#candle) | SHOW A CHARACTER-ART CANDLE WITH RANDOM FLAME FRAMES. |
 | ![CUBE3D](CUBE3D/icon-preview.gif) | [CUBE3D](#cube3d) | A ROTATING 3D WIREFRAME CUBE.   RUN/STOP TO RETURN TO LAUNCHER. |
 | ![DANCE](DANCE/icon-preview.gif) | [DANCE](#dance) | DISCO LADY: FOUR VECTOR DANCE POSES. RUN/STOP TO RETURN. |
@@ -17,6 +18,16 @@ PIXELS, SOUND AND TINY SHOWS.
 | ![XORPAT](XORPAT/icon.png) | [XORPAT](#xorpat) | A CLASSIC X-XOR-Y CHARACTER TEXTURE. |
 
 ---
+
+## ATOM
+
+Cycles a single electron around a tiny character-mode atom.
+
+Stored payload: **76 bytes**.
+
+[Assembly source](ATOM/main.asm)
+
+![ATOM preview](ATOM/preview.png)
 
 ## CANDLE
 
@@ -109,7 +120,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**9 programs · 1,299 bytes total · 1005 bytes to spare in this category**
+**10 programs · 1,375 bytes total · 1185 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
