@@ -197,6 +197,8 @@ Completed: CATALAN — added a Catalan-number reference to MATH.
 
 Completed: EDIGITS — added a leading-digits reference for e to MATH.
 
+Completed: PI — added a leading-digits reference for pi to MATH.
+
 ## GAMES
 
 118 ideas.

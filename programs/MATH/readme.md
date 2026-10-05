@@ -24,6 +24,7 @@ NUMBERS, PATTERNS, AND SMALL PROOFS.
 * ![MULTAB](MULTAB/icon.png) [MULTAB](#multab)
 * ![PASCAL](PASCAL/icon.png) [PASCAL](#pascal)
 * ![PERFECT](PERFECT/icon.png) [PERFECT](#perfect)
+* ![PI](PI/icon.png) [PI](#pi)
 * ![POWERS2](POWERS2/icon.png) [POWERS2](#powers2)
 * ![PRIMES](PRIMES/icon.png) [PRIMES](#primes)
 * ![PYTHTRIP](PYTHTRIP/icon.png) [PYTHTRIP](#pythtrip)
@@ -234,6 +235,16 @@ Stored payload: **104 bytes**.
 
 ![PERFECT preview](PERFECT/preview.png)
 
+## PI
+
+DISPLAY LEADING DECIMAL DIGITS OF PI.
+
+Stored payload: **76 bytes**.
+
+[Assembly source](PI/main.asm)
+
+![PI preview](PI/preview.png)
+
 ## POWERS2
 
 POWERS OF TWO THROUGH THE 16-BIT LIMIT.
@@ -305,7 +316,7 @@ Stored payload: **160 bytes**.
 ![TRIANGNU preview](TRIANGNU/preview.png)
 
 ---
-**27 programs · 3,261 bytes total · 3651 bytes to spare in this category**
+**28 programs · 3,337 bytes total · 3831 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
