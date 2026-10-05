@@ -69,6 +69,7 @@ SMALL GAMES. BIG FUN.
 * ![PAIRS](PAIRS/icon.png) [PAIRS](#pairs)
 * ![PEGS](PEGS/icon.png) [PEGS](#pegs)
 * ![POKER](POKER/icon.png) [POKER](#poker)
+* ![PONG](PONG/icon.png) [PONG](#pong)
 * ![TICTACTO](TICTACTO/icon-preview.gif) [TICTACTO](#tictacto)
 
 ---
@@ -711,6 +712,16 @@ Stored payload: **183 bytes**.
 
 ![POKER preview](POKER/preview.png)
 
+## PONG
+
+RETURN THE BALL WITH A ON LEFT OR D ON RIGHT.
+
+Stored payload: **187 bytes**.
+
+[Assembly source](PONG/main.asm)
+
+![PONG preview](PONG/preview.png)
+
 ## TICTACTO
 
 TWO PLAYERS. KEYS 1-9 PLACE X/O. MAKE A LINE OF THREE.
@@ -722,7 +733,7 @@ Stored payload: **253 bytes**.
 ![TICTACTO preview](TICTACTO/preview.png)
 
 ---
-**66 programs · 12,257 bytes total · 4639 bytes to spare in this category**
+**67 programs · 12,444 bytes total · 4708 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).
