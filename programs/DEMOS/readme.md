@@ -13,6 +13,7 @@ PIXELS, SOUND AND TINY SHOWS.
 | ![CUBE3D](CUBE3D/icon-preview.gif) | [CUBE3D](#cube3d) | A ROTATING 3D WIREFRAME CUBE.   RUN/STOP TO RETURN TO LAUNCHER. |
 | ![DANCE](DANCE/icon-preview.gif) | [DANCE](#dance) | DISCO LADY: FOUR VECTOR DANCE POSES. RUN/STOP TO RETURN. |
 | ![EQUALIZR](EQUALIZR/icon.png) | [EQUALIZR](#equalizr) | RANDOM CHARACTER-MODE EQUALIZER BARS. |
+| ![FIREFLY](FIREFLY/icon.png) | [FIREFLY](#firefly) | Scatters a fresh random field of blinking fireflies. |
 | ![HEARTBT](HEARTBT/icon.png) | [HEARTBT](#heartbt) | Alternates character-heart frames with a SID pulse. |
 | ![MARQUEE](MARQUEE/icon.png) | [MARQUEE](#marquee) | A tiny character-mode chasing-light marquee. |
 | ![MAZE10](MAZE10/icon.png) | [MAZE10](#maze10) | A CLASSIC RANDOM DIAGONAL CHARACTER MAZE. |
@@ -96,6 +97,16 @@ Stored payload: **97 bytes**.
 [Assembly source](EQUALIZR/main.asm)
 
 ![EQUALIZR preview](EQUALIZR/preview.png)
+
+## FIREFLY
+
+Scatters a fresh random field of blinking fireflies.
+
+Stored payload: **82 bytes**.
+
+[Assembly source](FIREFLY/main.asm)
+
+![FIREFLY preview](FIREFLY/preview.png)
 
 ## HEARTBT
 
@@ -208,7 +219,7 @@ Stored payload: **45 bytes**.
 ![XORPAT preview](XORPAT/preview.png)
 
 ---
-**18 programs · 2,548 bytes total · 2060 bytes to spare in this category**
+**19 programs · 2,630 bytes total · 2234 bytes to spare in this category**
 
 Want to add one? See [Add a program](../../docs/add_program.md)
 and the [program interface](../../docs/program-api.md).

@@ -277,6 +277,8 @@ Completed: PHONERNG — added a compact two-tone SID telephone ring to SOUND.
 
 Completed: TRUCHET — added a compact random character-tile demo to DEMOS.
 
+Completed: FIREFLY — added a compact random character-firefly demo to DEMOS.
+
 ## GAMES
 
 118 ideas.
