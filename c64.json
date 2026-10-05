@@ -5,6 +5,6 @@
   "preview": "docs/social-preview.jpg",
   "logo": "docs/logo.png",
   "screenshot": "docs/launcher.png",
-  "file": "release/sector-256.d64",
+  "file": "https://github.com/lewismoten/sector-256/releases/download/v1.0.0/sector-256.d64",
   "source": "https://github.com/lewismoten/sector-256"
 }
