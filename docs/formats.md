@@ -34,9 +34,9 @@ Each subsequent record is exactly 96 bytes:
 | 82 | 14 | Reserved, zero |
 
 INDEX.DAT is globally alphabetical. Filtering by category preserves that order.
-CATS.DAT follows the order of `categories.json`. Only twelve index records
-are resident at once. Pages and letter jumps stream from the start of the file;
-late pages take longer to reach on a physical drive.
+CATS.DAT follows the `order` values in `programs/*/category.json`. Only twelve
+index records are resident at once. Pages and letter jumps stream from the
+start of the file; late pages take longer to reach on a physical drive.
 
 ## ICONS.DAT
 

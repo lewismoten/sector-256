@@ -21,8 +21,8 @@ def generate(root=ROOT):
         "in any program to return to the launcher.",
         ""
         ]
-    categories = json.loads((root / "categories.json").read_text())
-    category_names = {category["name"].upper() for category in categories}
+    category_names = {path.parent.name.upper()
+                      for path in (root / "programs").glob("*/category.json")}
     folders = sorted((path.parent for path in (root / "programs").glob("*/*/program.json")
                       if path.parent.parent.name.upper() in category_names),
                      key=lambda path: path.name.upper())

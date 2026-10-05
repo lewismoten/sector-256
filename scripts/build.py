@@ -90,23 +90,32 @@ def build(allow_oversize=False, root=ROOT, assembler="64tass"):
     assembler = shutil.which(assembler) or assembler
     out = root / "build"
     out.mkdir(exist_ok=True)
-    categories = json.loads((root / "categories.json").read_text())
-    if not 1 <= len(categories) <= 12:
+    program_root = root / "programs"
+    category_folders = [folder for folder in program_root.iterdir() if folder.is_dir()]
+    if not 1 <= len(category_folders) <= 12:
         raise ValueError("use 1..12 categories")
+    category_entries = []
+    for folder in category_folders:
+        metadata_path = folder / "category.json"
+        if not metadata_path.is_file():
+            raise ValueError(f"{folder}: missing category.json")
+        metadata = json.loads(metadata_path.read_text())
+        if "name" in metadata:
+            raise ValueError(f"{folder.name}: remove name from category.json; its parent folder defines it")
+        order = metadata.pop("order", None)
+        if not isinstance(order, int) or isinstance(order, bool) or order < 0:
+            raise ValueError(f"{folder.name}: category order must be a nonnegative integer")
+        category_entries.append((order, folder, {"name": folder.name.upper(), **metadata}))
+    category_entries.sort(key=lambda entry: entry[0])
+    if [entry[0] for entry in category_entries] != list(range(len(category_entries))):
+        raise ValueError("category order values must be unique and contiguous from zero")
+    categories = [entry[2] for entry in category_entries]
     ids = {c["name"].upper(): i for i, c in enumerate(categories)}
     if len(ids) != len(categories):
         raise ValueError("category names must be unique")
-    program_root = root / "programs"
-    category_folders = {folder.name.upper(): folder for folder in program_root.iterdir()
-                        if folder.is_dir()}
-    unknown = sorted(set(category_folders) - set(ids))
-    if unknown:
-        raise ValueError(f"unknown program category folder: {unknown[0]}")
     program_folders = []
-    for category_name in ids:
-        category_folder = category_folders.get(category_name)
-        if category_folder is None:
-            raise ValueError(f"missing program category folder: {category_name}")
+    for _, category_folder, category in category_entries:
+        category_name = category["name"]
         for folder in category_folder.iterdir():
             if folder.is_dir():
                 if not (folder / "program.json").is_file():

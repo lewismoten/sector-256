@@ -8,6 +8,8 @@ globally, and space-padded to eight bytes in the index.
 ```text
 programs/
   UTILS/
+    category.json
+    icon.png
     MYTOOL/
       main.asm
       program.json
@@ -18,7 +20,16 @@ programs/
       preview.png  optional, used only in programs/readme.md
 ```
 
-Example metadata:
+Example category metadata:
+
+```json
+{
+  "description": "HANDY LITTLE TOOLS.",
+  "order": 1
+}
+```
+
+Example program metadata:
 
 ```json
 {
@@ -29,9 +40,10 @@ Example metadata:
 
 Descriptions are printable ASCII, at most 64 bytes, converted to uppercase and
 space-padded. The launcher displays them in two 32-character lines; embedded
-spaces can be used to arrange the line break. Each category in `categories.json`
-has a matching folder in `programs/`; its `icon.png` is the category icon.
-Configure up to twelve categories.
+spaces can be used to arrange the line break. Each category folder has a
+`category.json` containing its description and zero-based display order, plus
+an `icon.png` for the category icon. Configure up to twelve categories. Order
+values must be unique and contiguous from zero.
 
 `main.asm` must assemble for the 6502 with entry address `$c000` and use the
 [program interface](program-api.md). Only its actual machine-code/data

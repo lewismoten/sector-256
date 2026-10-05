@@ -25,6 +25,14 @@ class ProjectTests(unittest.TestCase):
         disk = read_disk((ROOT / 'release/sector-256.d64').read_bytes())
         category_ids = {category['name']: index
                         for index, category in enumerate(manifest['categories'])}
+        category_metadata = list((ROOT / 'programs').glob('*/category.json'))
+        self.assertFalse((ROOT / 'categories.json').exists())
+        self.assertEqual({path.parent.name for path in category_metadata},
+                         set(category_ids))
+        for path in category_metadata:
+            metadata = json.loads(path.read_text())
+            self.assertNotIn('name', metadata)
+            self.assertEqual(metadata['order'], category_ids[path.parent.name])
         program_metadata = list((ROOT / 'programs').glob('*/*/program.json'))
         self.assertEqual({path.parent.parent.name for path in program_metadata},
                          set(category_ids))

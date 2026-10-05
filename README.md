@@ -70,6 +70,8 @@ redistributed in this project.
 | --- | --- |
 | `src/launcher.asm` | Graphical disk/catalog launcher |
 | `src/api.inc` | Stable game entry and shared routine addresses |
+| `programs/<category>/category.json` | Category description and launcher order |
+| `programs/<category>/icon.png` | Category icon |
 | `programs/<category>/*/main.asm` | Individual program source, grouped by category |
 | `scripts/build.py` | Compile, validate, pack, and build D64 |
 | `scripts/d64.py` | Disk-image writer and verification reader |
