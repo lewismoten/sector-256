@@ -262,6 +262,8 @@ Stored payload: **175 bytes**.
 
 [Assembly source](OCEANLIF/main.asm)
 
+![OCEANLIF preview](OCEANLIF/preview.png)
+
 ## OCEANS
 
 PICK THE FIRST LETTER OF THREE OCEAN NAMES.
