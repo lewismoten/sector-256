@@ -1,4 +1,5 @@
 const TY64_URL = "https://ty64.krissz.hu/";
+const TY64_READY_DELAY_MS = 3000;
 const toast = document.querySelector("#status");
 const categoryList = document.querySelector("#category-list");
 const programList = document.querySelector("#program-list");
@@ -21,10 +22,10 @@ async function sendToTy64(path, label) {
         const response = await fetch(path);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const arrayOfBytes = new Uint8Array(await response.arrayBuffer());
-        // Give a newly opened cross-origin tab time to register its message listener.
-        await new Promise(resolve => setTimeout(resolve, 750));
+        // TY64 registers its cross-origin PRG listener during startup.
+        await new Promise(resolve => setTimeout(resolve, TY64_READY_DELAY_MS));
         ty64Tab.postMessage(arrayOfBytes, new URL(TY64_URL).origin);
-        setStatus(`Sent ${label} to TY64.`);
+        setStatus(`Sent ${label} to TY64. Switch to the emulator tab to play.`);
     } catch (error) {
         setStatus(`Could not load ${label}: ${error.message}`);
     }
@@ -67,28 +68,33 @@ function renderPrograms() {
         return;
     }
     programList.replaceChildren(...programs.map(program => {
-        const button = document.createElement("button");
-        button.className = "program";
-        button.type = "button";
+        const card = document.createElement("article");
+        card.className = "program";
         const name = document.createElement("strong");
         name.textContent = program.name;
         const bytes = document.createElement("span");
         bytes.textContent = `${program.bytes} B`;
         const description = document.createElement("small");
         description.textContent = program.description;
-        button.append(name, bytes, description);
-        button.addEventListener("click", () => sendProgram(program));
-        return button;
+        const actions = document.createElement("div");
+        actions.className = "program-actions";
+        const run = document.createElement("button");
+        run.type = "button";
+        run.textContent = "Run in TY64";
+        run.addEventListener("click", () => sendProgram(program));
+        const download = document.createElement("a");
+        download.className = "button secondary";
+        download.href = program.prg;
+        download.download = `${program.name}.PRG`;
+        download.textContent = "Download PRG";
+        actions.append(run, download);
+        card.append(name, bytes, description, actions);
+        return card;
     }));
 }
 const sendProgram = (program) => {
     sendToTy64(program.prg, `${program.name}.PRG`)
 }
-const sendDisk = () => {
-    sendToTy64("sector-256.d64", "sector-256.d64");
-}
-document.querySelector("#launch-disk").addEventListener("click", sendDisk);
-
 async function loadCatalog() {
     try {
         const response = await fetch("catalog.json");
@@ -97,7 +103,7 @@ async function loadCatalog() {
         selectedCategory = catalog.categories[0]?.name;
         renderCategories();
         renderPrograms();
-        setStatus("Choose a category, then send a standalone PRG to TY64.");
+        setStatus("Choose a category, then run or download a standalone PRG.");
     } catch (error) {
         setStatus(`Catalog unavailable: ${error.message}`);
     }

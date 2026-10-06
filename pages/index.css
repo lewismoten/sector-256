@@ -1,11 +1,12 @@
 :root {
     color-scheme: dark;
-    --ink: #edffe6;
-    --muted: #a9bfaa;
-    --panel: #10231b;
-    --line: #366048;
-    --accent: #a9ff9f;
-    --cyan: #75cec8;
+    --navy: #020b2a;
+    --ink: #e3f7ff;
+    --muted: #9fc5dc;
+    --panel: #071a42;
+    --line: #176ba9;
+    --accent: #02b3f2;
+    --cyan: #0ad5db;
 }
 
 * {
@@ -17,7 +18,7 @@ body {
     margin: 0 auto;
     padding: 2rem 1rem 4rem;
     color: var(--ink);
-    background: #07120d;
+    background: var(--navy);
     font: 16px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
@@ -49,7 +50,7 @@ p {
 button,
 a.button {
     border: 1px solid var(--accent);
-    color: #07120d;
+    color: var(--navy);
     background: var(--accent);
     padding: .7rem .9rem;
     border-radius: .25rem;
@@ -59,7 +60,8 @@ a.button {
     text-decoration: none;
 }
 
-button.secondary {
+a.button.secondary,
+.program-actions .secondary {
     border-color: var(--cyan);
     color: var(--cyan);
     background: transparent;
@@ -86,6 +88,20 @@ section {
     border: 1px solid var(--line);
     padding: 1rem;
     background: var(--panel);
+}
+
+.disk-instructions {
+    margin-top: 1.5rem;
+}
+
+.disk-instructions ol {
+    margin: 0;
+    padding-left: 1.4rem;
+    color: var(--muted);
+}
+
+.disk-instructions a {
+    color: var(--cyan);
 }
 
 #category-list,
@@ -118,11 +134,26 @@ section {
     display: grid;
     grid-template-columns: 1fr auto;
     gap: .4rem 1rem;
+    border-color: var(--line);
+    padding: .7rem;
 }
 
 .program small {
     grid-column: 1 / -1;
     color: var(--muted);
+}
+
+.program-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.program-actions button,
+.program-actions a.button {
+    padding: .45rem .65rem;
+    font-size: .85rem;
 }
 
 .empty {

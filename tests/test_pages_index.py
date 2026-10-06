@@ -7,10 +7,27 @@ PAGES = ROOT / "pages"
 
 
 class PagesIndexTests(unittest.TestCase):
-    def test_pages_index_exposes_disk_and_program_emulator_controls(self):
+    def test_pages_index_explains_disk_download_and_links_to_ty64(self):
         page = (PAGES / "index.html").read_text()
         script = (PAGES / "index.js").read_text()
-        self.assertIn('id="launch-disk"', page)
+        self.assertIn('href="sector-256.d64"', page)
+        self.assertIn('id="disk-instructions"', page)
+        self.assertIn('https://ty64.krissz.hu/', page)
+        self.assertIn('Open URL', page)
+        self.assertNotIn('id="launch-disk"', page)
+        self.assertNotIn('sector-256.d64', script)
+
+    def test_pages_index_gives_each_program_run_and_download_controls(self):
+        script = (PAGES / "index.js").read_text()
+        self.assertIn('className = "program-actions"', script)
+        self.assertIn('Run in TY64', script)
+        self.assertIn('Download PRG', script)
+        self.assertIn('download = `${program.name}.PRG`', script)
+        self.assertIn('download.href = program.prg', script)
+
+    def test_pages_index_exposes_catalog_and_safe_ty64_message_controls(self):
+        page = (PAGES / "index.html").read_text()
+        script = (PAGES / "index.js").read_text()
         self.assertIn('id="category-list"', page)
         self.assertIn('id="program-list"', page)
         self.assertIn('src="index.js"', page)

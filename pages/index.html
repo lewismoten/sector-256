@@ -13,15 +13,23 @@
   <header class="header">
     <div>
       <h1>SECTOR 256</h1>
-      <p>Browse the catalog, open the disk image, or send any standalone program to TY64.</p>
+      <p>Download the catalog disk or run and download standalone programs.</p>
     </div>
   </header>
 
   <div class="actions">
-    <button id="launch-disk">Open D64 in TY64</button>
-    <a class="button secondary" href="sector-256.d64" download>Download D64</a>
+    <a class="button" href="sector-256.d64" download>Download D64</a>
     <a class="button secondary" href="https://ty64.krissz.hu/" target="ty64" rel="noopener">Open TY64</a>
   </div>
+  <section id="disk-instructions" class="disk-instructions" aria-labelledby="disk-instructions-heading">
+    <h2 id="disk-instructions-heading">Use the disk image in TY64</h2>
+    <ol>
+      <li>Download <code>sector-256.d64</code>.</li>
+      <li>Open <a href="https://ty64.krissz.hu/" target="ty64" rel="noopener">TY64</a>.</li>
+      <li>Select TY64’s folder icon, choose the downloaded D64, then use the disk directory to start the launcher.</li>
+    </ol>
+    <p>TY64’s globe icon opens its <strong>Open URL</strong> menu, which can also load the published D64 URL directly.</p>
+  </section>
   <p id="status" role="status">Loading catalog…</p>
 
   <main>
