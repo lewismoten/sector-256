@@ -108,6 +108,9 @@ section {
 #program-list {
     display: grid;
     gap: .45rem;
+    max-height: 42vh;
+    overflow-y: auto;
+    padding-right: .25rem;
 }
 
 .category,

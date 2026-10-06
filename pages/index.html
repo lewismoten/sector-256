@@ -14,7 +14,6 @@
     <div>
       <h1>SECTOR 256</h1>
       <p>Download the catalog disk or run and download standalone programs.</p>
-      <p><a class="repository-link" href="https://github.com/lewismoten/sector-256" target="sector-256-source" rel="noopener">View the Sector 256 repository</a></p>
     </div>
   </header>
 
@@ -22,8 +21,9 @@
     <a class="button" href="sector-256.d64" download>Download D64</a>
     <button id="inspect-disk" class="secondary" type="button">Inspect Disk</button>
     <a class="button secondary" href="https://ty64.krissz.hu/" target="ty64" rel="noopener">Open TY64</a>
+    <button id="disk-help" class="secondary" type="button">D64 Help</button>
   </div>
-  <section id="disk-instructions" class="disk-instructions" aria-labelledby="disk-instructions-heading">
+  <dialog id="disk-instructions-dialog" class="disk-instructions-dialog" aria-labelledby="disk-instructions-heading">
     <h2 id="disk-instructions-heading">Use the disk image in TY64</h2>
     <ol>
       <li>Download <code>sector-256.d64</code>.</li>
@@ -31,7 +31,8 @@
       <li>Select TY64’s folder icon, choose the downloaded D64, then use the disk directory to start the launcher.</li>
     </ol>
     <p>TY64’s globe icon opens its <strong>Open URL</strong> menu, which can also load the published D64 URL directly.</p>
-  </section>
+    <button id="disk-help-close" type="button">Close</button>
+  </dialog>
   <p id="status" role="status">Loading catalog…</p>
   <article id="program-info" class="program-info" hidden>
     <img id="program-screenshot" alt="Selected program screenshot">
@@ -55,6 +56,7 @@
       <div id="program-list" aria-live="polite"></div>
     </section>
   </main>
+  <footer id="repository-footer">Github: <a href="https://github.com/lewismoten/sector-256" target="sector-256-source" rel="noopener">lewismoten/sector-256</a></footer>
   <script type="text/javascript" src="index.js"></script>
 </body>
 

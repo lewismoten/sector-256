@@ -7,6 +7,9 @@ const categoryList = document.querySelector("#category-list");
 const programList = document.querySelector("#program-list");
 const programHeading = document.querySelector("#program-heading");
 const inspectDiskButton = document.querySelector("#inspect-disk");
+const diskHelpButton = document.querySelector("#disk-help");
+const diskHelpDialog = document.querySelector("#disk-instructions-dialog");
+const diskHelpClose = document.querySelector("#disk-help-close");
 const programInfo = document.querySelector("#program-info");
 const programScreenshot = document.querySelector("#program-screenshot");
 const selectedProgramName = document.querySelector("#selected-program-name");
@@ -199,3 +202,5 @@ async function loadCatalog() {
 
 loadCatalog();
 inspectDiskButton.addEventListener("click", inspectDisk);
+diskHelpButton.addEventListener("click", () => diskHelpDialog.showModal());
+diskHelpClose.addEventListener("click", () => diskHelpDialog.close());
