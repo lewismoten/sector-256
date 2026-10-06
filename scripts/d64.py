@@ -8,6 +8,23 @@ def sector_offset(track, sector):
     return (sum(SECTORS[:track]) + sector) * 256
 
 
+def interleaved_sectors(count, interleave=10):
+    """Return every sector once in a 1541-friendly file-chain order."""
+    order, used, sector = [], set(), 0
+    while len(order) < count:
+        order.append(sector)
+        used.add(sector)
+        if len(order) == count:
+            break
+        candidate = (sector + interleave) % count
+        if candidate in used:
+            candidate = (sector + interleave - 1) % count
+        while candidate in used:
+            candidate = (candidate + 1) % count
+        sector = candidate
+    return order
+
+
 def make_disk(files, name="SECTOR 256", disk_id="S2"):
     if len(files) > 144:
         raise ValueError("standard directory supports at most 144 files")
@@ -23,7 +40,7 @@ def make_disk(files, name="SECTOR 256", disk_id="S2"):
                    for track in (18 - distance, 18 + distance)
                    if 1 <= track <= 35]
     free = [(track, sector) for track in track_order
-            for sector in range(SECTORS[track])]
+            for sector in interleaved_sectors(SECTORS[track])]
     cursor = 0
     for i, (filename, payload, kind) in enumerate(files):
         blocks = max(1, (len(payload) + 253) // 254)

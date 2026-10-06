@@ -130,7 +130,7 @@ def build(allow_oversize=False, root=ROOT, assembler="64tass"):
                 if not (folder / "program.json").is_file():
                     raise ValueError(f"{folder}: missing program.json")
                 program_folders.append((folder, ids[category_name]))
-    program_folders.sort(key=lambda item: item[0].name.upper())
+    program_folders.sort(key=lambda item: (item[1], item[0].name.upper()))
     icon_data = bytearray()
     category_frames = []
     for i, cat in enumerate(categories):

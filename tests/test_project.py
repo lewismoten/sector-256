@@ -9,7 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build import build, encode_icon, collect_frames, record, ROOT
-from d64 import make_disk, read_disk
+from d64 import make_disk, read_disk, sector_offset
 from machine import Machine
 from programs_md import generate as generate_programs_md
 
@@ -121,11 +121,22 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(read_disk(data), {'A': bytes(range(256)), 'B': b'123'})
         self.assertEqual(sum(data[0x16500 + 4 + i * 4] for i in range(35)), 678)
 
+    def test_disk_interleaves_file_sectors_for_1541_reads(self):
+        data = make_disk([('LOADER', b'x' * (254 * 3), 'PRG')])
+        directory = sector_offset(18, 1)
+        track, sector = data[directory + 3:directory + 5]
+        chain = []
+        while track:
+            chain.append((track, sector))
+            base = sector_offset(track, sector)
+            track, sector = data[base:base + 2]
+        self.assertEqual(chain, [(17, 0), (17, 10), (17, 20)])
+
     def test_disk_allocates_boot_files_next_to_directory_track(self):
         data = make_disk([('LOADER', b'boot', 'PRG'), ('CATS.DAT', b'cats', 'SEQ')])
         directory = 0x16600
         self.assertEqual(tuple(data[directory + 3:directory + 5]), (17, 0))
-        self.assertEqual(tuple(data[directory + 35:directory + 37]), (17, 1))
+        self.assertEqual(tuple(data[directory + 35:directory + 37]), (17, 10))
 
     def test_games_fit_and_catalog_matches_disk(self):
         manifest = json.loads((ROOT / 'build/manifest.json').read_text())
@@ -148,6 +159,10 @@ class ProjectTests(unittest.TestCase):
         expected_categories = {path.parent.name: category_ids[path.parent.parent.name]
                                for path in program_metadata}
         self.assertEqual(disk['INDEX.DAT'][:6], b'S256\x01\x60')
+        self.assertEqual(
+            [(game['category'], game['name']) for game in manifest['programs']],
+            sorted((game['category'], game['name']) for game in manifest['programs']),
+        )
         for i, game in enumerate(manifest['programs']):
             self.assertLessEqual(game['size'], 256)
             self.assertEqual(game['category'], expected_categories[game['name']])
