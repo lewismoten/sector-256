@@ -1,4 +1,4 @@
-; Pump for points, but each breath makes the balloon more likely to pop.
+; Pump for points. RETURN holds the balloon: full pressure wins.
 .include "api.inc"
 .cpu "6502"
 * = $c000
@@ -8,6 +8,12 @@ text_ptr = $20
     lda #>title
     sta text_ptr+1
 round:
+    inc round_color
+    lda round_color
+    and #15
+    sta round_color
+    sta $d020
+    sta $d021
     jsr CLEAR
     lda #0
     sta air
@@ -15,16 +21,24 @@ round:
     jsr print
 pump:
     jsr WAITKEY
+    cmp #13
+    bne not_hold
+    lda air
+    cmp #7
+    beq won
+    ldx #<lost
+    jsr print
+    jmp again
+not_hold:
     cmp #32
     bne pump
     inc air
-    lda #79
-    jsr PUTCHAR                ; one O for each safe pump
+    lda #81
+    jsr PUTCHAR
     jsr RANDOM
     and #7
-    cmp air                    ; 1/8, then 2/8 ... until it must pop
+    cmp air
     bcs pump
-    jsr CLEAR
     dec air
     lda air
     clc
@@ -37,6 +51,10 @@ again:
     cmp #13
     bne again
     jmp round
+won:
+    ldx #<winner
+    jsr print
+    jmp again
 
 print:
     stx text_ptr
@@ -50,13 +68,13 @@ print_loop:
 printed:
     rts
 
-title: .text "    .--.",13,"   /    "
+title: .text " .--.",13," /    "
 .byte 92,13
-.text "   "
+.text "|      |",13
 .byte 92
-.text "    /",13,"    '--'",13,"BALLOON",13,"SPACE=PUMP",13,"AIR: "
-.byte 0
-popped: .text "POP! SCORE "
+.text "  '--'",13,"BALLOON",13,"SP=P RT=H ",0
+popped: .text 13,"POP! SCORE "
 score: .byte 48
-.text 13,"RETURN=AGAIN STOP=EXIT"
-.byte 0
+lost: .text 13,"NO WIN!",0
+winner: .text 13,"FULL PRESSURE! YOU WIN! RT=AGAIN",0
+round_color: .byte 1
