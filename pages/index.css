@@ -121,8 +121,21 @@ section {
 }
 
 .category {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 30px 1fr auto;
+    align-items: center;
+    gap: .45rem;
+}
+
+.category-icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.category-count {
+    color: var(--muted);
 }
 
 .category[aria-pressed="true"] {
@@ -132,7 +145,7 @@ section {
 
 .program {
     display: grid;
-    grid-template-columns: 48px 1fr;
+    grid-template-columns: 48px max-content minmax(0, 1fr);
     align-items: center;
     gap: .7rem;
     border-color: var(--line);

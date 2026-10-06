@@ -23,6 +23,8 @@ class PagesCatalogTests(unittest.TestCase):
             (root / "programs" / "PLAY" / "category.json").write_text(json.dumps({
                 "description": "PLAY.", "order": 0,
             }))
+            (root / "programs" / "TOOLS" / "icon.png").write_bytes(b"tools")
+            (root / "programs" / "PLAY" / "icon.png").write_bytes(b"play")
             (root / "programs" / "TOOLS" / "ALPHA" / "program.json").write_text(json.dumps({
                 "description": "AN ALPHA TOOL.",
             }))

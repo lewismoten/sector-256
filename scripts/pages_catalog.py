@@ -71,10 +71,18 @@ def build_catalog(root=ROOT, output=None):
         metadata = json.loads(metadata_path.read_text())
         entries.append((metadata["order"], metadata_path.parent, metadata))
     entries.sort(key=lambda entry: entry[0])
-    categories = [
-        {"name": folder.name.upper(), "description": metadata["description"], "count": 0}
-        for _, folder, metadata in entries
-    ]
+    categories = []
+    for _, folder, metadata in entries:
+        category_name = folder.name.upper()
+        category_asset = output.parent / "assets" / category_name / "icon.png"
+        category_asset.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(folder / "icon.png", category_asset)
+        categories.append({
+            "name": category_name,
+            "description": metadata["description"],
+            "icon": f"assets/{category_name}/icon.png",
+            "count": 0,
+        })
     category_names = [category["name"] for category in categories]
     manifest = json.loads((root / "build" / "manifest.json").read_text())
     programs = []
