@@ -40,7 +40,7 @@ jobs:
         run: |
           rm -rf site
           mkdir -p site
-          cp pages/index.html site/index.html
+          cp -R pages/. site/
           cp release/sector-256.d64 site/sector-256.d64
           cp -R release/programs site/programs
           python scripts/pages_catalog.py --output site/catalog.json

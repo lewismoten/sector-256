@@ -15,7 +15,7 @@ class PagesWorkflowTests(unittest.TestCase):
         self.assertIn("id-token: write", workflow)
         self.assertIn("python scripts/pages_catalog.py", workflow)
         self.assertIn("release/programs", workflow)
-        self.assertIn("cp pages/index.html site/index.html", workflow)
+        self.assertIn("cp -R pages/. site/", workflow)
 
 
 if __name__ == "__main__":
