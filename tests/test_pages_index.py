@@ -24,8 +24,13 @@ class PagesIndexTests(unittest.TestCase):
         self.assertNotIn('sendToTy64("sector-256.d64"', script)
 
     def test_pages_index_gives_each_program_run_and_download_controls(self):
+        page = (PAGES / "index.html").read_text()
         script = (PAGES / "index.js").read_text()
-        self.assertIn('className = "program-actions"', script)
+        self.assertIn('id="program-info"', page)
+        self.assertIn('id="program-screenshot"', page)
+        self.assertIn('id="program-readme"', page)
+        self.assertIn('className = "program-icon"', script)
+        self.assertIn('selectProgram(program)', script)
         self.assertIn('Run in TY64', script)
         self.assertIn('Download PRG', script)
         self.assertIn('download = `${program.name}.PRG`', script)

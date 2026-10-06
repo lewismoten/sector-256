@@ -44,6 +44,9 @@ class PagesCatalogTests(unittest.TestCase):
             alpha = next(item for item in catalog["programs"] if item["name"] == "ALPHA")
             self.assertEqual(alpha["prg"], "programs/TOOLS/ALPHA/ALPHA.PRG")
             self.assertEqual(alpha["bytes"], 12)
+            self.assertEqual(alpha["icon"], "assets/TOOLS/ALPHA/icon.png")
+            self.assertEqual(alpha["screenshot"], "assets/TOOLS/ALPHA/icon.png")
+            self.assertEqual(alpha["readme"], "assets/TOOLS/ALPHA/README.html")
 
 
 if __name__ == "__main__":

@@ -7,8 +7,15 @@ const categoryList = document.querySelector("#category-list");
 const programList = document.querySelector("#program-list");
 const programHeading = document.querySelector("#program-heading");
 const inspectDiskButton = document.querySelector("#inspect-disk");
+const programInfo = document.querySelector("#program-info");
+const programScreenshot = document.querySelector("#program-screenshot");
+const selectedProgramName = document.querySelector("#selected-program-name");
+const selectedProgramDescription = document.querySelector("#selected-program-description");
+const selectedProgramActions = document.querySelector("#selected-program-actions");
+const programReadme = document.querySelector("#program-readme");
 let catalog;
 let selectedCategory;
+let selectedProgram;
 
 function setStatus(message) {
     toast.textContent = message;
@@ -25,7 +32,6 @@ async function sendToTy64(path, label) {
         const response = await fetch(path);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const arrayOfBytes = new Uint8Array(await response.arrayBuffer());
-        // TY64 registers its cross-origin PRG listener during startup.
         await new Promise(resolve => setTimeout(resolve, TY64_READY_DELAY_MS));
         ty64Tab.postMessage(arrayOfBytes, new URL(TY64_URL).origin);
         setStatus(`Sent ${label} to TY64. Switch to the emulator tab to play.`);
@@ -55,10 +61,7 @@ async function inspectDisk() {
                 resolve();
             };
             window.addEventListener("message", onMessage);
-            storageTab = window.open(
-                `${STORAGE_D64_URL}#receive=${encodeURIComponent(requestId)}`,
-                "storage-d64",
-            );
+            storageTab = window.open(`${STORAGE_D64_URL}#receive=${encodeURIComponent(requestId)}`, "storage-d64");
             if (!storageTab) {
                 window.clearTimeout(timeout);
                 window.removeEventListener("message", onMessage);
@@ -69,10 +72,7 @@ async function inspectDisk() {
         const response = await fetch("sector-256.d64");
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const bytes = new Uint8Array(await response.arrayBuffer());
-        storageTab.postMessage(
-            { type: "storage-d64:load", sourceName: "sector-256.d64", bytes },
-            storageOrigin,
-        );
+        storageTab.postMessage({ type: "storage-d64:load", sourceName: "sector-256.d64", bytes }, storageOrigin);
         setStatus("Sent sector-256.d64 to the disk inspector. Switch to that tab to inspect it.");
     } catch (error) {
         setStatus(`Could not open the disk inspector: ${error.message}`);
@@ -81,8 +81,39 @@ async function inspectDisk() {
     }
 }
 
-const isSelectedCategory = (category) => category.name === selectedCategory;
-const isInSelectedCategory = (program) => program.category === selectedCategory;
+const isSelectedCategory = category => category.name === selectedCategory;
+const isInSelectedCategory = program => program.category === selectedCategory;
+const isSelectedProgram = program => selectedProgram && program.name === selectedProgram.name && program.category === selectedProgram.category;
+
+function makeProgramActions(program) {
+    const actions = document.createElement("div");
+    actions.className = "program-actions";
+    const run = document.createElement("button");
+    run.type = "button";
+    run.textContent = "Run in TY64";
+    run.addEventListener("click", () => sendToTy64(program.prg, `${program.name}.PRG`));
+    const download = document.createElement("a");
+    download.className = "button secondary";
+    download.href = program.prg;
+    download.download = `${program.name}.PRG`;
+    download.textContent = "Download PRG";
+    actions.append(run, download);
+    return actions;
+}
+
+function renderSelectedProgram() {
+    if (!selectedProgram) {
+        programInfo.hidden = true;
+        return;
+    }
+    programInfo.hidden = false;
+    programScreenshot.src = selectedProgram.screenshot;
+    programScreenshot.alt = `${selectedProgram.name} screenshot`;
+    selectedProgramName.textContent = selectedProgram.name;
+    selectedProgramDescription.textContent = selectedProgram.description;
+    selectedProgramActions.replaceChildren(makeProgramActions(selectedProgram));
+    programReadme.src = selectedProgram.readme;
+}
 
 function renderCategories() {
     categoryList.replaceChildren(...catalog.categories.map(category => {
@@ -101,10 +132,18 @@ function renderCategories() {
     }));
 }
 
-const selectCategory = category => {
+function selectCategory(category) {
     selectedCategory = category.name;
+    selectedProgram = catalog.programs.find(isInSelectedCategory);
     renderCategories();
     renderPrograms();
+    renderSelectedProgram();
+}
+
+function selectProgram(program) {
+    selectedProgram = program;
+    renderPrograms();
+    renderSelectedProgram();
 }
 
 function renderPrograms() {
@@ -118,42 +157,33 @@ function renderPrograms() {
         return;
     }
     programList.replaceChildren(...programs.map(program => {
-        const card = document.createElement("article");
-        card.className = "program";
+        const button = document.createElement("button");
+        button.className = "program";
+        button.type = "button";
+        button.setAttribute("aria-pressed", String(isSelectedProgram(program)));
+        const icon = document.createElement("img");
+        icon.className = "program-icon";
+        icon.src = program.icon;
+        icon.alt = "";
+        const details = document.createElement("span");
         const name = document.createElement("strong");
         name.textContent = program.name;
-        const bytes = document.createElement("span");
+        const bytes = document.createElement("small");
         bytes.textContent = `${program.bytes} B`;
-        const description = document.createElement("small");
-        description.textContent = program.description;
-        const actions = document.createElement("div");
-        actions.className = "program-actions";
-        const run = document.createElement("button");
-        run.type = "button";
-        run.textContent = "Run in TY64";
-        run.addEventListener("click", () => sendProgram(program));
-        const download = document.createElement("a");
-        download.className = "button secondary";
-        download.href = program.prg;
-        download.download = `${program.name}.PRG`;
-        download.textContent = "Download PRG";
-        actions.append(run, download);
-        card.append(name, bytes, description, actions);
-        return card;
+        details.append(name, bytes);
+        button.append(icon, details);
+        button.addEventListener("click", () => selectProgram(program));
+        return button;
     }));
 }
-const sendProgram = (program) => {
-    sendToTy64(program.prg, `${program.name}.PRG`)
-}
+
 async function loadCatalog() {
     try {
         const response = await fetch("catalog.json");
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         catalog = await response.json();
-        selectedCategory = catalog.categories[0]?.name;
-        renderCategories();
-        renderPrograms();
-        setStatus("Choose a category, then run or download a standalone PRG.");
+        selectCategory(catalog.categories[0]);
+        setStatus("Choose a program to view its screenshot, README, and run/download controls.");
     } catch (error) {
         setStatus(`Catalog unavailable: ${error.message}`);
     }

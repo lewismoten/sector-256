@@ -132,15 +132,67 @@ section {
 
 .program {
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: .4rem 1rem;
+    grid-template-columns: 48px 1fr;
+    align-items: center;
+    gap: .7rem;
     border-color: var(--line);
-    padding: .7rem;
+    padding: .55rem;
+}
+
+.program[aria-pressed="true"] {
+    border-color: var(--accent);
+    background: rgba(2, 179, 242, .12);
+}
+
+.program-icon {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.program span {
+    display: grid;
+    gap: .15rem;
 }
 
 .program small {
-    grid-column: 1 / -1;
     color: var(--muted);
+}
+
+.program-info {
+    display: grid;
+    grid-template-columns: minmax(150px, .55fr) minmax(0, 1.45fr);
+    gap: 1rem;
+    margin: 0 0 1rem;
+    border: 1px solid var(--accent);
+    padding: .8rem;
+    background: rgba(2, 179, 242, .08);
+}
+
+#program-screenshot {
+    width: 100%;
+    max-height: 230px;
+    object-fit: contain;
+    align-self: start;
+    image-rendering: pixelated;
+    background: var(--navy);
+}
+
+.program-details {
+    min-width: 0;
+}
+
+.program-details h2 {
+    margin-bottom: .35rem;
+}
+
+#program-readme {
+    width: 100%;
+    height: 180px;
+    margin-top: .75rem;
+    border: 1px solid var(--line);
+    background: #fff;
 }
 
 .program-actions {
