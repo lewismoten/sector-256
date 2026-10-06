@@ -105,3 +105,14 @@ not redistributed in this project.
 | `tests/` | Machine-code and packaging verification |
 | `build/manifest.json` | Generated sizes, offsets, flags, and pack assignments |
 | `release/sector-256.d64` | Playable disk image |
+
+## Acknowledgments
+
+Sector 256 was designed and directed by Lewis Moten. Its code and documentation
+were developed with assistance from GPT-5.x, accessed through Hermes and using
+Honcho for context and project-memory support. This assistance does not replace
+the repository's source history, validation records, licensing, or the human
+maintainer's responsibility for published work.
+
+Thanks to Krisztián for guidance on sending D64 and PRG bytes to the
+[TY64 emulator](https://ty64.krissz.hu/) from the GitHub Pages catalog.
