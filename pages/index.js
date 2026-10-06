@@ -1,5 +1,5 @@
 const TY64_URL = "https://ty64.krissz.hu/";
-const status = document.querySelector("#status");
+const toast = document.querySelector("#status");
 const categoryList = document.querySelector("#category-list");
 const programList = document.querySelector("#program-list");
 const programHeading = document.querySelector("#program-heading");
@@ -7,7 +7,7 @@ let catalog;
 let selectedCategory;
 
 function setStatus(message) {
-    status.textContent = message;
+    toast.textContent = message;
 }
 
 async function sendToTy64(path, label) {
@@ -30,29 +30,34 @@ async function sendToTy64(path, label) {
     }
 }
 
+const isSelectedCategory = (category) => category.name === selectedCategory;
+const isInSelectedCategory = (program) => program.category === selectedCategory;
+
 function renderCategories() {
     categoryList.replaceChildren(...catalog.categories.map(category => {
         const button = document.createElement("button");
         button.className = "category";
         button.type = "button";
-        button.setAttribute("aria-pressed", String(category.name === selectedCategory));
+        button.setAttribute("aria-pressed", String(isSelectedCategory(category)));
         const name = document.createElement("span");
         name.textContent = category.name;
         const count = document.createElement("span");
         count.textContent = category.count;
         button.append(name, count);
         button.title = category.description;
-        button.addEventListener("click", () => {
-            selectedCategory = category.name;
-            renderCategories();
-            renderPrograms();
-        });
+        button.addEventListener("click", () => selectCategory(category));
         return button;
     }));
 }
 
+const selectCategory = category => {
+    selectedCategory = category.name;
+    renderCategories();
+    renderPrograms();
+}
+
 function renderPrograms() {
-    const programs = catalog.programs.filter(program => program.category === selectedCategory);
+    const programs = catalog.programs.filter(isInSelectedCategory);
     programHeading.textContent = selectedCategory ? `${selectedCategory} programs` : "Programs";
     if (!programs.length) {
         const empty = document.createElement("p");
@@ -72,14 +77,17 @@ function renderPrograms() {
         const description = document.createElement("small");
         description.textContent = program.description;
         button.append(name, bytes, description);
-        button.addEventListener("click", () => sendToTy64(program.prg, `${program.name}.PRG`));
+        button.addEventListener("click", () => sendProgram(program));
         return button;
     }));
 }
-
-document.querySelector("#launch-disk").addEventListener("click", () => {
+const sendProgram = (program) => {
+    sendToTy64(program.prg, `${program.name}.PRG`)
+}
+const sendDisk = () => {
     sendToTy64("sector-256.d64", "sector-256.d64");
-});
+}
+document.querySelector("#launch-disk").addEventListener("click", sendDisk);
 
 async function loadCatalog() {
     try {
