@@ -17,6 +17,8 @@ class PagesIndexTests(unittest.TestCase):
         self.assertIn('storage-d64:ready', script)
         self.assertIn('storage-d64:load', script)
         self.assertIn('new URL(STORAGE_D64_URL).origin', script)
+        self.assertIn('window.open(`${STORAGE_D64_URL}#receive=${encodeURIComponent(requestId)}`, "storage-d64-inspector")', script)
+        self.assertIn('{ type: "storage-d64:load", sourceName: "sector-256.d64", bytes }', script)
         self.assertIn('id="disk-help"', page)
         self.assertIn('id="disk-instructions-dialog"', page)
         self.assertNotIn('id="disk-instructions"', page)

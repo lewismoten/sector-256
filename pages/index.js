@@ -66,7 +66,7 @@ async function inspectDisk() {
                 resolve();
             };
             window.addEventListener("message", onMessage);
-            storageTab = window.open(`${STORAGE_D64_URL}#receive=${encodeURIComponent(requestId)}`, "storage-d64");
+            storageTab = window.open(`${STORAGE_D64_URL}#receive=${encodeURIComponent(requestId)}`, "storage-d64-inspector");
             if (!storageTab) {
                 window.clearTimeout(timeout);
                 window.removeEventListener("message", onMessage);
@@ -78,7 +78,7 @@ async function inspectDisk() {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const bytes = new Uint8Array(await response.arrayBuffer());
         storageTab.postMessage({ type: "storage-d64:load", sourceName: "sector-256.d64", bytes }, storageOrigin);
-        setStatus("Sent sector-256.d64 to the disk inspector. Switch to that tab to inspect it.");
+        setStatus("Posted sector-256.d64 to the disk inspector. Switch to that tab to inspect it.");
     } catch (error) {
         setStatus(`Could not open the disk inspector: ${error.message}`);
     } finally {
