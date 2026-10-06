@@ -68,11 +68,7 @@ print_loop:
 printed:
     rts
 
-title: .text " .--.",13," /    "
-.byte 92,13
-.text "|      |",13
-.byte 92
-.text "  '--'",13,"BALLOON",13,"SP=P RT=H ",0
+title: .text "   OOO",13,"  OOOOO",13," OOOOOOO",13,"  OOOOO",13,"   OOO",13,"    O",13,"    O",13,"BALLOON",13,"SP=P RT=H ",0
 popped: .text 13,"POP! SCORE "
 score: .byte 48
 lost: .text 13,"NO WIN!",0
