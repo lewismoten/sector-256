@@ -89,6 +89,11 @@ def validate_category_count(categories):
         raise ValueError("use 1..256 categories")
 
 
+def validate_category_name(name):
+    if not re.fullmatch(r"[A-Z][A-Z0-9_-]{0,7}", name):
+        raise ValueError(f"{name}: category name must be a URL-safe 1..8 character identifier")
+
+
 def build(allow_oversize=False, root=ROOT, assembler="64tass"):
     root = Path(root)
     assembler = shutil.which(assembler) or assembler
@@ -99,6 +104,7 @@ def build(allow_oversize=False, root=ROOT, assembler="64tass"):
     validate_category_count(category_folders)
     category_entries = []
     for folder in category_folders:
+        validate_category_name(folder.name)
         metadata_path = folder / "category.json"
         if not metadata_path.is_file():
             raise ValueError(f"{folder}: missing category.json")

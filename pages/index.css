@@ -1,0 +1,140 @@
+:root {
+    color-scheme: dark;
+    --ink: #edffe6;
+    --muted: #a9bfaa;
+    --panel: #10231b;
+    --line: #366048;
+    --accent: #a9ff9f;
+    --cyan: #75cec8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+    color: var(--ink);
+    background: #07120d;
+    font: 16px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+h1 {
+    margin: 0;
+    color: var(--accent);
+    letter-spacing: .05em;
+}
+
+h2 {
+    font-size: 1rem;
+    margin: 0 0 .8rem;
+    color: var(--cyan);
+}
+
+p {
+    color: var(--muted);
+    max-width: 75ch;
+}
+
+.actions,
+.header {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+button,
+a.button {
+    border: 1px solid var(--accent);
+    color: #07120d;
+    background: var(--accent);
+    padding: .7rem .9rem;
+    border-radius: .25rem;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+button.secondary {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    background: transparent;
+}
+
+button:hover,
+a.button:hover {
+    filter: brightness(1.12);
+}
+
+#status {
+    min-height: 1.5em;
+    color: var(--cyan);
+}
+
+main {
+    display: grid;
+    grid-template-columns: minmax(220px, .8fr) minmax(280px, 1.6fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+section {
+    border: 1px solid var(--line);
+    padding: 1rem;
+    background: var(--panel);
+}
+
+#category-list,
+#program-list {
+    display: grid;
+    gap: .45rem;
+}
+
+.category,
+.program {
+    width: 100%;
+    text-align: left;
+    color: var(--ink);
+    background: transparent;
+    border: 1px solid transparent;
+    padding: .55rem;
+}
+
+.category {
+    display: flex;
+    justify-content: space-between;
+}
+
+.category[aria-pressed="true"] {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.program {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: .4rem 1rem;
+}
+
+.program small {
+    grid-column: 1 / -1;
+    color: var(--muted);
+}
+
+.empty {
+    color: var(--muted);
+}
+
+code {
+    color: var(--cyan);
+}
+
+@media (max-width: 720px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}

@@ -17,6 +17,11 @@ class CategoryPaginationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, '1..256'):
             builder.validate_category_count(range(257))
 
+    def test_builder_rejects_category_names_that_are_not_prg_url_safe(self):
+        builder.validate_category_name('TABLETOP')
+        with self.assertRaisesRegex(ValueError, 'category name'):
+            builder.validate_category_name('A#B')
+
     def test_categories_page_by_arrows_and_open_byte_id_24(self):
         machine = Machine()
         frame = machine.files['ICONS.DAT'][8:44]

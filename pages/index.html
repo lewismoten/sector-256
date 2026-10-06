@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sector 256 — C64 launcher</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header class="header">
+    <div>
+      <h1>SECTOR 256</h1>
+      <p>Browse the catalog, open the disk image, or send any standalone program to TY64.</p>
+    </div>
+  </header>
+
+  <div class="actions">
+    <button id="launch-disk">Open D64 in TY64</button>
+    <a class="button secondary" href="sector-256.d64" download>Download D64</a>
+    <a class="button secondary" href="https://ty64.krissz.hu/" target="ty64" rel="noopener">Open TY64</a>
+  </div>
+  <p id="status" role="status">Loading catalog…</p>
+
+  <main>
+    <section>
+      <h2>Categories</h2>
+      <div id="category-list" aria-label="Categories"></div>
+    </section>
+    <section>
+      <h2 id="program-heading">Programs</h2>
+      <div id="program-list" aria-live="polite"></div>
+    </section>
+  </main>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

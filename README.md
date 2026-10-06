@@ -43,6 +43,17 @@ LOAD"LOADER",8
 RUN
 ```
 
+## GitHub Pages
+
+The `Deploy GitHub Pages` workflow builds the D64, standalone PRGs, and a static
+catalog browser. It publishes `index.html`, `sector-256.d64`, and every
+`programs/<CATEGORY>/<PROGRAM>/<PROGRAM>.PRG` artifact. The page can open TY64,
+send the D64, or filter categories and send an individual PRG through TY64's
+cross-window binary-message API.
+
+Configure the repository's Pages source as **GitHub Actions**, then push to
+`main` or run the workflow manually.
+
 ## Releases
 
 Pushing a semantic version tag in `vX.X.X` form builds and tests the project,
@@ -72,9 +83,9 @@ The tests execute the assembled 6502 code with deterministic KERNAL service
 stubs. They cover win/loss/draw logic, repeated/invalid input, returning to the
 launcher, categories, a 700-entry catalog, animation, D64 file chains, and the
 oversize rejection/bypass. They supplement VICE; they are not cycle-accurate
-hardware emulation. The included screenshots were rendered from executed
-screen/bitmap RAM with C64 glyphs; ROM files and toolchain binaries are not
-redistributed in this project.
+hardware emulation. The included screenshots are rendered from executed bitmap
+RAM with a deterministic preview charset; ROM files and toolchain binaries are
+not redistributed in this project.
 
 ## Layout
 
@@ -89,6 +100,8 @@ redistributed in this project.
 | `scripts/standalone.py` | Build standalone BASIC-loadable PRGs with the embedded API |
 | `scripts/programs_md.py` | Generate preview/source catalog |
 | `scripts/render_launcher_screenshots.py` | Render native 320×200 launcher screenshots from the machine harness |
+| `scripts/pages_catalog.py` | Generate GitHub Pages category/program metadata |
+| `pages/index.html` | Static GitHub Pages TY64 catalog browser |
 | `tests/` | Machine-code and packaging verification |
 | `build/manifest.json` | Generated sizes, offsets, flags, and pack assignments |
 | `release/sector-256.d64` | Playable disk image |
