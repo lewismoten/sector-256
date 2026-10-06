@@ -1,9 +1,12 @@
 const TY64_URL = "https://ty64.krissz.hu/";
 const TY64_READY_DELAY_MS = 3000;
+const STORAGE_D64_URL = "https://lewismoten.github.io/storage-d64/";
+const STORAGE_D64_READY_TIMEOUT_MS = 10000;
 const toast = document.querySelector("#status");
 const categoryList = document.querySelector("#category-list");
 const programList = document.querySelector("#program-list");
 const programHeading = document.querySelector("#program-heading");
+const inspectDiskButton = document.querySelector("#inspect-disk");
 let catalog;
 let selectedCategory;
 
@@ -28,6 +31,53 @@ async function sendToTy64(path, label) {
         setStatus(`Sent ${label} to TY64. Switch to the emulator tab to play.`);
     } catch (error) {
         setStatus(`Could not load ${label}: ${error.message}`);
+    }
+}
+
+async function inspectDisk() {
+    const requestId = crypto.randomUUID();
+    const storageOrigin = new URL(STORAGE_D64_URL).origin;
+    let storageTab;
+    inspectDiskButton.disabled = true;
+    setStatus("Opening disk inspector…");
+    try {
+        await new Promise((resolve, reject) => {
+            const timeout = window.setTimeout(() => {
+                window.removeEventListener("message", onMessage);
+                reject(new Error("The disk inspector did not become ready."));
+            }, STORAGE_D64_READY_TIMEOUT_MS);
+            const onMessage = event => {
+                if (event.source !== storageTab || event.origin !== storageOrigin) return;
+                if (event.data?.type !== "storage-d64:ready") return;
+                if (event.data.receiveRequestId !== requestId) return;
+                window.clearTimeout(timeout);
+                window.removeEventListener("message", onMessage);
+                resolve();
+            };
+            window.addEventListener("message", onMessage);
+            storageTab = window.open(
+                `${STORAGE_D64_URL}#receive=${encodeURIComponent(requestId)}`,
+                "storage-d64",
+            );
+            if (!storageTab) {
+                window.clearTimeout(timeout);
+                window.removeEventListener("message", onMessage);
+                reject(new Error("Popup blocked. Allow popups for this page, then try again."));
+            }
+        });
+        setStatus("Sending sector-256.d64 to the disk inspector…");
+        const response = await fetch("sector-256.d64");
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const bytes = new Uint8Array(await response.arrayBuffer());
+        storageTab.postMessage(
+            { type: "storage-d64:load", sourceName: "sector-256.d64", bytes },
+            storageOrigin,
+        );
+        setStatus("Sent sector-256.d64 to the disk inspector. Switch to that tab to inspect it.");
+    } catch (error) {
+        setStatus(`Could not open the disk inspector: ${error.message}`);
+    } finally {
+        inspectDiskButton.disabled = false;
     }
 }
 
@@ -110,3 +160,4 @@ async function loadCatalog() {
 }
 
 loadCatalog();
+inspectDiskButton.addEventListener("click", inspectDisk);
