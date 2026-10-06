@@ -14,6 +14,7 @@
     <div>
       <h1>SECTOR 256</h1>
       <p>Download the catalog disk or run and download standalone programs.</p>
+      <p><a class="repository-link" href="https://github.com/lewismoten/sector-256" target="sector-256-source" rel="noopener">View the Sector 256 repository</a></p>
     </div>
   </header>
 
@@ -32,6 +33,17 @@
     <p>TY64’s globe icon opens its <strong>Open URL</strong> menu, which can also load the published D64 URL directly.</p>
   </section>
   <p id="status" role="status">Loading catalog…</p>
+  <article id="program-info" class="program-info" hidden>
+    <img id="program-screenshot" alt="Selected program screenshot">
+    <div class="program-details">
+      <h2 id="selected-program-name">Select a program</h2>
+      <p id="selected-program-description"></p>
+      <p id="selected-program-bytes" class="program-bytes"></p>
+      <p><a id="selected-program-source" class="repository-link" target="program-source" rel="noopener">View assembly source</a></p>
+      <div id="selected-program-actions" class="program-actions"></div>
+      <iframe id="program-readme" title="Selected program README"></iframe>
+    </div>
+  </article>
 
   <main>
     <section>
@@ -40,16 +52,6 @@
     </section>
     <section>
       <h2 id="program-heading">Programs</h2>
-      <article id="program-info" class="program-info" hidden>
-        <img id="program-screenshot" alt="Selected program screenshot">
-        <div class="program-details">
-          <h2 id="selected-program-name">Select a program</h2>
-          <p id="selected-program-description"></p>
-          <p id="selected-program-bytes" class="program-bytes"></p>
-          <div id="selected-program-actions" class="program-actions"></div>
-          <iframe id="program-readme" title="Selected program README"></iframe>
-        </div>
-      </article>
       <div id="program-list" aria-live="polite"></div>
     </section>
   </main>

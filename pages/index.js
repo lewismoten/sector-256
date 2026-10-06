@@ -12,6 +12,7 @@ const programScreenshot = document.querySelector("#program-screenshot");
 const selectedProgramName = document.querySelector("#selected-program-name");
 const selectedProgramDescription = document.querySelector("#selected-program-description");
 const selectedProgramBytes = document.querySelector("#selected-program-bytes");
+const selectedProgramSource = document.querySelector("#selected-program-source");
 const selectedProgramActions = document.querySelector("#selected-program-actions");
 const programReadme = document.querySelector("#program-readme");
 let catalog;
@@ -112,7 +113,8 @@ function renderSelectedProgram() {
     programScreenshot.alt = `${selectedProgram.name} screenshot`;
     selectedProgramName.textContent = selectedProgram.name;
     selectedProgramDescription.textContent = selectedProgram.description;
-    selectedProgramBytes.textContent = `${selectedProgram.bytes} B`;
+    selectedProgramBytes.textContent = `${selectedProgram.bytes} B in the D64 · ${selectedProgram.prgBytes} B standalone PRG`;
+    selectedProgramSource.href = selectedProgram.source;
     selectedProgramActions.replaceChildren(makeProgramActions(selectedProgram));
     programReadme.src = selectedProgram.readme;
 }

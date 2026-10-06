@@ -32,7 +32,10 @@ def markdown_to_html(markdown):
         else:
             paragraph.append(line)
     flush_paragraph()
-    return "\n".join(rendered) or "<p>No project README is available.</p>"
+    return "\n".join([
+        "<!doctype html><meta charset='utf-8'><style>body{margin:0;padding:.8rem;background:#071a42;color:#e3f7ff;font:14px/1.45 ui-monospace,monospace}h1,h2{color:#0ad5db;margin:.2rem 0 .6rem}p{margin:.5rem 0;color:#9fc5dc}</style>",
+        *rendered,
+    ]) or "<p>No project README is available.</p>"
 
 
 def write_program_assets(folder, asset_folder, description):
@@ -90,6 +93,7 @@ def build_catalog(root=ROOT, output=None):
         category = category_names[record["category"]]
         folder = root / "programs" / category / record["name"]
         metadata = json.loads((folder / "program.json").read_text())
+        prg_file = root / "release" / "programs" / category / record["name"] / f"{record['name']}.PRG"
         assets = write_program_assets(
             folder,
             output.parent / "assets" / category / record["name"],
@@ -101,6 +105,8 @@ def build_catalog(root=ROOT, output=None):
             "description": metadata["description"],
             "bytes": record["size"],
             "prg": f"programs/{category}/{record['name']}/{record['name']}.PRG",
+            "prgBytes": prg_file.stat().st_size if prg_file.is_file() else record["size"],
+            "source": f"https://github.com/lewismoten/sector-256/blob/main/programs/{category}/{record['name']}/main.asm",
             **assets,
         })
     programs.sort(key=lambda program: (category_names.index(program["category"]), program["name"]))

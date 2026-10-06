@@ -184,8 +184,9 @@ section {
 }
 
 #program-screenshot {
-    width: 100%;
-    max-height: 230px;
+    width: 320px;
+    height: 200px;
+    max-width: 100%;
     object-fit: contain;
     align-self: start;
     image-rendering: pixelated;
