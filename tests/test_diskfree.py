@@ -17,7 +17,7 @@ class DiskfreeProgramTests(unittest.TestCase):
 
         metadata = json.loads((PROGRAM / "program.json").read_text())
         self.assertEqual(metadata, {
-            "description": "DISPLAY FREE BLOCKS ON DEVICE 8. ANY KEY:REFRESH. STOP:RETURN.",
+            "description": "DISPLAY FREE BLOCKS ON DEVICE 8. ANY KEY:REFRESH.",
             "animation_speed": 8,
         })
 

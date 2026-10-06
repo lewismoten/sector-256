@@ -1,4 +1,4 @@
 {
-  "description": "A ROTATING 3D WIREFRAME CUBE.   RUN/STOP TO RETURN TO LAUNCHER.",
+  "description": "A ROTATING 3D WIREFRAME CUBE WITH HIDDEN-LINE MOTION.",
   "animation_speed": 8
 }

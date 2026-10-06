@@ -1,4 +1,4 @@
 {
-  "description": "RULE 30 FROM ONE CELL. SPACE:RESET. RUN/STOP:RETURN.",
+  "description": "RULE 30 FROM ONE CELL. SPACE:RESET THE AUTOMATON.",
   "animation_speed": 8
 }
