@@ -11,6 +11,8 @@ class PagesIndexTests(unittest.TestCase):
         page = (PAGES / "index.html").read_text()
         script = (PAGES / "index.js").read_text()
         self.assertIn('href="sector-256.d64"', page)
+        self.assertIn('href="https://lewismoten.github.io/storage-d64/"', page)
+        self.assertIn('Inspect Disk', page)
         self.assertIn('id="disk-instructions"', page)
         self.assertIn('https://ty64.krissz.hu/', page)
         self.assertIn('Open URL', page)
