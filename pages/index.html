@@ -13,7 +13,6 @@
   <header class="header">
     <div>
       <h1>SECTOR 256</h1>
-      <p>Download the catalog disk or run and download standalone programs.</p>
     </div>
   </header>
 
@@ -35,13 +34,15 @@
   </dialog>
   <p id="status" role="status">Loading catalog…</p>
   <article id="program-info" class="program-info" hidden>
-    <img id="program-screenshot" alt="Selected program screenshot">
+    <div class="program-media">
+      <img id="program-screenshot" alt="Selected program screenshot">
+      <div id="selected-program-actions" class="program-actions"></div>
+      <a id="selected-program-source" class="repository-link" target="program-source" rel="noopener">View assembly source</a>
+    </div>
     <div class="program-details">
       <h2 id="selected-program-name">Select a program</h2>
       <p id="selected-program-description"></p>
       <p id="selected-program-bytes" class="program-bytes"></p>
-      <p><a id="selected-program-source" class="repository-link" target="program-source" rel="noopener">View assembly source</a></p>
-      <div id="selected-program-actions" class="program-actions"></div>
       <iframe id="program-readme" title="Selected program README"></iframe>
     </div>
   </article>

@@ -4,6 +4,7 @@ import argparse
 from html import escape
 import json
 from pathlib import Path
+import re
 import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,9 +16,15 @@ def markdown_to_html(markdown):
     rendered = []
     paragraph = []
 
+    def render_inline(text):
+        text = escape(text)
+        text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
+        text = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", text)
+        return re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<em>\1</em>", text)
+
     def flush_paragraph():
         if paragraph:
-            rendered.append(f"<p>{escape(' '.join(part.strip() for part in paragraph))}</p>")
+            rendered.append(f"<p>{render_inline(' '.join(part.strip() for part in paragraph))}</p>")
             paragraph.clear()
 
     for line in lines:
@@ -99,10 +106,11 @@ def build_catalog(root=ROOT, output=None):
             output.parent / "assets" / category / record["name"],
             metadata["description"],
         )
+        description = re.sub(r"\s*RUN/STOP TO RETURN TO (THE )?LAUNCHER\.?", "", metadata["description"], flags=re.I)
         programs.append({
             "name": record["name"],
             "category": category,
-            "description": metadata["description"],
+            "description": description,
             "bytes": record["size"],
             "prg": f"programs/{category}/{record['name']}/{record['name']}.PRG",
             "prgBytes": prg_file.stat().st_size if prg_file.is_file() else record["size"],

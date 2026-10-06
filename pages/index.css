@@ -52,7 +52,7 @@ a.button {
     border: 1px solid var(--accent);
     color: var(--navy);
     background: var(--accent);
-    padding: .7rem .9rem;
+    padding: .45rem .65rem;
     border-radius: .25rem;
     cursor: pointer;
     font: inherit;

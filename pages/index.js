@@ -194,7 +194,6 @@ async function loadCatalog() {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         catalog = await response.json();
         selectCategory(catalog.categories[0]);
-        setStatus("Choose a program to view its screenshot, README, and run/download controls.");
     } catch (error) {
         setStatus(`Catalog unavailable: ${error.message}`);
     }
